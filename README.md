@@ -30,7 +30,7 @@ If you find this work useful, please consider citing:
 
 ```bibtex
 @article{xiaomi2026robotics1,
-  title={Xiaomi-Robotics-1: Scaling Vision-Language-Action Models with 100K+ Hours of Real-World Data},
+  title={Xiaomi-Robotics-1: Scaling Vision-Language-Action Models with over 100K Hours of Real-World Trajectories},
   author={Xiaomi Robotics},
   journal={arXiv preprint},
   year={2026}
