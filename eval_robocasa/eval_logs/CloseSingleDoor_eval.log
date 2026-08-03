@@ -1,0 +1,419 @@
+[robosuite WARNING] No private macro file found! (macros.py:57)
+2026-07-21 18:08:42,122 WARNING No private macro file found!
+[robosuite WARNING] It is recommended to use a private macro file (macros.py:58)
+2026-07-21 18:08:42,122 WARNING It is recommended to use a private macro file
+[robosuite WARNING] To setup, run: python /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/scripts/setup_macros.py (macros.py:59)
+2026-07-21 18:08:42,122 WARNING To setup, run: python /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/scripts/setup_macros.py
+[robosuite WARNING] Could not import robosuite_models. Some robots may not be available. If you want to use these robots, please install robosuite_models from source (https://github.com/ARISE-Initiative/robosuite_models) or through pip install. (__init__.py:30)
+2026-07-21 18:08:56,061 WARNING Could not import robosuite_models. Some robots may not be available. If you want to use these robots, please install robosuite_models from source (https://github.com/ARISE-Initiative/robosuite_models) or through pip install.
+[robosuite WARNING] Could not load the mink-based whole-body IK. Make sure you install related import properly (e.g. pip install mink==0.0.5), otherwise you will not be able to use the default IK controller setting for GR1 robot. (__init__.py:40)
+2026-07-21 18:08:56,166 WARNING Could not load the mink-based whole-body IK. Make sure you install related import properly (e.g. pip install mink==0.0.5), otherwise you will not be able to use the default IK controller setting for GR1 robot.
+WARNING: mimicgen environments not imported since mimicgen is not installed!
+2026-07-21 18:11:04,839 INFO Task: CloseSingleDoor | Episodes: 100 | Start seed: 0
+2026-07-21 18:11:04,840 INFO Server: localhost:10087
+Client connected to server at localhost:10087.
+2026-07-21 18:11:06,144 INFO EvalClient ready. Robot types: ['robocasa_mg']
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:11:06,144 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:11:18,545 INFO No OpenGL_accelerate module loaded: No module named 'OpenGL_accelerate'
+2026-07-21 18:11:26,764 INFO Task CloseSingleDoor: Episode 1 (seed=0): Instruction: close the microwave door
+2026-07-21 18:11:42,212 INFO Task CloseSingleDoor: Episode 1 (seed=0): Success | Current Success Rate: 100.00% (1/1)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:11:42,213 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:11:53,812 INFO Task CloseSingleDoor: Episode 2 (seed=1): Instruction: close the microwave door
+2026-07-21 18:12:09,675 INFO Task CloseSingleDoor: Episode 2 (seed=1): Success | Current Success Rate: 100.00% (2/2)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:12:09,676 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:12:17,703 INFO Task CloseSingleDoor: Episode 3 (seed=2): Instruction: close the microwave door
+2026-07-21 18:12:32,547 INFO Task CloseSingleDoor: Episode 3 (seed=2): Success | Current Success Rate: 100.00% (3/3)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:12:32,548 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:12:41,549 INFO Task CloseSingleDoor: Episode 4 (seed=3): Instruction: close the microwave door
+2026-07-21 18:12:57,722 INFO Task CloseSingleDoor: Episode 4 (seed=3): Success | Current Success Rate: 100.00% (4/4)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:12:57,723 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:13:11,367 INFO Task CloseSingleDoor: Episode 5 (seed=4): Instruction: close the microwave door
+2026-07-21 18:13:26,207 INFO Task CloseSingleDoor: Episode 5 (seed=4): Success | Current Success Rate: 100.00% (5/5)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:13:26,208 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:13:37,630 INFO Task CloseSingleDoor: Episode 6 (seed=5): Instruction: close the microwave door
+2026-07-21 18:13:53,231 INFO Task CloseSingleDoor: Episode 6 (seed=5): Success | Current Success Rate: 100.00% (6/6)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:13:53,231 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:14:08,225 INFO Task CloseSingleDoor: Episode 7 (seed=6): Instruction: close the microwave door
+2026-07-21 18:14:30,702 INFO Task CloseSingleDoor: Episode 7 (seed=6): Success | Current Success Rate: 100.00% (7/7)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:14:30,702 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:14:40,370 INFO Task CloseSingleDoor: Episode 8 (seed=7): Instruction: close the cabinet door
+2026-07-21 18:14:53,558 INFO Task CloseSingleDoor: Episode 8 (seed=7): Success | Current Success Rate: 100.00% (8/8)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:14:53,559 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:15:05,465 INFO Task CloseSingleDoor: Episode 9 (seed=8): Instruction: close the cabinet door
+2026-07-21 18:15:20,522 INFO Task CloseSingleDoor: Episode 9 (seed=8): Success | Current Success Rate: 100.00% (9/9)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:15:20,523 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:15:30,946 INFO Task CloseSingleDoor: Episode 10 (seed=9): Instruction: close the microwave door
+2026-07-21 18:15:48,031 INFO Task CloseSingleDoor: Episode 10 (seed=9): Success | Current Success Rate: 100.00% (10/10)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:15:48,032 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:16:01,114 INFO Task CloseSingleDoor: Episode 11 (seed=10): Instruction: close the microwave door
+2026-07-21 18:16:16,460 INFO Task CloseSingleDoor: Episode 11 (seed=10): Success | Current Success Rate: 100.00% (11/11)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:16:16,461 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:16:24,456 INFO Task CloseSingleDoor: Episode 12 (seed=11): Instruction: close the microwave door
+2026-07-21 18:16:38,733 INFO Task CloseSingleDoor: Episode 12 (seed=11): Success | Current Success Rate: 100.00% (12/12)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:16:38,733 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:16:51,579 INFO Task CloseSingleDoor: Episode 13 (seed=12): Instruction: close the cabinet door
+2026-07-21 18:17:07,004 INFO Task CloseSingleDoor: Episode 13 (seed=12): Success | Current Success Rate: 100.00% (13/13)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:17:07,005 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:17:16,893 INFO Task CloseSingleDoor: Episode 14 (seed=13): Instruction: close the microwave door
+2026-07-21 18:17:33,424 INFO Task CloseSingleDoor: Episode 14 (seed=13): Success | Current Success Rate: 100.00% (14/14)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:17:33,425 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:17:42,781 INFO Task CloseSingleDoor: Episode 15 (seed=14): Instruction: close the cabinet door
+2026-07-21 18:17:56,666 INFO Task CloseSingleDoor: Episode 15 (seed=14): Success | Current Success Rate: 100.00% (15/15)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:17:56,667 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:18:07,352 INFO Task CloseSingleDoor: Episode 16 (seed=15): Instruction: close the cabinet door
+2026-07-21 18:18:19,478 INFO Task CloseSingleDoor: Episode 16 (seed=15): Success | Current Success Rate: 100.00% (16/16)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:18:19,501 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:18:30,902 INFO Task CloseSingleDoor: Episode 17 (seed=16): Instruction: close the cabinet door
+2026-07-21 18:18:44,119 INFO Task CloseSingleDoor: Episode 17 (seed=16): Success | Current Success Rate: 100.00% (17/17)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:18:44,120 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:18:58,307 INFO Task CloseSingleDoor: Episode 18 (seed=17): Instruction: close the cabinet door
+2026-07-21 18:19:10,349 INFO Task CloseSingleDoor: Episode 18 (seed=17): Success | Current Success Rate: 100.00% (18/18)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:19:10,394 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:19:17,802 INFO Task CloseSingleDoor: Episode 19 (seed=18): Instruction: close the microwave door
+2026-07-21 18:19:33,416 INFO Task CloseSingleDoor: Episode 19 (seed=18): Success | Current Success Rate: 100.00% (19/19)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:19:33,416 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:19:48,518 INFO Task CloseSingleDoor: Episode 20 (seed=19): Instruction: close the cabinet door
+2026-07-21 18:20:05,297 INFO Task CloseSingleDoor: Episode 20 (seed=19): Success | Current Success Rate: 100.00% (20/20)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:20:05,298 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:20:13,692 INFO Task CloseSingleDoor: Episode 21 (seed=20): Instruction: close the cabinet door
+2026-07-21 18:20:27,977 INFO Task CloseSingleDoor: Episode 21 (seed=20): Success | Current Success Rate: 100.00% (21/21)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:20:27,978 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:20:39,944 INFO Task CloseSingleDoor: Episode 22 (seed=21): Instruction: close the microwave door
+2026-07-21 18:20:57,231 INFO Task CloseSingleDoor: Episode 22 (seed=21): Success | Current Success Rate: 100.00% (22/22)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:20:57,231 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:21:14,831 INFO Task CloseSingleDoor: Episode 23 (seed=22): Instruction: close the cabinet door
+2026-07-21 18:21:32,854 INFO Task CloseSingleDoor: Episode 23 (seed=22): Success | Current Success Rate: 100.00% (23/23)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:21:32,855 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:21:42,934 INFO Task CloseSingleDoor: Episode 24 (seed=23): Instruction: close the microwave door
+2026-07-21 18:22:00,808 INFO Task CloseSingleDoor: Episode 24 (seed=23): Success | Current Success Rate: 100.00% (24/24)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:22:00,809 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:22:11,482 INFO Task CloseSingleDoor: Episode 25 (seed=24): Instruction: close the microwave door
+2026-07-21 18:22:27,766 INFO Task CloseSingleDoor: Episode 25 (seed=24): Success | Current Success Rate: 100.00% (25/25)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:22:27,766 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:22:35,846 INFO Task CloseSingleDoor: Episode 26 (seed=25): Instruction: close the microwave door
+2026-07-21 18:22:51,368 INFO Task CloseSingleDoor: Episode 26 (seed=25): Success | Current Success Rate: 100.00% (26/26)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:22:51,369 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:22:58,615 INFO Task CloseSingleDoor: Episode 27 (seed=26): Instruction: close the microwave door
+2026-07-21 18:23:12,866 INFO Task CloseSingleDoor: Episode 27 (seed=26): Success | Current Success Rate: 100.00% (27/27)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:23:12,866 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:23:23,091 INFO Task CloseSingleDoor: Episode 28 (seed=27): Instruction: close the microwave door
+2026-07-21 18:23:39,430 INFO Task CloseSingleDoor: Episode 28 (seed=27): Success | Current Success Rate: 100.00% (28/28)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:23:39,431 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:23:57,930 INFO Task CloseSingleDoor: Episode 29 (seed=28): Instruction: close the cabinet door
+2026-07-21 18:24:16,699 INFO Task CloseSingleDoor: Episode 29 (seed=28): Success | Current Success Rate: 100.00% (29/29)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:24:16,700 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:24:25,591 INFO Task CloseSingleDoor: Episode 30 (seed=29): Instruction: close the microwave door
+2026-07-21 18:24:48,223 INFO Task CloseSingleDoor: Episode 30 (seed=29): Success | Current Success Rate: 100.00% (30/30)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:24:48,224 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:24:59,101 INFO Task CloseSingleDoor: Episode 31 (seed=30): Instruction: close the microwave door
+2026-07-21 18:25:15,399 INFO Task CloseSingleDoor: Episode 31 (seed=30): Success | Current Success Rate: 100.00% (31/31)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:25:15,400 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:25:30,692 INFO Task CloseSingleDoor: Episode 32 (seed=31): Instruction: close the cabinet door
+2026-07-21 18:25:48,706 INFO Task CloseSingleDoor: Episode 32 (seed=31): Success | Current Success Rate: 100.00% (32/32)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:25:48,707 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:26:02,706 INFO Task CloseSingleDoor: Episode 33 (seed=32): Instruction: close the cabinet door
+2026-07-21 18:26:21,637 INFO Task CloseSingleDoor: Episode 33 (seed=32): Success | Current Success Rate: 100.00% (33/33)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:26:21,638 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:26:37,318 INFO Task CloseSingleDoor: Episode 34 (seed=33): Instruction: close the cabinet door
+2026-07-21 18:26:51,477 INFO Task CloseSingleDoor: Episode 34 (seed=33): Success | Current Success Rate: 100.00% (34/34)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:26:51,478 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:27:00,251 INFO Task CloseSingleDoor: Episode 35 (seed=34): Instruction: close the microwave door
+2026-07-21 18:27:16,587 INFO Task CloseSingleDoor: Episode 35 (seed=34): Success | Current Success Rate: 100.00% (35/35)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:27:16,588 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:27:25,030 INFO Task CloseSingleDoor: Episode 36 (seed=35): Instruction: close the microwave door
+2026-07-21 18:27:41,031 INFO Task CloseSingleDoor: Episode 36 (seed=35): Success | Current Success Rate: 100.00% (36/36)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:27:41,076 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:27:51,822 INFO Task CloseSingleDoor: Episode 37 (seed=36): Instruction: close the microwave door
+2026-07-21 18:28:10,107 INFO Task CloseSingleDoor: Episode 37 (seed=36): Success | Current Success Rate: 100.00% (37/37)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:28:10,107 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:28:20,543 INFO Task CloseSingleDoor: Episode 38 (seed=37): Instruction: close the microwave door
+2026-07-21 18:28:39,006 INFO Task CloseSingleDoor: Episode 38 (seed=37): Success | Current Success Rate: 100.00% (38/38)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:28:39,007 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:28:53,613 INFO Task CloseSingleDoor: Episode 39 (seed=38): Instruction: close the microwave door
+2026-07-21 18:29:17,043 INFO Task CloseSingleDoor: Episode 39 (seed=38): Success | Current Success Rate: 100.00% (39/39)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:29:17,044 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:29:26,787 INFO Task CloseSingleDoor: Episode 40 (seed=39): Instruction: close the cabinet door
+2026-07-21 18:29:39,222 INFO Task CloseSingleDoor: Episode 40 (seed=39): Success | Current Success Rate: 100.00% (40/40)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:29:39,223 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:29:50,363 INFO Task CloseSingleDoor: Episode 41 (seed=40): Instruction: close the cabinet door
+2026-07-21 18:30:03,476 INFO Task CloseSingleDoor: Episode 41 (seed=40): Success | Current Success Rate: 100.00% (41/41)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:30:03,522 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:30:18,447 INFO Task CloseSingleDoor: Episode 42 (seed=41): Instruction: close the microwave door
+2026-07-21 18:30:36,402 INFO Task CloseSingleDoor: Episode 42 (seed=41): Success | Current Success Rate: 100.00% (42/42)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:30:36,437 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:30:49,854 INFO Task CloseSingleDoor: Episode 43 (seed=42): Instruction: close the cabinet door
+2026-07-21 18:31:02,028 INFO Task CloseSingleDoor: Episode 43 (seed=42): Success | Current Success Rate: 100.00% (43/43)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:31:02,028 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:31:30,388 INFO Task CloseSingleDoor: Episode 44 (seed=43): Instruction: close the microwave door
+2026-07-21 18:31:45,562 INFO Task CloseSingleDoor: Episode 44 (seed=43): Success | Current Success Rate: 100.00% (44/44)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:31:45,563 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:32:04,477 INFO Task CloseSingleDoor: Episode 45 (seed=44): Instruction: close the microwave door
+2026-07-21 18:32:23,842 INFO Task CloseSingleDoor: Episode 45 (seed=44): Success | Current Success Rate: 100.00% (45/45)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:32:23,842 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:32:36,772 INFO Task CloseSingleDoor: Episode 46 (seed=45): Instruction: close the cabinet door
+2026-07-21 18:32:53,640 INFO Task CloseSingleDoor: Episode 46 (seed=45): Success | Current Success Rate: 100.00% (46/46)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:32:53,641 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:33:04,165 INFO Task CloseSingleDoor: Episode 47 (seed=46): Instruction: close the microwave door
+2026-07-21 18:33:19,332 INFO Task CloseSingleDoor: Episode 47 (seed=46): Success | Current Success Rate: 100.00% (47/47)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:33:19,333 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:33:30,720 INFO Task CloseSingleDoor: Episode 48 (seed=47): Instruction: close the microwave door
+2026-07-21 18:33:49,724 INFO Task CloseSingleDoor: Episode 48 (seed=47): Success | Current Success Rate: 100.00% (48/48)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:33:49,724 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:34:06,322 INFO Task CloseSingleDoor: Episode 49 (seed=48): Instruction: close the cabinet door
+2026-07-21 18:34:23,390 INFO Task CloseSingleDoor: Episode 49 (seed=48): Success | Current Success Rate: 100.00% (49/49)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:34:23,391 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:34:31,563 INFO Task CloseSingleDoor: Episode 50 (seed=49): Instruction: close the microwave door
+2026-07-21 18:34:46,478 INFO Task CloseSingleDoor: Episode 50 (seed=49): Success | Current Success Rate: 100.00% (50/50)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:34:46,479 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:35:05,472 INFO Task CloseSingleDoor: Episode 51 (seed=50): Instruction: close the cabinet door
+2026-07-21 18:35:25,809 INFO Task CloseSingleDoor: Episode 51 (seed=50): Success | Current Success Rate: 100.00% (51/51)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:35:25,809 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:35:40,024 INFO Task CloseSingleDoor: Episode 52 (seed=51): Instruction: close the cabinet door
+2026-07-21 18:35:54,517 INFO Task CloseSingleDoor: Episode 52 (seed=51): Success | Current Success Rate: 100.00% (52/52)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:35:54,518 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:36:04,595 INFO Task CloseSingleDoor: Episode 53 (seed=52): Instruction: close the microwave door
+2026-07-21 18:36:18,837 INFO Task CloseSingleDoor: Episode 53 (seed=52): Success | Current Success Rate: 100.00% (53/53)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:36:18,838 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:36:33,114 INFO Task CloseSingleDoor: Episode 54 (seed=53): Instruction: close the microwave door
+2026-07-21 18:36:50,132 INFO Task CloseSingleDoor: Episode 54 (seed=53): Success | Current Success Rate: 100.00% (54/54)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:36:50,133 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:37:00,960 INFO Task CloseSingleDoor: Episode 55 (seed=54): Instruction: close the microwave door
+2026-07-21 18:37:17,252 INFO Task CloseSingleDoor: Episode 55 (seed=54): Success | Current Success Rate: 100.00% (55/55)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:37:17,253 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:37:25,435 INFO Task CloseSingleDoor: Episode 56 (seed=55): Instruction: close the microwave door
+2026-07-21 18:37:40,508 INFO Task CloseSingleDoor: Episode 56 (seed=55): Success | Current Success Rate: 100.00% (56/56)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:37:40,509 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:37:52,536 INFO Task CloseSingleDoor: Episode 57 (seed=56): Instruction: close the cabinet door
+2026-07-21 18:38:05,608 INFO Task CloseSingleDoor: Episode 57 (seed=56): Success | Current Success Rate: 100.00% (57/57)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:38:05,609 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:38:14,866 INFO Task CloseSingleDoor: Episode 58 (seed=57): Instruction: close the microwave door
+2026-07-21 18:38:30,512 INFO Task CloseSingleDoor: Episode 58 (seed=57): Success | Current Success Rate: 100.00% (58/58)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:38:30,513 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:38:44,568 INFO Task CloseSingleDoor: Episode 59 (seed=58): Instruction: close the cabinet door
+2026-07-21 18:39:01,246 INFO Task CloseSingleDoor: Episode 59 (seed=58): Success | Current Success Rate: 100.00% (59/59)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:39:01,247 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:39:16,174 INFO Task CloseSingleDoor: Episode 60 (seed=59): Instruction: close the microwave door
+2026-07-21 18:39:30,875 INFO Task CloseSingleDoor: Episode 60 (seed=59): Success | Current Success Rate: 100.00% (60/60)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:39:30,876 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:39:41,347 INFO Task CloseSingleDoor: Episode 61 (seed=60): Instruction: close the microwave door
+2026-07-21 18:39:56,292 INFO Task CloseSingleDoor: Episode 61 (seed=60): Success | Current Success Rate: 100.00% (61/61)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:39:56,293 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:40:06,436 INFO Task CloseSingleDoor: Episode 62 (seed=61): Instruction: close the microwave door
+2026-07-21 18:40:21,962 INFO Task CloseSingleDoor: Episode 62 (seed=61): Success | Current Success Rate: 100.00% (62/62)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:40:21,963 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:40:32,942 INFO Task CloseSingleDoor: Episode 63 (seed=62): Instruction: close the microwave door
+2026-07-21 18:40:46,538 INFO Task CloseSingleDoor: Episode 63 (seed=62): Success | Current Success Rate: 100.00% (63/63)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:40:46,539 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:40:57,093 INFO Task CloseSingleDoor: Episode 64 (seed=63): Instruction: close the microwave door
+2026-07-21 18:41:13,316 INFO Task CloseSingleDoor: Episode 64 (seed=63): Success | Current Success Rate: 100.00% (64/64)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:41:13,317 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:41:24,533 INFO Task CloseSingleDoor: Episode 65 (seed=64): Instruction: close the cabinet door
+2026-07-21 18:41:38,924 INFO Task CloseSingleDoor: Episode 65 (seed=64): Success | Current Success Rate: 100.00% (65/65)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:41:38,925 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:41:50,500 INFO Task CloseSingleDoor: Episode 66 (seed=65): Instruction: close the microwave door
+2026-07-21 18:42:07,821 INFO Task CloseSingleDoor: Episode 66 (seed=65): Success | Current Success Rate: 100.00% (66/66)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:42:07,822 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:42:17,678 INFO Task CloseSingleDoor: Episode 67 (seed=66): Instruction: close the cabinet door
+2026-07-21 18:42:30,976 INFO Task CloseSingleDoor: Episode 67 (seed=66): Success | Current Success Rate: 100.00% (67/67)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:42:30,977 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:42:48,818 INFO Task CloseSingleDoor: Episode 68 (seed=67): Instruction: close the cabinet door
+2026-07-21 18:43:03,018 INFO Task CloseSingleDoor: Episode 68 (seed=67): Success | Current Success Rate: 100.00% (68/68)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:43:03,019 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:43:13,544 INFO Task CloseSingleDoor: Episode 69 (seed=68): Instruction: close the microwave door
+2026-07-21 18:43:29,655 INFO Task CloseSingleDoor: Episode 69 (seed=68): Success | Current Success Rate: 100.00% (69/69)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:43:29,656 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:43:39,388 INFO Task CloseSingleDoor: Episode 70 (seed=69): Instruction: close the microwave door
+2026-07-21 18:43:56,213 INFO Task CloseSingleDoor: Episode 70 (seed=69): Success | Current Success Rate: 100.00% (70/70)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:43:56,214 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:44:10,765 INFO Task CloseSingleDoor: Episode 71 (seed=70): Instruction: close the microwave door
+2026-07-21 18:44:27,592 INFO Task CloseSingleDoor: Episode 71 (seed=70): Success | Current Success Rate: 100.00% (71/71)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:44:27,593 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:44:36,572 INFO Task CloseSingleDoor: Episode 72 (seed=71): Instruction: close the microwave door
+2026-07-21 18:44:53,512 INFO Task CloseSingleDoor: Episode 72 (seed=71): Success | Current Success Rate: 100.00% (72/72)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:44:53,513 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:45:04,260 INFO Task CloseSingleDoor: Episode 73 (seed=72): Instruction: close the microwave door
+2026-07-21 18:45:22,159 INFO Task CloseSingleDoor: Episode 73 (seed=72): Success | Current Success Rate: 100.00% (73/73)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:45:22,160 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:45:36,363 INFO Task CloseSingleDoor: Episode 74 (seed=73): Instruction: close the microwave door
+2026-07-21 18:45:53,612 INFO Task CloseSingleDoor: Episode 74 (seed=73): Success | Current Success Rate: 100.00% (74/74)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:45:53,613 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:46:09,223 INFO Task CloseSingleDoor: Episode 75 (seed=74): Instruction: close the cabinet door
+2026-07-21 18:46:27,935 INFO Task CloseSingleDoor: Episode 75 (seed=74): Success | Current Success Rate: 100.00% (75/75)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:46:27,936 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:46:47,318 INFO Task CloseSingleDoor: Episode 76 (seed=75): Instruction: close the cabinet door
+2026-07-21 18:47:04,366 INFO Task CloseSingleDoor: Episode 76 (seed=75): Success | Current Success Rate: 100.00% (76/76)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:47:04,367 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:47:16,930 INFO Task CloseSingleDoor: Episode 77 (seed=76): Instruction: close the cabinet door
+2026-07-21 18:47:31,837 INFO Task CloseSingleDoor: Episode 77 (seed=76): Success | Current Success Rate: 100.00% (77/77)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:47:31,885 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:47:46,237 INFO Task CloseSingleDoor: Episode 78 (seed=77): Instruction: close the microwave door
+2026-07-21 18:48:08,398 INFO Task CloseSingleDoor: Episode 78 (seed=77): Success | Current Success Rate: 100.00% (78/78)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:48:08,399 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:48:27,531 INFO Task CloseSingleDoor: Episode 79 (seed=78): Instruction: close the cabinet door
+2026-07-21 18:48:44,886 INFO Task CloseSingleDoor: Episode 79 (seed=78): Success | Current Success Rate: 100.00% (79/79)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:48:44,887 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:48:54,286 INFO Task CloseSingleDoor: Episode 80 (seed=79): Instruction: close the microwave door
+2026-07-21 18:49:10,637 INFO Task CloseSingleDoor: Episode 80 (seed=79): Success | Current Success Rate: 100.00% (80/80)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:49:10,638 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:49:21,743 INFO Task CloseSingleDoor: Episode 81 (seed=80): Instruction: close the microwave door
+2026-07-21 18:49:37,951 INFO Task CloseSingleDoor: Episode 81 (seed=80): Success | Current Success Rate: 100.00% (81/81)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:49:37,952 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:49:45,462 INFO Task CloseSingleDoor: Episode 82 (seed=81): Instruction: close the cabinet door
+2026-07-21 18:50:00,756 INFO Task CloseSingleDoor: Episode 82 (seed=81): Success | Current Success Rate: 100.00% (82/82)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:50:00,757 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:50:33,689 INFO Task CloseSingleDoor: Episode 83 (seed=82): Instruction: close the cabinet door
+2026-07-21 18:50:49,581 INFO Task CloseSingleDoor: Episode 83 (seed=82): Success | Current Success Rate: 100.00% (83/83)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:50:49,582 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:51:04,843 INFO Task CloseSingleDoor: Episode 84 (seed=83): Instruction: close the cabinet door
+2026-07-21 18:51:19,268 INFO Task CloseSingleDoor: Episode 84 (seed=83): Success | Current Success Rate: 100.00% (84/84)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:51:19,269 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:51:38,071 INFO Task CloseSingleDoor: Episode 85 (seed=84): Instruction: close the microwave door
+2026-07-21 18:51:59,114 INFO Task CloseSingleDoor: Episode 85 (seed=84): Success | Current Success Rate: 100.00% (85/85)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:51:59,115 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:52:17,117 INFO Task CloseSingleDoor: Episode 86 (seed=85): Instruction: close the cabinet door
+2026-07-21 18:52:34,967 INFO Task CloseSingleDoor: Episode 86 (seed=85): Success | Current Success Rate: 100.00% (86/86)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:52:34,968 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:52:42,333 INFO Task CloseSingleDoor: Episode 87 (seed=86): Instruction: close the cabinet door
+2026-07-21 18:52:59,205 INFO Task CloseSingleDoor: Episode 87 (seed=86): Success | Current Success Rate: 100.00% (87/87)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:52:59,206 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:53:12,571 INFO Task CloseSingleDoor: Episode 88 (seed=87): Instruction: close the cabinet door
+2026-07-21 18:53:26,502 INFO Task CloseSingleDoor: Episode 88 (seed=87): Success | Current Success Rate: 100.00% (88/88)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:53:26,502 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:53:36,711 INFO Task CloseSingleDoor: Episode 89 (seed=88): Instruction: close the microwave door
+2026-07-21 18:53:51,857 INFO Task CloseSingleDoor: Episode 89 (seed=88): Success | Current Success Rate: 100.00% (89/89)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:53:51,902 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:54:05,179 INFO Task CloseSingleDoor: Episode 90 (seed=89): Instruction: close the microwave door
+2026-07-21 18:54:25,803 INFO Task CloseSingleDoor: Episode 90 (seed=89): Success | Current Success Rate: 100.00% (90/90)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:54:25,804 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:54:38,647 INFO Task CloseSingleDoor: Episode 91 (seed=90): Instruction: close the cabinet door
+2026-07-21 18:54:53,822 INFO Task CloseSingleDoor: Episode 91 (seed=90): Success | Current Success Rate: 100.00% (91/91)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:54:53,869 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:55:11,855 INFO Task CloseSingleDoor: Episode 92 (seed=91): Instruction: close the cabinet door
+2026-07-21 18:55:32,102 INFO Task CloseSingleDoor: Episode 92 (seed=91): Success | Current Success Rate: 100.00% (92/92)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:55:32,103 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:55:46,720 INFO Task CloseSingleDoor: Episode 93 (seed=92): Instruction: close the cabinet door
+2026-07-21 18:56:07,558 INFO Task CloseSingleDoor: Episode 93 (seed=92): Success | Current Success Rate: 100.00% (93/93)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:56:07,559 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:56:23,356 INFO Task CloseSingleDoor: Episode 94 (seed=93): Instruction: close the cabinet door
+2026-07-21 18:56:37,921 INFO Task CloseSingleDoor: Episode 94 (seed=93): Success | Current Success Rate: 100.00% (94/94)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:56:37,926 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:56:48,492 INFO Task CloseSingleDoor: Episode 95 (seed=94): Instruction: close the microwave door
+2026-07-21 18:57:05,864 INFO Task CloseSingleDoor: Episode 95 (seed=94): Success | Current Success Rate: 100.00% (95/95)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:57:05,865 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:57:16,685 INFO Task CloseSingleDoor: Episode 96 (seed=95): Instruction: close the microwave door
+2026-07-21 18:57:33,656 INFO Task CloseSingleDoor: Episode 96 (seed=95): Success | Current Success Rate: 100.00% (96/96)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:57:33,656 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:57:41,096 INFO Task CloseSingleDoor: Episode 97 (seed=96): Instruction: close the microwave door
+2026-07-21 18:57:56,415 INFO Task CloseSingleDoor: Episode 97 (seed=96): Success | Current Success Rate: 100.00% (97/97)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:57:56,416 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:58:09,998 INFO Task CloseSingleDoor: Episode 98 (seed=97): Instruction: close the cabinet door
+2026-07-21 18:58:30,621 INFO Task CloseSingleDoor: Episode 98 (seed=97): Success | Current Success Rate: 100.00% (98/98)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:58:30,622 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:58:42,926 INFO Task CloseSingleDoor: Episode 99 (seed=98): Instruction: close the cabinet door
+2026-07-21 18:58:57,343 INFO Task CloseSingleDoor: Episode 99 (seed=98): Success | Current Success Rate: 100.00% (99/99)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:58:57,344 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:59:05,997 INFO Task CloseSingleDoor: Episode 100 (seed=99): Instruction: close the microwave door
+2026-07-21 18:59:21,024 INFO Task CloseSingleDoor: Episode 100 (seed=99): Success | Current Success Rate: 100.00% (100/100)
+Client connection closed.
+2026-07-21 18:59:21,024 INFO Task CloseSingleDoor Final Success Rate: 100.00% (100/100)
+2026-07-21 18:59:21,062 INFO Results saved to: ./eval_robocasa/eval_logs/eval_results_CloseSingleDoor.json

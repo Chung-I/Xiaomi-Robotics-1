@@ -1,0 +1,419 @@
+[robosuite WARNING] No private macro file found! (macros.py:57)
+2026-07-21 17:02:55,048 WARNING No private macro file found!
+[robosuite WARNING] It is recommended to use a private macro file (macros.py:58)
+2026-07-21 17:02:55,048 WARNING It is recommended to use a private macro file
+[robosuite WARNING] To setup, run: python /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/scripts/setup_macros.py (macros.py:59)
+2026-07-21 17:02:55,048 WARNING To setup, run: python /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/scripts/setup_macros.py
+[robosuite WARNING] Could not import robosuite_models. Some robots may not be available. If you want to use these robots, please install robosuite_models from source (https://github.com/ARISE-Initiative/robosuite_models) or through pip install. (__init__.py:30)
+2026-07-21 17:03:13,179 WARNING Could not import robosuite_models. Some robots may not be available. If you want to use these robots, please install robosuite_models from source (https://github.com/ARISE-Initiative/robosuite_models) or through pip install.
+[robosuite WARNING] Could not load the mink-based whole-body IK. Make sure you install related import properly (e.g. pip install mink==0.0.5), otherwise you will not be able to use the default IK controller setting for GR1 robot. (__init__.py:40)
+2026-07-21 17:03:13,299 WARNING Could not load the mink-based whole-body IK. Make sure you install related import properly (e.g. pip install mink==0.0.5), otherwise you will not be able to use the default IK controller setting for GR1 robot.
+WARNING: mimicgen environments not imported since mimicgen is not installed!
+2026-07-21 17:05:34,190 INFO Task: PnPCounterToSink | Episodes: 100 | Start seed: 0
+2026-07-21 17:05:34,190 INFO Server: localhost:10088
+Client connected to server at localhost:10088.
+2026-07-21 17:05:35,638 INFO EvalClient ready. Robot types: ['robocasa_mg']
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:05:35,695 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:05:50,918 INFO No OpenGL_accelerate module loaded: No module named 'OpenGL_accelerate'
+2026-07-21 17:06:01,574 INFO Task PnPCounterToSink: Episode 1 (seed=0): Instruction: pick the wine from the counter and place it in the sink
+2026-07-21 17:06:50,636 INFO Task PnPCounterToSink: Episode 1 (seed=0): Failure | Current Success Rate: 0.00% (0/1)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:06:50,637 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:07:02,570 INFO Task PnPCounterToSink: Episode 2 (seed=1): Instruction: pick the avocado from the counter and place it in the sink
+2026-07-21 17:07:17,604 INFO Task PnPCounterToSink: Episode 2 (seed=1): Success | Current Success Rate: 50.00% (1/2)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:07:17,604 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:07:26,674 INFO Task PnPCounterToSink: Episode 3 (seed=2): Instruction: pick the banana from the counter and place it in the sink
+2026-07-21 17:08:10,302 INFO Task PnPCounterToSink: Episode 3 (seed=2): Failure | Current Success Rate: 33.33% (1/3)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:08:10,303 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:08:19,296 INFO Task PnPCounterToSink: Episode 4 (seed=3): Instruction: pick the egg from the counter and place it in the sink
+2026-07-21 17:08:51,655 INFO Task PnPCounterToSink: Episode 4 (seed=3): Success | Current Success Rate: 50.00% (2/4)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:08:51,656 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:09:09,533 INFO Task PnPCounterToSink: Episode 5 (seed=4): Instruction: pick the broccoli from the counter and place it in the sink
+2026-07-21 17:10:06,785 INFO Task PnPCounterToSink: Episode 5 (seed=4): Failure | Current Success Rate: 40.00% (2/5)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:10:06,786 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:10:22,304 INFO Task PnPCounterToSink: Episode 6 (seed=5): Instruction: pick the bowl from the counter and place it in the sink
+2026-07-21 17:11:06,682 INFO Task PnPCounterToSink: Episode 6 (seed=5): Failure | Current Success Rate: 33.33% (2/6)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:11:06,682 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:11:33,472 INFO Task PnPCounterToSink: Episode 7 (seed=6): Instruction: pick the teapot from the counter and place it in the sink
+2026-07-21 17:12:08,650 INFO Task PnPCounterToSink: Episode 7 (seed=6): Success | Current Success Rate: 42.86% (3/7)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:12:08,651 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:12:21,213 INFO Task PnPCounterToSink: Episode 8 (seed=7): Instruction: pick the tangerine from the counter and place it in the sink
+2026-07-21 17:12:50,195 INFO Task PnPCounterToSink: Episode 8 (seed=7): Success | Current Success Rate: 50.00% (4/8)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:12:50,196 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:13:04,047 INFO Task PnPCounterToSink: Episode 9 (seed=8): Instruction: pick the cheese from the counter and place it in the sink
+2026-07-21 17:13:39,211 INFO Task PnPCounterToSink: Episode 9 (seed=8): Success | Current Success Rate: 55.56% (5/9)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:13:39,211 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:13:58,458 INFO Task PnPCounterToSink: Episode 10 (seed=9): Instruction: pick the cucumber from the counter and place it in the sink
+2026-07-21 17:14:28,304 INFO Task PnPCounterToSink: Episode 10 (seed=9): Success | Current Success Rate: 60.00% (6/10)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:14:28,305 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:14:41,803 INFO Task PnPCounterToSink: Episode 11 (seed=10): Instruction: pick the lime from the counter and place it in the sink
+2026-07-21 17:15:05,844 INFO Task PnPCounterToSink: Episode 11 (seed=10): Success | Current Success Rate: 63.64% (7/11)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:15:05,845 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:15:14,544 INFO Task PnPCounterToSink: Episode 12 (seed=11): Instruction: pick the pot from the counter and place it in the sink
+2026-07-21 17:15:57,943 INFO Task PnPCounterToSink: Episode 12 (seed=11): Failure | Current Success Rate: 58.33% (7/12)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:15:57,944 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:16:12,594 INFO Task PnPCounterToSink: Episode 13 (seed=12): Instruction: pick the spray from the counter and place it in the sink
+2026-07-21 17:17:00,163 INFO Task PnPCounterToSink: Episode 13 (seed=12): Failure | Current Success Rate: 53.85% (7/13)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:17:00,164 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:17:14,105 INFO Task PnPCounterToSink: Episode 14 (seed=13): Instruction: pick the canned food from the counter and place it in the sink
+2026-07-21 17:17:48,714 INFO Task PnPCounterToSink: Episode 14 (seed=13): Success | Current Success Rate: 57.14% (8/14)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:17:48,714 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:18:00,199 INFO Task PnPCounterToSink: Episode 15 (seed=14): Instruction: pick the cup from the counter and place it in the sink
+2026-07-21 17:18:42,389 INFO Task PnPCounterToSink: Episode 15 (seed=14): Failure | Current Success Rate: 53.33% (8/15)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:18:42,389 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:18:53,098 INFO Task PnPCounterToSink: Episode 16 (seed=15): Instruction: pick the mushroom from the counter and place it in the sink
+2026-07-21 17:19:41,553 INFO Task PnPCounterToSink: Episode 16 (seed=15): Failure | Current Success Rate: 50.00% (8/16)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:19:41,554 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:19:52,460 INFO Task PnPCounterToSink: Episode 17 (seed=16): Instruction: pick the eggplant from the counter and place it in the sink
+2026-07-21 17:20:24,956 INFO Task PnPCounterToSink: Episode 17 (seed=16): Success | Current Success Rate: 52.94% (9/17)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:20:24,980 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:20:39,429 INFO Task PnPCounterToSink: Episode 18 (seed=17): Instruction: pick the banana from the counter and place it in the sink
+2026-07-21 17:21:06,050 INFO Task PnPCounterToSink: Episode 18 (seed=17): Success | Current Success Rate: 55.56% (10/18)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:21:06,051 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:21:20,293 INFO Task PnPCounterToSink: Episode 19 (seed=18): Instruction: pick the cup from the counter and place it in the sink
+2026-07-21 17:22:08,267 INFO Task PnPCounterToSink: Episode 19 (seed=18): Failure | Current Success Rate: 52.63% (10/19)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:22:08,268 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:22:24,478 INFO Task PnPCounterToSink: Episode 20 (seed=19): Instruction: pick the banana from the counter and place it in the sink
+2026-07-21 17:23:21,075 INFO Task PnPCounterToSink: Episode 20 (seed=19): Failure | Current Success Rate: 50.00% (10/20)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:23:21,076 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:23:36,898 INFO Task PnPCounterToSink: Episode 21 (seed=20): Instruction: pick the water bottle from the counter and place it in the sink
+2026-07-21 17:24:32,700 INFO Task PnPCounterToSink: Episode 21 (seed=20): Failure | Current Success Rate: 47.62% (10/21)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:24:32,701 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:24:46,482 INFO Task PnPCounterToSink: Episode 22 (seed=21): Instruction: pick the bottled water from the counter and place it in the sink
+2026-07-21 17:25:33,208 INFO Task PnPCounterToSink: Episode 22 (seed=21): Failure | Current Success Rate: 45.45% (10/22)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:25:33,209 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:25:52,314 INFO Task PnPCounterToSink: Episode 23 (seed=22): Instruction: pick the kiwi from the counter and place it in the sink
+2026-07-21 17:26:49,768 INFO Task PnPCounterToSink: Episode 23 (seed=22): Failure | Current Success Rate: 43.48% (10/23)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:26:49,769 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:27:06,723 INFO Task PnPCounterToSink: Episode 24 (seed=23): Instruction: pick the cheese from the counter and place it in the sink
+2026-07-21 17:27:39,370 INFO Task PnPCounterToSink: Episode 24 (seed=23): Success | Current Success Rate: 45.83% (11/24)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:27:39,371 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:27:49,532 INFO Task PnPCounterToSink: Episode 25 (seed=24): Instruction: pick the teapot from the counter and place it in the sink
+2026-07-21 17:28:34,117 INFO Task PnPCounterToSink: Episode 25 (seed=24): Failure | Current Success Rate: 44.00% (11/25)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:28:34,117 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:28:49,137 INFO Task PnPCounterToSink: Episode 26 (seed=25): Instruction: pick the broccoli from the counter and place it in the sink
+2026-07-21 17:29:22,420 INFO Task PnPCounterToSink: Episode 26 (seed=25): Success | Current Success Rate: 46.15% (12/26)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:29:22,421 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:29:33,152 INFO Task PnPCounterToSink: Episode 27 (seed=26): Instruction: pick the cucumber from the counter and place it in the sink
+2026-07-21 17:30:02,392 INFO Task PnPCounterToSink: Episode 27 (seed=26): Success | Current Success Rate: 48.15% (13/27)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:30:02,393 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:30:17,466 INFO Task PnPCounterToSink: Episode 28 (seed=27): Instruction: pick the banana from the counter and place it in the sink
+2026-07-21 17:30:54,843 INFO Task PnPCounterToSink: Episode 28 (seed=27): Success | Current Success Rate: 50.00% (14/28)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:30:54,844 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:31:13,712 INFO Task PnPCounterToSink: Episode 29 (seed=28): Instruction: pick the wine from the counter and place it in the sink
+2026-07-21 17:31:59,928 INFO Task PnPCounterToSink: Episode 29 (seed=28): Success | Current Success Rate: 51.72% (15/29)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:31:59,929 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:32:08,406 INFO Task PnPCounterToSink: Episode 30 (seed=29): Instruction: pick the carrot from the counter and place it in the sink
+2026-07-21 17:32:31,297 INFO Task PnPCounterToSink: Episode 30 (seed=29): Success | Current Success Rate: 53.33% (16/30)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:32:31,298 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:32:40,110 INFO Task PnPCounterToSink: Episode 31 (seed=30): Instruction: pick the broccoli from the counter and place it in the sink
+2026-07-21 17:32:56,012 INFO Task PnPCounterToSink: Episode 31 (seed=30): Success | Current Success Rate: 54.84% (17/31)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:32:56,013 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:33:07,184 INFO Task PnPCounterToSink: Episode 32 (seed=31): Instruction: pick the tomato from the counter and place it in the sink
+2026-07-21 17:33:33,665 INFO Task PnPCounterToSink: Episode 32 (seed=31): Success | Current Success Rate: 56.25% (18/32)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:33:33,666 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:33:45,640 INFO Task PnPCounterToSink: Episode 33 (seed=32): Instruction: pick the corn from the counter and place it in the sink
+2026-07-21 17:34:18,080 INFO Task PnPCounterToSink: Episode 33 (seed=32): Success | Current Success Rate: 57.58% (19/33)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:34:18,080 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:34:27,709 INFO Task PnPCounterToSink: Episode 34 (seed=33): Instruction: pick the mug from the counter and place it in the sink
+2026-07-21 17:35:15,428 INFO Task PnPCounterToSink: Episode 34 (seed=33): Failure | Current Success Rate: 55.88% (19/34)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:35:15,429 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:35:25,664 INFO Task PnPCounterToSink: Episode 35 (seed=34): Instruction: pick the mango from the counter and place it in the sink
+2026-07-21 17:36:01,964 INFO Task PnPCounterToSink: Episode 35 (seed=34): Success | Current Success Rate: 57.14% (20/35)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:36:01,964 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:36:13,103 INFO Task PnPCounterToSink: Episode 36 (seed=35): Instruction: pick the cup from the counter and place it in the sink
+2026-07-21 17:36:32,086 INFO Task PnPCounterToSink: Episode 36 (seed=35): Success | Current Success Rate: 58.33% (21/36)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:36:32,087 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:36:44,078 INFO Task PnPCounterToSink: Episode 37 (seed=36): Instruction: pick the beer from the counter and place it in the sink
+2026-07-21 17:37:10,673 INFO Task PnPCounterToSink: Episode 37 (seed=36): Success | Current Success Rate: 59.46% (22/37)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:37:10,674 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:37:23,312 INFO Task PnPCounterToSink: Episode 38 (seed=37): Instruction: pick the water bottle from the counter and place it in the sink
+2026-07-21 17:37:50,931 INFO Task PnPCounterToSink: Episode 38 (seed=37): Success | Current Success Rate: 60.53% (23/38)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:37:50,932 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:38:05,817 INFO Task PnPCounterToSink: Episode 39 (seed=38): Instruction: pick the mug from the counter and place it in the sink
+2026-07-21 17:39:02,070 INFO Task PnPCounterToSink: Episode 39 (seed=38): Failure | Current Success Rate: 58.97% (23/39)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:39:02,071 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:39:19,334 INFO Task PnPCounterToSink: Episode 40 (seed=39): Instruction: pick the mushroom from the counter and place it in the sink
+2026-07-21 17:40:12,205 INFO Task PnPCounterToSink: Episode 40 (seed=39): Failure | Current Success Rate: 57.50% (23/40)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:40:12,229 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:40:22,828 INFO Task PnPCounterToSink: Episode 41 (seed=40): Instruction: pick the corn from the counter and place it in the sink
+2026-07-21 17:40:57,516 INFO Task PnPCounterToSink: Episode 41 (seed=40): Success | Current Success Rate: 58.54% (24/41)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:40:57,517 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:41:11,411 INFO Task PnPCounterToSink: Episode 42 (seed=41): Instruction: pick the water bottle from the counter and place it in the sink
+2026-07-21 17:41:56,749 INFO Task PnPCounterToSink: Episode 42 (seed=41): Failure | Current Success Rate: 57.14% (24/42)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:41:56,750 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:42:06,334 INFO Task PnPCounterToSink: Episode 43 (seed=42): Instruction: pick the bottled water from the counter and place it in the sink
+2026-07-21 17:42:53,985 INFO Task PnPCounterToSink: Episode 43 (seed=42): Failure | Current Success Rate: 55.81% (24/43)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:42:54,028 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:43:03,208 INFO Task PnPCounterToSink: Episode 44 (seed=43): Instruction: pick the jam from the counter and place it in the sink
+2026-07-21 17:43:31,626 INFO Task PnPCounterToSink: Episode 44 (seed=43): Success | Current Success Rate: 56.82% (25/44)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:43:31,627 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:43:48,779 INFO Task PnPCounterToSink: Episode 45 (seed=44): Instruction: pick the eggplant from the counter and place it in the sink
+2026-07-21 17:44:45,491 INFO Task PnPCounterToSink: Episode 45 (seed=44): Failure | Current Success Rate: 55.56% (25/45)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:44:45,492 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:44:59,164 INFO Task PnPCounterToSink: Episode 46 (seed=45): Instruction: pick the spray from the counter and place it in the sink
+2026-07-21 17:45:56,367 INFO Task PnPCounterToSink: Episode 46 (seed=45): Failure | Current Success Rate: 54.35% (25/46)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:45:56,368 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:46:06,660 INFO Task PnPCounterToSink: Episode 47 (seed=46): Instruction: pick the peach from the counter and place it in the sink
+2026-07-21 17:46:52,432 INFO Task PnPCounterToSink: Episode 47 (seed=46): Failure | Current Success Rate: 53.19% (25/47)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:46:52,432 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:47:01,037 INFO Task PnPCounterToSink: Episode 48 (seed=47): Instruction: pick the cheese from the counter and place it in the sink
+2026-07-21 17:47:30,413 INFO Task PnPCounterToSink: Episode 48 (seed=47): Success | Current Success Rate: 54.17% (26/48)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:47:30,414 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:47:45,347 INFO Task PnPCounterToSink: Episode 49 (seed=48): Instruction: pick the orange from the counter and place it in the sink
+2026-07-21 17:48:32,763 INFO Task PnPCounterToSink: Episode 49 (seed=48): Success | Current Success Rate: 55.10% (27/49)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:48:32,833 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:48:47,091 INFO Task PnPCounterToSink: Episode 50 (seed=49): Instruction: pick the cup from the counter and place it in the sink
+2026-07-21 17:49:26,101 INFO Task PnPCounterToSink: Episode 50 (seed=49): Success | Current Success Rate: 56.00% (28/50)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:49:26,102 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:49:44,604 INFO Task PnPCounterToSink: Episode 51 (seed=50): Instruction: pick the cheese from the counter and place it in the sink
+2026-07-21 17:50:21,134 INFO Task PnPCounterToSink: Episode 51 (seed=50): Success | Current Success Rate: 56.86% (29/51)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:50:21,134 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:50:33,238 INFO Task PnPCounterToSink: Episode 52 (seed=51): Instruction: pick the condiment bottle from the counter and place it in the sink
+2026-07-21 17:51:16,134 INFO Task PnPCounterToSink: Episode 52 (seed=51): Failure | Current Success Rate: 55.77% (29/52)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:51:16,135 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:51:27,236 INFO Task PnPCounterToSink: Episode 53 (seed=52): Instruction: pick the carrot from the counter and place it in the sink
+2026-07-21 17:52:12,524 INFO Task PnPCounterToSink: Episode 53 (seed=52): Success | Current Success Rate: 56.60% (30/53)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:52:12,525 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:52:27,923 INFO Task PnPCounterToSink: Episode 54 (seed=53): Instruction: pick the lime from the counter and place it in the sink
+2026-07-21 17:53:10,217 INFO Task PnPCounterToSink: Episode 54 (seed=53): Failure | Current Success Rate: 55.56% (30/54)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:53:10,218 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:53:21,955 INFO Task PnPCounterToSink: Episode 55 (seed=54): Instruction: pick the kiwi from the counter and place it in the sink
+2026-07-21 17:53:48,763 INFO Task PnPCounterToSink: Episode 55 (seed=54): Success | Current Success Rate: 56.36% (31/55)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:53:48,787 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:54:00,031 INFO Task PnPCounterToSink: Episode 56 (seed=55): Instruction: pick the onion from the counter and place it in the sink
+2026-07-21 17:54:48,016 INFO Task PnPCounterToSink: Episode 56 (seed=55): Failure | Current Success Rate: 55.36% (31/56)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:54:48,017 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:55:00,048 INFO Task PnPCounterToSink: Episode 57 (seed=56): Instruction: pick the kiwi from the counter and place it in the sink
+2026-07-21 17:55:34,095 INFO Task PnPCounterToSink: Episode 57 (seed=56): Success | Current Success Rate: 56.14% (32/57)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:55:34,096 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:55:50,751 INFO Task PnPCounterToSink: Episode 58 (seed=57): Instruction: pick the sponge from the counter and place it in the sink
+2026-07-21 17:56:39,082 INFO Task PnPCounterToSink: Episode 58 (seed=57): Failure | Current Success Rate: 55.17% (32/58)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:56:39,083 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:56:57,270 INFO Task PnPCounterToSink: Episode 59 (seed=58): Instruction: pick the kiwi from the counter and place it in the sink
+2026-07-21 17:57:33,480 INFO Task PnPCounterToSink: Episode 59 (seed=58): Success | Current Success Rate: 55.93% (33/59)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:57:33,481 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:57:48,996 INFO Task PnPCounterToSink: Episode 60 (seed=59): Instruction: pick the cup from the counter and place it in the sink
+2026-07-21 17:58:31,797 INFO Task PnPCounterToSink: Episode 60 (seed=59): Failure | Current Success Rate: 55.00% (33/60)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:58:31,798 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:58:44,927 INFO Task PnPCounterToSink: Episode 61 (seed=60): Instruction: pick the bottled water from the counter and place it in the sink
+2026-07-21 17:59:32,815 INFO Task PnPCounterToSink: Episode 61 (seed=60): Failure | Current Success Rate: 54.10% (33/61)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:59:32,816 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:59:44,470 INFO Task PnPCounterToSink: Episode 62 (seed=61): Instruction: pick the cucumber from the counter and place it in the sink
+2026-07-21 18:00:02,472 INFO Task PnPCounterToSink: Episode 62 (seed=61): Success | Current Success Rate: 54.84% (34/62)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:00:02,472 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:00:13,088 INFO Task PnPCounterToSink: Episode 63 (seed=62): Instruction: pick the onion from the counter and place it in the sink
+2026-07-21 18:00:42,501 INFO Task PnPCounterToSink: Episode 63 (seed=62): Success | Current Success Rate: 55.56% (35/63)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:00:42,502 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:00:55,209 INFO Task PnPCounterToSink: Episode 64 (seed=63): Instruction: pick the rolling pin from the counter and place it in the sink
+2026-07-21 18:01:39,431 INFO Task PnPCounterToSink: Episode 64 (seed=63): Failure | Current Success Rate: 54.69% (35/64)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:01:39,432 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:01:50,186 INFO Task PnPCounterToSink: Episode 65 (seed=64): Instruction: pick the bar soap from the counter and place it in the sink
+2026-07-21 18:02:18,578 INFO Task PnPCounterToSink: Episode 65 (seed=64): Success | Current Success Rate: 55.38% (36/65)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:02:18,579 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:02:30,514 INFO Task PnPCounterToSink: Episode 66 (seed=65): Instruction: pick the lemon from the counter and place it in the sink
+2026-07-21 18:03:14,311 INFO Task PnPCounterToSink: Episode 66 (seed=65): Failure | Current Success Rate: 54.55% (36/66)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:03:14,312 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:03:26,283 INFO Task PnPCounterToSink: Episode 67 (seed=66): Instruction: pick the onion from the counter and place it in the sink
+2026-07-21 18:03:59,897 INFO Task PnPCounterToSink: Episode 67 (seed=66): Success | Current Success Rate: 55.22% (37/67)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:03:59,898 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:04:17,210 INFO Task PnPCounterToSink: Episode 68 (seed=67): Instruction: pick the cucumber from the counter and place it in the sink
+2026-07-21 18:04:49,895 INFO Task PnPCounterToSink: Episode 68 (seed=67): Success | Current Success Rate: 55.88% (38/68)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:04:49,896 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:04:59,674 INFO Task PnPCounterToSink: Episode 69 (seed=68): Instruction: pick the carrot from the counter and place it in the sink
+2026-07-21 18:05:26,993 INFO Task PnPCounterToSink: Episode 69 (seed=68): Success | Current Success Rate: 56.52% (39/69)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:05:26,993 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:05:41,227 INFO Task PnPCounterToSink: Episode 70 (seed=69): Instruction: pick the sweet potato from the counter and place it in the sink
+2026-07-21 18:06:25,088 INFO Task PnPCounterToSink: Episode 70 (seed=69): Success | Current Success Rate: 57.14% (40/70)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:06:25,089 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:06:40,515 INFO Task PnPCounterToSink: Episode 71 (seed=70): Instruction: pick the sponge from the counter and place it in the sink
+2026-07-21 18:07:24,136 INFO Task PnPCounterToSink: Episode 71 (seed=70): Failure | Current Success Rate: 56.34% (40/71)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:07:24,137 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:07:37,923 INFO Task PnPCounterToSink: Episode 72 (seed=71): Instruction: pick the corn from the counter and place it in the sink
+2026-07-21 18:08:27,974 INFO Task PnPCounterToSink: Episode 72 (seed=71): Success | Current Success Rate: 56.94% (41/72)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:08:27,975 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:08:42,868 INFO Task PnPCounterToSink: Episode 73 (seed=72): Instruction: pick the cheese from the counter and place it in the sink
+2026-07-21 18:09:17,691 INFO Task PnPCounterToSink: Episode 73 (seed=72): Success | Current Success Rate: 57.53% (42/73)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:09:17,692 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:09:26,423 INFO Task PnPCounterToSink: Episode 74 (seed=73): Instruction: pick the carrot from the counter and place it in the sink
+2026-07-21 18:09:57,232 INFO Task PnPCounterToSink: Episode 74 (seed=73): Success | Current Success Rate: 58.11% (43/74)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:09:57,232 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:10:06,684 INFO Task PnPCounterToSink: Episode 75 (seed=74): Instruction: pick the mug from the counter and place it in the sink
+2026-07-21 18:10:50,327 INFO Task PnPCounterToSink: Episode 75 (seed=74): Failure | Current Success Rate: 57.33% (43/75)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:10:50,328 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:11:05,581 INFO Task PnPCounterToSink: Episode 76 (seed=75): Instruction: pick the water bottle from the counter and place it in the sink
+2026-07-21 18:11:54,628 INFO Task PnPCounterToSink: Episode 76 (seed=75): Failure | Current Success Rate: 56.58% (43/76)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:11:54,628 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:12:05,838 INFO Task PnPCounterToSink: Episode 77 (seed=76): Instruction: pick the squash from the counter and place it in the sink
+2026-07-21 18:12:43,097 INFO Task PnPCounterToSink: Episode 77 (seed=76): Success | Current Success Rate: 57.14% (44/77)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:12:43,144 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:12:52,677 INFO Task PnPCounterToSink: Episode 78 (seed=77): Instruction: pick the pear from the counter and place it in the sink
+2026-07-21 18:13:10,933 INFO Task PnPCounterToSink: Episode 78 (seed=77): Success | Current Success Rate: 57.69% (45/78)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:13:10,933 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:13:23,309 INFO Task PnPCounterToSink: Episode 79 (seed=78): Instruction: pick the rolling pin from the counter and place it in the sink
+2026-07-21 18:13:52,270 INFO Task PnPCounterToSink: Episode 79 (seed=78): Success | Current Success Rate: 58.23% (46/79)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:13:52,271 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:14:01,998 INFO Task PnPCounterToSink: Episode 80 (seed=79): Instruction: pick the sponge from the counter and place it in the sink
+2026-07-21 18:14:48,769 INFO Task PnPCounterToSink: Episode 80 (seed=79): Failure | Current Success Rate: 57.50% (46/80)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:14:48,815 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:14:59,058 INFO Task PnPCounterToSink: Episode 81 (seed=80): Instruction: pick the ladle from the counter and place it in the sink
+2026-07-21 18:15:41,334 INFO Task PnPCounterToSink: Episode 81 (seed=80): Failure | Current Success Rate: 56.79% (46/81)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:15:41,335 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:15:52,533 INFO Task PnPCounterToSink: Episode 82 (seed=81): Instruction: pick the eggplant from the counter and place it in the sink
+2026-07-21 18:16:21,188 INFO Task PnPCounterToSink: Episode 82 (seed=81): Success | Current Success Rate: 57.32% (47/82)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:16:21,189 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:16:36,308 INFO Task PnPCounterToSink: Episode 83 (seed=82): Instruction: pick the canned food from the counter and place it in the sink
+2026-07-21 18:17:19,784 INFO Task PnPCounterToSink: Episode 83 (seed=82): Failure | Current Success Rate: 56.63% (47/83)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:17:19,785 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:17:39,452 INFO Task PnPCounterToSink: Episode 84 (seed=83): Instruction: pick the lemon from the counter and place it in the sink
+2026-07-21 18:18:24,902 INFO Task PnPCounterToSink: Episode 84 (seed=83): Success | Current Success Rate: 57.14% (48/84)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:18:24,902 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:18:36,900 INFO Task PnPCounterToSink: Episode 85 (seed=84): Instruction: pick the canned food from the counter and place it in the sink
+2026-07-21 18:19:04,676 INFO Task PnPCounterToSink: Episode 85 (seed=84): Success | Current Success Rate: 57.65% (49/85)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:19:04,677 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:19:16,889 INFO Task PnPCounterToSink: Episode 86 (seed=85): Instruction: pick the carrot from the counter and place it in the sink
+2026-07-21 18:20:02,118 INFO Task PnPCounterToSink: Episode 86 (seed=85): Failure | Current Success Rate: 56.98% (49/86)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:20:02,119 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:20:10,996 INFO Task PnPCounterToSink: Episode 87 (seed=86): Instruction: pick the sweet potato from the counter and place it in the sink
+2026-07-21 18:20:56,586 INFO Task PnPCounterToSink: Episode 87 (seed=86): Failure | Current Success Rate: 56.32% (49/87)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:20:56,587 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:21:11,977 INFO Task PnPCounterToSink: Episode 88 (seed=87): Instruction: pick the condiment bottle from the counter and place it in the sink
+2026-07-21 18:21:31,202 INFO Task PnPCounterToSink: Episode 88 (seed=87): Success | Current Success Rate: 56.82% (50/88)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:21:31,203 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:21:49,413 INFO Task PnPCounterToSink: Episode 89 (seed=88): Instruction: pick the lemon from the counter and place it in the sink
+2026-07-21 18:22:21,234 INFO Task PnPCounterToSink: Episode 89 (seed=88): Success | Current Success Rate: 57.30% (51/89)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:22:21,235 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:22:30,165 INFO Task PnPCounterToSink: Episode 90 (seed=89): Instruction: pick the wine from the counter and place it in the sink
+2026-07-21 18:23:02,689 INFO Task PnPCounterToSink: Episode 90 (seed=89): Success | Current Success Rate: 57.78% (52/90)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:23:02,690 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:23:19,433 INFO Task PnPCounterToSink: Episode 91 (seed=90): Instruction: pick the steak from the counter and place it in the sink
+2026-07-21 18:24:02,282 INFO Task PnPCounterToSink: Episode 91 (seed=90): Failure | Current Success Rate: 57.14% (52/91)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:24:02,283 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:24:15,415 INFO Task PnPCounterToSink: Episode 92 (seed=91): Instruction: pick the mushroom from the counter and place it in the sink
+2026-07-21 18:24:39,257 INFO Task PnPCounterToSink: Episode 92 (seed=91): Success | Current Success Rate: 57.61% (53/92)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:24:39,258 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:24:50,208 INFO Task PnPCounterToSink: Episode 93 (seed=92): Instruction: pick the lemon from the counter and place it in the sink
+2026-07-21 18:25:13,433 INFO Task PnPCounterToSink: Episode 93 (seed=92): Success | Current Success Rate: 58.06% (54/93)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:25:13,434 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:25:21,942 INFO Task PnPCounterToSink: Episode 94 (seed=93): Instruction: pick the onion from the counter and place it in the sink
+2026-07-21 18:26:02,463 INFO Task PnPCounterToSink: Episode 94 (seed=93): Success | Current Success Rate: 58.51% (55/94)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:26:02,464 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:26:10,241 INFO Task PnPCounterToSink: Episode 95 (seed=94): Instruction: pick the bar soap from the counter and place it in the sink
+2026-07-21 18:26:37,742 INFO Task PnPCounterToSink: Episode 95 (seed=94): Success | Current Success Rate: 58.95% (56/95)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:26:37,787 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:26:48,361 INFO Task PnPCounterToSink: Episode 96 (seed=95): Instruction: pick the condiment bottle from the counter and place it in the sink
+2026-07-21 18:27:34,097 INFO Task PnPCounterToSink: Episode 96 (seed=95): Failure | Current Success Rate: 58.33% (56/96)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:27:34,098 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:27:44,229 INFO Task PnPCounterToSink: Episode 97 (seed=96): Instruction: pick the yogurt from the counter and place it in the sink
+2026-07-21 18:28:31,165 INFO Task PnPCounterToSink: Episode 97 (seed=96): Failure | Current Success Rate: 57.73% (56/97)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:28:31,166 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:28:46,527 INFO Task PnPCounterToSink: Episode 98 (seed=97): Instruction: pick the banana from the counter and place it in the sink
+2026-07-21 18:29:12,800 INFO Task PnPCounterToSink: Episode 98 (seed=97): Success | Current Success Rate: 58.16% (57/98)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:29:12,801 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:29:24,325 INFO Task PnPCounterToSink: Episode 99 (seed=98): Instruction: pick the condiment bottle from the counter and place it in the sink
+2026-07-21 18:29:50,918 INFO Task PnPCounterToSink: Episode 99 (seed=98): Success | Current Success Rate: 58.59% (58/99)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:29:50,919 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:30:05,179 INFO Task PnPCounterToSink: Episode 100 (seed=99): Instruction: pick the bottled drink from the counter and place it in the sink
+2026-07-21 18:30:47,261 INFO Task PnPCounterToSink: Episode 100 (seed=99): Success | Current Success Rate: 59.00% (59/100)
+Client connection closed.
+2026-07-21 18:30:47,261 INFO Task PnPCounterToSink Final Success Rate: 59.00% (59/100)
+2026-07-21 18:30:47,308 INFO Results saved to: ./eval_robocasa/eval_logs/eval_results_PnPCounterToSink.json

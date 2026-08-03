@@ -1,0 +1,419 @@
+[robosuite WARNING] No private macro file found! (macros.py:57)
+2026-07-21 19:26:02,736 WARNING No private macro file found!
+[robosuite WARNING] It is recommended to use a private macro file (macros.py:58)
+2026-07-21 19:26:02,736 WARNING It is recommended to use a private macro file
+[robosuite WARNING] To setup, run: python /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/scripts/setup_macros.py (macros.py:59)
+2026-07-21 19:26:02,736 WARNING To setup, run: python /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/scripts/setup_macros.py
+[robosuite WARNING] Could not import robosuite_models. Some robots may not be available. If you want to use these robots, please install robosuite_models from source (https://github.com/ARISE-Initiative/robosuite_models) or through pip install. (__init__.py:30)
+2026-07-21 19:26:16,850 WARNING Could not import robosuite_models. Some robots may not be available. If you want to use these robots, please install robosuite_models from source (https://github.com/ARISE-Initiative/robosuite_models) or through pip install.
+[robosuite WARNING] Could not load the mink-based whole-body IK. Make sure you install related import properly (e.g. pip install mink==0.0.5), otherwise you will not be able to use the default IK controller setting for GR1 robot. (__init__.py:40)
+2026-07-21 19:26:16,954 WARNING Could not load the mink-based whole-body IK. Make sure you install related import properly (e.g. pip install mink==0.0.5), otherwise you will not be able to use the default IK controller setting for GR1 robot.
+WARNING: mimicgen environments not imported since mimicgen is not installed!
+2026-07-21 19:28:31,489 INFO Task: CoffeePressButton | Episodes: 100 | Start seed: 0
+2026-07-21 19:28:31,489 INFO Server: localhost:10091
+Client connected to server at localhost:10091.
+2026-07-21 19:28:32,801 INFO EvalClient ready. Robot types: ['robocasa_mg']
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:28:32,846 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:28:45,405 INFO No OpenGL_accelerate module loaded: No module named 'OpenGL_accelerate'
+2026-07-21 19:28:57,000 INFO Task CoffeePressButton: Episode 1 (seed=0): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:29:21,061 INFO Task CoffeePressButton: Episode 1 (seed=0): Success | Current Success Rate: 100.00% (1/1)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:29:21,062 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:29:30,480 INFO Task CoffeePressButton: Episode 2 (seed=1): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:29:40,000 INFO Task CoffeePressButton: Episode 2 (seed=1): Success | Current Success Rate: 100.00% (2/2)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:29:40,001 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:29:48,721 INFO Task CoffeePressButton: Episode 3 (seed=2): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:29:55,794 INFO Task CoffeePressButton: Episode 3 (seed=2): Success | Current Success Rate: 100.00% (3/3)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:29:55,795 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:30:02,327 INFO Task CoffeePressButton: Episode 4 (seed=3): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:30:08,683 INFO Task CoffeePressButton: Episode 4 (seed=3): Success | Current Success Rate: 100.00% (4/4)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:30:08,684 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:30:22,433 INFO Task CoffeePressButton: Episode 5 (seed=4): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:30:30,371 INFO Task CoffeePressButton: Episode 5 (seed=4): Success | Current Success Rate: 100.00% (5/5)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:30:30,372 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:30:42,189 INFO Task CoffeePressButton: Episode 6 (seed=5): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:30:49,147 INFO Task CoffeePressButton: Episode 6 (seed=5): Success | Current Success Rate: 100.00% (6/6)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:30:49,193 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:30:58,915 INFO Task CoffeePressButton: Episode 7 (seed=6): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:31:16,989 INFO Task CoffeePressButton: Episode 7 (seed=6): Failure | Current Success Rate: 85.71% (6/7)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:31:16,989 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:31:24,074 INFO Task CoffeePressButton: Episode 8 (seed=7): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:31:33,202 INFO Task CoffeePressButton: Episode 8 (seed=7): Success | Current Success Rate: 87.50% (7/8)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:31:33,202 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:31:50,536 INFO Task CoffeePressButton: Episode 9 (seed=8): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:32:03,128 INFO Task CoffeePressButton: Episode 9 (seed=8): Success | Current Success Rate: 88.89% (8/9)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:32:03,129 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:32:11,636 INFO Task CoffeePressButton: Episode 10 (seed=9): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:32:23,513 INFO Task CoffeePressButton: Episode 10 (seed=9): Success | Current Success Rate: 90.00% (9/10)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:32:23,513 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:32:37,295 INFO Task CoffeePressButton: Episode 11 (seed=10): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:32:46,942 INFO Task CoffeePressButton: Episode 11 (seed=10): Success | Current Success Rate: 90.91% (10/11)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:32:46,942 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:32:55,803 INFO Task CoffeePressButton: Episode 12 (seed=11): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:33:03,797 INFO Task CoffeePressButton: Episode 12 (seed=11): Success | Current Success Rate: 91.67% (11/12)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:33:03,843 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:33:16,568 INFO Task CoffeePressButton: Episode 13 (seed=12): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:33:31,058 INFO Task CoffeePressButton: Episode 13 (seed=12): Success | Current Success Rate: 92.31% (12/13)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:33:31,059 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:33:37,911 INFO Task CoffeePressButton: Episode 14 (seed=13): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:33:44,403 INFO Task CoffeePressButton: Episode 14 (seed=13): Success | Current Success Rate: 92.86% (13/14)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:33:44,404 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:33:53,336 INFO Task CoffeePressButton: Episode 15 (seed=14): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:34:02,790 INFO Task CoffeePressButton: Episode 15 (seed=14): Success | Current Success Rate: 93.33% (14/15)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:34:02,790 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:34:10,054 INFO Task CoffeePressButton: Episode 16 (seed=15): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:34:17,172 INFO Task CoffeePressButton: Episode 16 (seed=15): Success | Current Success Rate: 93.75% (15/16)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:34:17,173 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:34:25,454 INFO Task CoffeePressButton: Episode 17 (seed=16): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:34:34,006 INFO Task CoffeePressButton: Episode 17 (seed=16): Success | Current Success Rate: 94.12% (16/17)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:34:34,007 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:34:46,771 INFO Task CoffeePressButton: Episode 18 (seed=17): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:34:52,842 INFO Task CoffeePressButton: Episode 18 (seed=17): Success | Current Success Rate: 94.44% (17/18)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:34:52,843 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:35:02,603 INFO Task CoffeePressButton: Episode 19 (seed=18): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:35:10,064 INFO Task CoffeePressButton: Episode 19 (seed=18): Success | Current Success Rate: 94.74% (18/19)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:35:10,064 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:35:20,974 INFO Task CoffeePressButton: Episode 20 (seed=19): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:35:29,112 INFO Task CoffeePressButton: Episode 20 (seed=19): Success | Current Success Rate: 95.00% (19/20)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:35:29,113 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:35:37,757 INFO Task CoffeePressButton: Episode 21 (seed=20): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:35:47,128 INFO Task CoffeePressButton: Episode 21 (seed=20): Success | Current Success Rate: 95.24% (20/21)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:35:47,129 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:35:56,560 INFO Task CoffeePressButton: Episode 22 (seed=21): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:36:15,026 INFO Task CoffeePressButton: Episode 22 (seed=21): Failure | Current Success Rate: 90.91% (20/22)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:36:15,027 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:36:33,213 INFO Task CoffeePressButton: Episode 23 (seed=22): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:36:46,525 INFO Task CoffeePressButton: Episode 23 (seed=22): Success | Current Success Rate: 91.30% (21/23)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:36:46,526 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:36:54,446 INFO Task CoffeePressButton: Episode 24 (seed=23): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:37:12,030 INFO Task CoffeePressButton: Episode 24 (seed=23): Success | Current Success Rate: 91.67% (22/24)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:37:12,031 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:37:22,890 INFO Task CoffeePressButton: Episode 25 (seed=24): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:37:33,173 INFO Task CoffeePressButton: Episode 25 (seed=24): Success | Current Success Rate: 92.00% (23/25)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:37:33,174 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:37:41,999 INFO Task CoffeePressButton: Episode 26 (seed=25): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:37:48,448 INFO Task CoffeePressButton: Episode 26 (seed=25): Success | Current Success Rate: 92.31% (24/26)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:37:48,449 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:37:57,788 INFO Task CoffeePressButton: Episode 27 (seed=26): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:38:15,786 INFO Task CoffeePressButton: Episode 27 (seed=26): Failure | Current Success Rate: 88.89% (24/27)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:38:15,787 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:38:25,455 INFO Task CoffeePressButton: Episode 28 (seed=27): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:38:34,933 INFO Task CoffeePressButton: Episode 28 (seed=27): Success | Current Success Rate: 89.29% (25/28)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:38:34,934 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:38:49,625 INFO Task CoffeePressButton: Episode 29 (seed=28): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:38:59,252 INFO Task CoffeePressButton: Episode 29 (seed=28): Success | Current Success Rate: 89.66% (26/29)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:38:59,253 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:39:07,652 INFO Task CoffeePressButton: Episode 30 (seed=29): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:39:16,642 INFO Task CoffeePressButton: Episode 30 (seed=29): Success | Current Success Rate: 90.00% (27/30)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:39:16,643 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:39:29,601 INFO Task CoffeePressButton: Episode 31 (seed=30): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:39:40,626 INFO Task CoffeePressButton: Episode 31 (seed=30): Success | Current Success Rate: 90.32% (28/31)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:39:40,627 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:39:49,912 INFO Task CoffeePressButton: Episode 32 (seed=31): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:40:09,046 INFO Task CoffeePressButton: Episode 32 (seed=31): Failure | Current Success Rate: 87.50% (28/32)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:40:09,047 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:40:17,932 INFO Task CoffeePressButton: Episode 33 (seed=32): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:40:35,451 INFO Task CoffeePressButton: Episode 33 (seed=32): Failure | Current Success Rate: 84.85% (28/33)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:40:35,451 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:40:43,932 INFO Task CoffeePressButton: Episode 34 (seed=33): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:41:01,556 INFO Task CoffeePressButton: Episode 34 (seed=33): Failure | Current Success Rate: 82.35% (28/34)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:41:01,557 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:41:09,889 INFO Task CoffeePressButton: Episode 35 (seed=34): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:41:19,629 INFO Task CoffeePressButton: Episode 35 (seed=34): Success | Current Success Rate: 82.86% (29/35)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:41:19,630 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:41:27,140 INFO Task CoffeePressButton: Episode 36 (seed=35): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:41:37,044 INFO Task CoffeePressButton: Episode 36 (seed=35): Success | Current Success Rate: 83.33% (30/36)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:41:37,050 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:41:48,480 INFO Task CoffeePressButton: Episode 37 (seed=36): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:42:05,630 INFO Task CoffeePressButton: Episode 37 (seed=36): Failure | Current Success Rate: 81.08% (30/37)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:42:05,631 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:42:15,038 INFO Task CoffeePressButton: Episode 38 (seed=37): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:42:20,769 INFO Task CoffeePressButton: Episode 38 (seed=37): Success | Current Success Rate: 81.58% (31/38)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:42:20,770 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:42:30,871 INFO Task CoffeePressButton: Episode 39 (seed=38): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:42:42,309 INFO Task CoffeePressButton: Episode 39 (seed=38): Success | Current Success Rate: 82.05% (32/39)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:42:42,310 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:42:50,284 INFO Task CoffeePressButton: Episode 40 (seed=39): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:43:00,015 INFO Task CoffeePressButton: Episode 40 (seed=39): Success | Current Success Rate: 82.50% (33/40)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:43:00,016 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:43:13,853 INFO Task CoffeePressButton: Episode 41 (seed=40): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:43:27,391 INFO Task CoffeePressButton: Episode 41 (seed=40): Success | Current Success Rate: 82.93% (34/41)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:43:27,392 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:43:41,862 INFO Task CoffeePressButton: Episode 42 (seed=41): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:43:51,246 INFO Task CoffeePressButton: Episode 42 (seed=41): Success | Current Success Rate: 83.33% (35/42)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:43:51,247 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:44:04,170 INFO Task CoffeePressButton: Episode 43 (seed=42): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:44:17,105 INFO Task CoffeePressButton: Episode 43 (seed=42): Success | Current Success Rate: 83.72% (36/43)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:44:17,106 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:44:26,472 INFO Task CoffeePressButton: Episode 44 (seed=43): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:44:36,103 INFO Task CoffeePressButton: Episode 44 (seed=43): Success | Current Success Rate: 84.09% (37/44)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:44:36,104 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:44:49,920 INFO Task CoffeePressButton: Episode 45 (seed=44): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:44:59,899 INFO Task CoffeePressButton: Episode 45 (seed=44): Success | Current Success Rate: 84.44% (38/45)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:44:59,900 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:45:06,854 INFO Task CoffeePressButton: Episode 46 (seed=45): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:45:13,018 INFO Task CoffeePressButton: Episode 46 (seed=45): Success | Current Success Rate: 84.78% (39/46)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:45:13,019 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:45:20,539 INFO Task CoffeePressButton: Episode 47 (seed=46): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:45:27,814 INFO Task CoffeePressButton: Episode 47 (seed=46): Success | Current Success Rate: 85.11% (40/47)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:45:27,815 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:45:35,739 INFO Task CoffeePressButton: Episode 48 (seed=47): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:45:43,360 INFO Task CoffeePressButton: Episode 48 (seed=47): Success | Current Success Rate: 85.42% (41/48)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:45:43,361 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:45:50,898 INFO Task CoffeePressButton: Episode 49 (seed=48): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:45:58,368 INFO Task CoffeePressButton: Episode 49 (seed=48): Success | Current Success Rate: 85.71% (42/49)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:45:58,412 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:46:07,689 INFO Task CoffeePressButton: Episode 50 (seed=49): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:46:15,217 INFO Task CoffeePressButton: Episode 50 (seed=49): Success | Current Success Rate: 86.00% (43/50)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:46:15,217 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:46:27,683 INFO Task CoffeePressButton: Episode 51 (seed=50): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:46:37,156 INFO Task CoffeePressButton: Episode 51 (seed=50): Success | Current Success Rate: 86.27% (44/51)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:46:37,157 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:46:48,661 INFO Task CoffeePressButton: Episode 52 (seed=51): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:46:55,818 INFO Task CoffeePressButton: Episode 52 (seed=51): Success | Current Success Rate: 86.54% (45/52)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:46:55,819 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:47:04,424 INFO Task CoffeePressButton: Episode 53 (seed=52): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:47:21,828 INFO Task CoffeePressButton: Episode 53 (seed=52): Failure | Current Success Rate: 84.91% (45/53)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:47:21,829 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:47:34,496 INFO Task CoffeePressButton: Episode 54 (seed=53): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:47:40,538 INFO Task CoffeePressButton: Episode 54 (seed=53): Success | Current Success Rate: 85.19% (46/54)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:47:40,539 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:47:49,397 INFO Task CoffeePressButton: Episode 55 (seed=54): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:47:55,805 INFO Task CoffeePressButton: Episode 55 (seed=54): Success | Current Success Rate: 85.45% (47/55)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:47:55,806 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:48:02,603 INFO Task CoffeePressButton: Episode 56 (seed=55): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:48:08,752 INFO Task CoffeePressButton: Episode 56 (seed=55): Success | Current Success Rate: 85.71% (48/56)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:48:08,798 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:48:19,222 INFO Task CoffeePressButton: Episode 57 (seed=56): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:48:28,566 INFO Task CoffeePressButton: Episode 57 (seed=56): Success | Current Success Rate: 85.96% (49/57)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:48:28,568 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:48:35,782 INFO Task CoffeePressButton: Episode 58 (seed=57): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:48:41,494 INFO Task CoffeePressButton: Episode 58 (seed=57): Success | Current Success Rate: 86.21% (50/58)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:48:41,494 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:48:50,991 INFO Task CoffeePressButton: Episode 59 (seed=58): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:49:00,685 INFO Task CoffeePressButton: Episode 59 (seed=58): Success | Current Success Rate: 86.44% (51/59)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:49:00,686 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:49:14,163 INFO Task CoffeePressButton: Episode 60 (seed=59): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:49:33,371 INFO Task CoffeePressButton: Episode 60 (seed=59): Failure | Current Success Rate: 85.00% (51/60)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:49:33,372 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:49:40,719 INFO Task CoffeePressButton: Episode 61 (seed=60): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:49:48,140 INFO Task CoffeePressButton: Episode 61 (seed=60): Success | Current Success Rate: 85.25% (52/61)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:49:48,141 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:50:02,235 INFO Task CoffeePressButton: Episode 62 (seed=61): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:50:13,825 INFO Task CoffeePressButton: Episode 62 (seed=61): Success | Current Success Rate: 85.48% (53/62)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:50:13,870 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:50:22,485 INFO Task CoffeePressButton: Episode 63 (seed=62): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:50:40,364 INFO Task CoffeePressButton: Episode 63 (seed=62): Failure | Current Success Rate: 84.13% (53/63)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:50:40,365 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:50:49,474 INFO Task CoffeePressButton: Episode 64 (seed=63): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:50:58,950 INFO Task CoffeePressButton: Episode 64 (seed=63): Success | Current Success Rate: 84.38% (54/64)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:50:58,972 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:51:07,887 INFO Task CoffeePressButton: Episode 65 (seed=64): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:51:17,693 INFO Task CoffeePressButton: Episode 65 (seed=64): Success | Current Success Rate: 84.62% (55/65)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:51:17,694 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:51:30,473 INFO Task CoffeePressButton: Episode 66 (seed=65): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:51:42,880 INFO Task CoffeePressButton: Episode 66 (seed=65): Success | Current Success Rate: 84.85% (56/66)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:51:42,881 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:51:49,798 INFO Task CoffeePressButton: Episode 67 (seed=66): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:52:05,652 INFO Task CoffeePressButton: Episode 67 (seed=66): Success | Current Success Rate: 85.07% (57/67)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:52:05,653 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:52:17,941 INFO Task CoffeePressButton: Episode 68 (seed=67): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:52:24,857 INFO Task CoffeePressButton: Episode 68 (seed=67): Success | Current Success Rate: 85.29% (58/68)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:52:24,869 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:52:35,975 INFO Task CoffeePressButton: Episode 69 (seed=68): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:52:43,298 INFO Task CoffeePressButton: Episode 69 (seed=68): Success | Current Success Rate: 85.51% (59/69)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:52:43,299 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:52:50,941 INFO Task CoffeePressButton: Episode 70 (seed=69): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:52:57,947 INFO Task CoffeePressButton: Episode 70 (seed=69): Success | Current Success Rate: 85.71% (60/70)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:52:57,948 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:53:10,656 INFO Task CoffeePressButton: Episode 71 (seed=70): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:53:22,792 INFO Task CoffeePressButton: Episode 71 (seed=70): Success | Current Success Rate: 85.92% (61/71)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:53:22,838 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:53:32,032 INFO Task CoffeePressButton: Episode 72 (seed=71): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:53:49,238 INFO Task CoffeePressButton: Episode 72 (seed=71): Failure | Current Success Rate: 84.72% (61/72)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:53:49,238 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:53:57,082 INFO Task CoffeePressButton: Episode 73 (seed=72): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:54:06,441 INFO Task CoffeePressButton: Episode 73 (seed=72): Success | Current Success Rate: 84.93% (62/73)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:54:06,442 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:54:13,761 INFO Task CoffeePressButton: Episode 74 (seed=73): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:54:31,054 INFO Task CoffeePressButton: Episode 74 (seed=73): Failure | Current Success Rate: 83.78% (62/74)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:54:31,101 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:54:39,995 INFO Task CoffeePressButton: Episode 75 (seed=74): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:54:48,978 INFO Task CoffeePressButton: Episode 75 (seed=74): Success | Current Success Rate: 84.00% (63/75)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:54:48,979 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:55:02,710 INFO Task CoffeePressButton: Episode 76 (seed=75): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:55:10,192 INFO Task CoffeePressButton: Episode 76 (seed=75): Success | Current Success Rate: 84.21% (64/76)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:55:10,215 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:55:22,655 INFO Task CoffeePressButton: Episode 77 (seed=76): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:55:32,564 INFO Task CoffeePressButton: Episode 77 (seed=76): Success | Current Success Rate: 84.42% (65/77)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:55:32,610 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:55:40,965 INFO Task CoffeePressButton: Episode 78 (seed=77): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:55:49,169 INFO Task CoffeePressButton: Episode 78 (seed=77): Success | Current Success Rate: 84.62% (66/78)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:55:49,170 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:56:07,858 INFO Task CoffeePressButton: Episode 79 (seed=78): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:56:18,817 INFO Task CoffeePressButton: Episode 79 (seed=78): Success | Current Success Rate: 84.81% (67/79)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:56:18,818 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:56:26,136 INFO Task CoffeePressButton: Episode 80 (seed=79): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:56:36,162 INFO Task CoffeePressButton: Episode 80 (seed=79): Success | Current Success Rate: 85.00% (68/80)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:56:36,209 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:56:46,097 INFO Task CoffeePressButton: Episode 81 (seed=80): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:57:03,813 INFO Task CoffeePressButton: Episode 81 (seed=80): Failure | Current Success Rate: 83.95% (68/81)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:57:03,814 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:57:17,325 INFO Task CoffeePressButton: Episode 82 (seed=81): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:57:29,439 INFO Task CoffeePressButton: Episode 82 (seed=81): Success | Current Success Rate: 84.15% (69/82)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:57:29,440 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:57:43,319 INFO Task CoffeePressButton: Episode 83 (seed=82): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:57:52,218 INFO Task CoffeePressButton: Episode 83 (seed=82): Success | Current Success Rate: 84.34% (70/83)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:57:52,219 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:58:06,208 INFO Task CoffeePressButton: Episode 84 (seed=83): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:58:16,134 INFO Task CoffeePressButton: Episode 84 (seed=83): Success | Current Success Rate: 84.52% (71/84)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:58:16,142 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:58:29,021 INFO Task CoffeePressButton: Episode 85 (seed=84): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:58:37,406 INFO Task CoffeePressButton: Episode 85 (seed=84): Success | Current Success Rate: 84.71% (72/85)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:58:37,407 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:58:52,057 INFO Task CoffeePressButton: Episode 86 (seed=85): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:59:00,043 INFO Task CoffeePressButton: Episode 86 (seed=85): Success | Current Success Rate: 84.88% (73/86)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:59:00,044 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:59:07,069 INFO Task CoffeePressButton: Episode 87 (seed=86): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:59:14,902 INFO Task CoffeePressButton: Episode 87 (seed=86): Success | Current Success Rate: 85.06% (74/87)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:59:14,903 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:59:27,693 INFO Task CoffeePressButton: Episode 88 (seed=87): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:59:35,217 INFO Task CoffeePressButton: Episode 88 (seed=87): Success | Current Success Rate: 85.23% (75/88)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:59:35,217 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:59:43,650 INFO Task CoffeePressButton: Episode 89 (seed=88): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 19:59:50,645 INFO Task CoffeePressButton: Episode 89 (seed=88): Success | Current Success Rate: 85.39% (76/89)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:59:50,694 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:59:57,790 INFO Task CoffeePressButton: Episode 90 (seed=89): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 20:00:04,898 INFO Task CoffeePressButton: Episode 90 (seed=89): Success | Current Success Rate: 85.56% (77/90)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:00:04,899 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:00:22,878 INFO Task CoffeePressButton: Episode 91 (seed=90): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 20:00:34,993 INFO Task CoffeePressButton: Episode 91 (seed=90): Success | Current Success Rate: 85.71% (78/91)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:00:35,005 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:00:48,568 INFO Task CoffeePressButton: Episode 92 (seed=91): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 20:01:02,886 INFO Task CoffeePressButton: Episode 92 (seed=91): Success | Current Success Rate: 85.87% (79/92)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:01:02,887 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:01:11,480 INFO Task CoffeePressButton: Episode 93 (seed=92): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 20:01:29,455 INFO Task CoffeePressButton: Episode 93 (seed=92): Failure | Current Success Rate: 84.95% (79/93)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:01:29,456 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:01:37,228 INFO Task CoffeePressButton: Episode 94 (seed=93): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 20:01:54,938 INFO Task CoffeePressButton: Episode 94 (seed=93): Failure | Current Success Rate: 84.04% (79/94)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:01:54,940 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:02:03,446 INFO Task CoffeePressButton: Episode 95 (seed=94): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 20:02:20,935 INFO Task CoffeePressButton: Episode 95 (seed=94): Failure | Current Success Rate: 83.16% (79/95)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:02:20,959 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:02:34,898 INFO Task CoffeePressButton: Episode 96 (seed=95): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 20:02:46,436 INFO Task CoffeePressButton: Episode 96 (seed=95): Success | Current Success Rate: 83.33% (80/96)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:02:46,437 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:02:56,196 INFO Task CoffeePressButton: Episode 97 (seed=96): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 20:03:13,757 INFO Task CoffeePressButton: Episode 97 (seed=96): Failure | Current Success Rate: 82.47% (80/97)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:03:13,758 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:03:21,381 INFO Task CoffeePressButton: Episode 98 (seed=97): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 20:03:38,549 INFO Task CoffeePressButton: Episode 98 (seed=97): Success | Current Success Rate: 82.65% (81/98)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:03:38,550 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:03:49,548 INFO Task CoffeePressButton: Episode 99 (seed=98): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 20:04:06,592 INFO Task CoffeePressButton: Episode 99 (seed=98): Failure | Current Success Rate: 81.82% (81/99)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:04:06,592 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:04:14,947 INFO Task CoffeePressButton: Episode 100 (seed=99): Instruction: press the button on the coffee machine to serve coffee
+2026-07-21 20:04:24,347 INFO Task CoffeePressButton: Episode 100 (seed=99): Success | Current Success Rate: 82.00% (82/100)
+Client connection closed.
+2026-07-21 20:04:24,347 INFO Task CoffeePressButton Final Success Rate: 82.00% (82/100)
+2026-07-21 20:04:24,388 INFO Results saved to: ./eval_robocasa/eval_logs/eval_results_CoffeePressButton.json

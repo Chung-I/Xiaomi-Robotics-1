@@ -1,0 +1,419 @@
+[robosuite WARNING] No private macro file found! (macros.py:57)
+2026-07-21 19:07:55,626 WARNING No private macro file found!
+[robosuite WARNING] It is recommended to use a private macro file (macros.py:58)
+2026-07-21 19:07:55,626 WARNING It is recommended to use a private macro file
+[robosuite WARNING] To setup, run: python /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/scripts/setup_macros.py (macros.py:59)
+2026-07-21 19:07:55,626 WARNING To setup, run: python /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/scripts/setup_macros.py
+[robosuite WARNING] Could not import robosuite_models. Some robots may not be available. If you want to use these robots, please install robosuite_models from source (https://github.com/ARISE-Initiative/robosuite_models) or through pip install. (__init__.py:30)
+2026-07-21 19:08:09,434 WARNING Could not import robosuite_models. Some robots may not be available. If you want to use these robots, please install robosuite_models from source (https://github.com/ARISE-Initiative/robosuite_models) or through pip install.
+[robosuite WARNING] Could not load the mink-based whole-body IK. Make sure you install related import properly (e.g. pip install mink==0.0.5), otherwise you will not be able to use the default IK controller setting for GR1 robot. (__init__.py:40)
+2026-07-21 19:08:09,541 WARNING Could not load the mink-based whole-body IK. Make sure you install related import properly (e.g. pip install mink==0.0.5), otherwise you will not be able to use the default IK controller setting for GR1 robot.
+WARNING: mimicgen environments not imported since mimicgen is not installed!
+2026-07-21 19:10:19,470 INFO Task: TurnSinkSpout | Episodes: 100 | Start seed: 0
+2026-07-21 19:10:19,470 INFO Server: localhost:10088
+Client connected to server at localhost:10088.
+2026-07-21 19:10:20,811 INFO EvalClient ready. Robot types: ['robocasa_mg']
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:10:20,812 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:10:34,378 INFO No OpenGL_accelerate module loaded: No module named 'OpenGL_accelerate'
+2026-07-21 19:10:41,965 INFO Task TurnSinkSpout: Episode 1 (seed=0): Instruction: turn the sink spout to the right
+2026-07-21 20:09:26,518 INFO Task TurnSinkSpout: Episode 1 (seed=0): Success | Current Success Rate: 100.00% (1/1)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:09:26,519 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:09:44,551 INFO Task TurnSinkSpout: Episode 2 (seed=1): Instruction: turn the sink spout to the left
+2026-07-21 20:09:59,524 INFO Task TurnSinkSpout: Episode 2 (seed=1): Success | Current Success Rate: 100.00% (2/2)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:09:59,524 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:10:10,520 INFO Task TurnSinkSpout: Episode 3 (seed=2): Instruction: turn the sink spout to the right
+2026-07-21 20:10:21,903 INFO Task TurnSinkSpout: Episode 3 (seed=2): Success | Current Success Rate: 100.00% (3/3)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:10:21,904 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:10:32,988 INFO Task TurnSinkSpout: Episode 4 (seed=3): Instruction: turn the sink spout to the left
+2026-07-21 20:10:40,774 INFO Task TurnSinkSpout: Episode 4 (seed=3): Success | Current Success Rate: 100.00% (4/4)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:10:40,801 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:10:57,180 INFO Task TurnSinkSpout: Episode 5 (seed=4): Instruction: turn the sink spout to the right
+2026-07-21 20:11:29,603 INFO Task TurnSinkSpout: Episode 5 (seed=4): Failure | Current Success Rate: 80.00% (4/5)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:11:29,604 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:11:45,254 INFO Task TurnSinkSpout: Episode 6 (seed=5): Instruction: turn the sink spout to the left
+2026-07-21 20:11:52,847 INFO Task TurnSinkSpout: Episode 6 (seed=5): Success | Current Success Rate: 83.33% (5/6)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:11:52,848 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:12:05,527 INFO Task TurnSinkSpout: Episode 7 (seed=6): Instruction: turn the sink spout to the right
+2026-07-21 20:12:15,140 INFO Task TurnSinkSpout: Episode 7 (seed=6): Success | Current Success Rate: 85.71% (6/7)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:12:15,142 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:12:25,265 INFO Task TurnSinkSpout: Episode 8 (seed=7): Instruction: turn the sink spout to the right
+2026-07-21 20:12:32,059 INFO Task TurnSinkSpout: Episode 8 (seed=7): Success | Current Success Rate: 87.50% (7/8)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:12:32,107 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:12:51,601 INFO Task TurnSinkSpout: Episode 9 (seed=8): Instruction: turn the sink spout to the left
+2026-07-21 20:13:00,027 INFO Task TurnSinkSpout: Episode 9 (seed=8): Success | Current Success Rate: 88.89% (8/9)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:13:00,028 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:13:09,417 INFO Task TurnSinkSpout: Episode 10 (seed=9): Instruction: turn the sink spout to the left
+2026-07-21 20:13:18,052 INFO Task TurnSinkSpout: Episode 10 (seed=9): Success | Current Success Rate: 90.00% (9/10)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:13:18,053 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:13:33,654 INFO Task TurnSinkSpout: Episode 11 (seed=10): Instruction: turn the sink spout to the left
+2026-07-21 20:13:46,010 INFO Task TurnSinkSpout: Episode 11 (seed=10): Success | Current Success Rate: 90.91% (10/11)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:13:46,011 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:14:10,276 INFO Task TurnSinkSpout: Episode 12 (seed=11): Instruction: turn the sink spout to the left
+2026-07-21 20:14:22,028 INFO Task TurnSinkSpout: Episode 12 (seed=11): Success | Current Success Rate: 91.67% (11/12)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:14:22,029 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:14:36,879 INFO Task TurnSinkSpout: Episode 13 (seed=12): Instruction: turn the sink spout to the left
+2026-07-21 20:15:06,820 INFO Task TurnSinkSpout: Episode 13 (seed=12): Failure | Current Success Rate: 84.62% (11/13)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:15:06,821 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:15:20,669 INFO Task TurnSinkSpout: Episode 14 (seed=13): Instruction: turn the sink spout to the right
+2026-07-21 20:15:44,421 INFO Task TurnSinkSpout: Episode 14 (seed=13): Success | Current Success Rate: 85.71% (12/14)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:15:44,489 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:15:55,664 INFO Task TurnSinkSpout: Episode 15 (seed=14): Instruction: turn the sink spout to the left
+2026-07-21 20:16:05,337 INFO Task TurnSinkSpout: Episode 15 (seed=14): Success | Current Success Rate: 86.67% (13/15)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:16:05,338 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:16:15,330 INFO Task TurnSinkSpout: Episode 16 (seed=15): Instruction: turn the sink spout to the right
+2026-07-21 20:16:21,423 INFO Task TurnSinkSpout: Episode 16 (seed=15): Success | Current Success Rate: 87.50% (14/16)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:16:21,424 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:16:33,016 INFO Task TurnSinkSpout: Episode 17 (seed=16): Instruction: turn the sink spout to the right
+2026-07-21 20:16:39,158 INFO Task TurnSinkSpout: Episode 17 (seed=16): Success | Current Success Rate: 88.24% (15/17)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:16:39,159 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:16:52,512 INFO Task TurnSinkSpout: Episode 18 (seed=17): Instruction: turn the sink spout to the left
+2026-07-21 20:17:01,855 INFO Task TurnSinkSpout: Episode 18 (seed=17): Success | Current Success Rate: 88.89% (16/18)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:17:01,856 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:17:14,922 INFO Task TurnSinkSpout: Episode 19 (seed=18): Instruction: turn the sink spout to the right
+2026-07-21 20:17:23,605 INFO Task TurnSinkSpout: Episode 19 (seed=18): Success | Current Success Rate: 89.47% (17/19)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:17:23,606 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:17:33,133 INFO Task TurnSinkSpout: Episode 20 (seed=19): Instruction: turn the sink spout to the right
+2026-07-21 20:17:40,978 INFO Task TurnSinkSpout: Episode 20 (seed=19): Success | Current Success Rate: 90.00% (18/20)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:17:40,978 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:17:53,234 INFO Task TurnSinkSpout: Episode 21 (seed=20): Instruction: turn the sink spout to the left
+2026-07-21 20:18:02,521 INFO Task TurnSinkSpout: Episode 21 (seed=20): Success | Current Success Rate: 90.48% (19/21)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:18:02,522 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:18:16,155 INFO Task TurnSinkSpout: Episode 22 (seed=21): Instruction: turn the sink spout to the right
+2026-07-21 20:18:27,133 INFO Task TurnSinkSpout: Episode 22 (seed=21): Success | Current Success Rate: 90.91% (20/22)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:18:27,134 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:18:43,042 INFO Task TurnSinkSpout: Episode 23 (seed=22): Instruction: turn the sink spout to the left
+2026-07-21 20:19:16,457 INFO Task TurnSinkSpout: Episode 23 (seed=22): Failure | Current Success Rate: 86.96% (20/23)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:19:16,458 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:19:30,144 INFO Task TurnSinkSpout: Episode 24 (seed=23): Instruction: turn the sink spout to the right
+2026-07-21 20:19:40,585 INFO Task TurnSinkSpout: Episode 24 (seed=23): Success | Current Success Rate: 87.50% (21/24)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:19:40,586 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:19:54,967 INFO Task TurnSinkSpout: Episode 25 (seed=24): Instruction: turn the sink spout to the left
+2026-07-21 20:20:07,788 INFO Task TurnSinkSpout: Episode 25 (seed=24): Success | Current Success Rate: 88.00% (22/25)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:20:07,789 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:20:29,665 INFO Task TurnSinkSpout: Episode 26 (seed=25): Instruction: turn the sink spout to the left
+2026-07-21 20:20:43,039 INFO Task TurnSinkSpout: Episode 26 (seed=25): Success | Current Success Rate: 88.46% (23/26)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:20:43,040 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:20:50,751 INFO Task TurnSinkSpout: Episode 27 (seed=26): Instruction: turn the sink spout to the right
+2026-07-21 20:21:02,508 INFO Task TurnSinkSpout: Episode 27 (seed=26): Success | Current Success Rate: 88.89% (24/27)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:21:02,554 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:21:13,148 INFO Task TurnSinkSpout: Episode 28 (seed=27): Instruction: turn the sink spout to the left
+2026-07-21 20:21:21,036 INFO Task TurnSinkSpout: Episode 28 (seed=27): Success | Current Success Rate: 89.29% (25/28)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:21:21,038 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:21:35,264 INFO Task TurnSinkSpout: Episode 29 (seed=28): Instruction: turn the sink spout to the right
+2026-07-21 20:21:46,580 INFO Task TurnSinkSpout: Episode 29 (seed=28): Success | Current Success Rate: 89.66% (26/29)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:21:46,581 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:21:56,122 INFO Task TurnSinkSpout: Episode 30 (seed=29): Instruction: turn the sink spout to the right
+2026-07-21 20:22:08,730 INFO Task TurnSinkSpout: Episode 30 (seed=29): Success | Current Success Rate: 90.00% (27/30)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:22:08,731 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:22:17,808 INFO Task TurnSinkSpout: Episode 31 (seed=30): Instruction: turn the sink spout to the left
+2026-07-21 20:22:25,004 INFO Task TurnSinkSpout: Episode 31 (seed=30): Success | Current Success Rate: 90.32% (28/31)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:22:25,005 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:22:36,626 INFO Task TurnSinkSpout: Episode 32 (seed=31): Instruction: turn the sink spout to the left
+2026-07-21 20:22:46,078 INFO Task TurnSinkSpout: Episode 32 (seed=31): Success | Current Success Rate: 90.62% (29/32)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:22:46,079 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:23:00,296 INFO Task TurnSinkSpout: Episode 33 (seed=32): Instruction: turn the sink spout to the left
+2026-07-21 20:23:39,393 INFO Task TurnSinkSpout: Episode 33 (seed=32): Failure | Current Success Rate: 87.88% (29/33)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:23:39,394 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:23:48,849 INFO Task TurnSinkSpout: Episode 34 (seed=33): Instruction: turn the sink spout to the left
+2026-07-21 20:23:58,024 INFO Task TurnSinkSpout: Episode 34 (seed=33): Success | Current Success Rate: 88.24% (30/34)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:23:58,024 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:24:11,985 INFO Task TurnSinkSpout: Episode 35 (seed=34): Instruction: turn the sink spout to the left
+2026-07-21 20:24:50,578 INFO Task TurnSinkSpout: Episode 35 (seed=34): Failure | Current Success Rate: 85.71% (30/35)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:24:50,579 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:25:03,690 INFO Task TurnSinkSpout: Episode 36 (seed=35): Instruction: turn the sink spout to the right
+2026-07-21 20:25:12,535 INFO Task TurnSinkSpout: Episode 36 (seed=35): Success | Current Success Rate: 86.11% (31/36)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:25:12,536 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:25:27,287 INFO Task TurnSinkSpout: Episode 37 (seed=36): Instruction: turn the sink spout to the left
+2026-07-21 20:25:39,081 INFO Task TurnSinkSpout: Episode 37 (seed=36): Success | Current Success Rate: 86.49% (32/37)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:25:39,081 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:25:53,844 INFO Task TurnSinkSpout: Episode 38 (seed=37): Instruction: turn the sink spout to the right
+2026-07-21 20:26:32,331 INFO Task TurnSinkSpout: Episode 38 (seed=37): Failure | Current Success Rate: 84.21% (32/38)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:26:32,332 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:26:47,590 INFO Task TurnSinkSpout: Episode 39 (seed=38): Instruction: turn the sink spout to the left
+2026-07-21 20:26:58,674 INFO Task TurnSinkSpout: Episode 39 (seed=38): Success | Current Success Rate: 84.62% (33/39)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:26:58,675 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:27:08,782 INFO Task TurnSinkSpout: Episode 40 (seed=39): Instruction: turn the sink spout to the left
+2026-07-21 20:27:17,744 INFO Task TurnSinkSpout: Episode 40 (seed=39): Success | Current Success Rate: 85.00% (34/40)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:27:17,745 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:27:28,425 INFO Task TurnSinkSpout: Episode 41 (seed=40): Instruction: turn the sink spout to the left
+2026-07-21 20:27:37,075 INFO Task TurnSinkSpout: Episode 41 (seed=40): Success | Current Success Rate: 85.37% (35/41)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:27:37,076 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:27:51,467 INFO Task TurnSinkSpout: Episode 42 (seed=41): Instruction: turn the sink spout to the right
+2026-07-21 20:28:03,718 INFO Task TurnSinkSpout: Episode 42 (seed=41): Success | Current Success Rate: 85.71% (36/42)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:28:03,798 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:28:16,216 INFO Task TurnSinkSpout: Episode 43 (seed=42): Instruction: turn the sink spout to the right
+2026-07-21 20:28:22,290 INFO Task TurnSinkSpout: Episode 43 (seed=42): Success | Current Success Rate: 86.05% (37/43)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:28:22,291 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:28:36,803 INFO Task TurnSinkSpout: Episode 44 (seed=43): Instruction: turn the sink spout to the left
+2026-07-21 20:28:44,868 INFO Task TurnSinkSpout: Episode 44 (seed=43): Success | Current Success Rate: 86.36% (38/44)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:28:44,868 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:29:02,497 INFO Task TurnSinkSpout: Episode 45 (seed=44): Instruction: turn the sink spout to the right
+2026-07-21 20:29:14,314 INFO Task TurnSinkSpout: Episode 45 (seed=44): Success | Current Success Rate: 86.67% (39/45)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:29:14,315 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:29:24,570 INFO Task TurnSinkSpout: Episode 46 (seed=45): Instruction: turn the sink spout to the left
+2026-07-21 20:29:53,969 INFO Task TurnSinkSpout: Episode 46 (seed=45): Failure | Current Success Rate: 84.78% (39/46)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:29:53,970 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:30:09,744 INFO Task TurnSinkSpout: Episode 47 (seed=46): Instruction: turn the sink spout to the right
+2026-07-21 20:30:48,519 INFO Task TurnSinkSpout: Episode 47 (seed=46): Failure | Current Success Rate: 82.98% (39/47)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:30:48,520 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:30:57,490 INFO Task TurnSinkSpout: Episode 48 (seed=47): Instruction: turn the sink spout to the left
+2026-07-21 20:31:05,849 INFO Task TurnSinkSpout: Episode 48 (seed=47): Success | Current Success Rate: 83.33% (40/48)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:31:05,850 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:31:19,756 INFO Task TurnSinkSpout: Episode 49 (seed=48): Instruction: turn the sink spout to the right
+2026-07-21 20:31:25,538 INFO Task TurnSinkSpout: Episode 49 (seed=48): Success | Current Success Rate: 83.67% (41/49)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:31:25,539 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:31:34,373 INFO Task TurnSinkSpout: Episode 50 (seed=49): Instruction: turn the sink spout to the left
+2026-07-21 20:31:42,986 INFO Task TurnSinkSpout: Episode 50 (seed=49): Success | Current Success Rate: 84.00% (42/50)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:31:42,987 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:32:00,219 INFO Task TurnSinkSpout: Episode 51 (seed=50): Instruction: turn the sink spout to the left
+2026-07-21 20:32:12,654 INFO Task TurnSinkSpout: Episode 51 (seed=50): Success | Current Success Rate: 84.31% (43/51)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:32:12,655 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:32:23,972 INFO Task TurnSinkSpout: Episode 52 (seed=51): Instruction: turn the sink spout to the right
+2026-07-21 20:32:32,443 INFO Task TurnSinkSpout: Episode 52 (seed=51): Success | Current Success Rate: 84.62% (44/52)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:32:32,477 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:32:40,943 INFO Task TurnSinkSpout: Episode 53 (seed=52): Instruction: turn the sink spout to the right
+2026-07-21 20:32:49,113 INFO Task TurnSinkSpout: Episode 53 (seed=52): Success | Current Success Rate: 84.91% (45/53)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:32:49,159 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:33:03,522 INFO Task TurnSinkSpout: Episode 54 (seed=53): Instruction: turn the sink spout to the left
+2026-07-21 20:33:16,121 INFO Task TurnSinkSpout: Episode 54 (seed=53): Success | Current Success Rate: 85.19% (46/54)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:33:16,122 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:33:30,981 INFO Task TurnSinkSpout: Episode 55 (seed=54): Instruction: turn the sink spout to the left
+2026-07-21 20:33:42,914 INFO Task TurnSinkSpout: Episode 55 (seed=54): Success | Current Success Rate: 85.45% (47/55)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:33:42,915 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:33:56,075 INFO Task TurnSinkSpout: Episode 56 (seed=55): Instruction: turn the sink spout to the left
+2026-07-21 20:34:09,050 INFO Task TurnSinkSpout: Episode 56 (seed=55): Success | Current Success Rate: 85.71% (48/56)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:34:09,050 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:34:20,153 INFO Task TurnSinkSpout: Episode 57 (seed=56): Instruction: turn the sink spout to the left
+2026-07-21 20:34:28,656 INFO Task TurnSinkSpout: Episode 57 (seed=56): Success | Current Success Rate: 85.96% (49/57)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:34:28,657 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:34:39,227 INFO Task TurnSinkSpout: Episode 58 (seed=57): Instruction: turn the sink spout to the left
+2026-07-21 20:34:46,213 INFO Task TurnSinkSpout: Episode 58 (seed=57): Success | Current Success Rate: 86.21% (50/58)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:34:46,214 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:34:56,707 INFO Task TurnSinkSpout: Episode 59 (seed=58): Instruction: turn the sink spout to the right
+2026-07-21 20:35:07,514 INFO Task TurnSinkSpout: Episode 59 (seed=58): Success | Current Success Rate: 86.44% (51/59)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:35:07,559 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:35:21,450 INFO Task TurnSinkSpout: Episode 60 (seed=59): Instruction: turn the sink spout to the left
+2026-07-21 20:35:50,683 INFO Task TurnSinkSpout: Episode 60 (seed=59): Failure | Current Success Rate: 85.00% (51/60)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:35:50,706 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:36:04,817 INFO Task TurnSinkSpout: Episode 61 (seed=60): Instruction: turn the sink spout to the left
+2026-07-21 20:36:17,554 INFO Task TurnSinkSpout: Episode 61 (seed=60): Success | Current Success Rate: 85.25% (52/61)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:36:17,555 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:36:31,476 INFO Task TurnSinkSpout: Episode 62 (seed=61): Instruction: turn the sink spout to the left
+2026-07-21 20:37:02,115 INFO Task TurnSinkSpout: Episode 62 (seed=61): Failure | Current Success Rate: 83.87% (52/62)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:37:02,139 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:37:13,768 INFO Task TurnSinkSpout: Episode 63 (seed=62): Instruction: turn the sink spout to the right
+2026-07-21 20:37:21,873 INFO Task TurnSinkSpout: Episode 63 (seed=62): Success | Current Success Rate: 84.13% (53/63)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:37:21,920 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:37:39,308 INFO Task TurnSinkSpout: Episode 64 (seed=63): Instruction: turn the sink spout to the left
+2026-07-21 20:37:50,094 INFO Task TurnSinkSpout: Episode 64 (seed=63): Success | Current Success Rate: 84.38% (54/64)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:37:50,095 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:37:59,420 INFO Task TurnSinkSpout: Episode 65 (seed=64): Instruction: turn the sink spout to the left
+2026-07-21 20:38:08,210 INFO Task TurnSinkSpout: Episode 65 (seed=64): Success | Current Success Rate: 84.62% (55/65)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:38:08,211 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:38:17,923 INFO Task TurnSinkSpout: Episode 66 (seed=65): Instruction: turn the sink spout to the left
+2026-07-21 20:38:25,913 INFO Task TurnSinkSpout: Episode 66 (seed=65): Success | Current Success Rate: 84.85% (56/66)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:38:25,959 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:38:36,387 INFO Task TurnSinkSpout: Episode 67 (seed=66): Instruction: turn the sink spout to the left
+2026-07-21 20:38:44,181 INFO Task TurnSinkSpout: Episode 67 (seed=66): Success | Current Success Rate: 85.07% (57/67)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:38:44,182 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:38:57,899 INFO Task TurnSinkSpout: Episode 68 (seed=67): Instruction: turn the sink spout to the left
+2026-07-21 20:39:06,707 INFO Task TurnSinkSpout: Episode 68 (seed=67): Success | Current Success Rate: 85.29% (58/68)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:39:06,730 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:39:18,894 INFO Task TurnSinkSpout: Episode 69 (seed=68): Instruction: turn the sink spout to the left
+2026-07-21 20:39:47,611 INFO Task TurnSinkSpout: Episode 69 (seed=68): Failure | Current Success Rate: 84.06% (58/69)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:39:47,657 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:39:58,177 INFO Task TurnSinkSpout: Episode 70 (seed=69): Instruction: turn the sink spout to the right
+2026-07-21 20:40:07,670 INFO Task TurnSinkSpout: Episode 70 (seed=69): Success | Current Success Rate: 84.29% (59/70)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:40:07,694 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:40:28,046 INFO Task TurnSinkSpout: Episode 71 (seed=70): Instruction: turn the sink spout to the left
+2026-07-21 20:40:39,647 INFO Task TurnSinkSpout: Episode 71 (seed=70): Success | Current Success Rate: 84.51% (60/71)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:40:39,648 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:40:49,544 INFO Task TurnSinkSpout: Episode 72 (seed=71): Instruction: turn the sink spout to the right
+2026-07-21 20:40:58,367 INFO Task TurnSinkSpout: Episode 72 (seed=71): Success | Current Success Rate: 84.72% (61/72)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:40:58,426 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:41:07,086 INFO Task TurnSinkSpout: Episode 73 (seed=72): Instruction: turn the sink spout to the left
+2026-07-21 20:41:15,166 INFO Task TurnSinkSpout: Episode 73 (seed=72): Success | Current Success Rate: 84.93% (62/73)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:41:15,189 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:41:27,337 INFO Task TurnSinkSpout: Episode 74 (seed=73): Instruction: turn the sink spout to the right
+2026-07-21 20:41:36,404 INFO Task TurnSinkSpout: Episode 74 (seed=73): Success | Current Success Rate: 85.14% (63/74)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:41:36,405 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:41:49,876 INFO Task TurnSinkSpout: Episode 75 (seed=74): Instruction: turn the sink spout to the left
+2026-07-21 20:41:57,604 INFO Task TurnSinkSpout: Episode 75 (seed=74): Success | Current Success Rate: 85.33% (64/75)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:41:57,604 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:42:11,465 INFO Task TurnSinkSpout: Episode 76 (seed=75): Instruction: turn the sink spout to the right
+2026-07-21 20:42:20,319 INFO Task TurnSinkSpout: Episode 76 (seed=75): Success | Current Success Rate: 85.53% (65/76)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:42:20,386 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:42:34,167 INFO Task TurnSinkSpout: Episode 77 (seed=76): Instruction: turn the sink spout to the left
+2026-07-21 20:42:42,163 INFO Task TurnSinkSpout: Episode 77 (seed=76): Success | Current Success Rate: 85.71% (66/77)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:42:42,164 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:42:50,381 INFO Task TurnSinkSpout: Episode 78 (seed=77): Instruction: turn the sink spout to the right
+2026-07-21 20:42:58,969 INFO Task TurnSinkSpout: Episode 78 (seed=77): Success | Current Success Rate: 85.90% (67/78)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:42:58,982 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:43:15,403 INFO Task TurnSinkSpout: Episode 79 (seed=78): Instruction: turn the sink spout to the left
+2026-07-21 20:43:45,968 INFO Task TurnSinkSpout: Episode 79 (seed=78): Failure | Current Success Rate: 84.81% (67/79)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:43:46,037 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:43:56,651 INFO Task TurnSinkSpout: Episode 80 (seed=79): Instruction: turn the sink spout to the left
+2026-07-21 20:44:04,677 INFO Task TurnSinkSpout: Episode 80 (seed=79): Success | Current Success Rate: 85.00% (68/80)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:44:04,690 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:44:15,387 INFO Task TurnSinkSpout: Episode 81 (seed=80): Instruction: turn the sink spout to the right
+2026-07-21 20:44:21,329 INFO Task TurnSinkSpout: Episode 81 (seed=80): Success | Current Success Rate: 85.19% (69/81)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:44:21,330 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:44:38,836 INFO Task TurnSinkSpout: Episode 82 (seed=81): Instruction: turn the sink spout to the right
+2026-07-21 20:44:47,348 INFO Task TurnSinkSpout: Episode 82 (seed=81): Success | Current Success Rate: 85.37% (70/82)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:44:47,417 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:45:03,674 INFO Task TurnSinkSpout: Episode 83 (seed=82): Instruction: turn the sink spout to the right
+2026-07-21 20:45:13,589 INFO Task TurnSinkSpout: Episode 83 (seed=82): Success | Current Success Rate: 85.54% (71/83)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:45:13,602 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:45:31,229 INFO Task TurnSinkSpout: Episode 84 (seed=83): Instruction: turn the sink spout to the right
+2026-07-21 20:46:02,134 INFO Task TurnSinkSpout: Episode 84 (seed=83): Success | Current Success Rate: 85.71% (72/84)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:46:02,202 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:46:19,488 INFO Task TurnSinkSpout: Episode 85 (seed=84): Instruction: turn the sink spout to the left
+2026-07-21 20:46:28,758 INFO Task TurnSinkSpout: Episode 85 (seed=84): Success | Current Success Rate: 85.88% (73/85)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:46:28,759 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:46:38,630 INFO Task TurnSinkSpout: Episode 86 (seed=85): Instruction: turn the sink spout to the right
+2026-07-21 20:46:47,674 INFO Task TurnSinkSpout: Episode 86 (seed=85): Success | Current Success Rate: 86.05% (74/86)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:46:47,675 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:46:54,959 INFO Task TurnSinkSpout: Episode 87 (seed=86): Instruction: turn the sink spout to the right
+2026-07-21 20:47:03,786 INFO Task TurnSinkSpout: Episode 87 (seed=86): Success | Current Success Rate: 86.21% (75/87)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:47:03,854 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:47:19,762 INFO Task TurnSinkSpout: Episode 88 (seed=87): Instruction: turn the sink spout to the left
+2026-07-21 20:47:27,063 INFO Task TurnSinkSpout: Episode 88 (seed=87): Success | Current Success Rate: 86.36% (76/88)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:47:27,064 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:47:42,075 INFO Task TurnSinkSpout: Episode 89 (seed=88): Instruction: turn the sink spout to the right
+2026-07-21 20:48:20,328 INFO Task TurnSinkSpout: Episode 89 (seed=88): Failure | Current Success Rate: 85.39% (76/89)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:48:20,410 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:48:43,282 INFO Task TurnSinkSpout: Episode 90 (seed=89): Instruction: turn the sink spout to the right
+2026-07-21 20:49:07,223 INFO Task TurnSinkSpout: Episode 90 (seed=89): Success | Current Success Rate: 85.56% (77/90)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:49:07,224 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:49:21,768 INFO Task TurnSinkSpout: Episode 91 (seed=90): Instruction: turn the sink spout to the right
+2026-07-21 20:49:31,987 INFO Task TurnSinkSpout: Episode 91 (seed=90): Success | Current Success Rate: 85.71% (78/91)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:49:32,067 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:49:49,355 INFO Task TurnSinkSpout: Episode 92 (seed=91): Instruction: turn the sink spout to the left
+2026-07-21 20:49:59,013 INFO Task TurnSinkSpout: Episode 92 (seed=91): Success | Current Success Rate: 85.87% (79/92)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:49:59,014 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:50:10,169 INFO Task TurnSinkSpout: Episode 93 (seed=92): Instruction: turn the sink spout to the right
+2026-07-21 20:50:43,022 INFO Task TurnSinkSpout: Episode 93 (seed=92): Failure | Current Success Rate: 84.95% (79/93)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:50:43,101 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:50:55,135 INFO Task TurnSinkSpout: Episode 94 (seed=93): Instruction: turn the sink spout to the left
+2026-07-21 20:51:03,745 INFO Task TurnSinkSpout: Episode 94 (seed=93): Success | Current Success Rate: 85.11% (80/94)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:51:03,746 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:51:11,668 INFO Task TurnSinkSpout: Episode 95 (seed=94): Instruction: turn the sink spout to the left
+2026-07-21 20:51:20,548 INFO Task TurnSinkSpout: Episode 95 (seed=94): Success | Current Success Rate: 85.26% (81/95)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:51:20,549 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:51:39,356 INFO Task TurnSinkSpout: Episode 96 (seed=95): Instruction: turn the sink spout to the left
+2026-07-21 20:51:50,359 INFO Task TurnSinkSpout: Episode 96 (seed=95): Success | Current Success Rate: 85.42% (82/96)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:51:50,440 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:52:02,647 INFO Task TurnSinkSpout: Episode 97 (seed=96): Instruction: turn the sink spout to the left
+2026-07-21 20:52:14,738 INFO Task TurnSinkSpout: Episode 97 (seed=96): Success | Current Success Rate: 85.57% (83/97)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:52:14,739 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:52:24,140 INFO Task TurnSinkSpout: Episode 98 (seed=97): Instruction: turn the sink spout to the left
+2026-07-21 20:52:32,966 INFO Task TurnSinkSpout: Episode 98 (seed=97): Success | Current Success Rate: 85.71% (84/98)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:52:32,967 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:52:46,265 INFO Task TurnSinkSpout: Episode 99 (seed=98): Instruction: turn the sink spout to the left
+2026-07-21 20:53:06,432 INFO Task TurnSinkSpout: Episode 99 (seed=98): Success | Current Success Rate: 85.86% (85/99)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:53:06,512 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:53:21,738 INFO Task TurnSinkSpout: Episode 100 (seed=99): Instruction: turn the sink spout to the left
+2026-07-21 20:53:34,000 INFO Task TurnSinkSpout: Episode 100 (seed=99): Success | Current Success Rate: 86.00% (86/100)
+Client connection closed.
+2026-07-21 20:53:34,000 INFO Task TurnSinkSpout Final Success Rate: 86.00% (86/100)
+2026-07-21 20:53:34,046 INFO Results saved to: ./eval_robocasa/eval_logs/eval_results_TurnSinkSpout.json

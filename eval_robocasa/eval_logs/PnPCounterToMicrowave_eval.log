@@ -1,0 +1,419 @@
+[robosuite WARNING] No private macro file found! (macros.py:57)
+2026-07-21 17:02:55,048 WARNING No private macro file found!
+[robosuite WARNING] It is recommended to use a private macro file (macros.py:58)
+2026-07-21 17:02:55,048 WARNING It is recommended to use a private macro file
+[robosuite WARNING] To setup, run: python /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/scripts/setup_macros.py (macros.py:59)
+2026-07-21 17:02:55,048 WARNING To setup, run: python /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/scripts/setup_macros.py
+[robosuite WARNING] Could not import robosuite_models. Some robots may not be available. If you want to use these robots, please install robosuite_models from source (https://github.com/ARISE-Initiative/robosuite_models) or through pip install. (__init__.py:30)
+2026-07-21 17:03:13,179 WARNING Could not import robosuite_models. Some robots may not be available. If you want to use these robots, please install robosuite_models from source (https://github.com/ARISE-Initiative/robosuite_models) or through pip install.
+[robosuite WARNING] Could not load the mink-based whole-body IK. Make sure you install related import properly (e.g. pip install mink==0.0.5), otherwise you will not be able to use the default IK controller setting for GR1 robot. (__init__.py:40)
+2026-07-21 17:03:13,290 WARNING Could not load the mink-based whole-body IK. Make sure you install related import properly (e.g. pip install mink==0.0.5), otherwise you will not be able to use the default IK controller setting for GR1 robot.
+WARNING: mimicgen environments not imported since mimicgen is not installed!
+2026-07-21 17:05:34,190 INFO Task: PnPCounterToMicrowave | Episodes: 100 | Start seed: 0
+2026-07-21 17:05:34,190 INFO Server: localhost:10090
+Client connected to server at localhost:10090.
+2026-07-21 17:05:35,652 INFO EvalClient ready. Robot types: ['robocasa_mg']
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:05:35,695 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:05:50,918 INFO No OpenGL_accelerate module loaded: No module named 'OpenGL_accelerate'
+2026-07-21 17:06:01,120 INFO Task PnPCounterToMicrowave: Episode 1 (seed=0): Instruction: pick the cheese from the counter and place it in the microwave
+2026-07-21 17:06:32,551 INFO Task PnPCounterToMicrowave: Episode 1 (seed=0): Success | Current Success Rate: 100.00% (1/1)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:06:32,552 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:06:45,763 INFO Task PnPCounterToMicrowave: Episode 2 (seed=1): Instruction: pick the onion from the counter and place it in the microwave
+2026-07-21 17:07:23,127 INFO Task PnPCounterToMicrowave: Episode 2 (seed=1): Failure | Current Success Rate: 50.00% (1/2)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:07:23,127 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:07:35,312 INFO Task PnPCounterToMicrowave: Episode 3 (seed=2): Instruction: pick the garlic from the counter and place it in the microwave
+2026-07-21 17:08:14,316 INFO Task PnPCounterToMicrowave: Episode 3 (seed=2): Failure | Current Success Rate: 33.33% (1/3)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:08:14,317 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:08:26,756 INFO Task PnPCounterToMicrowave: Episode 4 (seed=3): Instruction: pick the mushroom from the counter and place it in the microwave
+2026-07-21 17:09:03,944 INFO Task PnPCounterToMicrowave: Episode 4 (seed=3): Failure | Current Success Rate: 25.00% (1/4)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:09:03,945 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:09:22,809 INFO Task PnPCounterToMicrowave: Episode 5 (seed=4): Instruction: pick the egg from the counter and place it in the microwave
+2026-07-21 17:10:11,981 INFO Task PnPCounterToMicrowave: Episode 5 (seed=4): Failure | Current Success Rate: 20.00% (1/5)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:10:11,982 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:10:29,322 INFO Task PnPCounterToMicrowave: Episode 6 (seed=5): Instruction: pick the broccoli from the counter and place it in the microwave
+2026-07-21 17:11:10,007 INFO Task PnPCounterToMicrowave: Episode 6 (seed=5): Failure | Current Success Rate: 16.67% (1/6)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:11:10,008 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:11:19,696 INFO Task PnPCounterToMicrowave: Episode 7 (seed=6): Instruction: pick the onion from the counter and place it in the microwave
+2026-07-21 17:12:00,323 INFO Task PnPCounterToMicrowave: Episode 7 (seed=6): Failure | Current Success Rate: 14.29% (1/7)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:12:00,323 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:12:16,768 INFO Task PnPCounterToMicrowave: Episode 8 (seed=7): Instruction: pick the bell pepper from the counter and place it in the microwave
+2026-07-21 17:12:54,624 INFO Task PnPCounterToMicrowave: Episode 8 (seed=7): Failure | Current Success Rate: 12.50% (1/8)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:12:54,625 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:13:10,191 INFO Task PnPCounterToMicrowave: Episode 9 (seed=8): Instruction: pick the garlic from the counter and place it in the microwave
+2026-07-21 17:13:46,528 INFO Task PnPCounterToMicrowave: Episode 9 (seed=8): Failure | Current Success Rate: 11.11% (1/9)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:13:46,529 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:14:00,061 INFO Task PnPCounterToMicrowave: Episode 10 (seed=9): Instruction: pick the steak from the counter and place it in the microwave
+2026-07-21 17:14:24,906 INFO Task PnPCounterToMicrowave: Episode 10 (seed=9): Success | Current Success Rate: 20.00% (2/10)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:14:24,907 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:14:42,018 INFO Task PnPCounterToMicrowave: Episode 11 (seed=10): Instruction: pick the potato from the counter and place it in the microwave
+2026-07-21 17:15:19,716 INFO Task PnPCounterToMicrowave: Episode 11 (seed=10): Failure | Current Success Rate: 18.18% (2/11)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:15:19,717 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:15:29,067 INFO Task PnPCounterToMicrowave: Episode 12 (seed=11): Instruction: pick the steak from the counter and place it in the microwave
+2026-07-21 17:16:07,184 INFO Task PnPCounterToMicrowave: Episode 12 (seed=11): Failure | Current Success Rate: 16.67% (2/12)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:16:07,185 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:16:21,074 INFO Task PnPCounterToMicrowave: Episode 13 (seed=12): Instruction: pick the steak from the counter and place it in the microwave
+2026-07-21 17:16:59,073 INFO Task PnPCounterToMicrowave: Episode 13 (seed=12): Failure | Current Success Rate: 15.38% (2/13)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:16:59,074 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:17:07,689 INFO Task PnPCounterToMicrowave: Episode 14 (seed=13): Instruction: pick the tomato from the counter and place it in the microwave
+2026-07-21 17:17:48,412 INFO Task PnPCounterToMicrowave: Episode 14 (seed=13): Failure | Current Success Rate: 14.29% (2/14)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:17:48,413 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:17:58,409 INFO Task PnPCounterToMicrowave: Episode 15 (seed=14): Instruction: pick the garlic from the counter and place it in the microwave
+2026-07-21 17:18:38,827 INFO Task PnPCounterToMicrowave: Episode 15 (seed=14): Failure | Current Success Rate: 13.33% (2/15)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:18:38,828 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:18:46,922 INFO Task PnPCounterToMicrowave: Episode 16 (seed=15): Instruction: pick the cheese from the counter and place it in the microwave
+2026-07-21 17:19:27,909 INFO Task PnPCounterToMicrowave: Episode 16 (seed=15): Failure | Current Success Rate: 12.50% (2/16)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:19:27,971 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:19:44,525 INFO Task PnPCounterToMicrowave: Episode 17 (seed=16): Instruction: pick the tomato from the counter and place it in the microwave
+2026-07-21 17:20:34,248 INFO Task PnPCounterToMicrowave: Episode 17 (seed=16): Failure | Current Success Rate: 11.76% (2/17)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:20:34,294 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:20:49,228 INFO Task PnPCounterToMicrowave: Episode 18 (seed=17): Instruction: pick the squash from the counter and place it in the microwave
+2026-07-21 17:21:23,460 INFO Task PnPCounterToMicrowave: Episode 18 (seed=17): Success | Current Success Rate: 16.67% (3/18)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:21:23,462 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:21:34,828 INFO Task PnPCounterToMicrowave: Episode 19 (seed=18): Instruction: pick the bell pepper from the counter and place it in the microwave
+2026-07-21 17:22:01,304 INFO Task PnPCounterToMicrowave: Episode 19 (seed=18): Success | Current Success Rate: 21.05% (4/19)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:22:01,305 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:22:20,110 INFO Task PnPCounterToMicrowave: Episode 20 (seed=19): Instruction: pick the potato from the counter and place it in the microwave
+2026-07-21 17:23:09,294 INFO Task PnPCounterToMicrowave: Episode 20 (seed=19): Failure | Current Success Rate: 20.00% (4/20)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:23:09,294 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:23:27,147 INFO Task PnPCounterToMicrowave: Episode 21 (seed=20): Instruction: pick the garlic from the counter and place it in the microwave
+2026-07-21 17:24:04,609 INFO Task PnPCounterToMicrowave: Episode 21 (seed=20): Failure | Current Success Rate: 19.05% (4/21)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:24:04,609 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:24:20,446 INFO Task PnPCounterToMicrowave: Episode 22 (seed=21): Instruction: pick the carrot from the counter and place it in the microwave
+2026-07-21 17:25:11,707 INFO Task PnPCounterToMicrowave: Episode 22 (seed=21): Failure | Current Success Rate: 18.18% (4/22)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:25:11,708 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:25:31,234 INFO Task PnPCounterToMicrowave: Episode 23 (seed=22): Instruction: pick the eggplant from the counter and place it in the microwave
+2026-07-21 17:26:07,273 INFO Task PnPCounterToMicrowave: Episode 23 (seed=22): Success | Current Success Rate: 21.74% (5/23)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:26:07,319 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:26:18,468 INFO Task PnPCounterToMicrowave: Episode 24 (seed=23): Instruction: pick the garlic from the counter and place it in the microwave
+2026-07-21 17:26:55,502 INFO Task PnPCounterToMicrowave: Episode 24 (seed=23): Failure | Current Success Rate: 20.83% (5/24)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:26:55,503 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:27:07,437 INFO Task PnPCounterToMicrowave: Episode 25 (seed=24): Instruction: pick the onion from the counter and place it in the microwave
+2026-07-21 17:27:34,605 INFO Task PnPCounterToMicrowave: Episode 25 (seed=24): Success | Current Success Rate: 24.00% (6/25)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:27:34,606 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:27:49,228 INFO Task PnPCounterToMicrowave: Episode 26 (seed=25): Instruction: pick the steak from the counter and place it in the microwave
+2026-07-21 17:28:24,879 INFO Task PnPCounterToMicrowave: Episode 26 (seed=25): Success | Current Success Rate: 26.92% (7/26)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:28:24,927 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:28:39,272 INFO Task PnPCounterToMicrowave: Episode 27 (seed=26): Instruction: pick the onion from the counter and place it in the microwave
+2026-07-21 17:29:27,569 INFO Task PnPCounterToMicrowave: Episode 27 (seed=26): Failure | Current Success Rate: 25.93% (7/27)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:29:27,570 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:29:41,541 INFO Task PnPCounterToMicrowave: Episode 28 (seed=27): Instruction: pick the garlic from the counter and place it in the microwave
+2026-07-21 17:30:30,239 INFO Task PnPCounterToMicrowave: Episode 28 (seed=27): Failure | Current Success Rate: 25.00% (7/28)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:30:30,240 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:30:45,029 INFO Task PnPCounterToMicrowave: Episode 29 (seed=28): Instruction: pick the onion from the counter and place it in the microwave
+2026-07-21 17:31:17,026 INFO Task PnPCounterToMicrowave: Episode 29 (seed=28): Success | Current Success Rate: 27.59% (8/29)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:31:17,027 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:31:30,307 INFO Task PnPCounterToMicrowave: Episode 30 (seed=29): Instruction: pick the onion from the counter and place it in the microwave
+2026-07-21 17:32:07,014 INFO Task PnPCounterToMicrowave: Episode 30 (seed=29): Failure | Current Success Rate: 26.67% (8/30)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:32:07,014 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:32:18,696 INFO Task PnPCounterToMicrowave: Episode 31 (seed=30): Instruction: pick the eggplant from the counter and place it in the microwave
+2026-07-21 17:32:45,551 INFO Task PnPCounterToMicrowave: Episode 31 (seed=30): Success | Current Success Rate: 29.03% (9/31)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:32:45,552 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:32:55,831 INFO Task PnPCounterToMicrowave: Episode 32 (seed=31): Instruction: pick the steak from the counter and place it in the microwave
+2026-07-21 17:33:34,589 INFO Task PnPCounterToMicrowave: Episode 32 (seed=31): Failure | Current Success Rate: 28.12% (9/32)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:33:34,589 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:33:46,578 INFO Task PnPCounterToMicrowave: Episode 33 (seed=32): Instruction: pick the sweet potato from the counter and place it in the microwave
+2026-07-21 17:34:26,414 INFO Task PnPCounterToMicrowave: Episode 33 (seed=32): Failure | Current Success Rate: 27.27% (9/33)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:34:26,415 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:34:34,571 INFO Task PnPCounterToMicrowave: Episode 34 (seed=33): Instruction: pick the broccoli from the counter and place it in the microwave
+2026-07-21 17:35:13,754 INFO Task PnPCounterToMicrowave: Episode 34 (seed=33): Failure | Current Success Rate: 26.47% (9/34)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:35:13,755 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:35:25,664 INFO Task PnPCounterToMicrowave: Episode 35 (seed=34): Instruction: pick the carrot from the counter and place it in the microwave
+2026-07-21 17:35:55,020 INFO Task PnPCounterToMicrowave: Episode 35 (seed=34): Success | Current Success Rate: 28.57% (10/35)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:35:55,021 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:36:06,059 INFO Task PnPCounterToMicrowave: Episode 36 (seed=35): Instruction: pick the potato from the counter and place it in the microwave
+2026-07-21 17:36:39,736 INFO Task PnPCounterToMicrowave: Episode 36 (seed=35): Success | Current Success Rate: 30.56% (11/36)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:36:39,737 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:36:57,579 INFO Task PnPCounterToMicrowave: Episode 37 (seed=36): Instruction: pick the hot dog from the counter and place it in the microwave
+2026-07-21 17:37:35,518 INFO Task PnPCounterToMicrowave: Episode 37 (seed=36): Success | Current Success Rate: 32.43% (12/37)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:37:35,519 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:37:51,215 INFO Task PnPCounterToMicrowave: Episode 38 (seed=37): Instruction: pick the steak from the counter and place it in the microwave
+2026-07-21 17:38:40,331 INFO Task PnPCounterToMicrowave: Episode 38 (seed=37): Failure | Current Success Rate: 31.58% (12/38)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:38:40,332 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:38:51,686 INFO Task PnPCounterToMicrowave: Episode 39 (seed=38): Instruction: pick the tomato from the counter and place it in the microwave
+2026-07-21 17:39:31,151 INFO Task PnPCounterToMicrowave: Episode 39 (seed=38): Failure | Current Success Rate: 30.77% (12/39)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:39:31,152 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:39:39,574 INFO Task PnPCounterToMicrowave: Episode 40 (seed=39): Instruction: pick the onion from the counter and place it in the microwave
+2026-07-21 17:40:18,345 INFO Task PnPCounterToMicrowave: Episode 40 (seed=39): Failure | Current Success Rate: 30.00% (12/40)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:40:18,346 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:40:27,883 INFO Task PnPCounterToMicrowave: Episode 41 (seed=40): Instruction: pick the cheese from the counter and place it in the microwave
+2026-07-21 17:41:07,082 INFO Task PnPCounterToMicrowave: Episode 41 (seed=40): Failure | Current Success Rate: 29.27% (12/41)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:41:07,083 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:41:22,932 INFO Task PnPCounterToMicrowave: Episode 42 (seed=41): Instruction: pick the squash from the counter and place it in the microwave
+2026-07-21 17:42:06,622 INFO Task PnPCounterToMicrowave: Episode 42 (seed=41): Failure | Current Success Rate: 28.57% (12/42)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:42:06,623 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:42:18,624 INFO Task PnPCounterToMicrowave: Episode 43 (seed=42): Instruction: pick the eggplant from the counter and place it in the microwave
+2026-07-21 17:42:46,954 INFO Task PnPCounterToMicrowave: Episode 43 (seed=42): Success | Current Success Rate: 30.23% (13/43)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:42:46,955 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:42:58,135 INFO Task PnPCounterToMicrowave: Episode 44 (seed=43): Instruction: pick the cheese from the counter and place it in the microwave
+2026-07-21 17:43:34,548 INFO Task PnPCounterToMicrowave: Episode 44 (seed=43): Failure | Current Success Rate: 29.55% (13/44)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:43:34,549 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:43:48,087 INFO Task PnPCounterToMicrowave: Episode 45 (seed=44): Instruction: pick the broccoli from the counter and place it in the microwave
+2026-07-21 17:44:13,934 INFO Task PnPCounterToMicrowave: Episode 45 (seed=44): Success | Current Success Rate: 31.11% (14/45)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:44:13,935 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:44:27,273 INFO Task PnPCounterToMicrowave: Episode 46 (seed=45): Instruction: pick the potato from the counter and place it in the microwave
+2026-07-21 17:45:17,148 INFO Task PnPCounterToMicrowave: Episode 46 (seed=45): Failure | Current Success Rate: 30.43% (14/46)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:45:17,149 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:45:26,875 INFO Task PnPCounterToMicrowave: Episode 47 (seed=46): Instruction: pick the eggplant from the counter and place it in the microwave
+2026-07-21 17:46:05,116 INFO Task PnPCounterToMicrowave: Episode 47 (seed=46): Failure | Current Success Rate: 29.79% (14/47)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:46:05,117 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:46:14,241 INFO Task PnPCounterToMicrowave: Episode 48 (seed=47): Instruction: pick the squash from the counter and place it in the microwave
+2026-07-21 17:46:55,258 INFO Task PnPCounterToMicrowave: Episode 48 (seed=47): Failure | Current Success Rate: 29.17% (14/48)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:46:55,259 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:47:09,326 INFO Task PnPCounterToMicrowave: Episode 49 (seed=48): Instruction: pick the egg from the counter and place it in the microwave
+2026-07-21 17:47:58,692 INFO Task PnPCounterToMicrowave: Episode 49 (seed=48): Failure | Current Success Rate: 28.57% (14/49)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:47:58,693 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:48:09,773 INFO Task PnPCounterToMicrowave: Episode 50 (seed=49): Instruction: pick the potato from the counter and place it in the microwave
+2026-07-21 17:48:47,746 INFO Task PnPCounterToMicrowave: Episode 50 (seed=49): Failure | Current Success Rate: 28.00% (14/50)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:48:47,747 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:49:06,571 INFO Task PnPCounterToMicrowave: Episode 51 (seed=50): Instruction: pick the garlic from the counter and place it in the microwave
+2026-07-21 17:49:55,741 INFO Task PnPCounterToMicrowave: Episode 51 (seed=50): Failure | Current Success Rate: 27.45% (14/51)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:49:55,742 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:50:06,413 INFO Task PnPCounterToMicrowave: Episode 52 (seed=51): Instruction: pick the squash from the counter and place it in the microwave
+2026-07-21 17:50:43,900 INFO Task PnPCounterToMicrowave: Episode 52 (seed=51): Failure | Current Success Rate: 26.92% (14/52)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:50:43,948 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:50:52,148 INFO Task PnPCounterToMicrowave: Episode 53 (seed=52): Instruction: pick the sweet potato from the counter and place it in the microwave
+2026-07-21 17:51:31,623 INFO Task PnPCounterToMicrowave: Episode 53 (seed=52): Failure | Current Success Rate: 26.42% (14/53)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:51:31,631 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:51:48,242 INFO Task PnPCounterToMicrowave: Episode 54 (seed=53): Instruction: pick the corn from the counter and place it in the microwave
+2026-07-21 17:52:25,624 INFO Task PnPCounterToMicrowave: Episode 54 (seed=53): Failure | Current Success Rate: 25.93% (14/54)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:52:25,625 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:52:42,515 INFO Task PnPCounterToMicrowave: Episode 55 (seed=54): Instruction: pick the eggplant from the counter and place it in the microwave
+2026-07-21 17:53:31,543 INFO Task PnPCounterToMicrowave: Episode 55 (seed=54): Failure | Current Success Rate: 25.45% (14/55)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:53:31,543 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:53:40,905 INFO Task PnPCounterToMicrowave: Episode 56 (seed=55): Instruction: pick the carrot from the counter and place it in the microwave
+2026-07-21 17:54:12,479 INFO Task PnPCounterToMicrowave: Episode 56 (seed=55): Success | Current Success Rate: 26.79% (15/56)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:54:12,524 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:54:23,858 INFO Task PnPCounterToMicrowave: Episode 57 (seed=56): Instruction: pick the garlic from the counter and place it in the microwave
+2026-07-21 17:55:04,995 INFO Task PnPCounterToMicrowave: Episode 57 (seed=56): Failure | Current Success Rate: 26.32% (15/57)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:55:04,996 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:55:21,086 INFO Task PnPCounterToMicrowave: Episode 58 (seed=57): Instruction: pick the fish from the counter and place it in the microwave
+2026-07-21 17:56:00,304 INFO Task PnPCounterToMicrowave: Episode 58 (seed=57): Failure | Current Success Rate: 25.86% (15/58)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:56:00,305 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:56:11,832 INFO Task PnPCounterToMicrowave: Episode 59 (seed=58): Instruction: pick the sweet potato from the counter and place it in the microwave
+2026-07-21 17:56:41,707 INFO Task PnPCounterToMicrowave: Episode 59 (seed=58): Success | Current Success Rate: 27.12% (16/59)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:56:41,707 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:56:57,177 INFO Task PnPCounterToMicrowave: Episode 60 (seed=59): Instruction: pick the tomato from the counter and place it in the microwave
+2026-07-21 17:57:24,558 INFO Task PnPCounterToMicrowave: Episode 60 (seed=59): Success | Current Success Rate: 28.33% (17/60)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:57:24,559 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:57:35,945 INFO Task PnPCounterToMicrowave: Episode 61 (seed=60): Instruction: pick the corn from the counter and place it in the microwave
+2026-07-21 17:58:15,310 INFO Task PnPCounterToMicrowave: Episode 61 (seed=60): Success | Current Success Rate: 29.51% (18/61)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:58:15,311 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:58:30,419 INFO Task PnPCounterToMicrowave: Episode 62 (seed=61): Instruction: pick the garlic from the counter and place it in the microwave
+2026-07-21 17:59:10,334 INFO Task PnPCounterToMicrowave: Episode 62 (seed=61): Failure | Current Success Rate: 29.03% (18/62)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:59:10,335 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:59:26,642 INFO Task PnPCounterToMicrowave: Episode 63 (seed=62): Instruction: pick the tomato from the counter and place it in the microwave
+2026-07-21 18:00:22,260 INFO Task PnPCounterToMicrowave: Episode 63 (seed=62): Failure | Current Success Rate: 28.57% (18/63)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:00:22,261 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:00:33,218 INFO Task PnPCounterToMicrowave: Episode 64 (seed=63): Instruction: pick the onion from the counter and place it in the microwave
+2026-07-21 18:01:13,363 INFO Task PnPCounterToMicrowave: Episode 64 (seed=63): Failure | Current Success Rate: 28.12% (18/64)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:01:13,364 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:01:29,686 INFO Task PnPCounterToMicrowave: Episode 65 (seed=64): Instruction: pick the steak from the counter and place it in the microwave
+2026-07-21 18:02:26,658 INFO Task PnPCounterToMicrowave: Episode 65 (seed=64): Failure | Current Success Rate: 27.69% (18/65)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:02:26,659 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:02:35,757 INFO Task PnPCounterToMicrowave: Episode 66 (seed=65): Instruction: pick the tomato from the counter and place it in the microwave
+2026-07-21 18:03:03,804 INFO Task PnPCounterToMicrowave: Episode 66 (seed=65): Success | Current Success Rate: 28.79% (19/66)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:03:03,817 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:03:17,532 INFO Task PnPCounterToMicrowave: Episode 67 (seed=66): Instruction: pick the hot dog from the counter and place it in the microwave
+2026-07-21 18:03:58,280 INFO Task PnPCounterToMicrowave: Episode 67 (seed=66): Failure | Current Success Rate: 28.36% (19/67)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:03:58,282 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:04:14,376 INFO Task PnPCounterToMicrowave: Episode 68 (seed=67): Instruction: pick the broccoli from the counter and place it in the microwave
+2026-07-21 18:04:53,351 INFO Task PnPCounterToMicrowave: Episode 68 (seed=67): Failure | Current Success Rate: 27.94% (19/68)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:04:53,352 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:05:04,595 INFO Task PnPCounterToMicrowave: Episode 69 (seed=68): Instruction: pick the sweet potato from the counter and place it in the microwave
+2026-07-21 18:05:36,151 INFO Task PnPCounterToMicrowave: Episode 69 (seed=68): Success | Current Success Rate: 28.99% (20/69)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:05:36,152 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:05:50,061 INFO Task PnPCounterToMicrowave: Episode 70 (seed=69): Instruction: pick the bell pepper from the counter and place it in the microwave
+2026-07-21 18:06:39,218 INFO Task PnPCounterToMicrowave: Episode 70 (seed=69): Failure | Current Success Rate: 28.57% (20/70)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:06:39,219 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:07:11,669 INFO Task PnPCounterToMicrowave: Episode 71 (seed=70): Instruction: pick the egg from the counter and place it in the microwave
+2026-07-21 18:07:40,053 INFO Task PnPCounterToMicrowave: Episode 71 (seed=70): Success | Current Success Rate: 29.58% (21/71)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:07:40,054 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:07:50,247 INFO Task PnPCounterToMicrowave: Episode 72 (seed=71): Instruction: pick the potato from the counter and place it in the microwave
+2026-07-21 18:08:28,863 INFO Task PnPCounterToMicrowave: Episode 72 (seed=71): Failure | Current Success Rate: 29.17% (21/72)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:08:28,863 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:08:37,470 INFO Task PnPCounterToMicrowave: Episode 73 (seed=72): Instruction: pick the squash from the counter and place it in the microwave
+2026-07-21 18:09:17,153 INFO Task PnPCounterToMicrowave: Episode 73 (seed=72): Failure | Current Success Rate: 28.77% (21/73)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:09:17,198 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:09:34,236 INFO Task PnPCounterToMicrowave: Episode 74 (seed=73): Instruction: pick the bell pepper from the counter and place it in the microwave
+2026-07-21 18:10:13,955 INFO Task PnPCounterToMicrowave: Episode 74 (seed=73): Failure | Current Success Rate: 28.38% (21/74)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:10:13,955 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:10:25,354 INFO Task PnPCounterToMicrowave: Episode 75 (seed=74): Instruction: pick the bell pepper from the counter and place it in the microwave
+2026-07-21 18:11:03,020 INFO Task PnPCounterToMicrowave: Episode 75 (seed=74): Failure | Current Success Rate: 28.00% (21/75)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:11:03,021 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:11:19,073 INFO Task PnPCounterToMicrowave: Episode 76 (seed=75): Instruction: pick the egg from the counter and place it in the microwave
+2026-07-21 18:11:47,432 INFO Task PnPCounterToMicrowave: Episode 76 (seed=75): Success | Current Success Rate: 28.95% (22/76)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:11:47,433 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:11:57,379 INFO Task PnPCounterToMicrowave: Episode 77 (seed=76): Instruction: pick the fish from the counter and place it in the microwave
+2026-07-21 18:12:27,628 INFO Task PnPCounterToMicrowave: Episode 77 (seed=76): Success | Current Success Rate: 29.87% (23/77)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:12:27,628 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:12:43,931 INFO Task PnPCounterToMicrowave: Episode 78 (seed=77): Instruction: pick the squash from the counter and place it in the microwave
+2026-07-21 18:13:37,426 INFO Task PnPCounterToMicrowave: Episode 78 (seed=77): Failure | Current Success Rate: 29.49% (23/78)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:13:37,427 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:13:52,497 INFO Task PnPCounterToMicrowave: Episode 79 (seed=78): Instruction: pick the potato from the counter and place it in the microwave
+2026-07-21 18:14:21,887 INFO Task PnPCounterToMicrowave: Episode 79 (seed=78): Success | Current Success Rate: 30.38% (24/79)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:14:21,888 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:14:35,796 INFO Task PnPCounterToMicrowave: Episode 80 (seed=79): Instruction: pick the fish from the counter and place it in the microwave
+2026-07-21 18:15:24,632 INFO Task PnPCounterToMicrowave: Episode 80 (seed=79): Failure | Current Success Rate: 30.00% (24/80)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:15:24,633 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:15:34,949 INFO Task PnPCounterToMicrowave: Episode 81 (seed=80): Instruction: pick the tomato from the counter and place it in the microwave
+2026-07-21 18:16:13,028 INFO Task PnPCounterToMicrowave: Episode 81 (seed=80): Failure | Current Success Rate: 29.63% (24/81)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:16:13,029 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:16:24,246 INFO Task PnPCounterToMicrowave: Episode 82 (seed=81): Instruction: pick the cheese from the counter and place it in the microwave
+2026-07-21 18:17:03,346 INFO Task PnPCounterToMicrowave: Episode 82 (seed=81): Failure | Current Success Rate: 29.27% (24/82)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:17:03,391 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:17:22,441 INFO Task PnPCounterToMicrowave: Episode 83 (seed=82): Instruction: pick the cheese from the counter and place it in the microwave
+2026-07-21 18:18:10,338 INFO Task PnPCounterToMicrowave: Episode 83 (seed=82): Failure | Current Success Rate: 28.92% (24/83)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:18:10,339 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:18:29,211 INFO Task PnPCounterToMicrowave: Episode 84 (seed=83): Instruction: pick the garlic from the counter and place it in the microwave
+2026-07-21 18:19:16,340 INFO Task PnPCounterToMicrowave: Episode 84 (seed=83): Failure | Current Success Rate: 28.57% (24/84)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:19:16,341 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:19:31,680 INFO Task PnPCounterToMicrowave: Episode 85 (seed=84): Instruction: pick the fish from the counter and place it in the microwave
+2026-07-21 18:20:12,206 INFO Task PnPCounterToMicrowave: Episode 85 (seed=84): Failure | Current Success Rate: 28.24% (24/85)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:20:12,252 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:20:27,718 INFO Task PnPCounterToMicrowave: Episode 86 (seed=85): Instruction: pick the corn from the counter and place it in the microwave
+2026-07-21 18:20:55,203 INFO Task PnPCounterToMicrowave: Episode 86 (seed=85): Success | Current Success Rate: 29.07% (25/86)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:20:55,203 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:21:08,197 INFO Task PnPCounterToMicrowave: Episode 87 (seed=86): Instruction: pick the hot dog from the counter and place it in the microwave
+2026-07-21 18:21:39,996 INFO Task PnPCounterToMicrowave: Episode 87 (seed=86): Success | Current Success Rate: 29.89% (26/87)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:21:39,997 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:21:56,841 INFO Task PnPCounterToMicrowave: Episode 88 (seed=87): Instruction: pick the hot dog from the counter and place it in the microwave
+2026-07-21 18:22:24,158 INFO Task PnPCounterToMicrowave: Episode 88 (seed=87): Success | Current Success Rate: 30.68% (27/88)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:22:24,158 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:22:40,617 INFO Task PnPCounterToMicrowave: Episode 89 (seed=88): Instruction: pick the fish from the counter and place it in the microwave
+2026-07-21 18:23:19,294 INFO Task PnPCounterToMicrowave: Episode 89 (seed=88): Success | Current Success Rate: 31.46% (28/89)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:23:19,295 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:23:33,268 INFO Task PnPCounterToMicrowave: Episode 90 (seed=89): Instruction: pick the broccoli from the counter and place it in the microwave
+2026-07-21 18:24:21,845 INFO Task PnPCounterToMicrowave: Episode 90 (seed=89): Failure | Current Success Rate: 31.11% (28/90)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:24:21,891 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:24:36,026 INFO Task PnPCounterToMicrowave: Episode 91 (seed=90): Instruction: pick the bell pepper from the counter and place it in the microwave
+2026-07-21 18:25:05,215 INFO Task PnPCounterToMicrowave: Episode 91 (seed=90): Success | Current Success Rate: 31.87% (29/91)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:25:05,217 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:25:21,789 INFO Task PnPCounterToMicrowave: Episode 92 (seed=91): Instruction: pick the garlic from the counter and place it in the microwave
+2026-07-21 18:26:02,802 INFO Task PnPCounterToMicrowave: Episode 92 (seed=91): Failure | Current Success Rate: 31.52% (29/92)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:26:02,803 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:26:13,395 INFO Task PnPCounterToMicrowave: Episode 93 (seed=92): Instruction: pick the bell pepper from the counter and place it in the microwave
+2026-07-21 18:26:54,430 INFO Task PnPCounterToMicrowave: Episode 93 (seed=92): Failure | Current Success Rate: 31.18% (29/93)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:26:54,431 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:27:03,563 INFO Task PnPCounterToMicrowave: Episode 94 (seed=93): Instruction: pick the garlic from the counter and place it in the microwave
+2026-07-21 18:27:42,319 INFO Task PnPCounterToMicrowave: Episode 94 (seed=93): Failure | Current Success Rate: 30.85% (29/94)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:27:42,320 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:27:56,015 INFO Task PnPCounterToMicrowave: Episode 95 (seed=94): Instruction: pick the tomato from the counter and place it in the microwave
+2026-07-21 18:28:35,865 INFO Task PnPCounterToMicrowave: Episode 95 (seed=94): Failure | Current Success Rate: 30.53% (29/95)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:28:35,866 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:28:47,673 INFO Task PnPCounterToMicrowave: Episode 96 (seed=95): Instruction: pick the bell pepper from the counter and place it in the microwave
+2026-07-21 18:29:25,890 INFO Task PnPCounterToMicrowave: Episode 96 (seed=95): Failure | Current Success Rate: 30.21% (29/96)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:29:25,891 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:29:37,372 INFO Task PnPCounterToMicrowave: Episode 97 (seed=96): Instruction: pick the hot dog from the counter and place it in the microwave
+2026-07-21 18:30:14,445 INFO Task PnPCounterToMicrowave: Episode 97 (seed=96): Failure | Current Success Rate: 29.90% (29/97)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:30:14,446 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:30:27,151 INFO Task PnPCounterToMicrowave: Episode 98 (seed=97): Instruction: pick the eggplant from the counter and place it in the microwave
+2026-07-21 18:30:55,072 INFO Task PnPCounterToMicrowave: Episode 98 (seed=97): Success | Current Success Rate: 30.61% (30/98)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:30:55,073 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:31:11,008 INFO Task PnPCounterToMicrowave: Episode 99 (seed=98): Instruction: pick the corn from the counter and place it in the microwave
+2026-07-21 18:32:02,272 INFO Task PnPCounterToMicrowave: Episode 99 (seed=98): Failure | Current Success Rate: 30.30% (30/99)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:32:02,273 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:32:14,000 INFO Task PnPCounterToMicrowave: Episode 100 (seed=99): Instruction: pick the fish from the counter and place it in the microwave
+2026-07-21 18:32:50,774 INFO Task PnPCounterToMicrowave: Episode 100 (seed=99): Failure | Current Success Rate: 30.00% (30/100)
+Client connection closed.
+2026-07-21 18:32:50,774 INFO Task PnPCounterToMicrowave Final Success Rate: 30.00% (30/100)
+2026-07-21 18:32:50,815 INFO Results saved to: ./eval_robocasa/eval_logs/eval_results_PnPCounterToMicrowave.json

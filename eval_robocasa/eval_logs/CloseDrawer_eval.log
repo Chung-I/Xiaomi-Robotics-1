@@ -1,0 +1,419 @@
+[robosuite WARNING] No private macro file found! (macros.py:57)
+2026-07-21 18:19:24,881 WARNING No private macro file found!
+[robosuite WARNING] It is recommended to use a private macro file (macros.py:58)
+2026-07-21 18:19:24,881 WARNING It is recommended to use a private macro file
+[robosuite WARNING] To setup, run: python /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/scripts/setup_macros.py (macros.py:59)
+2026-07-21 18:19:24,881 WARNING To setup, run: python /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/scripts/setup_macros.py
+[robosuite WARNING] Could not import robosuite_models. Some robots may not be available. If you want to use these robots, please install robosuite_models from source (https://github.com/ARISE-Initiative/robosuite_models) or through pip install. (__init__.py:30)
+2026-07-21 18:19:38,833 WARNING Could not import robosuite_models. Some robots may not be available. If you want to use these robots, please install robosuite_models from source (https://github.com/ARISE-Initiative/robosuite_models) or through pip install.
+[robosuite WARNING] Could not load the mink-based whole-body IK. Make sure you install related import properly (e.g. pip install mink==0.0.5), otherwise you will not be able to use the default IK controller setting for GR1 robot. (__init__.py:40)
+2026-07-21 18:19:38,934 WARNING Could not load the mink-based whole-body IK. Make sure you install related import properly (e.g. pip install mink==0.0.5), otherwise you will not be able to use the default IK controller setting for GR1 robot.
+WARNING: mimicgen environments not imported since mimicgen is not installed!
+2026-07-21 18:21:52,751 INFO Task: CloseDrawer | Episodes: 100 | Start seed: 0
+2026-07-21 18:21:52,751 INFO Server: localhost:10091
+Client connected to server at localhost:10091.
+2026-07-21 18:21:54,085 INFO EvalClient ready. Robot types: ['robocasa_mg']
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:21:54,086 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:22:06,627 INFO No OpenGL_accelerate module loaded: No module named 'OpenGL_accelerate'
+2026-07-21 18:22:15,585 INFO Task CloseDrawer: Episode 1 (seed=0): Instruction: close the left drawer
+2026-07-21 18:22:27,552 INFO Task CloseDrawer: Episode 1 (seed=0): Success | Current Success Rate: 100.00% (1/1)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:22:27,553 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:22:36,530 INFO Task CloseDrawer: Episode 2 (seed=1): Instruction: close the right drawer
+2026-07-21 18:22:47,434 INFO Task CloseDrawer: Episode 2 (seed=1): Success | Current Success Rate: 100.00% (2/2)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:22:47,435 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:22:56,093 INFO Task CloseDrawer: Episode 3 (seed=2): Instruction: close the right drawer
+2026-07-21 18:23:07,331 INFO Task CloseDrawer: Episode 3 (seed=2): Success | Current Success Rate: 100.00% (3/3)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:23:07,332 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:23:16,745 INFO Task CloseDrawer: Episode 4 (seed=3): Instruction: close the left drawer
+2026-07-21 18:23:30,125 INFO Task CloseDrawer: Episode 4 (seed=3): Success | Current Success Rate: 100.00% (4/4)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:23:30,126 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:23:44,774 INFO Task CloseDrawer: Episode 5 (seed=4): Instruction: close the right drawer
+2026-07-21 18:23:57,668 INFO Task CloseDrawer: Episode 5 (seed=4): Success | Current Success Rate: 100.00% (5/5)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:23:57,669 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:24:15,540 INFO Task CloseDrawer: Episode 6 (seed=5): Instruction: close the right drawer
+2026-07-21 18:24:26,859 INFO Task CloseDrawer: Episode 6 (seed=5): Success | Current Success Rate: 100.00% (6/6)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:24:26,860 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:24:37,600 INFO Task CloseDrawer: Episode 7 (seed=6): Instruction: close the right drawer
+2026-07-21 18:24:49,008 INFO Task CloseDrawer: Episode 7 (seed=6): Success | Current Success Rate: 100.00% (7/7)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:24:49,009 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:24:57,673 INFO Task CloseDrawer: Episode 8 (seed=7): Instruction: close the right drawer
+2026-07-21 18:25:09,967 INFO Task CloseDrawer: Episode 8 (seed=7): Success | Current Success Rate: 100.00% (8/8)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:25:09,968 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:25:24,317 INFO Task CloseDrawer: Episode 9 (seed=8): Instruction: close the left drawer
+2026-07-21 18:25:37,594 INFO Task CloseDrawer: Episode 9 (seed=8): Success | Current Success Rate: 100.00% (9/9)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:25:37,595 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:25:49,806 INFO Task CloseDrawer: Episode 10 (seed=9): Instruction: close the left drawer
+2026-07-21 18:26:19,028 INFO Task CloseDrawer: Episode 10 (seed=9): Failure | Current Success Rate: 90.00% (9/10)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:26:19,029 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:26:36,562 INFO Task CloseDrawer: Episode 11 (seed=10): Instruction: close the left drawer
+2026-07-21 18:26:52,530 INFO Task CloseDrawer: Episode 11 (seed=10): Success | Current Success Rate: 90.91% (10/11)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:26:52,531 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:27:01,830 INFO Task CloseDrawer: Episode 12 (seed=11): Instruction: close the right drawer
+2026-07-21 18:27:14,001 INFO Task CloseDrawer: Episode 12 (seed=11): Success | Current Success Rate: 91.67% (11/12)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:27:14,002 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:27:30,943 INFO Task CloseDrawer: Episode 13 (seed=12): Instruction: close the right drawer
+2026-07-21 18:27:43,935 INFO Task CloseDrawer: Episode 13 (seed=12): Success | Current Success Rate: 92.31% (12/13)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:27:43,935 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:27:53,297 INFO Task CloseDrawer: Episode 14 (seed=13): Instruction: close the left drawer
+2026-07-21 18:28:25,608 INFO Task CloseDrawer: Episode 14 (seed=13): Failure | Current Success Rate: 85.71% (12/14)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:28:25,621 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:28:41,095 INFO Task CloseDrawer: Episode 15 (seed=14): Instruction: close the left drawer
+2026-07-21 18:28:59,435 INFO Task CloseDrawer: Episode 15 (seed=14): Success | Current Success Rate: 86.67% (13/15)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:28:59,480 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:29:09,947 INFO Task CloseDrawer: Episode 16 (seed=15): Instruction: close the left drawer
+2026-07-21 18:29:21,872 INFO Task CloseDrawer: Episode 16 (seed=15): Success | Current Success Rate: 87.50% (14/16)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:29:21,873 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:29:32,609 INFO Task CloseDrawer: Episode 17 (seed=16): Instruction: close the left drawer
+2026-07-21 18:29:45,765 INFO Task CloseDrawer: Episode 17 (seed=16): Success | Current Success Rate: 88.24% (15/17)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:29:45,766 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:30:02,562 INFO Task CloseDrawer: Episode 18 (seed=17): Instruction: close the left drawer
+2026-07-21 18:30:15,681 INFO Task CloseDrawer: Episode 18 (seed=17): Success | Current Success Rate: 88.89% (16/18)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:30:15,681 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:30:25,444 INFO Task CloseDrawer: Episode 19 (seed=18): Instruction: close the right drawer
+2026-07-21 18:30:37,623 INFO Task CloseDrawer: Episode 19 (seed=18): Success | Current Success Rate: 89.47% (17/19)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:30:37,624 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:30:47,535 INFO Task CloseDrawer: Episode 20 (seed=19): Instruction: close the left drawer
+2026-07-21 18:30:58,926 INFO Task CloseDrawer: Episode 20 (seed=19): Success | Current Success Rate: 90.00% (18/20)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:30:58,927 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:31:28,340 INFO Task CloseDrawer: Episode 21 (seed=20): Instruction: close the right drawer
+2026-07-21 18:31:39,421 INFO Task CloseDrawer: Episode 21 (seed=20): Success | Current Success Rate: 90.48% (19/21)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:31:39,421 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:31:51,155 INFO Task CloseDrawer: Episode 22 (seed=21): Instruction: close the right drawer
+2026-07-21 18:32:03,639 INFO Task CloseDrawer: Episode 22 (seed=21): Success | Current Success Rate: 90.91% (20/22)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:32:03,640 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:32:17,522 INFO Task CloseDrawer: Episode 23 (seed=22): Instruction: close the right drawer
+2026-07-21 18:32:29,649 INFO Task CloseDrawer: Episode 23 (seed=22): Success | Current Success Rate: 91.30% (21/23)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:32:29,695 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:32:39,814 INFO Task CloseDrawer: Episode 24 (seed=23): Instruction: close the right drawer
+2026-07-21 18:32:51,453 INFO Task CloseDrawer: Episode 24 (seed=23): Success | Current Success Rate: 91.67% (22/24)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:32:51,454 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:33:02,914 INFO Task CloseDrawer: Episode 25 (seed=24): Instruction: close the left drawer
+2026-07-21 18:33:16,927 INFO Task CloseDrawer: Episode 25 (seed=24): Success | Current Success Rate: 92.00% (23/25)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:33:16,927 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:33:27,477 INFO Task CloseDrawer: Episode 26 (seed=25): Instruction: close the right drawer
+2026-07-21 18:33:39,207 INFO Task CloseDrawer: Episode 26 (seed=25): Success | Current Success Rate: 92.31% (24/26)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:33:39,274 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:33:48,387 INFO Task CloseDrawer: Episode 27 (seed=26): Instruction: close the right drawer
+2026-07-21 18:34:01,410 INFO Task CloseDrawer: Episode 27 (seed=26): Success | Current Success Rate: 92.59% (25/27)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:34:01,411 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:34:09,446 INFO Task CloseDrawer: Episode 28 (seed=27): Instruction: close the left drawer
+2026-07-21 18:34:21,200 INFO Task CloseDrawer: Episode 28 (seed=27): Success | Current Success Rate: 92.86% (26/28)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:34:21,201 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:34:36,301 INFO Task CloseDrawer: Episode 29 (seed=28): Instruction: close the left drawer
+2026-07-21 18:34:49,654 INFO Task CloseDrawer: Episode 29 (seed=28): Success | Current Success Rate: 93.10% (27/29)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:34:49,654 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:34:59,419 INFO Task CloseDrawer: Episode 30 (seed=29): Instruction: close the left drawer
+2026-07-21 18:35:13,089 INFO Task CloseDrawer: Episode 30 (seed=29): Success | Current Success Rate: 93.33% (28/30)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:35:13,089 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:35:21,164 INFO Task CloseDrawer: Episode 31 (seed=30): Instruction: close the left drawer
+2026-07-21 18:35:33,934 INFO Task CloseDrawer: Episode 31 (seed=30): Success | Current Success Rate: 93.55% (29/31)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:35:33,934 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:35:43,839 INFO Task CloseDrawer: Episode 32 (seed=31): Instruction: close the right drawer
+2026-07-21 18:35:56,171 INFO Task CloseDrawer: Episode 32 (seed=31): Success | Current Success Rate: 93.75% (30/32)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:35:56,172 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:36:06,220 INFO Task CloseDrawer: Episode 33 (seed=32): Instruction: close the left drawer
+2026-07-21 18:36:21,305 INFO Task CloseDrawer: Episode 33 (seed=32): Success | Current Success Rate: 93.94% (31/33)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:36:21,306 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:36:32,098 INFO Task CloseDrawer: Episode 34 (seed=33): Instruction: close the left drawer
+2026-07-21 18:36:46,373 INFO Task CloseDrawer: Episode 34 (seed=33): Success | Current Success Rate: 94.12% (32/34)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:36:46,374 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:37:00,117 INFO Task CloseDrawer: Episode 35 (seed=34): Instruction: close the left drawer
+2026-07-21 18:37:16,316 INFO Task CloseDrawer: Episode 35 (seed=34): Success | Current Success Rate: 94.29% (33/35)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:37:16,317 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:37:26,518 INFO Task CloseDrawer: Episode 36 (seed=35): Instruction: close the right drawer
+2026-07-21 18:37:38,139 INFO Task CloseDrawer: Episode 36 (seed=35): Success | Current Success Rate: 94.44% (34/36)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:37:38,140 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:37:50,199 INFO Task CloseDrawer: Episode 37 (seed=36): Instruction: close the right drawer
+2026-07-21 18:38:03,369 INFO Task CloseDrawer: Episode 37 (seed=36): Success | Current Success Rate: 94.59% (35/37)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:38:03,370 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:38:11,245 INFO Task CloseDrawer: Episode 38 (seed=37): Instruction: close the left drawer
+2026-07-21 18:38:22,851 INFO Task CloseDrawer: Episode 38 (seed=37): Success | Current Success Rate: 94.74% (36/38)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:38:22,852 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:38:34,909 INFO Task CloseDrawer: Episode 39 (seed=38): Instruction: close the left drawer
+2026-07-21 18:38:48,091 INFO Task CloseDrawer: Episode 39 (seed=38): Success | Current Success Rate: 94.87% (37/39)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:38:48,091 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:39:00,565 INFO Task CloseDrawer: Episode 40 (seed=39): Instruction: close the left drawer
+2026-07-21 18:39:12,876 INFO Task CloseDrawer: Episode 40 (seed=39): Success | Current Success Rate: 95.00% (38/40)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:39:12,877 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:39:29,845 INFO Task CloseDrawer: Episode 41 (seed=40): Instruction: close the right drawer
+2026-07-21 18:39:45,655 INFO Task CloseDrawer: Episode 41 (seed=40): Success | Current Success Rate: 95.12% (39/41)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:39:45,656 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:40:02,704 INFO Task CloseDrawer: Episode 42 (seed=41): Instruction: close the left drawer
+2026-07-21 18:40:17,000 INFO Task CloseDrawer: Episode 42 (seed=41): Success | Current Success Rate: 95.24% (40/42)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:40:17,001 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:40:26,123 INFO Task CloseDrawer: Episode 43 (seed=42): Instruction: close the left drawer
+2026-07-21 18:40:38,322 INFO Task CloseDrawer: Episode 43 (seed=42): Success | Current Success Rate: 95.35% (41/43)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:40:38,323 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:40:49,439 INFO Task CloseDrawer: Episode 44 (seed=43): Instruction: close the right drawer
+2026-07-21 18:41:23,674 INFO Task CloseDrawer: Episode 44 (seed=43): Failure | Current Success Rate: 93.18% (41/44)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:41:23,675 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:41:43,019 INFO Task CloseDrawer: Episode 45 (seed=44): Instruction: close the left drawer
+2026-07-21 18:41:58,336 INFO Task CloseDrawer: Episode 45 (seed=44): Success | Current Success Rate: 93.33% (42/45)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:41:58,337 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:42:06,681 INFO Task CloseDrawer: Episode 46 (seed=45): Instruction: close the left drawer
+2026-07-21 18:42:18,973 INFO Task CloseDrawer: Episode 46 (seed=45): Success | Current Success Rate: 93.48% (43/46)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:42:18,974 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:42:35,410 INFO Task CloseDrawer: Episode 47 (seed=46): Instruction: close the left drawer
+2026-07-21 18:43:15,096 INFO Task CloseDrawer: Episode 47 (seed=46): Failure | Current Success Rate: 91.49% (43/47)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:43:15,097 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:43:24,223 INFO Task CloseDrawer: Episode 48 (seed=47): Instruction: close the left drawer
+2026-07-21 18:43:37,888 INFO Task CloseDrawer: Episode 48 (seed=47): Success | Current Success Rate: 91.67% (44/48)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:43:37,888 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:43:46,778 INFO Task CloseDrawer: Episode 49 (seed=48): Instruction: close the left drawer
+2026-07-21 18:44:00,512 INFO Task CloseDrawer: Episode 49 (seed=48): Success | Current Success Rate: 91.84% (45/49)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:44:00,513 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:44:10,766 INFO Task CloseDrawer: Episode 50 (seed=49): Instruction: close the right drawer
+2026-07-21 18:44:22,866 INFO Task CloseDrawer: Episode 50 (seed=49): Success | Current Success Rate: 92.00% (46/50)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:44:22,913 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:44:36,217 INFO Task CloseDrawer: Episode 51 (seed=50): Instruction: close the right drawer
+2026-07-21 18:44:48,208 INFO Task CloseDrawer: Episode 51 (seed=50): Success | Current Success Rate: 92.16% (47/51)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:44:48,209 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:45:05,647 INFO Task CloseDrawer: Episode 52 (seed=51): Instruction: close the right drawer
+2026-07-21 18:45:21,515 INFO Task CloseDrawer: Episode 52 (seed=51): Success | Current Success Rate: 92.31% (48/52)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:45:21,516 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:45:35,130 INFO Task CloseDrawer: Episode 53 (seed=52): Instruction: close the left drawer
+2026-07-21 18:45:50,680 INFO Task CloseDrawer: Episode 53 (seed=52): Success | Current Success Rate: 92.45% (49/53)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:45:50,681 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:46:06,204 INFO Task CloseDrawer: Episode 54 (seed=53): Instruction: close the right drawer
+2026-07-21 18:46:18,619 INFO Task CloseDrawer: Episode 54 (seed=53): Success | Current Success Rate: 92.59% (50/54)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:46:18,620 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:46:30,747 INFO Task CloseDrawer: Episode 55 (seed=54): Instruction: close the left drawer
+2026-07-21 18:46:45,249 INFO Task CloseDrawer: Episode 55 (seed=54): Success | Current Success Rate: 92.73% (51/55)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:46:45,250 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:46:53,869 INFO Task CloseDrawer: Episode 56 (seed=55): Instruction: close the right drawer
+2026-07-21 18:47:07,536 INFO Task CloseDrawer: Episode 56 (seed=55): Success | Current Success Rate: 92.86% (52/56)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:47:07,537 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:47:18,988 INFO Task CloseDrawer: Episode 57 (seed=56): Instruction: close the left drawer
+2026-07-21 18:47:32,245 INFO Task CloseDrawer: Episode 57 (seed=56): Success | Current Success Rate: 92.98% (53/57)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:47:32,246 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:47:46,318 INFO Task CloseDrawer: Episode 58 (seed=57): Instruction: close the right drawer
+2026-07-21 18:48:01,037 INFO Task CloseDrawer: Episode 58 (seed=57): Success | Current Success Rate: 93.10% (54/58)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:48:01,038 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:48:14,925 INFO Task CloseDrawer: Episode 59 (seed=58): Instruction: close the left drawer
+2026-07-21 18:48:28,685 INFO Task CloseDrawer: Episode 59 (seed=58): Success | Current Success Rate: 93.22% (55/59)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:48:28,686 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:48:47,683 INFO Task CloseDrawer: Episode 60 (seed=59): Instruction: close the left drawer
+2026-07-21 18:49:04,061 INFO Task CloseDrawer: Episode 60 (seed=59): Success | Current Success Rate: 93.33% (56/60)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:49:04,062 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:49:17,746 INFO Task CloseDrawer: Episode 61 (seed=60): Instruction: close the right drawer
+2026-07-21 18:49:32,629 INFO Task CloseDrawer: Episode 61 (seed=60): Success | Current Success Rate: 93.44% (57/61)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:49:32,673 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:49:43,128 INFO Task CloseDrawer: Episode 62 (seed=61): Instruction: close the left drawer
+2026-07-21 18:49:56,559 INFO Task CloseDrawer: Episode 62 (seed=61): Success | Current Success Rate: 93.55% (58/62)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:49:56,560 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:50:08,353 INFO Task CloseDrawer: Episode 63 (seed=62): Instruction: close the left drawer
+2026-07-21 18:50:23,945 INFO Task CloseDrawer: Episode 63 (seed=62): Success | Current Success Rate: 93.65% (59/63)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:50:23,946 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:50:33,360 INFO Task CloseDrawer: Episode 64 (seed=63): Instruction: close the right drawer
+2026-07-21 18:50:44,993 INFO Task CloseDrawer: Episode 64 (seed=63): Success | Current Success Rate: 93.75% (60/64)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:50:44,994 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:50:54,853 INFO Task CloseDrawer: Episode 65 (seed=64): Instruction: close the right drawer
+2026-07-21 18:51:06,701 INFO Task CloseDrawer: Episode 65 (seed=64): Success | Current Success Rate: 93.85% (61/65)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:51:06,702 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:51:15,931 INFO Task CloseDrawer: Episode 66 (seed=65): Instruction: close the right drawer
+2026-07-21 18:51:29,618 INFO Task CloseDrawer: Episode 66 (seed=65): Success | Current Success Rate: 93.94% (62/66)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:51:29,619 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:51:39,366 INFO Task CloseDrawer: Episode 67 (seed=66): Instruction: close the right drawer
+2026-07-21 18:51:52,560 INFO Task CloseDrawer: Episode 67 (seed=66): Success | Current Success Rate: 94.03% (63/67)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:51:52,561 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:52:08,018 INFO Task CloseDrawer: Episode 68 (seed=67): Instruction: close the left drawer
+2026-07-21 18:52:21,546 INFO Task CloseDrawer: Episode 68 (seed=67): Success | Current Success Rate: 94.12% (64/68)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:52:21,547 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:52:31,339 INFO Task CloseDrawer: Episode 69 (seed=68): Instruction: close the right drawer
+2026-07-21 18:52:44,607 INFO Task CloseDrawer: Episode 69 (seed=68): Success | Current Success Rate: 94.20% (65/69)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:52:44,607 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:52:58,738 INFO Task CloseDrawer: Episode 70 (seed=69): Instruction: close the right drawer
+2026-07-21 18:53:14,786 INFO Task CloseDrawer: Episode 70 (seed=69): Success | Current Success Rate: 94.29% (66/70)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:53:14,787 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:53:34,230 INFO Task CloseDrawer: Episode 71 (seed=70): Instruction: close the left drawer
+2026-07-21 18:53:50,199 INFO Task CloseDrawer: Episode 71 (seed=70): Success | Current Success Rate: 94.37% (67/71)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:53:50,199 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:53:58,439 INFO Task CloseDrawer: Episode 72 (seed=71): Instruction: close the right drawer
+2026-07-21 18:54:11,170 INFO Task CloseDrawer: Episode 72 (seed=71): Success | Current Success Rate: 94.44% (68/72)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:54:11,170 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:54:20,279 INFO Task CloseDrawer: Episode 73 (seed=72): Instruction: close the left drawer
+2026-07-21 18:54:33,769 INFO Task CloseDrawer: Episode 73 (seed=72): Success | Current Success Rate: 94.52% (69/73)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:54:33,770 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:54:43,266 INFO Task CloseDrawer: Episode 74 (seed=73): Instruction: close the right drawer
+2026-07-21 18:54:54,317 INFO Task CloseDrawer: Episode 74 (seed=73): Success | Current Success Rate: 94.59% (70/74)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:54:54,317 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:55:04,641 INFO Task CloseDrawer: Episode 75 (seed=74): Instruction: close the right drawer
+2026-07-21 18:55:16,907 INFO Task CloseDrawer: Episode 75 (seed=74): Success | Current Success Rate: 94.67% (71/75)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:55:16,918 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:55:35,983 INFO Task CloseDrawer: Episode 76 (seed=75): Instruction: close the left drawer
+2026-07-21 18:55:51,705 INFO Task CloseDrawer: Episode 76 (seed=75): Success | Current Success Rate: 94.74% (72/76)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:55:51,712 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:56:02,948 INFO Task CloseDrawer: Episode 77 (seed=76): Instruction: close the right drawer
+2026-07-21 18:56:15,363 INFO Task CloseDrawer: Episode 77 (seed=76): Success | Current Success Rate: 94.81% (73/77)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:56:15,363 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:56:24,732 INFO Task CloseDrawer: Episode 78 (seed=77): Instruction: close the right drawer
+2026-07-21 18:56:37,451 INFO Task CloseDrawer: Episode 78 (seed=77): Success | Current Success Rate: 94.87% (74/78)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:56:37,452 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:56:52,359 INFO Task CloseDrawer: Episode 79 (seed=78): Instruction: close the right drawer
+2026-07-21 18:57:05,289 INFO Task CloseDrawer: Episode 79 (seed=78): Success | Current Success Rate: 94.94% (75/79)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:57:05,290 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:57:16,474 INFO Task CloseDrawer: Episode 80 (seed=79): Instruction: close the right drawer
+2026-07-21 18:57:29,397 INFO Task CloseDrawer: Episode 80 (seed=79): Success | Current Success Rate: 95.00% (76/80)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:57:29,398 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:57:40,279 INFO Task CloseDrawer: Episode 81 (seed=80): Instruction: close the right drawer
+2026-07-21 18:57:52,573 INFO Task CloseDrawer: Episode 81 (seed=80): Success | Current Success Rate: 95.06% (77/81)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:57:52,574 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:58:08,238 INFO Task CloseDrawer: Episode 82 (seed=81): Instruction: close the left drawer
+2026-07-21 18:58:24,233 INFO Task CloseDrawer: Episode 82 (seed=81): Success | Current Success Rate: 95.12% (78/82)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:58:24,234 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:58:39,378 INFO Task CloseDrawer: Episode 83 (seed=82): Instruction: close the left drawer
+2026-07-21 18:58:52,201 INFO Task CloseDrawer: Episode 83 (seed=82): Success | Current Success Rate: 95.18% (79/83)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:58:52,202 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:59:07,534 INFO Task CloseDrawer: Episode 84 (seed=83): Instruction: close the left drawer
+2026-07-21 18:59:20,297 INFO Task CloseDrawer: Episode 84 (seed=83): Success | Current Success Rate: 95.24% (80/84)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:59:20,298 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:59:36,488 INFO Task CloseDrawer: Episode 85 (seed=84): Instruction: close the left drawer
+2026-07-21 18:59:50,407 INFO Task CloseDrawer: Episode 85 (seed=84): Success | Current Success Rate: 95.29% (81/85)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:59:50,407 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:00:10,437 INFO Task CloseDrawer: Episode 86 (seed=85): Instruction: close the right drawer
+2026-07-21 19:00:27,493 INFO Task CloseDrawer: Episode 86 (seed=85): Success | Current Success Rate: 95.35% (82/86)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:00:27,494 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:00:41,259 INFO Task CloseDrawer: Episode 87 (seed=86): Instruction: close the right drawer
+2026-07-21 19:00:57,443 INFO Task CloseDrawer: Episode 87 (seed=86): Success | Current Success Rate: 95.40% (83/87)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:00:57,444 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:01:16,658 INFO Task CloseDrawer: Episode 88 (seed=87): Instruction: close the left drawer
+2026-07-21 19:01:32,598 INFO Task CloseDrawer: Episode 88 (seed=87): Success | Current Success Rate: 95.45% (84/88)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:01:32,599 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:01:47,727 INFO Task CloseDrawer: Episode 89 (seed=88): Instruction: close the right drawer
+2026-07-21 19:02:03,762 INFO Task CloseDrawer: Episode 89 (seed=88): Success | Current Success Rate: 95.51% (85/89)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:02:03,763 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:02:12,368 INFO Task CloseDrawer: Episode 90 (seed=89): Instruction: close the right drawer
+2026-07-21 19:02:24,199 INFO Task CloseDrawer: Episode 90 (seed=89): Success | Current Success Rate: 95.56% (86/90)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:02:24,245 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:02:43,558 INFO Task CloseDrawer: Episode 91 (seed=90): Instruction: close the right drawer
+2026-07-21 19:02:58,574 INFO Task CloseDrawer: Episode 91 (seed=90): Success | Current Success Rate: 95.60% (87/91)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:02:58,575 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:03:17,505 INFO Task CloseDrawer: Episode 92 (seed=91): Instruction: close the left drawer
+2026-07-21 19:03:32,741 INFO Task CloseDrawer: Episode 92 (seed=91): Success | Current Success Rate: 95.65% (88/92)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:03:32,742 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:03:43,185 INFO Task CloseDrawer: Episode 93 (seed=92): Instruction: close the left drawer
+2026-07-21 19:03:55,430 INFO Task CloseDrawer: Episode 93 (seed=92): Success | Current Success Rate: 95.70% (89/93)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:03:55,442 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:04:10,831 INFO Task CloseDrawer: Episode 94 (seed=93): Instruction: close the left drawer
+2026-07-21 19:04:22,671 INFO Task CloseDrawer: Episode 94 (seed=93): Success | Current Success Rate: 95.74% (90/94)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:04:22,672 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:04:30,170 INFO Task CloseDrawer: Episode 95 (seed=94): Instruction: close the right drawer
+2026-07-21 19:04:43,070 INFO Task CloseDrawer: Episode 95 (seed=94): Success | Current Success Rate: 95.79% (91/95)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:04:43,071 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:04:54,855 INFO Task CloseDrawer: Episode 96 (seed=95): Instruction: close the left drawer
+2026-07-21 19:05:07,633 INFO Task CloseDrawer: Episode 96 (seed=95): Success | Current Success Rate: 95.83% (92/96)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:05:07,634 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:05:15,324 INFO Task CloseDrawer: Episode 97 (seed=96): Instruction: close the left drawer
+2026-07-21 19:05:28,459 INFO Task CloseDrawer: Episode 97 (seed=96): Success | Current Success Rate: 95.88% (93/97)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:05:28,460 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:05:37,985 INFO Task CloseDrawer: Episode 98 (seed=97): Instruction: close the left drawer
+2026-07-21 19:05:50,670 INFO Task CloseDrawer: Episode 98 (seed=97): Success | Current Success Rate: 95.92% (94/98)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:05:50,671 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:06:06,864 INFO Task CloseDrawer: Episode 99 (seed=98): Instruction: close the right drawer
+2026-07-21 19:06:22,635 INFO Task CloseDrawer: Episode 99 (seed=98): Success | Current Success Rate: 95.96% (95/99)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:06:22,636 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:06:31,906 INFO Task CloseDrawer: Episode 100 (seed=99): Instruction: close the left drawer
+2026-07-21 19:06:44,264 INFO Task CloseDrawer: Episode 100 (seed=99): Success | Current Success Rate: 96.00% (96/100)
+Client connection closed.
+2026-07-21 19:06:44,265 INFO Task CloseDrawer Final Success Rate: 96.00% (96/100)
+2026-07-21 19:06:44,302 INFO Results saved to: ./eval_robocasa/eval_logs/eval_results_CloseDrawer.json

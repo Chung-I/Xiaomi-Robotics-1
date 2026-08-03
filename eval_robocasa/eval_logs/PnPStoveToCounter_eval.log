@@ -1,0 +1,419 @@
+[robosuite WARNING] No private macro file found! (macros.py:57)
+2026-07-21 17:02:55,048 WARNING No private macro file found!
+[robosuite WARNING] It is recommended to use a private macro file (macros.py:58)
+2026-07-21 17:02:55,048 WARNING It is recommended to use a private macro file
+[robosuite WARNING] To setup, run: python /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/scripts/setup_macros.py (macros.py:59)
+2026-07-21 17:02:55,048 WARNING To setup, run: python /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/scripts/setup_macros.py
+[robosuite WARNING] Could not import robosuite_models. Some robots may not be available. If you want to use these robots, please install robosuite_models from source (https://github.com/ARISE-Initiative/robosuite_models) or through pip install. (__init__.py:30)
+2026-07-21 17:03:13,179 WARNING Could not import robosuite_models. Some robots may not be available. If you want to use these robots, please install robosuite_models from source (https://github.com/ARISE-Initiative/robosuite_models) or through pip install.
+[robosuite WARNING] Could not load the mink-based whole-body IK. Make sure you install related import properly (e.g. pip install mink==0.0.5), otherwise you will not be able to use the default IK controller setting for GR1 robot. (__init__.py:40)
+2026-07-21 17:03:13,311 WARNING Could not load the mink-based whole-body IK. Make sure you install related import properly (e.g. pip install mink==0.0.5), otherwise you will not be able to use the default IK controller setting for GR1 robot.
+WARNING: mimicgen environments not imported since mimicgen is not installed!
+2026-07-21 17:05:34,190 INFO Task: PnPStoveToCounter | Episodes: 100 | Start seed: 0
+2026-07-21 17:05:34,190 INFO Server: localhost:10093
+Client connected to server at localhost:10093.
+2026-07-21 17:05:35,667 INFO EvalClient ready. Robot types: ['robocasa_mg']
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:05:35,695 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:05:50,918 INFO No OpenGL_accelerate module loaded: No module named 'OpenGL_accelerate'
+2026-07-21 17:05:59,767 INFO Task PnPStoveToCounter: Episode 1 (seed=0): Instruction: pick the sweet potato from the pan and place it on the plate
+2026-07-21 17:06:20,803 INFO Task PnPStoveToCounter: Episode 1 (seed=0): Success | Current Success Rate: 100.00% (1/1)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:06:20,804 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:06:32,685 INFO Task PnPStoveToCounter: Episode 2 (seed=1): Instruction: pick the egg from the pan and place it in the bowl
+2026-07-21 17:07:07,268 INFO Task PnPStoveToCounter: Episode 2 (seed=1): Success | Current Success Rate: 100.00% (2/2)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:07:07,269 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:07:17,789 INFO Task PnPStoveToCounter: Episode 3 (seed=2): Instruction: pick the garlic from the pan and place it on the plate
+2026-07-21 17:07:36,198 INFO Task PnPStoveToCounter: Episode 3 (seed=2): Success | Current Success Rate: 100.00% (3/3)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:07:36,198 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:07:53,037 INFO Task PnPStoveToCounter: Episode 4 (seed=3): Instruction: pick the broccoli from the pan and place it on the plate
+2026-07-21 17:08:24,913 INFO Task PnPStoveToCounter: Episode 4 (seed=3): Failure | Current Success Rate: 75.00% (3/4)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:08:24,914 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:08:38,222 INFO Task PnPStoveToCounter: Episode 5 (seed=4): Instruction: pick the tomato from the pan and place it in the bowl
+2026-07-21 17:09:11,180 INFO Task PnPStoveToCounter: Episode 5 (seed=4): Failure | Current Success Rate: 60.00% (3/5)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:09:11,181 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:09:29,976 INFO Task PnPStoveToCounter: Episode 6 (seed=5): Instruction: pick the mushroom from the pan and place it in the bowl
+2026-07-21 17:10:11,998 INFO Task PnPStoveToCounter: Episode 6 (seed=5): Failure | Current Success Rate: 50.00% (3/6)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:10:11,999 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:10:27,923 INFO Task PnPStoveToCounter: Episode 7 (seed=6): Instruction: pick the mushroom from the pan and place it on the plate
+2026-07-21 17:11:07,847 INFO Task PnPStoveToCounter: Episode 7 (seed=6): Failure | Current Success Rate: 42.86% (3/7)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:11:07,847 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:11:16,852 INFO Task PnPStoveToCounter: Episode 8 (seed=7): Instruction: pick the steak from the pan and place it in the bowl
+2026-07-21 17:11:35,119 INFO Task PnPStoveToCounter: Episode 8 (seed=7): Success | Current Success Rate: 50.00% (4/8)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:11:35,119 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:11:49,584 INFO Task PnPStoveToCounter: Episode 9 (seed=8): Instruction: pick the mushroom from the pan and place it in the bowl
+2026-07-21 17:12:05,387 INFO Task PnPStoveToCounter: Episode 9 (seed=8): Success | Current Success Rate: 55.56% (5/9)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:12:05,388 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:12:15,182 INFO Task PnPStoveToCounter: Episode 10 (seed=9): Instruction: pick the mango from the pan and place it in the bowl
+2026-07-21 17:12:48,133 INFO Task PnPStoveToCounter: Episode 10 (seed=9): Failure | Current Success Rate: 50.00% (5/10)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:12:48,134 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:13:01,394 INFO Task PnPStoveToCounter: Episode 11 (seed=10): Instruction: pick the sweet potato from the pan and place it in the bowl
+2026-07-21 17:13:21,990 INFO Task PnPStoveToCounter: Episode 11 (seed=10): Success | Current Success Rate: 54.55% (6/11)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:13:21,991 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:13:38,894 INFO Task PnPStoveToCounter: Episode 12 (seed=11): Instruction: pick the mushroom from the pan and place it in the bowl
+2026-07-21 17:13:56,374 INFO Task PnPStoveToCounter: Episode 12 (seed=11): Success | Current Success Rate: 58.33% (7/12)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:13:56,375 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:14:10,032 INFO Task PnPStoveToCounter: Episode 13 (seed=12): Instruction: pick the mushroom from the pan and place it in the bowl
+2026-07-21 17:14:43,792 INFO Task PnPStoveToCounter: Episode 13 (seed=12): Failure | Current Success Rate: 53.85% (7/13)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:14:43,792 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:14:53,930 INFO Task PnPStoveToCounter: Episode 14 (seed=13): Instruction: pick the mango from the pan and place it in the bowl
+2026-07-21 17:15:30,669 INFO Task PnPStoveToCounter: Episode 14 (seed=13): Failure | Current Success Rate: 50.00% (7/14)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:15:30,670 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:15:40,635 INFO Task PnPStoveToCounter: Episode 15 (seed=14): Instruction: pick the mango from the pan and place it on the plate
+2026-07-21 17:15:57,865 INFO Task PnPStoveToCounter: Episode 15 (seed=14): Success | Current Success Rate: 53.33% (8/15)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:15:57,865 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:16:06,171 INFO Task PnPStoveToCounter: Episode 16 (seed=15): Instruction: pick the mango from the pan and place it in the bowl
+2026-07-21 17:16:24,625 INFO Task PnPStoveToCounter: Episode 16 (seed=15): Success | Current Success Rate: 56.25% (9/16)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:16:24,626 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:16:33,594 INFO Task PnPStoveToCounter: Episode 17 (seed=16): Instruction: pick the squash from the pan and place it in the bowl
+2026-07-21 17:17:07,473 INFO Task PnPStoveToCounter: Episode 17 (seed=16): Failure | Current Success Rate: 52.94% (9/17)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:17:07,474 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:17:23,089 INFO Task PnPStoveToCounter: Episode 18 (seed=17): Instruction: pick the steak from the pan and place it on the plate
+2026-07-21 17:17:57,473 INFO Task PnPStoveToCounter: Episode 18 (seed=17): Failure | Current Success Rate: 50.00% (9/18)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:17:57,474 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:18:19,801 INFO Task PnPStoveToCounter: Episode 19 (seed=18): Instruction: pick the tomato from the pan and place it in the bowl
+2026-07-21 17:18:38,905 INFO Task PnPStoveToCounter: Episode 19 (seed=18): Success | Current Success Rate: 52.63% (10/19)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:18:38,905 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:18:59,232 INFO Task PnPStoveToCounter: Episode 20 (seed=19): Instruction: pick the apple from the pan and place it on the plate
+2026-07-21 17:19:39,530 INFO Task PnPStoveToCounter: Episode 20 (seed=19): Failure | Current Success Rate: 50.00% (10/20)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:19:39,531 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:20:00,382 INFO Task PnPStoveToCounter: Episode 21 (seed=20): Instruction: pick the sweet potato from the pan and place it on the plate
+2026-07-21 17:20:41,735 INFO Task PnPStoveToCounter: Episode 21 (seed=20): Failure | Current Success Rate: 47.62% (10/21)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:20:41,736 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:20:52,192 INFO Task PnPStoveToCounter: Episode 22 (seed=21): Instruction: pick the garlic from the pan and place it on the plate
+2026-07-21 17:21:26,894 INFO Task PnPStoveToCounter: Episode 22 (seed=21): Failure | Current Success Rate: 45.45% (10/22)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:21:26,895 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:21:44,927 INFO Task PnPStoveToCounter: Episode 23 (seed=22): Instruction: pick the cheese from the pan and place it in the bowl
+2026-07-21 17:22:03,761 INFO Task PnPStoveToCounter: Episode 23 (seed=22): Success | Current Success Rate: 47.83% (11/23)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:22:03,762 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:22:14,251 INFO Task PnPStoveToCounter: Episode 24 (seed=23): Instruction: pick the potato from the pan and place it in the bowl
+2026-07-21 17:22:32,291 INFO Task PnPStoveToCounter: Episode 24 (seed=23): Success | Current Success Rate: 50.00% (12/24)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:22:32,291 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:22:42,531 INFO Task PnPStoveToCounter: Episode 25 (seed=24): Instruction: pick the broccoli from the pan and place it in the bowl
+2026-07-21 17:23:04,481 INFO Task PnPStoveToCounter: Episode 25 (seed=24): Success | Current Success Rate: 52.00% (13/25)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:23:04,482 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:23:20,121 INFO Task PnPStoveToCounter: Episode 26 (seed=25): Instruction: pick the egg from the pan and place it in the bowl
+2026-07-21 17:23:39,253 INFO Task PnPStoveToCounter: Episode 26 (seed=25): Success | Current Success Rate: 53.85% (14/26)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:23:39,254 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:23:55,259 INFO Task PnPStoveToCounter: Episode 27 (seed=26): Instruction: pick the bell pepper from the pan and place it on the plate
+2026-07-21 17:24:36,351 INFO Task PnPStoveToCounter: Episode 27 (seed=26): Failure | Current Success Rate: 51.85% (14/27)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:24:36,352 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:24:44,551 INFO Task PnPStoveToCounter: Episode 28 (seed=27): Instruction: pick the steak from the pan and place it on the plate
+2026-07-21 17:25:17,260 INFO Task PnPStoveToCounter: Episode 28 (seed=27): Failure | Current Success Rate: 50.00% (14/28)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:25:17,261 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:25:30,423 INFO Task PnPStoveToCounter: Episode 29 (seed=28): Instruction: pick the lemon from the pan and place it on the plate
+2026-07-21 17:25:49,458 INFO Task PnPStoveToCounter: Episode 29 (seed=28): Success | Current Success Rate: 51.72% (15/29)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:25:49,459 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:26:10,091 INFO Task PnPStoveToCounter: Episode 30 (seed=29): Instruction: pick the potato from the pan and place it on the plate
+2026-07-21 17:26:31,493 INFO Task PnPStoveToCounter: Episode 30 (seed=29): Success | Current Success Rate: 53.33% (16/30)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:26:31,504 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:26:40,572 INFO Task PnPStoveToCounter: Episode 31 (seed=30): Instruction: pick the squash from the pan and place it in the bowl
+2026-07-21 17:27:03,463 INFO Task PnPStoveToCounter: Episode 31 (seed=30): Success | Current Success Rate: 54.84% (17/31)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:27:03,464 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:27:16,647 INFO Task PnPStoveToCounter: Episode 32 (seed=31): Instruction: pick the lemon from the pan and place it on the plate
+2026-07-21 17:27:32,758 INFO Task PnPStoveToCounter: Episode 32 (seed=31): Success | Current Success Rate: 56.25% (18/32)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:27:32,759 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:27:44,566 INFO Task PnPStoveToCounter: Episode 33 (seed=32): Instruction: pick the broccoli from the pan and place it in the bowl
+2026-07-21 17:28:00,124 INFO Task PnPStoveToCounter: Episode 33 (seed=32): Success | Current Success Rate: 57.58% (19/33)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:28:00,125 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:28:09,868 INFO Task PnPStoveToCounter: Episode 34 (seed=33): Instruction: pick the onion from the pan and place it on the plate
+2026-07-21 17:28:43,889 INFO Task PnPStoveToCounter: Episode 34 (seed=33): Failure | Current Success Rate: 55.88% (19/34)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:28:43,889 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:28:57,007 INFO Task PnPStoveToCounter: Episode 35 (seed=34): Instruction: pick the cheese from the pan and place it on the plate
+2026-07-21 17:29:17,733 INFO Task PnPStoveToCounter: Episode 35 (seed=34): Success | Current Success Rate: 57.14% (20/35)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:29:17,734 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:29:27,528 INFO Task PnPStoveToCounter: Episode 36 (seed=35): Instruction: pick the lime from the pan and place it on the plate
+2026-07-21 17:30:00,566 INFO Task PnPStoveToCounter: Episode 36 (seed=35): Failure | Current Success Rate: 55.56% (20/36)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:30:00,567 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:30:15,226 INFO Task PnPStoveToCounter: Episode 37 (seed=36): Instruction: pick the eggplant from the pan and place it on the plate
+2026-07-21 17:30:46,667 INFO Task PnPStoveToCounter: Episode 37 (seed=36): Failure | Current Success Rate: 54.05% (20/37)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:30:46,667 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:30:57,717 INFO Task PnPStoveToCounter: Episode 38 (seed=37): Instruction: pick the mango from the pan and place it on the plate
+2026-07-21 17:31:17,213 INFO Task PnPStoveToCounter: Episode 38 (seed=37): Success | Current Success Rate: 55.26% (21/38)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:31:17,214 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:31:30,039 INFO Task PnPStoveToCounter: Episode 39 (seed=38): Instruction: pick the mushroom from the pan and place it in the bowl
+2026-07-21 17:31:47,626 INFO Task PnPStoveToCounter: Episode 39 (seed=38): Success | Current Success Rate: 56.41% (22/39)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:31:47,627 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:31:59,288 INFO Task PnPStoveToCounter: Episode 40 (seed=39): Instruction: pick the steak from the pan and place it in the bowl
+2026-07-21 17:32:32,779 INFO Task PnPStoveToCounter: Episode 40 (seed=39): Failure | Current Success Rate: 55.00% (22/40)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:32:32,780 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:32:44,863 INFO Task PnPStoveToCounter: Episode 41 (seed=40): Instruction: pick the onion from the pan and place it on the plate
+2026-07-21 17:33:19,248 INFO Task PnPStoveToCounter: Episode 41 (seed=40): Failure | Current Success Rate: 53.66% (22/41)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:33:19,249 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:33:38,194 INFO Task PnPStoveToCounter: Episode 42 (seed=41): Instruction: pick the garlic from the pan and place it on the plate
+2026-07-21 17:33:58,780 INFO Task PnPStoveToCounter: Episode 42 (seed=41): Success | Current Success Rate: 54.76% (23/42)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:33:58,780 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:34:14,903 INFO Task PnPStoveToCounter: Episode 43 (seed=42): Instruction: pick the broccoli from the pan and place it in the bowl
+2026-07-21 17:34:56,113 INFO Task PnPStoveToCounter: Episode 43 (seed=42): Failure | Current Success Rate: 53.49% (23/43)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:34:56,158 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:35:07,703 INFO Task PnPStoveToCounter: Episode 44 (seed=43): Instruction: pick the onion from the pan and place it in the bowl
+2026-07-21 17:35:27,237 INFO Task PnPStoveToCounter: Episode 44 (seed=43): Success | Current Success Rate: 54.55% (24/44)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:35:27,238 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:35:40,086 INFO Task PnPStoveToCounter: Episode 45 (seed=44): Instruction: pick the sweet potato from the pan and place it in the bowl
+2026-07-21 17:35:57,326 INFO Task PnPStoveToCounter: Episode 45 (seed=44): Success | Current Success Rate: 55.56% (25/45)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:35:57,327 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:36:07,546 INFO Task PnPStoveToCounter: Episode 46 (seed=45): Instruction: pick the cheese from the pan and place it on the plate
+2026-07-21 17:36:31,841 INFO Task PnPStoveToCounter: Episode 46 (seed=45): Success | Current Success Rate: 56.52% (26/46)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:36:31,842 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:36:42,111 INFO Task PnPStoveToCounter: Episode 47 (seed=46): Instruction: pick the steak from the pan and place it on the plate
+2026-07-21 17:37:15,596 INFO Task PnPStoveToCounter: Episode 47 (seed=46): Failure | Current Success Rate: 55.32% (26/47)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:37:15,597 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:37:23,962 INFO Task PnPStoveToCounter: Episode 48 (seed=47): Instruction: pick the cheese from the pan and place it in the bowl
+2026-07-21 17:37:56,891 INFO Task PnPStoveToCounter: Episode 48 (seed=47): Failure | Current Success Rate: 54.17% (26/48)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:37:56,892 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:38:08,476 INFO Task PnPStoveToCounter: Episode 49 (seed=48): Instruction: pick the apple from the pan and place it in the bowl
+2026-07-21 17:38:25,594 INFO Task PnPStoveToCounter: Episode 49 (seed=48): Success | Current Success Rate: 55.10% (27/49)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:38:25,595 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:38:36,403 INFO Task PnPStoveToCounter: Episode 50 (seed=49): Instruction: pick the steak from the pan and place it in the bowl
+2026-07-21 17:38:58,621 INFO Task PnPStoveToCounter: Episode 50 (seed=49): Success | Current Success Rate: 56.00% (28/50)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:38:58,621 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:39:11,835 INFO Task PnPStoveToCounter: Episode 51 (seed=50): Instruction: pick the egg from the pan and place it in the bowl
+2026-07-21 17:39:29,413 INFO Task PnPStoveToCounter: Episode 51 (seed=50): Success | Current Success Rate: 56.86% (29/51)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:39:29,414 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:39:39,692 INFO Task PnPStoveToCounter: Episode 52 (seed=51): Instruction: pick the cheese from the pan and place it on the plate
+2026-07-21 17:40:00,545 INFO Task PnPStoveToCounter: Episode 52 (seed=51): Success | Current Success Rate: 57.69% (30/52)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:40:00,546 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:40:15,471 INFO Task PnPStoveToCounter: Episode 53 (seed=52): Instruction: pick the carrot from the pan and place it on the plate
+2026-07-21 17:40:37,562 INFO Task PnPStoveToCounter: Episode 53 (seed=52): Success | Current Success Rate: 58.49% (31/53)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:40:37,563 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:40:54,389 INFO Task PnPStoveToCounter: Episode 54 (seed=53): Instruction: pick the squash from the pan and place it in the bowl
+2026-07-21 17:41:15,320 INFO Task PnPStoveToCounter: Episode 54 (seed=53): Success | Current Success Rate: 59.26% (32/54)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:41:15,343 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:41:26,362 INFO Task PnPStoveToCounter: Episode 55 (seed=54): Instruction: pick the potato from the pan and place it on the plate
+2026-07-21 17:42:00,563 INFO Task PnPStoveToCounter: Episode 55 (seed=54): Failure | Current Success Rate: 58.18% (32/55)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:42:00,564 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:42:13,979 INFO Task PnPStoveToCounter: Episode 56 (seed=55): Instruction: pick the bell pepper from the pan and place it on the plate
+2026-07-21 17:42:35,243 INFO Task PnPStoveToCounter: Episode 56 (seed=55): Success | Current Success Rate: 58.93% (33/56)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:42:35,243 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:42:50,247 INFO Task PnPStoveToCounter: Episode 57 (seed=56): Instruction: pick the tomato from the pan and place it on the plate
+2026-07-21 17:43:11,272 INFO Task PnPStoveToCounter: Episode 57 (seed=56): Success | Current Success Rate: 59.65% (34/57)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:43:11,273 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:43:26,381 INFO Task PnPStoveToCounter: Episode 58 (seed=57): Instruction: pick the squash from the pan and place it in the bowl
+2026-07-21 17:43:47,771 INFO Task PnPStoveToCounter: Episode 58 (seed=57): Success | Current Success Rate: 60.34% (35/58)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:43:47,772 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:43:59,768 INFO Task PnPStoveToCounter: Episode 59 (seed=58): Instruction: pick the mango from the pan and place it in the bowl
+2026-07-21 17:44:14,363 INFO Task PnPStoveToCounter: Episode 59 (seed=58): Success | Current Success Rate: 61.02% (36/59)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:44:14,364 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:44:34,178 INFO Task PnPStoveToCounter: Episode 60 (seed=59): Instruction: pick the mango from the pan and place it in the bowl
+2026-07-21 17:44:55,834 INFO Task PnPStoveToCounter: Episode 60 (seed=59): Success | Current Success Rate: 61.67% (37/60)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:44:55,835 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:45:06,455 INFO Task PnPStoveToCounter: Episode 61 (seed=60): Instruction: pick the eggplant from the pan and place it in the bowl
+2026-07-21 17:45:41,705 INFO Task PnPStoveToCounter: Episode 61 (seed=60): Failure | Current Success Rate: 60.66% (37/61)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:45:41,706 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:45:57,068 INFO Task PnPStoveToCounter: Episode 62 (seed=61): Instruction: pick the broccoli from the pan and place it in the bowl
+2026-07-21 17:46:38,464 INFO Task PnPStoveToCounter: Episode 62 (seed=61): Failure | Current Success Rate: 59.68% (37/62)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:46:38,465 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:46:49,230 INFO Task PnPStoveToCounter: Episode 63 (seed=62): Instruction: pick the onion from the pan and place it on the plate
+2026-07-21 17:47:22,355 INFO Task PnPStoveToCounter: Episode 63 (seed=62): Failure | Current Success Rate: 58.73% (37/63)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:47:22,400 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:47:33,536 INFO Task PnPStoveToCounter: Episode 64 (seed=63): Instruction: pick the tomato from the pan and place it on the plate
+2026-07-21 17:47:54,485 INFO Task PnPStoveToCounter: Episode 64 (seed=63): Success | Current Success Rate: 59.38% (38/64)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:47:54,486 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:48:10,229 INFO Task PnPStoveToCounter: Episode 65 (seed=64): Instruction: pick the lime from the pan and place it in the bowl
+2026-07-21 17:48:52,899 INFO Task PnPStoveToCounter: Episode 65 (seed=64): Failure | Current Success Rate: 58.46% (38/65)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:48:52,899 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:49:06,722 INFO Task PnPStoveToCounter: Episode 66 (seed=65): Instruction: pick the onion from the pan and place it on the plate
+2026-07-21 17:49:26,114 INFO Task PnPStoveToCounter: Episode 66 (seed=65): Success | Current Success Rate: 59.09% (39/66)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:49:26,115 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:49:35,703 INFO Task PnPStoveToCounter: Episode 67 (seed=66): Instruction: pick the onion from the pan and place it on the plate
+2026-07-21 17:49:52,568 INFO Task PnPStoveToCounter: Episode 67 (seed=66): Success | Current Success Rate: 59.70% (40/67)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:49:52,569 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:50:14,438 INFO Task PnPStoveToCounter: Episode 68 (seed=67): Instruction: pick the bell pepper from the pan and place it on the plate
+2026-07-21 17:50:55,850 INFO Task PnPStoveToCounter: Episode 68 (seed=67): Failure | Current Success Rate: 58.82% (40/68)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:50:55,851 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:51:12,157 INFO Task PnPStoveToCounter: Episode 69 (seed=68): Instruction: pick the eggplant from the pan and place it on the plate
+2026-07-21 17:51:53,979 INFO Task PnPStoveToCounter: Episode 69 (seed=68): Failure | Current Success Rate: 57.97% (40/69)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:51:53,980 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:52:03,454 INFO Task PnPStoveToCounter: Episode 70 (seed=69): Instruction: pick the carrot from the pan and place it on the plate
+2026-07-21 17:52:35,593 INFO Task PnPStoveToCounter: Episode 70 (seed=69): Failure | Current Success Rate: 57.14% (40/70)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:52:35,594 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:52:54,734 INFO Task PnPStoveToCounter: Episode 71 (seed=70): Instruction: pick the mango from the pan and place it on the plate
+2026-07-21 17:53:14,222 INFO Task PnPStoveToCounter: Episode 71 (seed=70): Success | Current Success Rate: 57.75% (41/71)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:53:14,223 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:53:22,560 INFO Task PnPStoveToCounter: Episode 72 (seed=71): Instruction: pick the broccoli from the pan and place it in the bowl
+2026-07-21 17:53:57,466 INFO Task PnPStoveToCounter: Episode 72 (seed=71): Failure | Current Success Rate: 56.94% (41/72)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:53:57,467 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:54:06,073 INFO Task PnPStoveToCounter: Episode 73 (seed=72): Instruction: pick the garlic from the pan and place it in the bowl
+2026-07-21 17:54:24,703 INFO Task PnPStoveToCounter: Episode 73 (seed=72): Success | Current Success Rate: 57.53% (42/73)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:54:24,704 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:54:41,526 INFO Task PnPStoveToCounter: Episode 74 (seed=73): Instruction: pick the tomato from the pan and place it in the bowl
+2026-07-21 17:54:58,630 INFO Task PnPStoveToCounter: Episode 74 (seed=73): Success | Current Success Rate: 58.11% (43/74)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:54:58,631 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:55:09,792 INFO Task PnPStoveToCounter: Episode 75 (seed=74): Instruction: pick the garlic from the pan and place it on the plate
+2026-07-21 17:55:26,415 INFO Task PnPStoveToCounter: Episode 75 (seed=74): Success | Current Success Rate: 58.67% (44/75)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:55:26,416 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:55:40,195 INFO Task PnPStoveToCounter: Episode 76 (seed=75): Instruction: pick the potato from the pan and place it in the bowl
+2026-07-21 17:56:12,935 INFO Task PnPStoveToCounter: Episode 76 (seed=75): Failure | Current Success Rate: 57.89% (44/76)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:56:12,985 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:56:35,231 INFO Task PnPStoveToCounter: Episode 77 (seed=76): Instruction: pick the garlic from the pan and place it in the bowl
+2026-07-21 17:56:58,227 INFO Task PnPStoveToCounter: Episode 77 (seed=76): Success | Current Success Rate: 58.44% (45/77)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:56:58,228 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:57:09,763 INFO Task PnPStoveToCounter: Episode 78 (seed=77): Instruction: pick the mushroom from the pan and place it in the bowl
+2026-07-21 17:57:26,713 INFO Task PnPStoveToCounter: Episode 78 (seed=77): Success | Current Success Rate: 58.97% (46/78)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:57:26,714 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:57:42,244 INFO Task PnPStoveToCounter: Episode 79 (seed=78): Instruction: pick the egg from the pan and place it on the plate
+2026-07-21 17:58:01,555 INFO Task PnPStoveToCounter: Episode 79 (seed=78): Success | Current Success Rate: 59.49% (47/79)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:58:01,555 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:58:11,577 INFO Task PnPStoveToCounter: Episode 80 (seed=79): Instruction: pick the cheese from the pan and place it on the plate
+2026-07-21 17:58:28,554 INFO Task PnPStoveToCounter: Episode 80 (seed=79): Success | Current Success Rate: 60.00% (48/80)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:58:28,599 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:58:38,984 INFO Task PnPStoveToCounter: Episode 81 (seed=80): Instruction: pick the steak from the pan and place it on the plate
+2026-07-21 17:59:12,920 INFO Task PnPStoveToCounter: Episode 81 (seed=80): Failure | Current Success Rate: 59.26% (48/81)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 17:59:12,920 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 17:59:26,760 INFO Task PnPStoveToCounter: Episode 82 (seed=81): Instruction: pick the apple from the pan and place it in the bowl
+2026-07-21 18:00:04,296 INFO Task PnPStoveToCounter: Episode 82 (seed=81): Failure | Current Success Rate: 58.54% (48/82)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:00:04,297 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:00:18,920 INFO Task PnPStoveToCounter: Episode 83 (seed=82): Instruction: pick the lime from the pan and place it in the bowl
+2026-07-21 18:00:37,372 INFO Task PnPStoveToCounter: Episode 83 (seed=82): Success | Current Success Rate: 59.04% (49/83)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:00:37,419 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:00:56,441 INFO Task PnPStoveToCounter: Episode 84 (seed=83): Instruction: pick the cheese from the pan and place it on the plate
+2026-07-21 18:01:19,391 INFO Task PnPStoveToCounter: Episode 84 (seed=83): Success | Current Success Rate: 59.52% (50/84)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:01:19,392 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:01:33,686 INFO Task PnPStoveToCounter: Episode 85 (seed=84): Instruction: pick the cheese from the pan and place it in the bowl
+2026-07-21 18:01:51,408 INFO Task PnPStoveToCounter: Episode 85 (seed=84): Success | Current Success Rate: 60.00% (51/85)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:01:51,409 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:02:07,256 INFO Task PnPStoveToCounter: Episode 86 (seed=85): Instruction: pick the broccoli from the pan and place it on the plate
+2026-07-21 18:02:40,697 INFO Task PnPStoveToCounter: Episode 86 (seed=85): Failure | Current Success Rate: 59.30% (51/86)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:02:40,743 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:02:50,126 INFO Task PnPStoveToCounter: Episode 87 (seed=86): Instruction: pick the bell pepper from the pan and place it on the plate
+2026-07-21 18:03:10,372 INFO Task PnPStoveToCounter: Episode 87 (seed=86): Success | Current Success Rate: 59.77% (52/87)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:03:10,373 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:03:24,698 INFO Task PnPStoveToCounter: Episode 88 (seed=87): Instruction: pick the lime from the pan and place it on the plate
+2026-07-21 18:03:41,814 INFO Task PnPStoveToCounter: Episode 88 (seed=87): Success | Current Success Rate: 60.23% (53/88)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:03:41,860 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:03:56,126 INFO Task PnPStoveToCounter: Episode 89 (seed=88): Instruction: pick the apple from the pan and place it in the bowl
+2026-07-21 18:04:12,508 INFO Task PnPStoveToCounter: Episode 89 (seed=88): Success | Current Success Rate: 60.67% (54/89)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:04:12,509 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:04:22,832 INFO Task PnPStoveToCounter: Episode 90 (seed=89): Instruction: pick the lemon from the pan and place it on the plate
+2026-07-21 18:04:38,558 INFO Task PnPStoveToCounter: Episode 90 (seed=89): Success | Current Success Rate: 61.11% (55/90)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:04:38,559 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:04:53,991 INFO Task PnPStoveToCounter: Episode 91 (seed=90): Instruction: pick the egg from the pan and place it on the plate
+2026-07-21 18:05:10,489 INFO Task PnPStoveToCounter: Episode 91 (seed=90): Success | Current Success Rate: 61.54% (56/91)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:05:10,490 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:05:24,797 INFO Task PnPStoveToCounter: Episode 92 (seed=91): Instruction: pick the mushroom from the pan and place it on the plate
+2026-07-21 18:05:39,625 INFO Task PnPStoveToCounter: Episode 92 (seed=91): Success | Current Success Rate: 61.96% (57/92)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:05:39,626 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:05:50,955 INFO Task PnPStoveToCounter: Episode 93 (seed=92): Instruction: pick the mango from the pan and place it in the bowl
+2026-07-21 18:06:09,351 INFO Task PnPStoveToCounter: Episode 93 (seed=92): Success | Current Success Rate: 62.37% (58/93)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:06:09,352 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:06:20,288 INFO Task PnPStoveToCounter: Episode 94 (seed=93): Instruction: pick the sweet potato from the pan and place it on the plate
+2026-07-21 18:06:50,449 INFO Task PnPStoveToCounter: Episode 94 (seed=93): Failure | Current Success Rate: 61.70% (58/94)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:06:50,451 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:07:00,327 INFO Task PnPStoveToCounter: Episode 95 (seed=94): Instruction: pick the egg from the pan and place it on the plate
+2026-07-21 18:07:14,373 INFO Task PnPStoveToCounter: Episode 95 (seed=94): Success | Current Success Rate: 62.11% (59/95)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:07:14,374 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:07:26,769 INFO Task PnPStoveToCounter: Episode 96 (seed=95): Instruction: pick the garlic from the pan and place it in the bowl
+2026-07-21 18:07:57,209 INFO Task PnPStoveToCounter: Episode 96 (seed=95): Failure | Current Success Rate: 61.46% (59/96)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:07:57,210 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:08:06,762 INFO Task PnPStoveToCounter: Episode 97 (seed=96): Instruction: pick the mushroom from the pan and place it on the plate
+2026-07-21 18:08:27,714 INFO Task PnPStoveToCounter: Episode 97 (seed=96): Success | Current Success Rate: 61.86% (60/97)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:08:27,715 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:08:38,026 INFO Task PnPStoveToCounter: Episode 98 (seed=97): Instruction: pick the sweet potato from the pan and place it on the plate
+2026-07-21 18:08:54,501 INFO Task PnPStoveToCounter: Episode 98 (seed=97): Success | Current Success Rate: 62.24% (61/98)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:08:54,501 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:09:09,443 INFO Task PnPStoveToCounter: Episode 99 (seed=98): Instruction: pick the sweet potato from the pan and place it in the bowl
+2026-07-21 18:09:48,268 INFO Task PnPStoveToCounter: Episode 99 (seed=98): Failure | Current Success Rate: 61.62% (61/99)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:09:48,269 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:10:01,421 INFO Task PnPStoveToCounter: Episode 100 (seed=99): Instruction: pick the onion from the pan and place it on the plate
+2026-07-21 18:10:19,955 INFO Task PnPStoveToCounter: Episode 100 (seed=99): Success | Current Success Rate: 62.00% (62/100)
+Client connection closed.
+2026-07-21 18:10:19,955 INFO Task PnPStoveToCounter Final Success Rate: 62.00% (62/100)
+2026-07-21 18:10:19,994 INFO Results saved to: ./eval_robocasa/eval_logs/eval_results_PnPStoveToCounter.json

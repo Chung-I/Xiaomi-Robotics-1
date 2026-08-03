@@ -1,0 +1,419 @@
+[robosuite WARNING] No private macro file found! (macros.py:57)
+2026-07-21 19:55:11,338 WARNING No private macro file found!
+[robosuite WARNING] It is recommended to use a private macro file (macros.py:58)
+2026-07-21 19:55:11,338 WARNING It is recommended to use a private macro file
+[robosuite WARNING] To setup, run: python /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/scripts/setup_macros.py (macros.py:59)
+2026-07-21 19:55:11,338 WARNING To setup, run: python /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/scripts/setup_macros.py
+[robosuite WARNING] Could not import robosuite_models. Some robots may not be available. If you want to use these robots, please install robosuite_models from source (https://github.com/ARISE-Initiative/robosuite_models) or through pip install. (__init__.py:30)
+2026-07-21 19:55:25,358 WARNING Could not import robosuite_models. Some robots may not be available. If you want to use these robots, please install robosuite_models from source (https://github.com/ARISE-Initiative/robosuite_models) or through pip install.
+[robosuite WARNING] Could not load the mink-based whole-body IK. Make sure you install related import properly (e.g. pip install mink==0.0.5), otherwise you will not be able to use the default IK controller setting for GR1 robot. (__init__.py:40)
+2026-07-21 19:55:25,460 WARNING Could not load the mink-based whole-body IK. Make sure you install related import properly (e.g. pip install mink==0.0.5), otherwise you will not be able to use the default IK controller setting for GR1 robot.
+WARNING: mimicgen environments not imported since mimicgen is not installed!
+2026-07-21 19:57:40,191 INFO Task: TurnOffMicrowave | Episodes: 100 | Start seed: 0
+2026-07-21 19:57:40,191 INFO Server: localhost:10093
+Client connected to server at localhost:10093.
+2026-07-21 19:57:41,576 INFO EvalClient ready. Robot types: ['robocasa_mg']
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:57:41,577 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:57:54,078 INFO No OpenGL_accelerate module loaded: No module named 'OpenGL_accelerate'
+2026-07-21 19:58:00,057 INFO Task TurnOffMicrowave: Episode 1 (seed=0): Instruction: press the stop button on the microwave
+2026-07-21 19:58:14,384 INFO Task TurnOffMicrowave: Episode 1 (seed=0): Success | Current Success Rate: 100.00% (1/1)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:58:14,408 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:58:23,742 INFO Task TurnOffMicrowave: Episode 2 (seed=1): Instruction: press the stop button on the microwave
+2026-07-21 19:58:38,333 INFO Task TurnOffMicrowave: Episode 2 (seed=1): Success | Current Success Rate: 100.00% (2/2)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:58:38,334 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:58:45,389 INFO Task TurnOffMicrowave: Episode 3 (seed=2): Instruction: press the stop button on the microwave
+2026-07-21 19:58:58,082 INFO Task TurnOffMicrowave: Episode 3 (seed=2): Success | Current Success Rate: 100.00% (3/3)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:58:58,083 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:59:09,817 INFO Task TurnOffMicrowave: Episode 4 (seed=3): Instruction: press the stop button on the microwave
+2026-07-21 19:59:32,298 INFO Task TurnOffMicrowave: Episode 4 (seed=3): Success | Current Success Rate: 100.00% (4/4)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:59:32,309 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:59:46,825 INFO Task TurnOffMicrowave: Episode 5 (seed=4): Instruction: press the stop button on the microwave
+2026-07-21 20:00:01,139 INFO Task TurnOffMicrowave: Episode 5 (seed=4): Success | Current Success Rate: 100.00% (5/5)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:00:01,140 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:00:18,689 INFO Task TurnOffMicrowave: Episode 6 (seed=5): Instruction: press the stop button on the microwave
+2026-07-21 20:00:36,726 INFO Task TurnOffMicrowave: Episode 6 (seed=5): Success | Current Success Rate: 100.00% (6/6)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:00:36,727 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:00:46,955 INFO Task TurnOffMicrowave: Episode 7 (seed=6): Instruction: press the stop button on the microwave
+2026-07-21 20:00:59,635 INFO Task TurnOffMicrowave: Episode 7 (seed=6): Success | Current Success Rate: 100.00% (7/7)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:00:59,679 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:01:08,062 INFO Task TurnOffMicrowave: Episode 8 (seed=7): Instruction: press the stop button on the microwave
+2026-07-21 20:01:23,585 INFO Task TurnOffMicrowave: Episode 8 (seed=7): Success | Current Success Rate: 100.00% (8/8)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:01:23,586 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:01:35,923 INFO Task TurnOffMicrowave: Episode 9 (seed=8): Instruction: press the stop button on the microwave
+2026-07-21 20:01:47,077 INFO Task TurnOffMicrowave: Episode 9 (seed=8): Success | Current Success Rate: 100.00% (9/9)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:01:47,078 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:01:58,189 INFO Task TurnOffMicrowave: Episode 10 (seed=9): Instruction: press the stop button on the microwave
+2026-07-21 20:02:12,820 INFO Task TurnOffMicrowave: Episode 10 (seed=9): Success | Current Success Rate: 100.00% (10/10)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:02:12,821 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:02:32,292 INFO Task TurnOffMicrowave: Episode 11 (seed=10): Instruction: press the stop button on the microwave
+2026-07-21 20:02:52,141 INFO Task TurnOffMicrowave: Episode 11 (seed=10): Success | Current Success Rate: 100.00% (11/11)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:02:52,141 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:03:01,251 INFO Task TurnOffMicrowave: Episode 12 (seed=11): Instruction: press the stop button on the microwave
+2026-07-21 20:03:13,774 INFO Task TurnOffMicrowave: Episode 12 (seed=11): Success | Current Success Rate: 100.00% (12/12)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:03:13,774 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:03:31,729 INFO Task TurnOffMicrowave: Episode 13 (seed=12): Instruction: press the stop button on the microwave
+2026-07-21 20:04:10,569 INFO Task TurnOffMicrowave: Episode 13 (seed=12): Failure | Current Success Rate: 92.31% (12/13)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:04:10,569 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:04:17,503 INFO Task TurnOffMicrowave: Episode 14 (seed=13): Instruction: press the stop button on the microwave
+2026-07-21 20:04:32,141 INFO Task TurnOffMicrowave: Episode 14 (seed=13): Success | Current Success Rate: 92.86% (13/14)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:04:32,211 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:04:39,679 INFO Task TurnOffMicrowave: Episode 15 (seed=14): Instruction: press the stop button on the microwave
+2026-07-21 20:04:53,118 INFO Task TurnOffMicrowave: Episode 15 (seed=14): Success | Current Success Rate: 93.33% (14/15)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:04:53,119 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:05:02,313 INFO Task TurnOffMicrowave: Episode 16 (seed=15): Instruction: press the stop button on the microwave
+2026-07-21 20:05:15,585 INFO Task TurnOffMicrowave: Episode 16 (seed=15): Success | Current Success Rate: 93.75% (15/16)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:05:15,586 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:05:29,989 INFO Task TurnOffMicrowave: Episode 17 (seed=16): Instruction: press the stop button on the microwave
+2026-07-21 20:05:51,376 INFO Task TurnOffMicrowave: Episode 17 (seed=16): Success | Current Success Rate: 94.12% (16/17)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:05:51,377 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:06:04,751 INFO Task TurnOffMicrowave: Episode 18 (seed=17): Instruction: press the stop button on the microwave
+2026-07-21 20:06:22,138 INFO Task TurnOffMicrowave: Episode 18 (seed=17): Success | Current Success Rate: 94.44% (17/18)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:06:22,138 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:06:29,704 INFO Task TurnOffMicrowave: Episode 19 (seed=18): Instruction: press the stop button on the microwave
+2026-07-21 20:06:30,418 INFO Task TurnOffMicrowave: Episode 19 (seed=18): Success | Current Success Rate: 94.74% (18/19)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:06:30,420 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:06:38,820 INFO Task TurnOffMicrowave: Episode 20 (seed=19): Instruction: press the stop button on the microwave
+2026-07-21 20:06:49,148 INFO Task TurnOffMicrowave: Episode 20 (seed=19): Success | Current Success Rate: 95.00% (19/20)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:06:49,149 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:06:57,466 INFO Task TurnOffMicrowave: Episode 21 (seed=20): Instruction: press the stop button on the microwave
+2026-07-21 20:07:12,811 INFO Task TurnOffMicrowave: Episode 21 (seed=20): Success | Current Success Rate: 95.24% (20/21)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:07:12,812 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:07:27,654 INFO Task TurnOffMicrowave: Episode 22 (seed=21): Instruction: press the stop button on the microwave
+2026-07-21 20:07:46,074 INFO Task TurnOffMicrowave: Episode 22 (seed=21): Success | Current Success Rate: 95.45% (21/22)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:07:46,119 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:08:00,386 INFO Task TurnOffMicrowave: Episode 23 (seed=22): Instruction: press the stop button on the microwave
+2026-07-21 20:08:13,598 INFO Task TurnOffMicrowave: Episode 23 (seed=22): Success | Current Success Rate: 95.65% (22/23)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:08:13,599 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:08:23,148 INFO Task TurnOffMicrowave: Episode 24 (seed=23): Instruction: press the stop button on the microwave
+2026-07-21 20:08:38,412 INFO Task TurnOffMicrowave: Episode 24 (seed=23): Success | Current Success Rate: 95.83% (23/24)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:08:38,437 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:08:49,397 INFO Task TurnOffMicrowave: Episode 25 (seed=24): Instruction: press the stop button on the microwave
+2026-07-21 20:09:02,231 INFO Task TurnOffMicrowave: Episode 25 (seed=24): Success | Current Success Rate: 96.00% (24/25)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:09:02,276 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:09:16,045 INFO Task TurnOffMicrowave: Episode 26 (seed=25): Instruction: press the stop button on the microwave
+2026-07-21 20:09:34,291 INFO Task TurnOffMicrowave: Episode 26 (seed=25): Success | Current Success Rate: 96.15% (25/26)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:09:34,292 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:09:43,240 INFO Task TurnOffMicrowave: Episode 27 (seed=26): Instruction: press the stop button on the microwave
+2026-07-21 20:10:00,690 INFO Task TurnOffMicrowave: Episode 27 (seed=26): Success | Current Success Rate: 96.30% (26/27)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:10:00,691 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:10:10,612 INFO Task TurnOffMicrowave: Episode 28 (seed=27): Instruction: press the stop button on the microwave
+2026-07-21 20:10:24,979 INFO Task TurnOffMicrowave: Episode 28 (seed=27): Success | Current Success Rate: 96.43% (27/28)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:10:24,980 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:10:37,831 INFO Task TurnOffMicrowave: Episode 29 (seed=28): Instruction: press the stop button on the microwave
+2026-07-21 20:10:52,631 INFO Task TurnOffMicrowave: Episode 29 (seed=28): Success | Current Success Rate: 96.55% (28/29)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:10:52,632 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:10:59,656 INFO Task TurnOffMicrowave: Episode 30 (seed=29): Instruction: press the stop button on the microwave
+2026-07-21 20:11:15,155 INFO Task TurnOffMicrowave: Episode 30 (seed=29): Success | Current Success Rate: 96.67% (29/30)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:11:15,156 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:11:22,546 INFO Task TurnOffMicrowave: Episode 31 (seed=30): Instruction: press the stop button on the microwave
+2026-07-21 20:11:34,079 INFO Task TurnOffMicrowave: Episode 31 (seed=30): Success | Current Success Rate: 96.77% (30/31)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:11:34,080 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:11:43,045 INFO Task TurnOffMicrowave: Episode 32 (seed=31): Instruction: press the stop button on the microwave
+2026-07-21 20:11:43,739 INFO Task TurnOffMicrowave: Episode 32 (seed=31): Success | Current Success Rate: 96.88% (31/32)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:11:43,740 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:11:50,660 INFO Task TurnOffMicrowave: Episode 33 (seed=32): Instruction: press the stop button on the microwave
+2026-07-21 20:11:51,337 INFO Task TurnOffMicrowave: Episode 33 (seed=32): Success | Current Success Rate: 96.97% (32/33)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:11:51,338 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:11:59,433 INFO Task TurnOffMicrowave: Episode 34 (seed=33): Instruction: press the stop button on the microwave
+2026-07-21 20:12:16,311 INFO Task TurnOffMicrowave: Episode 34 (seed=33): Success | Current Success Rate: 97.06% (33/34)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:12:16,312 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:12:25,449 INFO Task TurnOffMicrowave: Episode 35 (seed=34): Instruction: press the stop button on the microwave
+2026-07-21 20:12:38,482 INFO Task TurnOffMicrowave: Episode 35 (seed=34): Success | Current Success Rate: 97.14% (34/35)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:12:38,482 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:12:47,290 INFO Task TurnOffMicrowave: Episode 36 (seed=35): Instruction: press the stop button on the microwave
+2026-07-21 20:12:59,345 INFO Task TurnOffMicrowave: Episode 36 (seed=35): Success | Current Success Rate: 97.22% (35/36)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:12:59,346 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:13:08,992 INFO Task TurnOffMicrowave: Episode 37 (seed=36): Instruction: press the stop button on the microwave
+2026-07-21 20:13:20,574 INFO Task TurnOffMicrowave: Episode 37 (seed=36): Success | Current Success Rate: 97.30% (36/37)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:13:20,575 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:13:30,693 INFO Task TurnOffMicrowave: Episode 38 (seed=37): Instruction: press the stop button on the microwave
+2026-07-21 20:13:54,110 INFO Task TurnOffMicrowave: Episode 38 (seed=37): Success | Current Success Rate: 97.37% (37/38)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:13:54,111 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:14:03,398 INFO Task TurnOffMicrowave: Episode 39 (seed=38): Instruction: press the stop button on the microwave
+2026-07-21 20:14:14,942 INFO Task TurnOffMicrowave: Episode 39 (seed=38): Success | Current Success Rate: 97.44% (38/39)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:14:14,943 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:14:22,182 INFO Task TurnOffMicrowave: Episode 40 (seed=39): Instruction: press the stop button on the microwave
+2026-07-21 20:14:33,905 INFO Task TurnOffMicrowave: Episode 40 (seed=39): Success | Current Success Rate: 97.50% (39/40)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:14:33,906 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:14:48,400 INFO Task TurnOffMicrowave: Episode 41 (seed=40): Instruction: press the stop button on the microwave
+2026-07-21 20:15:04,250 INFO Task TurnOffMicrowave: Episode 41 (seed=40): Success | Current Success Rate: 97.56% (40/41)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:15:04,251 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:15:18,784 INFO Task TurnOffMicrowave: Episode 42 (seed=41): Instruction: press the stop button on the microwave
+2026-07-21 20:15:31,622 INFO Task TurnOffMicrowave: Episode 42 (seed=41): Success | Current Success Rate: 97.62% (41/42)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:15:31,623 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:15:40,037 INFO Task TurnOffMicrowave: Episode 43 (seed=42): Instruction: press the stop button on the microwave
+2026-07-21 20:15:54,600 INFO Task TurnOffMicrowave: Episode 43 (seed=42): Success | Current Success Rate: 97.67% (42/43)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:15:54,601 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:16:07,611 INFO Task TurnOffMicrowave: Episode 44 (seed=43): Instruction: press the stop button on the microwave
+2026-07-21 20:16:24,293 INFO Task TurnOffMicrowave: Episode 44 (seed=43): Success | Current Success Rate: 97.73% (43/44)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:16:24,294 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:16:37,190 INFO Task TurnOffMicrowave: Episode 45 (seed=44): Instruction: press the stop button on the microwave
+2026-07-21 20:16:48,803 INFO Task TurnOffMicrowave: Episode 45 (seed=44): Success | Current Success Rate: 97.78% (44/45)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:16:48,804 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:16:55,833 INFO Task TurnOffMicrowave: Episode 46 (seed=45): Instruction: press the stop button on the microwave
+2026-07-21 20:17:11,262 INFO Task TurnOffMicrowave: Episode 46 (seed=45): Success | Current Success Rate: 97.83% (45/46)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:17:11,263 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:17:19,739 INFO Task TurnOffMicrowave: Episode 47 (seed=46): Instruction: press the stop button on the microwave
+2026-07-21 20:17:40,562 INFO Task TurnOffMicrowave: Episode 47 (seed=46): Success | Current Success Rate: 97.87% (46/47)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:17:40,563 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:17:54,160 INFO Task TurnOffMicrowave: Episode 48 (seed=47): Instruction: press the stop button on the microwave
+2026-07-21 20:18:15,998 INFO Task TurnOffMicrowave: Episode 48 (seed=47): Success | Current Success Rate: 97.92% (47/48)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:18:15,999 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:18:23,555 INFO Task TurnOffMicrowave: Episode 49 (seed=48): Instruction: press the stop button on the microwave
+2026-07-21 20:18:38,938 INFO Task TurnOffMicrowave: Episode 49 (seed=48): Success | Current Success Rate: 97.96% (48/49)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:18:38,938 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:18:46,387 INFO Task TurnOffMicrowave: Episode 50 (seed=49): Instruction: press the stop button on the microwave
+2026-07-21 20:18:59,012 INFO Task TurnOffMicrowave: Episode 50 (seed=49): Success | Current Success Rate: 98.00% (49/50)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:18:59,056 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:19:13,126 INFO Task TurnOffMicrowave: Episode 51 (seed=50): Instruction: press the stop button on the microwave
+2026-07-21 20:19:25,750 INFO Task TurnOffMicrowave: Episode 51 (seed=50): Success | Current Success Rate: 98.04% (50/51)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:19:25,750 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:19:37,777 INFO Task TurnOffMicrowave: Episode 52 (seed=51): Instruction: press the stop button on the microwave
+2026-07-21 20:19:52,113 INFO Task TurnOffMicrowave: Episode 52 (seed=51): Success | Current Success Rate: 98.08% (51/52)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:19:52,113 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:20:01,265 INFO Task TurnOffMicrowave: Episode 53 (seed=52): Instruction: press the stop button on the microwave
+2026-07-21 20:20:02,056 INFO Task TurnOffMicrowave: Episode 53 (seed=52): Success | Current Success Rate: 98.11% (52/53)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:20:02,104 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:20:13,838 INFO Task TurnOffMicrowave: Episode 54 (seed=53): Instruction: press the stop button on the microwave
+2026-07-21 20:20:28,210 INFO Task TurnOffMicrowave: Episode 54 (seed=53): Success | Current Success Rate: 98.15% (53/54)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:20:28,211 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:20:37,561 INFO Task TurnOffMicrowave: Episode 55 (seed=54): Instruction: press the stop button on the microwave
+2026-07-21 20:20:53,873 INFO Task TurnOffMicrowave: Episode 55 (seed=54): Success | Current Success Rate: 98.18% (54/55)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:20:53,874 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:21:02,501 INFO Task TurnOffMicrowave: Episode 56 (seed=55): Instruction: press the stop button on the microwave
+2026-07-21 20:21:18,224 INFO Task TurnOffMicrowave: Episode 56 (seed=55): Success | Current Success Rate: 98.21% (55/56)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:21:18,225 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:21:28,673 INFO Task TurnOffMicrowave: Episode 57 (seed=56): Instruction: press the stop button on the microwave
+2026-07-21 20:21:29,404 INFO Task TurnOffMicrowave: Episode 57 (seed=56): Success | Current Success Rate: 98.25% (56/57)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:21:29,405 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:21:38,275 INFO Task TurnOffMicrowave: Episode 58 (seed=57): Instruction: press the stop button on the microwave
+2026-07-21 20:21:50,730 INFO Task TurnOffMicrowave: Episode 58 (seed=57): Success | Current Success Rate: 98.28% (57/58)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:21:50,754 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:21:59,476 INFO Task TurnOffMicrowave: Episode 59 (seed=58): Instruction: press the stop button on the microwave
+2026-07-21 20:22:10,624 INFO Task TurnOffMicrowave: Episode 59 (seed=58): Success | Current Success Rate: 98.31% (58/59)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:22:10,625 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:22:25,835 INFO Task TurnOffMicrowave: Episode 60 (seed=59): Instruction: press the stop button on the microwave
+2026-07-21 20:22:38,699 INFO Task TurnOffMicrowave: Episode 60 (seed=59): Success | Current Success Rate: 98.33% (59/60)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:22:38,700 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:22:47,238 INFO Task TurnOffMicrowave: Episode 61 (seed=60): Instruction: press the stop button on the microwave
+2026-07-21 20:23:02,376 INFO Task TurnOffMicrowave: Episode 61 (seed=60): Success | Current Success Rate: 98.36% (60/61)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:23:02,377 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:23:12,721 INFO Task TurnOffMicrowave: Episode 62 (seed=61): Instruction: press the stop button on the microwave
+2026-07-21 20:23:26,518 INFO Task TurnOffMicrowave: Episode 62 (seed=61): Success | Current Success Rate: 98.39% (61/62)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:23:26,519 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:23:35,911 INFO Task TurnOffMicrowave: Episode 63 (seed=62): Instruction: press the stop button on the microwave
+2026-07-21 20:23:54,109 INFO Task TurnOffMicrowave: Episode 63 (seed=62): Success | Current Success Rate: 98.41% (62/63)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:23:54,131 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:24:03,430 INFO Task TurnOffMicrowave: Episode 64 (seed=63): Instruction: press the stop button on the microwave
+2026-07-21 20:24:16,232 INFO Task TurnOffMicrowave: Episode 64 (seed=63): Success | Current Success Rate: 98.44% (63/64)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:24:16,232 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:24:24,450 INFO Task TurnOffMicrowave: Episode 65 (seed=64): Instruction: press the stop button on the microwave
+2026-07-21 20:24:25,139 INFO Task TurnOffMicrowave: Episode 65 (seed=64): Success | Current Success Rate: 98.46% (64/65)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:24:25,140 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:24:32,608 INFO Task TurnOffMicrowave: Episode 66 (seed=65): Instruction: press the stop button on the microwave
+2026-07-21 20:24:47,978 INFO Task TurnOffMicrowave: Episode 66 (seed=65): Success | Current Success Rate: 98.48% (65/66)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:24:47,979 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:24:56,113 INFO Task TurnOffMicrowave: Episode 67 (seed=66): Instruction: press the stop button on the microwave
+2026-07-21 20:25:09,938 INFO Task TurnOffMicrowave: Episode 67 (seed=66): Success | Current Success Rate: 98.51% (66/67)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:25:09,939 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:25:24,807 INFO Task TurnOffMicrowave: Episode 68 (seed=67): Instruction: press the stop button on the microwave
+2026-07-21 20:25:38,377 INFO Task TurnOffMicrowave: Episode 68 (seed=67): Success | Current Success Rate: 98.53% (67/68)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:25:38,423 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:25:49,029 INFO Task TurnOffMicrowave: Episode 69 (seed=68): Instruction: press the stop button on the microwave
+2026-07-21 20:26:03,753 INFO Task TurnOffMicrowave: Episode 69 (seed=68): Success | Current Success Rate: 98.55% (68/69)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:26:03,755 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:26:13,301 INFO Task TurnOffMicrowave: Episode 70 (seed=69): Instruction: press the stop button on the microwave
+2026-07-21 20:26:27,851 INFO Task TurnOffMicrowave: Episode 70 (seed=69): Success | Current Success Rate: 98.57% (69/70)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:26:27,852 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:26:41,202 INFO Task TurnOffMicrowave: Episode 71 (seed=70): Instruction: press the stop button on the microwave
+2026-07-21 20:26:53,524 INFO Task TurnOffMicrowave: Episode 71 (seed=70): Success | Current Success Rate: 98.59% (70/71)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:26:53,525 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:27:01,363 INFO Task TurnOffMicrowave: Episode 72 (seed=71): Instruction: press the stop button on the microwave
+2026-07-21 20:27:22,192 INFO Task TurnOffMicrowave: Episode 72 (seed=71): Success | Current Success Rate: 98.61% (71/72)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:27:22,193 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:27:30,658 INFO Task TurnOffMicrowave: Episode 73 (seed=72): Instruction: press the stop button on the microwave
+2026-07-21 20:27:42,829 INFO Task TurnOffMicrowave: Episode 73 (seed=72): Success | Current Success Rate: 98.63% (72/73)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:27:42,830 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:27:50,234 INFO Task TurnOffMicrowave: Episode 74 (seed=73): Instruction: press the stop button on the microwave
+2026-07-21 20:28:03,831 INFO Task TurnOffMicrowave: Episode 74 (seed=73): Success | Current Success Rate: 98.65% (73/74)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:28:03,832 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:28:11,525 INFO Task TurnOffMicrowave: Episode 75 (seed=74): Instruction: press the stop button on the microwave
+2026-07-21 20:28:22,750 INFO Task TurnOffMicrowave: Episode 75 (seed=74): Success | Current Success Rate: 98.67% (74/75)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:28:22,750 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:28:34,807 INFO Task TurnOffMicrowave: Episode 76 (seed=75): Instruction: press the stop button on the microwave
+2026-07-21 20:28:46,292 INFO Task TurnOffMicrowave: Episode 76 (seed=75): Success | Current Success Rate: 98.68% (75/76)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:28:46,293 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:28:55,376 INFO Task TurnOffMicrowave: Episode 77 (seed=76): Instruction: press the stop button on the microwave
+2026-07-21 20:29:08,276 INFO Task TurnOffMicrowave: Episode 77 (seed=76): Success | Current Success Rate: 98.70% (76/77)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:29:08,355 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:29:16,375 INFO Task TurnOffMicrowave: Episode 78 (seed=77): Instruction: press the stop button on the microwave
+2026-07-21 20:29:29,079 INFO Task TurnOffMicrowave: Episode 78 (seed=77): Success | Current Success Rate: 98.72% (77/78)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:29:29,080 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:29:42,563 INFO Task TurnOffMicrowave: Episode 79 (seed=78): Instruction: press the stop button on the microwave
+2026-07-21 20:30:00,845 INFO Task TurnOffMicrowave: Episode 79 (seed=78): Success | Current Success Rate: 98.73% (78/79)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:30:00,846 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:30:09,340 INFO Task TurnOffMicrowave: Episode 80 (seed=79): Instruction: press the stop button on the microwave
+2026-07-21 20:30:27,677 INFO Task TurnOffMicrowave: Episode 80 (seed=79): Success | Current Success Rate: 98.75% (79/80)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:30:27,754 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:30:35,753 INFO Task TurnOffMicrowave: Episode 81 (seed=80): Instruction: press the stop button on the microwave
+2026-07-21 20:30:48,192 INFO Task TurnOffMicrowave: Episode 81 (seed=80): Success | Current Success Rate: 98.77% (80/81)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:30:48,193 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:31:01,797 INFO Task TurnOffMicrowave: Episode 82 (seed=81): Instruction: press the stop button on the microwave
+2026-07-21 20:31:25,084 INFO Task TurnOffMicrowave: Episode 82 (seed=81): Success | Current Success Rate: 98.78% (81/82)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:31:25,085 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:31:38,260 INFO Task TurnOffMicrowave: Episode 83 (seed=82): Instruction: press the stop button on the microwave
+2026-07-21 20:31:39,015 INFO Task TurnOffMicrowave: Episode 83 (seed=82): Success | Current Success Rate: 98.80% (82/83)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:31:39,062 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:31:51,269 INFO Task TurnOffMicrowave: Episode 84 (seed=83): Instruction: press the stop button on the microwave
+2026-07-21 20:32:04,256 INFO Task TurnOffMicrowave: Episode 84 (seed=83): Success | Current Success Rate: 98.81% (83/84)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:32:04,257 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:32:17,828 INFO Task TurnOffMicrowave: Episode 85 (seed=84): Instruction: press the stop button on the microwave
+2026-07-21 20:32:32,485 INFO Task TurnOffMicrowave: Episode 85 (seed=84): Success | Current Success Rate: 98.82% (84/85)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:32:32,485 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:32:45,880 INFO Task TurnOffMicrowave: Episode 86 (seed=85): Instruction: press the stop button on the microwave
+2026-07-21 20:32:58,724 INFO Task TurnOffMicrowave: Episode 86 (seed=85): Success | Current Success Rate: 98.84% (85/86)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:32:58,725 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:33:10,963 INFO Task TurnOffMicrowave: Episode 87 (seed=86): Instruction: press the stop button on the microwave
+2026-07-21 20:33:29,466 INFO Task TurnOffMicrowave: Episode 87 (seed=86): Success | Current Success Rate: 98.85% (86/87)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:33:29,467 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:33:43,842 INFO Task TurnOffMicrowave: Episode 88 (seed=87): Instruction: press the stop button on the microwave
+2026-07-21 20:33:59,749 INFO Task TurnOffMicrowave: Episode 88 (seed=87): Success | Current Success Rate: 98.86% (87/88)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:33:59,795 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:34:14,187 INFO Task TurnOffMicrowave: Episode 89 (seed=88): Instruction: press the stop button on the microwave
+2026-07-21 20:34:37,642 INFO Task TurnOffMicrowave: Episode 89 (seed=88): Success | Current Success Rate: 98.88% (88/89)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:34:37,642 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:34:45,492 INFO Task TurnOffMicrowave: Episode 90 (seed=89): Instruction: press the stop button on the microwave
+2026-07-21 20:34:58,380 INFO Task TurnOffMicrowave: Episode 90 (seed=89): Success | Current Success Rate: 98.89% (89/90)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:34:58,381 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:35:12,888 INFO Task TurnOffMicrowave: Episode 91 (seed=90): Instruction: press the stop button on the microwave
+2026-07-21 20:35:26,265 INFO Task TurnOffMicrowave: Episode 91 (seed=90): Success | Current Success Rate: 98.90% (90/91)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:35:26,266 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:35:38,918 INFO Task TurnOffMicrowave: Episode 92 (seed=91): Instruction: press the stop button on the microwave
+2026-07-21 20:35:50,835 INFO Task TurnOffMicrowave: Episode 92 (seed=91): Success | Current Success Rate: 98.91% (91/92)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:35:50,835 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:36:01,688 INFO Task TurnOffMicrowave: Episode 93 (seed=92): Instruction: press the stop button on the microwave
+2026-07-21 20:36:16,834 INFO Task TurnOffMicrowave: Episode 93 (seed=92): Success | Current Success Rate: 98.92% (92/93)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:36:16,879 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:36:23,931 INFO Task TurnOffMicrowave: Episode 94 (seed=93): Instruction: press the stop button on the microwave
+2026-07-21 20:36:38,715 INFO Task TurnOffMicrowave: Episode 94 (seed=93): Success | Current Success Rate: 98.94% (93/94)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:36:38,727 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:36:47,105 INFO Task TurnOffMicrowave: Episode 95 (seed=94): Instruction: press the stop button on the microwave
+2026-07-21 20:37:02,209 INFO Task TurnOffMicrowave: Episode 95 (seed=94): Success | Current Success Rate: 98.95% (94/95)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:37:02,209 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:37:13,824 INFO Task TurnOffMicrowave: Episode 96 (seed=95): Instruction: press the stop button on the microwave
+2026-07-21 20:37:27,614 INFO Task TurnOffMicrowave: Episode 96 (seed=95): Success | Current Success Rate: 98.96% (95/96)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:37:27,615 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:37:35,710 INFO Task TurnOffMicrowave: Episode 97 (seed=96): Instruction: press the stop button on the microwave
+2026-07-21 20:37:48,125 INFO Task TurnOffMicrowave: Episode 97 (seed=96): Success | Current Success Rate: 98.97% (96/97)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:37:48,137 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:38:00,759 INFO Task TurnOffMicrowave: Episode 98 (seed=97): Instruction: press the stop button on the microwave
+2026-07-21 20:38:01,489 INFO Task TurnOffMicrowave: Episode 98 (seed=97): Success | Current Success Rate: 98.98% (97/98)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:38:01,490 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:38:13,930 INFO Task TurnOffMicrowave: Episode 99 (seed=98): Instruction: press the stop button on the microwave
+2026-07-21 20:38:32,182 INFO Task TurnOffMicrowave: Episode 99 (seed=98): Success | Current Success Rate: 98.99% (98/99)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:38:32,183 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:38:39,528 INFO Task TurnOffMicrowave: Episode 100 (seed=99): Instruction: press the stop button on the microwave
+2026-07-21 20:38:50,373 INFO Task TurnOffMicrowave: Episode 100 (seed=99): Success | Current Success Rate: 99.00% (99/100)
+Client connection closed.
+2026-07-21 20:38:50,374 INFO Task TurnOffMicrowave Final Success Rate: 99.00% (99/100)
+2026-07-21 20:38:50,411 INFO Results saved to: ./eval_robocasa/eval_logs/eval_results_TurnOffMicrowave.json

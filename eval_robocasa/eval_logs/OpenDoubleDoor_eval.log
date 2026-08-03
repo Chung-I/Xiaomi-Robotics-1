@@ -1,0 +1,419 @@
+[robosuite WARNING] No private macro file found! (macros.py:57)
+2026-07-21 18:09:53,806 WARNING No private macro file found!
+[robosuite WARNING] It is recommended to use a private macro file (macros.py:58)
+2026-07-21 18:09:53,806 WARNING It is recommended to use a private macro file
+[robosuite WARNING] To setup, run: python /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/scripts/setup_macros.py (macros.py:59)
+2026-07-21 18:09:53,806 WARNING To setup, run: python /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/scripts/setup_macros.py
+[robosuite WARNING] Could not import robosuite_models. Some robots may not be available. If you want to use these robots, please install robosuite_models from source (https://github.com/ARISE-Initiative/robosuite_models) or through pip install. (__init__.py:30)
+2026-07-21 18:10:07,621 WARNING Could not import robosuite_models. Some robots may not be available. If you want to use these robots, please install robosuite_models from source (https://github.com/ARISE-Initiative/robosuite_models) or through pip install.
+[robosuite WARNING] Could not load the mink-based whole-body IK. Make sure you install related import properly (e.g. pip install mink==0.0.5), otherwise you will not be able to use the default IK controller setting for GR1 robot. (__init__.py:40)
+2026-07-21 18:10:07,722 WARNING Could not load the mink-based whole-body IK. Make sure you install related import properly (e.g. pip install mink==0.0.5), otherwise you will not be able to use the default IK controller setting for GR1 robot.
+WARNING: mimicgen environments not imported since mimicgen is not installed!
+2026-07-21 18:12:17,989 INFO Task: OpenDoubleDoor | Episodes: 100 | Start seed: 0
+2026-07-21 18:12:17,989 INFO Server: localhost:10088
+Client connected to server at localhost:10088.
+2026-07-21 18:12:19,282 INFO EvalClient ready. Robot types: ['robocasa_mg']
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:12:19,283 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:12:31,815 INFO No OpenGL_accelerate module loaded: No module named 'OpenGL_accelerate'
+2026-07-21 18:12:40,515 INFO Task OpenDoubleDoor: Episode 1 (seed=0): Instruction: open the cabinet doors
+2026-07-21 18:31:28,481 INFO Task OpenDoubleDoor: Episode 1 (seed=0): Success | Current Success Rate: 100.00% (1/1)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:31:28,482 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:31:37,552 INFO Task OpenDoubleDoor: Episode 2 (seed=1): Instruction: open the cabinet doors
+2026-07-21 18:32:21,735 INFO Task OpenDoubleDoor: Episode 2 (seed=1): Success | Current Success Rate: 100.00% (2/2)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:32:21,736 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:32:30,025 INFO Task OpenDoubleDoor: Episode 3 (seed=2): Instruction: open the cabinet doors
+2026-07-21 18:33:09,333 INFO Task OpenDoubleDoor: Episode 3 (seed=2): Success | Current Success Rate: 100.00% (3/3)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:33:09,333 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:33:18,731 INFO Task OpenDoubleDoor: Episode 4 (seed=3): Instruction: open the cabinet doors
+2026-07-21 18:34:05,919 INFO Task OpenDoubleDoor: Episode 4 (seed=3): Success | Current Success Rate: 100.00% (4/4)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:34:05,920 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:34:21,364 INFO Task OpenDoubleDoor: Episode 5 (seed=4): Instruction: open the cabinet doors
+2026-07-21 18:35:06,156 INFO Task OpenDoubleDoor: Episode 5 (seed=4): Success | Current Success Rate: 100.00% (5/5)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:35:06,157 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:35:20,200 INFO Task OpenDoubleDoor: Episode 6 (seed=5): Instruction: open the cabinet doors
+2026-07-21 18:36:00,669 INFO Task OpenDoubleDoor: Episode 6 (seed=5): Success | Current Success Rate: 100.00% (6/6)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:36:00,670 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:36:12,573 INFO Task OpenDoubleDoor: Episode 7 (seed=6): Instruction: open the cabinet doors
+2026-07-21 18:36:55,019 INFO Task OpenDoubleDoor: Episode 7 (seed=6): Success | Current Success Rate: 100.00% (7/7)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:36:55,066 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:37:04,437 INFO Task OpenDoubleDoor: Episode 8 (seed=7): Instruction: open the cabinet doors
+2026-07-21 18:37:47,319 INFO Task OpenDoubleDoor: Episode 8 (seed=7): Success | Current Success Rate: 100.00% (8/8)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:37:47,320 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:38:04,852 INFO Task OpenDoubleDoor: Episode 9 (seed=8): Instruction: open the cabinet doors
+2026-07-21 18:38:59,278 INFO Task OpenDoubleDoor: Episode 9 (seed=8): Success | Current Success Rate: 100.00% (9/9)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:38:59,278 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:39:13,646 INFO Task OpenDoubleDoor: Episode 10 (seed=9): Instruction: open the cabinet doors
+2026-07-21 18:40:08,116 INFO Task OpenDoubleDoor: Episode 10 (seed=9): Success | Current Success Rate: 100.00% (10/10)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:40:08,163 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:40:21,707 INFO Task OpenDoubleDoor: Episode 11 (seed=10): Instruction: open the cabinet doors
+2026-07-21 18:41:05,167 INFO Task OpenDoubleDoor: Episode 11 (seed=10): Success | Current Success Rate: 100.00% (11/11)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:41:05,168 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:41:15,550 INFO Task OpenDoubleDoor: Episode 12 (seed=11): Instruction: open the cabinet doors
+2026-07-21 18:41:51,916 INFO Task OpenDoubleDoor: Episode 12 (seed=11): Success | Current Success Rate: 100.00% (12/12)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:41:51,917 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:42:07,110 INFO Task OpenDoubleDoor: Episode 13 (seed=12): Instruction: open the cabinet doors
+2026-07-21 18:42:51,535 INFO Task OpenDoubleDoor: Episode 13 (seed=12): Success | Current Success Rate: 100.00% (13/13)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:42:51,536 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:43:00,496 INFO Task OpenDoubleDoor: Episode 14 (seed=13): Instruction: open the cabinet doors
+2026-07-21 18:43:42,250 INFO Task OpenDoubleDoor: Episode 14 (seed=13): Success | Current Success Rate: 100.00% (14/14)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:43:42,251 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:43:52,150 INFO Task OpenDoubleDoor: Episode 15 (seed=14): Instruction: open the cabinet doors
+2026-07-21 18:44:37,927 INFO Task OpenDoubleDoor: Episode 15 (seed=14): Success | Current Success Rate: 100.00% (15/15)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:44:37,928 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:44:44,794 INFO Task OpenDoubleDoor: Episode 16 (seed=15): Instruction: open the cabinet doors
+2026-07-21 18:45:36,973 INFO Task OpenDoubleDoor: Episode 16 (seed=15): Success | Current Success Rate: 100.00% (16/16)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:45:36,973 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:45:52,016 INFO Task OpenDoubleDoor: Episode 17 (seed=16): Instruction: open the cabinet doors
+2026-07-21 18:46:56,825 INFO Task OpenDoubleDoor: Episode 17 (seed=16): Success | Current Success Rate: 100.00% (17/17)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:46:56,848 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:47:10,651 INFO Task OpenDoubleDoor: Episode 18 (seed=17): Instruction: open the cabinet doors
+2026-07-21 18:47:57,604 INFO Task OpenDoubleDoor: Episode 18 (seed=17): Success | Current Success Rate: 100.00% (18/18)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:47:57,628 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:48:06,534 INFO Task OpenDoubleDoor: Episode 19 (seed=18): Instruction: open the cabinet doors
+2026-07-21 18:48:52,748 INFO Task OpenDoubleDoor: Episode 19 (seed=18): Success | Current Success Rate: 100.00% (19/19)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:48:52,749 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:49:01,899 INFO Task OpenDoubleDoor: Episode 20 (seed=19): Instruction: open the cabinet doors
+2026-07-21 18:49:48,946 INFO Task OpenDoubleDoor: Episode 20 (seed=19): Success | Current Success Rate: 100.00% (20/20)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:49:48,947 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:49:57,932 INFO Task OpenDoubleDoor: Episode 21 (seed=20): Instruction: open the cabinet doors
+2026-07-21 18:50:43,859 INFO Task OpenDoubleDoor: Episode 21 (seed=20): Success | Current Success Rate: 100.00% (21/21)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:50:43,860 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:50:54,133 INFO Task OpenDoubleDoor: Episode 22 (seed=21): Instruction: open the cabinet doors
+2026-07-21 18:51:40,103 INFO Task OpenDoubleDoor: Episode 22 (seed=21): Success | Current Success Rate: 100.00% (22/22)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:51:40,104 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:51:54,024 INFO Task OpenDoubleDoor: Episode 23 (seed=22): Instruction: open the cabinet doors
+2026-07-21 18:52:33,386 INFO Task OpenDoubleDoor: Episode 23 (seed=22): Success | Current Success Rate: 100.00% (23/23)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:52:33,387 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:52:43,435 INFO Task OpenDoubleDoor: Episode 24 (seed=23): Instruction: open the cabinet doors
+2026-07-21 18:53:38,719 INFO Task OpenDoubleDoor: Episode 24 (seed=23): Success | Current Success Rate: 100.00% (24/24)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:53:38,720 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:53:50,327 INFO Task OpenDoubleDoor: Episode 25 (seed=24): Instruction: open the cabinet doors
+2026-07-21 18:54:32,770 INFO Task OpenDoubleDoor: Episode 25 (seed=24): Success | Current Success Rate: 100.00% (25/25)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:54:32,777 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:54:41,835 INFO Task OpenDoubleDoor: Episode 26 (seed=25): Instruction: open the cabinet doors
+2026-07-21 18:55:24,544 INFO Task OpenDoubleDoor: Episode 26 (seed=25): Success | Current Success Rate: 100.00% (26/26)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:55:24,545 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:55:32,366 INFO Task OpenDoubleDoor: Episode 27 (seed=26): Instruction: open the cabinet doors
+2026-07-21 18:56:14,103 INFO Task OpenDoubleDoor: Episode 27 (seed=26): Success | Current Success Rate: 100.00% (27/27)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:56:14,104 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:56:22,353 INFO Task OpenDoubleDoor: Episode 28 (seed=27): Instruction: open the cabinet doors
+2026-07-21 18:57:13,290 INFO Task OpenDoubleDoor: Episode 28 (seed=27): Success | Current Success Rate: 100.00% (28/28)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:57:13,291 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:57:29,148 INFO Task OpenDoubleDoor: Episode 29 (seed=28): Instruction: open the cabinet doors
+2026-07-21 18:58:10,319 INFO Task OpenDoubleDoor: Episode 29 (seed=28): Success | Current Success Rate: 100.00% (29/29)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:58:10,320 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:58:19,737 INFO Task OpenDoubleDoor: Episode 30 (seed=29): Instruction: open the cabinet doors
+2026-07-21 18:59:09,182 INFO Task OpenDoubleDoor: Episode 30 (seed=29): Success | Current Success Rate: 100.00% (30/30)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:59:09,189 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:59:22,995 INFO Task OpenDoubleDoor: Episode 31 (seed=30): Instruction: open the cabinet doors
+2026-07-21 19:00:21,904 INFO Task OpenDoubleDoor: Episode 31 (seed=30): Success | Current Success Rate: 100.00% (31/31)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:00:21,904 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:00:31,347 INFO Task OpenDoubleDoor: Episode 32 (seed=31): Instruction: open the cabinet doors
+2026-07-21 19:01:15,053 INFO Task OpenDoubleDoor: Episode 32 (seed=31): Success | Current Success Rate: 100.00% (32/32)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:01:15,054 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:01:29,786 INFO Task OpenDoubleDoor: Episode 33 (seed=32): Instruction: open the cabinet doors
+2026-07-21 19:02:41,255 INFO Task OpenDoubleDoor: Episode 33 (seed=32): Success | Current Success Rate: 100.00% (33/33)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:02:41,256 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:02:48,627 INFO Task OpenDoubleDoor: Episode 34 (seed=33): Instruction: open the cabinet doors
+2026-07-21 19:03:33,648 INFO Task OpenDoubleDoor: Episode 34 (seed=33): Success | Current Success Rate: 100.00% (34/34)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:03:33,650 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:03:45,135 INFO Task OpenDoubleDoor: Episode 35 (seed=34): Instruction: open the cabinet doors
+2026-07-21 19:04:25,598 INFO Task OpenDoubleDoor: Episode 35 (seed=34): Success | Current Success Rate: 100.00% (35/35)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:04:25,599 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:04:35,741 INFO Task OpenDoubleDoor: Episode 36 (seed=35): Instruction: open the cabinet doors
+2026-07-21 19:05:13,828 INFO Task OpenDoubleDoor: Episode 36 (seed=35): Success | Current Success Rate: 100.00% (36/36)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:05:13,828 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:05:26,085 INFO Task OpenDoubleDoor: Episode 37 (seed=36): Instruction: open the cabinet doors
+2026-07-21 19:06:07,494 INFO Task OpenDoubleDoor: Episode 37 (seed=36): Success | Current Success Rate: 100.00% (37/37)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:06:07,495 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:06:16,532 INFO Task OpenDoubleDoor: Episode 38 (seed=37): Instruction: open the cabinet doors
+2026-07-21 19:07:03,764 INFO Task OpenDoubleDoor: Episode 38 (seed=37): Success | Current Success Rate: 100.00% (38/38)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:07:03,765 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:07:14,785 INFO Task OpenDoubleDoor: Episode 39 (seed=38): Instruction: open the cabinet doors
+2026-07-21 19:07:57,996 INFO Task OpenDoubleDoor: Episode 39 (seed=38): Success | Current Success Rate: 100.00% (39/39)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:07:57,997 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:08:06,382 INFO Task OpenDoubleDoor: Episode 40 (seed=39): Instruction: open the cabinet doors
+2026-07-21 19:08:49,541 INFO Task OpenDoubleDoor: Episode 40 (seed=39): Success | Current Success Rate: 100.00% (40/40)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:08:49,542 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:08:58,511 INFO Task OpenDoubleDoor: Episode 41 (seed=40): Instruction: open the cabinet doors
+2026-07-21 19:09:47,932 INFO Task OpenDoubleDoor: Episode 41 (seed=40): Success | Current Success Rate: 100.00% (41/41)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:09:47,933 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:10:01,583 INFO Task OpenDoubleDoor: Episode 42 (seed=41): Instruction: open the cabinet doors
+2026-07-21 19:10:57,104 INFO Task OpenDoubleDoor: Episode 42 (seed=41): Success | Current Success Rate: 100.00% (42/42)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:10:57,105 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:11:06,768 INFO Task OpenDoubleDoor: Episode 43 (seed=42): Instruction: open the cabinet doors
+2026-07-21 19:11:59,376 INFO Task OpenDoubleDoor: Episode 43 (seed=42): Success | Current Success Rate: 100.00% (43/43)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:11:59,377 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:12:13,137 INFO Task OpenDoubleDoor: Episode 44 (seed=43): Instruction: open the cabinet doors
+2026-07-21 19:13:05,092 INFO Task OpenDoubleDoor: Episode 44 (seed=43): Success | Current Success Rate: 100.00% (44/44)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:13:05,093 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:13:18,426 INFO Task OpenDoubleDoor: Episode 45 (seed=44): Instruction: open the cabinet doors
+2026-07-21 19:14:12,000 INFO Task OpenDoubleDoor: Episode 45 (seed=44): Success | Current Success Rate: 100.00% (45/45)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:14:12,001 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:14:23,254 INFO Task OpenDoubleDoor: Episode 46 (seed=45): Instruction: open the cabinet doors
+2026-07-21 19:15:14,872 INFO Task OpenDoubleDoor: Episode 46 (seed=45): Success | Current Success Rate: 100.00% (46/46)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:15:14,874 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:15:26,977 INFO Task OpenDoubleDoor: Episode 47 (seed=46): Instruction: open the cabinet doors
+2026-07-21 19:16:15,205 INFO Task OpenDoubleDoor: Episode 47 (seed=46): Success | Current Success Rate: 100.00% (47/47)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:16:15,206 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:16:29,560 INFO Task OpenDoubleDoor: Episode 48 (seed=47): Instruction: open the cabinet doors
+2026-07-21 19:17:32,092 INFO Task OpenDoubleDoor: Episode 48 (seed=47): Success | Current Success Rate: 100.00% (48/48)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:17:32,137 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:17:41,648 INFO Task OpenDoubleDoor: Episode 49 (seed=48): Instruction: open the cabinet doors
+2026-07-21 19:18:29,061 INFO Task OpenDoubleDoor: Episode 49 (seed=48): Success | Current Success Rate: 100.00% (49/49)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:18:29,062 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:18:37,896 INFO Task OpenDoubleDoor: Episode 50 (seed=49): Instruction: open the cabinet doors
+2026-07-21 19:19:27,048 INFO Task OpenDoubleDoor: Episode 50 (seed=49): Success | Current Success Rate: 100.00% (50/50)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:19:27,049 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:19:41,611 INFO Task OpenDoubleDoor: Episode 51 (seed=50): Instruction: open the cabinet doors
+2026-07-21 19:20:35,467 INFO Task OpenDoubleDoor: Episode 51 (seed=50): Success | Current Success Rate: 100.00% (51/51)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:20:35,468 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:20:48,078 INFO Task OpenDoubleDoor: Episode 52 (seed=51): Instruction: open the cabinet doors
+2026-07-21 19:21:34,462 INFO Task OpenDoubleDoor: Episode 52 (seed=51): Success | Current Success Rate: 100.00% (52/52)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:21:34,463 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:21:45,011 INFO Task OpenDoubleDoor: Episode 53 (seed=52): Instruction: open the cabinet doors
+2026-07-21 19:22:30,290 INFO Task OpenDoubleDoor: Episode 53 (seed=52): Success | Current Success Rate: 100.00% (53/53)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:22:30,291 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:22:43,249 INFO Task OpenDoubleDoor: Episode 54 (seed=53): Instruction: open the cabinet doors
+2026-07-21 19:23:30,595 INFO Task OpenDoubleDoor: Episode 54 (seed=53): Success | Current Success Rate: 100.00% (54/54)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:23:30,596 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:23:42,977 INFO Task OpenDoubleDoor: Episode 55 (seed=54): Instruction: open the cabinet doors
+2026-07-21 19:24:35,939 INFO Task OpenDoubleDoor: Episode 55 (seed=54): Success | Current Success Rate: 100.00% (55/55)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:24:35,940 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:24:44,415 INFO Task OpenDoubleDoor: Episode 56 (seed=55): Instruction: open the cabinet doors
+2026-07-21 19:25:31,009 INFO Task OpenDoubleDoor: Episode 56 (seed=55): Success | Current Success Rate: 100.00% (56/56)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:25:31,010 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:25:43,420 INFO Task OpenDoubleDoor: Episode 57 (seed=56): Instruction: open the cabinet doors
+2026-07-21 19:26:28,076 INFO Task OpenDoubleDoor: Episode 57 (seed=56): Success | Current Success Rate: 100.00% (57/57)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:26:28,077 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:26:37,847 INFO Task OpenDoubleDoor: Episode 58 (seed=57): Instruction: open the cabinet doors
+2026-07-21 19:27:22,660 INFO Task OpenDoubleDoor: Episode 58 (seed=57): Success | Current Success Rate: 100.00% (58/58)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:27:22,706 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:27:34,121 INFO Task OpenDoubleDoor: Episode 59 (seed=58): Instruction: open the cabinet doors
+2026-07-21 19:28:14,794 INFO Task OpenDoubleDoor: Episode 59 (seed=58): Success | Current Success Rate: 100.00% (59/59)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:28:14,795 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:28:29,312 INFO Task OpenDoubleDoor: Episode 60 (seed=59): Instruction: open the cabinet doors
+2026-07-21 19:29:15,736 INFO Task OpenDoubleDoor: Episode 60 (seed=59): Success | Current Success Rate: 100.00% (60/60)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:29:15,737 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:29:29,586 INFO Task OpenDoubleDoor: Episode 61 (seed=60): Instruction: open the cabinet doors
+2026-07-21 19:30:25,993 INFO Task OpenDoubleDoor: Episode 61 (seed=60): Success | Current Success Rate: 100.00% (61/61)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:30:25,994 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:30:36,810 INFO Task OpenDoubleDoor: Episode 62 (seed=61): Instruction: open the cabinet doors
+2026-07-21 19:31:42,191 INFO Task OpenDoubleDoor: Episode 62 (seed=61): Failure | Current Success Rate: 98.39% (61/62)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:31:42,191 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:31:52,544 INFO Task OpenDoubleDoor: Episode 63 (seed=62): Instruction: open the cabinet doors
+2026-07-21 19:32:40,219 INFO Task OpenDoubleDoor: Episode 63 (seed=62): Success | Current Success Rate: 98.41% (62/63)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:32:40,220 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:32:50,994 INFO Task OpenDoubleDoor: Episode 64 (seed=63): Instruction: open the cabinet doors
+2026-07-21 19:33:58,162 INFO Task OpenDoubleDoor: Episode 64 (seed=63): Success | Current Success Rate: 98.44% (63/64)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:33:58,163 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:34:10,409 INFO Task OpenDoubleDoor: Episode 65 (seed=64): Instruction: open the cabinet doors
+2026-07-21 19:34:49,907 INFO Task OpenDoubleDoor: Episode 65 (seed=64): Success | Current Success Rate: 98.46% (64/65)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:34:49,908 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:34:58,558 INFO Task OpenDoubleDoor: Episode 66 (seed=65): Instruction: open the cabinet doors
+2026-07-21 19:35:41,507 INFO Task OpenDoubleDoor: Episode 66 (seed=65): Success | Current Success Rate: 98.48% (65/66)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:35:41,507 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:35:51,823 INFO Task OpenDoubleDoor: Episode 67 (seed=66): Instruction: open the cabinet doors
+2026-07-21 19:36:37,427 INFO Task OpenDoubleDoor: Episode 67 (seed=66): Success | Current Success Rate: 98.51% (66/67)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:36:37,428 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:36:51,784 INFO Task OpenDoubleDoor: Episode 68 (seed=67): Instruction: open the cabinet doors
+2026-07-21 19:37:35,479 INFO Task OpenDoubleDoor: Episode 68 (seed=67): Success | Current Success Rate: 98.53% (67/68)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:37:35,480 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:37:44,713 INFO Task OpenDoubleDoor: Episode 69 (seed=68): Instruction: open the cabinet doors
+2026-07-21 19:38:29,594 INFO Task OpenDoubleDoor: Episode 69 (seed=68): Success | Current Success Rate: 98.55% (68/69)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:38:29,595 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:38:40,274 INFO Task OpenDoubleDoor: Episode 70 (seed=69): Instruction: open the cabinet doors
+2026-07-21 19:39:20,888 INFO Task OpenDoubleDoor: Episode 70 (seed=69): Success | Current Success Rate: 98.57% (69/70)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:39:20,889 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:39:53,841 INFO Task OpenDoubleDoor: Episode 71 (seed=70): Instruction: open the cabinet doors
+2026-07-21 19:40:38,060 INFO Task OpenDoubleDoor: Episode 71 (seed=70): Success | Current Success Rate: 98.59% (70/71)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:40:38,100 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:40:45,629 INFO Task OpenDoubleDoor: Episode 72 (seed=71): Instruction: open the cabinet doors
+2026-07-21 19:41:28,720 INFO Task OpenDoubleDoor: Episode 72 (seed=71): Success | Current Success Rate: 98.61% (71/72)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:41:28,721 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:41:37,908 INFO Task OpenDoubleDoor: Episode 73 (seed=72): Instruction: open the cabinet doors
+2026-07-21 19:42:27,784 INFO Task OpenDoubleDoor: Episode 73 (seed=72): Success | Current Success Rate: 98.63% (72/73)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:42:27,785 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:42:38,088 INFO Task OpenDoubleDoor: Episode 74 (seed=73): Instruction: open the cabinet doors
+2026-07-21 19:43:23,219 INFO Task OpenDoubleDoor: Episode 74 (seed=73): Success | Current Success Rate: 98.65% (73/74)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:43:23,220 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:43:37,827 INFO Task OpenDoubleDoor: Episode 75 (seed=74): Instruction: open the cabinet doors
+2026-07-21 19:44:36,025 INFO Task OpenDoubleDoor: Episode 75 (seed=74): Success | Current Success Rate: 98.67% (74/75)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:44:36,026 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:44:54,799 INFO Task OpenDoubleDoor: Episode 76 (seed=75): Instruction: open the cabinet doors
+2026-07-21 19:45:50,207 INFO Task OpenDoubleDoor: Episode 76 (seed=75): Success | Current Success Rate: 98.68% (75/76)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:45:50,207 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:45:59,044 INFO Task OpenDoubleDoor: Episode 77 (seed=76): Instruction: open the cabinet doors
+2026-07-21 19:46:43,256 INFO Task OpenDoubleDoor: Episode 77 (seed=76): Success | Current Success Rate: 98.70% (76/77)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:46:43,256 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:46:52,563 INFO Task OpenDoubleDoor: Episode 78 (seed=77): Instruction: open the cabinet doors
+2026-07-21 19:47:37,918 INFO Task OpenDoubleDoor: Episode 78 (seed=77): Success | Current Success Rate: 98.72% (77/78)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:47:37,919 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:47:51,631 INFO Task OpenDoubleDoor: Episode 79 (seed=78): Instruction: open the cabinet doors
+2026-07-21 19:48:34,918 INFO Task OpenDoubleDoor: Episode 79 (seed=78): Success | Current Success Rate: 98.73% (78/79)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:48:34,918 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:48:45,173 INFO Task OpenDoubleDoor: Episode 80 (seed=79): Instruction: open the cabinet doors
+2026-07-21 19:49:30,132 INFO Task OpenDoubleDoor: Episode 80 (seed=79): Success | Current Success Rate: 98.75% (79/80)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:49:30,133 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:49:37,905 INFO Task OpenDoubleDoor: Episode 81 (seed=80): Instruction: open the cabinet doors
+2026-07-21 19:50:18,777 INFO Task OpenDoubleDoor: Episode 81 (seed=80): Success | Current Success Rate: 98.77% (80/81)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:50:18,778 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:50:29,299 INFO Task OpenDoubleDoor: Episode 82 (seed=81): Instruction: open the cabinet doors
+2026-07-21 19:51:12,209 INFO Task OpenDoubleDoor: Episode 82 (seed=81): Success | Current Success Rate: 98.78% (81/82)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:51:12,210 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:51:27,017 INFO Task OpenDoubleDoor: Episode 83 (seed=82): Instruction: open the cabinet doors
+2026-07-21 19:52:16,151 INFO Task OpenDoubleDoor: Episode 83 (seed=82): Success | Current Success Rate: 98.80% (82/83)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:52:16,152 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:52:35,097 INFO Task OpenDoubleDoor: Episode 84 (seed=83): Instruction: open the cabinet doors
+2026-07-21 19:53:29,650 INFO Task OpenDoubleDoor: Episode 84 (seed=83): Success | Current Success Rate: 98.81% (83/84)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:53:29,650 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:53:44,506 INFO Task OpenDoubleDoor: Episode 85 (seed=84): Instruction: open the cabinet doors
+2026-07-21 19:54:34,208 INFO Task OpenDoubleDoor: Episode 85 (seed=84): Success | Current Success Rate: 98.82% (84/85)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:54:34,209 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:54:53,380 INFO Task OpenDoubleDoor: Episode 86 (seed=85): Instruction: open the cabinet doors
+2026-07-21 19:55:50,887 INFO Task OpenDoubleDoor: Episode 86 (seed=85): Success | Current Success Rate: 98.84% (85/86)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:55:50,888 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:56:01,789 INFO Task OpenDoubleDoor: Episode 87 (seed=86): Instruction: open the cabinet doors
+2026-07-21 19:56:47,977 INFO Task OpenDoubleDoor: Episode 87 (seed=86): Success | Current Success Rate: 98.85% (86/87)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:56:47,977 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:57:03,917 INFO Task OpenDoubleDoor: Episode 88 (seed=87): Instruction: open the cabinet doors
+2026-07-21 19:57:50,347 INFO Task OpenDoubleDoor: Episode 88 (seed=87): Success | Current Success Rate: 98.86% (87/88)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:57:50,348 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:58:00,538 INFO Task OpenDoubleDoor: Episode 89 (seed=88): Instruction: open the cabinet doors
+2026-07-21 19:58:46,053 INFO Task OpenDoubleDoor: Episode 89 (seed=88): Success | Current Success Rate: 98.88% (88/89)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:58:46,099 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:58:57,369 INFO Task OpenDoubleDoor: Episode 90 (seed=89): Instruction: open the cabinet doors
+2026-07-21 19:59:39,256 INFO Task OpenDoubleDoor: Episode 90 (seed=89): Success | Current Success Rate: 98.89% (89/90)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:59:39,257 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:59:52,168 INFO Task OpenDoubleDoor: Episode 91 (seed=90): Instruction: open the cabinet doors
+2026-07-21 20:00:39,186 INFO Task OpenDoubleDoor: Episode 91 (seed=90): Success | Current Success Rate: 98.90% (90/91)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:00:39,187 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:00:58,108 INFO Task OpenDoubleDoor: Episode 92 (seed=91): Instruction: open the cabinet doors
+2026-07-21 20:01:51,217 INFO Task OpenDoubleDoor: Episode 92 (seed=91): Success | Current Success Rate: 98.91% (91/92)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:01:51,218 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:02:00,838 INFO Task OpenDoubleDoor: Episode 93 (seed=92): Instruction: open the cabinet doors
+2026-07-21 20:02:42,744 INFO Task OpenDoubleDoor: Episode 93 (seed=92): Success | Current Success Rate: 98.92% (92/93)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:02:42,745 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:02:57,693 INFO Task OpenDoubleDoor: Episode 94 (seed=93): Instruction: open the cabinet doors
+2026-07-21 20:03:41,666 INFO Task OpenDoubleDoor: Episode 94 (seed=93): Success | Current Success Rate: 98.94% (93/94)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:03:41,666 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:03:51,225 INFO Task OpenDoubleDoor: Episode 95 (seed=94): Instruction: open the cabinet doors
+2026-07-21 20:04:37,212 INFO Task OpenDoubleDoor: Episode 95 (seed=94): Success | Current Success Rate: 98.95% (94/95)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:04:37,225 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:04:48,549 INFO Task OpenDoubleDoor: Episode 96 (seed=95): Instruction: open the cabinet doors
+2026-07-21 20:05:33,680 INFO Task OpenDoubleDoor: Episode 96 (seed=95): Success | Current Success Rate: 98.96% (95/96)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:05:33,746 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:05:46,739 INFO Task OpenDoubleDoor: Episode 97 (seed=96): Instruction: open the cabinet doors
+2026-07-21 20:06:44,142 INFO Task OpenDoubleDoor: Episode 97 (seed=96): Success | Current Success Rate: 98.97% (96/97)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:06:44,143 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:06:53,912 INFO Task OpenDoubleDoor: Episode 98 (seed=97): Instruction: open the cabinet doors
+2026-07-21 20:07:31,885 INFO Task OpenDoubleDoor: Episode 98 (seed=97): Success | Current Success Rate: 98.98% (97/98)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:07:31,886 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:07:43,988 INFO Task OpenDoubleDoor: Episode 99 (seed=98): Instruction: open the cabinet doors
+2026-07-21 20:08:26,192 INFO Task OpenDoubleDoor: Episode 99 (seed=98): Success | Current Success Rate: 98.99% (98/99)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:08:26,193 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:08:36,570 INFO Task OpenDoubleDoor: Episode 100 (seed=99): Instruction: open the cabinet doors
+2026-07-21 20:09:18,081 INFO Task OpenDoubleDoor: Episode 100 (seed=99): Success | Current Success Rate: 99.00% (99/100)
+Client connection closed.
+2026-07-21 20:09:18,081 INFO Task OpenDoubleDoor Final Success Rate: 99.00% (99/100)
+2026-07-21 20:09:18,120 INFO Results saved to: ./eval_robocasa/eval_logs/eval_results_OpenDoubleDoor.json

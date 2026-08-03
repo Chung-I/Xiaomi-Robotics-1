@@ -1,0 +1,419 @@
+[robosuite WARNING] No private macro file found! (macros.py:57)
+2026-07-21 19:06:29,380 WARNING No private macro file found!
+[robosuite WARNING] It is recommended to use a private macro file (macros.py:58)
+2026-07-21 19:06:29,380 WARNING It is recommended to use a private macro file
+[robosuite WARNING] To setup, run: python /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/scripts/setup_macros.py (macros.py:59)
+2026-07-21 19:06:29,380 WARNING To setup, run: python /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/scripts/setup_macros.py
+[robosuite WARNING] Could not import robosuite_models. Some robots may not be available. If you want to use these robots, please install robosuite_models from source (https://github.com/ARISE-Initiative/robosuite_models) or through pip install. (__init__.py:30)
+2026-07-21 19:06:43,435 WARNING Could not import robosuite_models. Some robots may not be available. If you want to use these robots, please install robosuite_models from source (https://github.com/ARISE-Initiative/robosuite_models) or through pip install.
+[robosuite WARNING] Could not load the mink-based whole-body IK. Make sure you install related import properly (e.g. pip install mink==0.0.5), otherwise you will not be able to use the default IK controller setting for GR1 robot. (__init__.py:40)
+2026-07-21 19:06:43,539 WARNING Could not load the mink-based whole-body IK. Make sure you install related import properly (e.g. pip install mink==0.0.5), otherwise you will not be able to use the default IK controller setting for GR1 robot.
+WARNING: mimicgen environments not imported since mimicgen is not installed!
+2026-07-21 19:08:57,269 INFO Task: TurnOffSinkFaucet | Episodes: 100 | Start seed: 0
+2026-07-21 19:08:57,269 INFO Server: localhost:10087
+Client connected to server at localhost:10087.
+2026-07-21 19:08:58,586 INFO EvalClient ready. Robot types: ['robocasa_mg']
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:08:58,630 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:09:11,282 INFO No OpenGL_accelerate module loaded: No module named 'OpenGL_accelerate'
+2026-07-21 19:09:21,864 INFO Task TurnOffSinkFaucet: Episode 1 (seed=0): Instruction: turn off the sink faucet
+2026-07-21 19:09:34,370 INFO Task TurnOffSinkFaucet: Episode 1 (seed=0): Success | Current Success Rate: 100.00% (1/1)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:09:34,371 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:09:50,497 INFO Task TurnOffSinkFaucet: Episode 2 (seed=1): Instruction: turn off the sink faucet
+2026-07-21 19:10:24,700 INFO Task TurnOffSinkFaucet: Episode 2 (seed=1): Success | Current Success Rate: 100.00% (2/2)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:10:24,701 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:10:33,781 INFO Task TurnOffSinkFaucet: Episode 3 (seed=2): Instruction: turn off the sink faucet
+2026-07-21 19:10:45,498 INFO Task TurnOffSinkFaucet: Episode 3 (seed=2): Success | Current Success Rate: 100.00% (3/3)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:10:45,498 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:10:59,052 INFO Task TurnOffSinkFaucet: Episode 4 (seed=3): Instruction: turn off the sink faucet
+2026-07-21 19:11:08,109 INFO Task TurnOffSinkFaucet: Episode 4 (seed=3): Success | Current Success Rate: 100.00% (4/4)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:11:08,155 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:11:22,785 INFO Task TurnOffSinkFaucet: Episode 5 (seed=4): Instruction: turn off the sink faucet
+2026-07-21 19:11:34,877 INFO Task TurnOffSinkFaucet: Episode 5 (seed=4): Success | Current Success Rate: 100.00% (5/5)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:11:34,877 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:11:49,911 INFO Task TurnOffSinkFaucet: Episode 6 (seed=5): Instruction: turn off the sink faucet
+2026-07-21 19:12:02,173 INFO Task TurnOffSinkFaucet: Episode 6 (seed=5): Success | Current Success Rate: 100.00% (6/6)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:12:02,173 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:12:12,780 INFO Task TurnOffSinkFaucet: Episode 7 (seed=6): Instruction: turn off the sink faucet
+2026-07-21 19:12:25,499 INFO Task TurnOffSinkFaucet: Episode 7 (seed=6): Success | Current Success Rate: 100.00% (7/7)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:12:25,500 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:12:35,981 INFO Task TurnOffSinkFaucet: Episode 8 (seed=7): Instruction: turn off the sink faucet
+2026-07-21 19:12:47,962 INFO Task TurnOffSinkFaucet: Episode 8 (seed=7): Success | Current Success Rate: 100.00% (8/8)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:12:47,963 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:13:04,064 INFO Task TurnOffSinkFaucet: Episode 9 (seed=8): Instruction: turn off the sink faucet
+2026-07-21 19:13:15,486 INFO Task TurnOffSinkFaucet: Episode 9 (seed=8): Success | Current Success Rate: 100.00% (9/9)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:13:15,531 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:13:25,463 INFO Task TurnOffSinkFaucet: Episode 10 (seed=9): Instruction: turn off the sink faucet
+2026-07-21 19:13:36,091 INFO Task TurnOffSinkFaucet: Episode 10 (seed=9): Success | Current Success Rate: 100.00% (10/10)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:13:36,092 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:13:50,562 INFO Task TurnOffSinkFaucet: Episode 11 (seed=10): Instruction: turn off the sink faucet
+2026-07-21 19:14:04,066 INFO Task TurnOffSinkFaucet: Episode 11 (seed=10): Success | Current Success Rate: 100.00% (11/11)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:14:04,078 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:14:18,590 INFO Task TurnOffSinkFaucet: Episode 12 (seed=11): Instruction: turn off the sink faucet
+2026-07-21 19:14:28,122 INFO Task TurnOffSinkFaucet: Episode 12 (seed=11): Success | Current Success Rate: 100.00% (12/12)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:14:28,129 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:14:42,294 INFO Task TurnOffSinkFaucet: Episode 13 (seed=12): Instruction: turn off the sink faucet
+2026-07-21 19:14:52,647 INFO Task TurnOffSinkFaucet: Episode 13 (seed=12): Success | Current Success Rate: 100.00% (13/13)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:14:52,648 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:15:09,611 INFO Task TurnOffSinkFaucet: Episode 14 (seed=13): Instruction: turn off the sink faucet
+2026-07-21 19:15:18,149 INFO Task TurnOffSinkFaucet: Episode 14 (seed=13): Success | Current Success Rate: 100.00% (14/14)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:15:18,192 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:15:25,671 INFO Task TurnOffSinkFaucet: Episode 15 (seed=14): Instruction: turn off the sink faucet
+2026-07-21 19:15:36,357 INFO Task TurnOffSinkFaucet: Episode 15 (seed=14): Success | Current Success Rate: 100.00% (15/15)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:15:36,358 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:15:45,963 INFO Task TurnOffSinkFaucet: Episode 16 (seed=15): Instruction: turn off the sink faucet
+2026-07-21 19:15:55,546 INFO Task TurnOffSinkFaucet: Episode 16 (seed=15): Success | Current Success Rate: 100.00% (16/16)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:15:55,547 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:16:06,013 INFO Task TurnOffSinkFaucet: Episode 17 (seed=16): Instruction: turn off the sink faucet
+2026-07-21 19:16:15,613 INFO Task TurnOffSinkFaucet: Episode 17 (seed=16): Success | Current Success Rate: 100.00% (17/17)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:16:15,613 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:16:31,008 INFO Task TurnOffSinkFaucet: Episode 18 (seed=17): Instruction: turn off the sink faucet
+2026-07-21 19:16:41,268 INFO Task TurnOffSinkFaucet: Episode 18 (seed=17): Success | Current Success Rate: 100.00% (18/18)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:16:41,269 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:16:55,865 INFO Task TurnOffSinkFaucet: Episode 19 (seed=18): Instruction: turn off the sink faucet
+2026-07-21 19:17:07,568 INFO Task TurnOffSinkFaucet: Episode 19 (seed=18): Success | Current Success Rate: 100.00% (19/19)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:17:07,569 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:17:17,850 INFO Task TurnOffSinkFaucet: Episode 20 (seed=19): Instruction: turn off the sink faucet
+2026-07-21 19:17:27,944 INFO Task TurnOffSinkFaucet: Episode 20 (seed=19): Success | Current Success Rate: 100.00% (20/20)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:17:27,945 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:17:37,107 INFO Task TurnOffSinkFaucet: Episode 21 (seed=20): Instruction: turn off the sink faucet
+2026-07-21 19:17:47,479 INFO Task TurnOffSinkFaucet: Episode 21 (seed=20): Success | Current Success Rate: 100.00% (21/21)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:17:47,479 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:18:09,326 INFO Task TurnOffSinkFaucet: Episode 22 (seed=21): Instruction: turn off the sink faucet
+2026-07-21 19:18:22,337 INFO Task TurnOffSinkFaucet: Episode 22 (seed=21): Success | Current Success Rate: 100.00% (22/22)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:18:22,337 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:18:36,387 INFO Task TurnOffSinkFaucet: Episode 23 (seed=22): Instruction: turn off the sink faucet
+2026-07-21 19:18:47,416 INFO Task TurnOffSinkFaucet: Episode 23 (seed=22): Success | Current Success Rate: 100.00% (23/23)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:18:47,417 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:18:57,569 INFO Task TurnOffSinkFaucet: Episode 24 (seed=23): Instruction: turn off the sink faucet
+2026-07-21 19:19:06,238 INFO Task TurnOffSinkFaucet: Episode 24 (seed=23): Success | Current Success Rate: 100.00% (24/24)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:19:06,239 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:19:17,883 INFO Task TurnOffSinkFaucet: Episode 25 (seed=24): Instruction: turn off the sink faucet
+2026-07-21 19:19:29,944 INFO Task TurnOffSinkFaucet: Episode 25 (seed=24): Success | Current Success Rate: 100.00% (25/25)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:19:29,945 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:19:38,418 INFO Task TurnOffSinkFaucet: Episode 26 (seed=25): Instruction: turn off the sink faucet
+2026-07-21 19:19:50,823 INFO Task TurnOffSinkFaucet: Episode 26 (seed=25): Success | Current Success Rate: 100.00% (26/26)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:19:50,824 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:20:00,730 INFO Task TurnOffSinkFaucet: Episode 27 (seed=26): Instruction: turn off the sink faucet
+2026-07-21 19:20:12,264 INFO Task TurnOffSinkFaucet: Episode 27 (seed=26): Success | Current Success Rate: 100.00% (27/27)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:20:12,265 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:20:21,875 INFO Task TurnOffSinkFaucet: Episode 28 (seed=27): Instruction: turn off the sink faucet
+2026-07-21 19:20:31,983 INFO Task TurnOffSinkFaucet: Episode 28 (seed=27): Success | Current Success Rate: 100.00% (28/28)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:20:31,984 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:20:45,305 INFO Task TurnOffSinkFaucet: Episode 29 (seed=28): Instruction: turn off the sink faucet
+2026-07-21 19:20:54,859 INFO Task TurnOffSinkFaucet: Episode 29 (seed=28): Success | Current Success Rate: 100.00% (29/29)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:20:54,860 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:21:01,831 INFO Task TurnOffSinkFaucet: Episode 30 (seed=29): Instruction: turn off the sink faucet
+2026-07-21 19:21:12,872 INFO Task TurnOffSinkFaucet: Episode 30 (seed=29): Success | Current Success Rate: 100.00% (30/30)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:21:12,872 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:21:26,239 INFO Task TurnOffSinkFaucet: Episode 31 (seed=30): Instruction: turn off the sink faucet
+2026-07-21 19:22:00,623 INFO Task TurnOffSinkFaucet: Episode 31 (seed=30): Success | Current Success Rate: 100.00% (31/31)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:22:00,669 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:22:09,739 INFO Task TurnOffSinkFaucet: Episode 32 (seed=31): Instruction: turn off the sink faucet
+2026-07-21 19:22:19,389 INFO Task TurnOffSinkFaucet: Episode 32 (seed=31): Success | Current Success Rate: 100.00% (32/32)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:22:19,389 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:22:28,574 INFO Task TurnOffSinkFaucet: Episode 33 (seed=32): Instruction: turn off the sink faucet
+2026-07-21 19:22:38,770 INFO Task TurnOffSinkFaucet: Episode 33 (seed=32): Success | Current Success Rate: 100.00% (33/33)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:22:38,771 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:22:51,742 INFO Task TurnOffSinkFaucet: Episode 34 (seed=33): Instruction: turn off the sink faucet
+2026-07-21 19:23:19,248 INFO Task TurnOffSinkFaucet: Episode 34 (seed=33): Success | Current Success Rate: 100.00% (34/34)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:23:19,249 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:23:30,662 INFO Task TurnOffSinkFaucet: Episode 35 (seed=34): Instruction: turn off the sink faucet
+2026-07-21 19:23:41,776 INFO Task TurnOffSinkFaucet: Episode 35 (seed=34): Success | Current Success Rate: 100.00% (35/35)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:23:41,776 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:23:54,157 INFO Task TurnOffSinkFaucet: Episode 36 (seed=35): Instruction: turn off the sink faucet
+2026-07-21 19:24:05,717 INFO Task TurnOffSinkFaucet: Episode 36 (seed=35): Success | Current Success Rate: 100.00% (36/36)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:24:05,764 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:24:17,769 INFO Task TurnOffSinkFaucet: Episode 37 (seed=36): Instruction: turn off the sink faucet
+2026-07-21 19:24:30,350 INFO Task TurnOffSinkFaucet: Episode 37 (seed=36): Success | Current Success Rate: 100.00% (37/37)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:24:30,351 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:24:41,910 INFO Task TurnOffSinkFaucet: Episode 38 (seed=37): Instruction: turn off the sink faucet
+2026-07-21 19:24:51,766 INFO Task TurnOffSinkFaucet: Episode 38 (seed=37): Success | Current Success Rate: 100.00% (38/38)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:24:51,767 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:25:03,958 INFO Task TurnOffSinkFaucet: Episode 39 (seed=38): Instruction: turn off the sink faucet
+2026-07-21 19:25:18,235 INFO Task TurnOffSinkFaucet: Episode 39 (seed=38): Success | Current Success Rate: 100.00% (39/39)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:25:18,279 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:25:28,162 INFO Task TurnOffSinkFaucet: Episode 40 (seed=39): Instruction: turn off the sink faucet
+2026-07-21 19:25:38,101 INFO Task TurnOffSinkFaucet: Episode 40 (seed=39): Success | Current Success Rate: 100.00% (40/40)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:25:38,102 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:25:49,578 INFO Task TurnOffSinkFaucet: Episode 41 (seed=40): Instruction: turn off the sink faucet
+2026-07-21 19:25:59,046 INFO Task TurnOffSinkFaucet: Episode 41 (seed=40): Success | Current Success Rate: 100.00% (41/41)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:25:59,047 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:26:13,508 INFO Task TurnOffSinkFaucet: Episode 42 (seed=41): Instruction: turn off the sink faucet
+2026-07-21 19:26:23,621 INFO Task TurnOffSinkFaucet: Episode 42 (seed=41): Success | Current Success Rate: 100.00% (42/42)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:26:23,621 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:26:35,299 INFO Task TurnOffSinkFaucet: Episode 43 (seed=42): Instruction: turn off the sink faucet
+2026-07-21 19:26:46,121 INFO Task TurnOffSinkFaucet: Episode 43 (seed=42): Success | Current Success Rate: 100.00% (43/43)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:26:46,122 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:26:57,647 INFO Task TurnOffSinkFaucet: Episode 44 (seed=43): Instruction: turn off the sink faucet
+2026-07-21 19:27:08,062 INFO Task TurnOffSinkFaucet: Episode 44 (seed=43): Success | Current Success Rate: 100.00% (44/44)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:27:08,062 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:27:25,366 INFO Task TurnOffSinkFaucet: Episode 45 (seed=44): Instruction: turn off the sink faucet
+2026-07-21 19:27:35,417 INFO Task TurnOffSinkFaucet: Episode 45 (seed=44): Success | Current Success Rate: 100.00% (45/45)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:27:35,418 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:27:46,282 INFO Task TurnOffSinkFaucet: Episode 46 (seed=45): Instruction: turn off the sink faucet
+2026-07-21 19:27:54,740 INFO Task TurnOffSinkFaucet: Episode 46 (seed=45): Success | Current Success Rate: 100.00% (46/46)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:27:54,741 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:28:05,992 INFO Task TurnOffSinkFaucet: Episode 47 (seed=46): Instruction: turn off the sink faucet
+2026-07-21 19:28:17,573 INFO Task TurnOffSinkFaucet: Episode 47 (seed=46): Success | Current Success Rate: 100.00% (47/47)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:28:17,574 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:28:38,995 INFO Task TurnOffSinkFaucet: Episode 48 (seed=47): Instruction: turn off the sink faucet
+2026-07-21 19:28:48,493 INFO Task TurnOffSinkFaucet: Episode 48 (seed=47): Success | Current Success Rate: 100.00% (48/48)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:28:48,494 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:29:02,008 INFO Task TurnOffSinkFaucet: Episode 49 (seed=48): Instruction: turn off the sink faucet
+2026-07-21 19:29:12,635 INFO Task TurnOffSinkFaucet: Episode 49 (seed=48): Success | Current Success Rate: 100.00% (49/49)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:29:12,647 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:29:26,070 INFO Task TurnOffSinkFaucet: Episode 50 (seed=49): Instruction: turn off the sink faucet
+2026-07-21 19:29:39,457 INFO Task TurnOffSinkFaucet: Episode 50 (seed=49): Success | Current Success Rate: 100.00% (50/50)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:29:39,503 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:30:00,236 INFO Task TurnOffSinkFaucet: Episode 51 (seed=50): Instruction: turn off the sink faucet
+2026-07-21 19:30:13,912 INFO Task TurnOffSinkFaucet: Episode 51 (seed=50): Success | Current Success Rate: 100.00% (51/51)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:30:13,912 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:30:26,371 INFO Task TurnOffSinkFaucet: Episode 52 (seed=51): Instruction: turn off the sink faucet
+2026-07-21 19:30:38,915 INFO Task TurnOffSinkFaucet: Episode 52 (seed=51): Success | Current Success Rate: 100.00% (52/52)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:30:38,916 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:30:50,683 INFO Task TurnOffSinkFaucet: Episode 53 (seed=52): Instruction: turn off the sink faucet
+2026-07-21 19:31:02,836 INFO Task TurnOffSinkFaucet: Episode 53 (seed=52): Success | Current Success Rate: 100.00% (53/53)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:31:02,837 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:31:17,874 INFO Task TurnOffSinkFaucet: Episode 54 (seed=53): Instruction: turn off the sink faucet
+2026-07-21 19:31:30,557 INFO Task TurnOffSinkFaucet: Episode 54 (seed=53): Success | Current Success Rate: 100.00% (54/54)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:31:30,558 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:31:42,424 INFO Task TurnOffSinkFaucet: Episode 55 (seed=54): Instruction: turn off the sink faucet
+2026-07-21 19:31:52,966 INFO Task TurnOffSinkFaucet: Episode 55 (seed=54): Success | Current Success Rate: 100.00% (55/55)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:31:53,005 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:32:06,694 INFO Task TurnOffSinkFaucet: Episode 56 (seed=55): Instruction: turn off the sink faucet
+2026-07-21 19:32:17,839 INFO Task TurnOffSinkFaucet: Episode 56 (seed=55): Success | Current Success Rate: 100.00% (56/56)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:32:17,840 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:32:35,952 INFO Task TurnOffSinkFaucet: Episode 57 (seed=56): Instruction: turn off the sink faucet
+2026-07-21 19:32:48,199 INFO Task TurnOffSinkFaucet: Episode 57 (seed=56): Success | Current Success Rate: 100.00% (57/57)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:32:48,200 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:33:05,829 INFO Task TurnOffSinkFaucet: Episode 58 (seed=57): Instruction: turn off the sink faucet
+2026-07-21 19:33:18,501 INFO Task TurnOffSinkFaucet: Episode 58 (seed=57): Success | Current Success Rate: 100.00% (58/58)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:33:18,502 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:33:53,059 INFO Task TurnOffSinkFaucet: Episode 59 (seed=58): Instruction: turn off the sink faucet
+2026-07-21 19:34:04,372 INFO Task TurnOffSinkFaucet: Episode 59 (seed=58): Success | Current Success Rate: 100.00% (59/59)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:34:04,419 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:34:26,827 INFO Task TurnOffSinkFaucet: Episode 60 (seed=59): Instruction: turn off the sink faucet
+2026-07-21 19:35:08,356 INFO Task TurnOffSinkFaucet: Episode 60 (seed=59): Failure | Current Success Rate: 98.33% (59/60)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:35:08,402 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:35:22,627 INFO Task TurnOffSinkFaucet: Episode 61 (seed=60): Instruction: turn off the sink faucet
+2026-07-21 19:35:48,105 INFO Task TurnOffSinkFaucet: Episode 61 (seed=60): Success | Current Success Rate: 98.36% (60/61)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:35:48,107 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:36:03,172 INFO Task TurnOffSinkFaucet: Episode 62 (seed=61): Instruction: turn off the sink faucet
+2026-07-21 19:36:14,732 INFO Task TurnOffSinkFaucet: Episode 62 (seed=61): Success | Current Success Rate: 98.39% (61/62)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:36:14,733 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:36:27,890 INFO Task TurnOffSinkFaucet: Episode 63 (seed=62): Instruction: turn off the sink faucet
+2026-07-21 19:36:47,160 INFO Task TurnOffSinkFaucet: Episode 63 (seed=62): Success | Current Success Rate: 98.41% (62/63)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:36:47,161 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:37:01,188 INFO Task TurnOffSinkFaucet: Episode 64 (seed=63): Instruction: turn off the sink faucet
+2026-07-21 19:37:12,825 INFO Task TurnOffSinkFaucet: Episode 64 (seed=63): Success | Current Success Rate: 98.44% (63/64)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:37:12,826 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:37:25,118 INFO Task TurnOffSinkFaucet: Episode 65 (seed=64): Instruction: turn off the sink faucet
+2026-07-21 19:37:37,848 INFO Task TurnOffSinkFaucet: Episode 65 (seed=64): Success | Current Success Rate: 98.46% (64/65)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:37:37,849 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:37:46,092 INFO Task TurnOffSinkFaucet: Episode 66 (seed=65): Instruction: turn off the sink faucet
+2026-07-21 19:37:56,638 INFO Task TurnOffSinkFaucet: Episode 66 (seed=65): Success | Current Success Rate: 98.48% (65/66)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:37:56,639 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:38:06,606 INFO Task TurnOffSinkFaucet: Episode 67 (seed=66): Instruction: turn off the sink faucet
+2026-07-21 19:38:16,251 INFO Task TurnOffSinkFaucet: Episode 67 (seed=66): Success | Current Success Rate: 98.51% (66/67)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:38:16,252 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:38:30,648 INFO Task TurnOffSinkFaucet: Episode 68 (seed=67): Instruction: turn off the sink faucet
+2026-07-21 19:38:41,071 INFO Task TurnOffSinkFaucet: Episode 68 (seed=67): Success | Current Success Rate: 98.53% (67/68)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:38:41,093 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:38:55,666 INFO Task TurnOffSinkFaucet: Episode 69 (seed=68): Instruction: turn off the sink faucet
+2026-07-21 19:39:34,872 INFO Task TurnOffSinkFaucet: Episode 69 (seed=68): Failure | Current Success Rate: 97.10% (67/69)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:39:34,916 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:39:43,761 INFO Task TurnOffSinkFaucet: Episode 70 (seed=69): Instruction: turn off the sink faucet
+2026-07-21 19:39:57,228 INFO Task TurnOffSinkFaucet: Episode 70 (seed=69): Success | Current Success Rate: 97.14% (68/70)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:39:57,229 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:40:11,077 INFO Task TurnOffSinkFaucet: Episode 71 (seed=70): Instruction: turn off the sink faucet
+2026-07-21 19:40:21,363 INFO Task TurnOffSinkFaucet: Episode 71 (seed=70): Success | Current Success Rate: 97.18% (69/71)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:40:21,364 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:40:31,228 INFO Task TurnOffSinkFaucet: Episode 72 (seed=71): Instruction: turn off the sink faucet
+2026-07-21 19:40:42,362 INFO Task TurnOffSinkFaucet: Episode 72 (seed=71): Success | Current Success Rate: 97.22% (70/72)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:40:42,362 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:40:51,642 INFO Task TurnOffSinkFaucet: Episode 73 (seed=72): Instruction: turn off the sink faucet
+2026-07-21 19:41:02,736 INFO Task TurnOffSinkFaucet: Episode 73 (seed=72): Success | Current Success Rate: 97.26% (71/73)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:41:02,737 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:41:10,848 INFO Task TurnOffSinkFaucet: Episode 74 (seed=73): Instruction: turn off the sink faucet
+2026-07-21 19:41:19,998 INFO Task TurnOffSinkFaucet: Episode 74 (seed=73): Success | Current Success Rate: 97.30% (72/74)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:41:19,998 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:41:28,350 INFO Task TurnOffSinkFaucet: Episode 75 (seed=74): Instruction: turn off the sink faucet
+2026-07-21 19:41:38,513 INFO Task TurnOffSinkFaucet: Episode 75 (seed=74): Success | Current Success Rate: 97.33% (73/75)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:41:38,552 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:42:02,278 INFO Task TurnOffSinkFaucet: Episode 76 (seed=75): Instruction: turn off the sink faucet
+2026-07-21 19:42:17,445 INFO Task TurnOffSinkFaucet: Episode 76 (seed=75): Success | Current Success Rate: 97.37% (74/76)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:42:17,454 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:42:32,595 INFO Task TurnOffSinkFaucet: Episode 77 (seed=76): Instruction: turn off the sink faucet
+2026-07-21 19:42:46,163 INFO Task TurnOffSinkFaucet: Episode 77 (seed=76): Success | Current Success Rate: 97.40% (75/77)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:42:46,163 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:42:55,386 INFO Task TurnOffSinkFaucet: Episode 78 (seed=77): Instruction: turn off the sink faucet
+2026-07-21 19:43:06,364 INFO Task TurnOffSinkFaucet: Episode 78 (seed=77): Success | Current Success Rate: 97.44% (76/78)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:43:06,365 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:43:19,951 INFO Task TurnOffSinkFaucet: Episode 79 (seed=78): Instruction: turn off the sink faucet
+2026-07-21 19:43:28,828 INFO Task TurnOffSinkFaucet: Episode 79 (seed=78): Success | Current Success Rate: 97.47% (77/79)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:43:28,829 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:43:39,383 INFO Task TurnOffSinkFaucet: Episode 80 (seed=79): Instruction: turn off the sink faucet
+2026-07-21 19:43:48,100 INFO Task TurnOffSinkFaucet: Episode 80 (seed=79): Success | Current Success Rate: 97.50% (78/80)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:43:48,170 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:44:02,229 INFO Task TurnOffSinkFaucet: Episode 81 (seed=80): Instruction: turn off the sink faucet
+2026-07-21 19:44:16,158 INFO Task TurnOffSinkFaucet: Episode 81 (seed=80): Success | Current Success Rate: 97.53% (79/81)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:44:16,159 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:44:29,702 INFO Task TurnOffSinkFaucet: Episode 82 (seed=81): Instruction: turn off the sink faucet
+2026-07-21 19:44:42,432 INFO Task TurnOffSinkFaucet: Episode 82 (seed=81): Success | Current Success Rate: 97.56% (80/82)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:44:42,433 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:45:00,969 INFO Task TurnOffSinkFaucet: Episode 83 (seed=82): Instruction: turn off the sink faucet
+2026-07-21 19:45:13,198 INFO Task TurnOffSinkFaucet: Episode 83 (seed=82): Success | Current Success Rate: 97.59% (81/83)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:45:13,198 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:45:30,153 INFO Task TurnOffSinkFaucet: Episode 84 (seed=83): Instruction: turn off the sink faucet
+2026-07-21 19:45:45,328 INFO Task TurnOffSinkFaucet: Episode 84 (seed=83): Success | Current Success Rate: 97.62% (82/84)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:45:45,329 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:46:00,767 INFO Task TurnOffSinkFaucet: Episode 85 (seed=84): Instruction: turn off the sink faucet
+2026-07-21 19:46:09,272 INFO Task TurnOffSinkFaucet: Episode 85 (seed=84): Success | Current Success Rate: 97.65% (83/85)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:46:09,272 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:46:30,567 INFO Task TurnOffSinkFaucet: Episode 86 (seed=85): Instruction: turn off the sink faucet
+2026-07-21 19:46:43,525 INFO Task TurnOffSinkFaucet: Episode 86 (seed=85): Success | Current Success Rate: 97.67% (84/86)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:46:43,525 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:47:05,323 INFO Task TurnOffSinkFaucet: Episode 87 (seed=86): Instruction: turn off the sink faucet
+2026-07-21 19:47:35,520 INFO Task TurnOffSinkFaucet: Episode 87 (seed=86): Success | Current Success Rate: 97.70% (85/87)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:47:35,521 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:47:50,315 INFO Task TurnOffSinkFaucet: Episode 88 (seed=87): Instruction: turn off the sink faucet
+2026-07-21 19:48:01,357 INFO Task TurnOffSinkFaucet: Episode 88 (seed=87): Success | Current Success Rate: 97.73% (86/88)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:48:01,358 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:48:32,510 INFO Task TurnOffSinkFaucet: Episode 89 (seed=88): Instruction: turn off the sink faucet
+2026-07-21 19:48:43,095 INFO Task TurnOffSinkFaucet: Episode 89 (seed=88): Success | Current Success Rate: 97.75% (87/89)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:48:43,096 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:49:03,496 INFO Task TurnOffSinkFaucet: Episode 90 (seed=89): Instruction: turn off the sink faucet
+2026-07-21 19:49:33,559 INFO Task TurnOffSinkFaucet: Episode 90 (seed=89): Success | Current Success Rate: 97.78% (88/90)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:49:33,559 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:49:52,487 INFO Task TurnOffSinkFaucet: Episode 91 (seed=90): Instruction: turn off the sink faucet
+2026-07-21 19:50:06,403 INFO Task TurnOffSinkFaucet: Episode 91 (seed=90): Success | Current Success Rate: 97.80% (89/91)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:50:06,403 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:50:23,030 INFO Task TurnOffSinkFaucet: Episode 92 (seed=91): Instruction: turn off the sink faucet
+2026-07-21 19:50:34,522 INFO Task TurnOffSinkFaucet: Episode 92 (seed=91): Success | Current Success Rate: 97.83% (90/92)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:50:34,523 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:50:46,735 INFO Task TurnOffSinkFaucet: Episode 93 (seed=92): Instruction: turn off the sink faucet
+2026-07-21 19:50:59,109 INFO Task TurnOffSinkFaucet: Episode 93 (seed=92): Success | Current Success Rate: 97.85% (91/93)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:50:59,109 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:51:07,847 INFO Task TurnOffSinkFaucet: Episode 94 (seed=93): Instruction: turn off the sink faucet
+2026-07-21 19:51:17,741 INFO Task TurnOffSinkFaucet: Episode 94 (seed=93): Success | Current Success Rate: 97.87% (92/94)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:51:17,742 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:51:28,507 INFO Task TurnOffSinkFaucet: Episode 95 (seed=94): Instruction: turn off the sink faucet
+2026-07-21 19:51:41,642 INFO Task TurnOffSinkFaucet: Episode 95 (seed=94): Success | Current Success Rate: 97.89% (93/95)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:51:41,643 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:51:50,838 INFO Task TurnOffSinkFaucet: Episode 96 (seed=95): Instruction: turn off the sink faucet
+2026-07-21 19:52:01,994 INFO Task TurnOffSinkFaucet: Episode 96 (seed=95): Success | Current Success Rate: 97.92% (94/96)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:52:02,017 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:52:14,161 INFO Task TurnOffSinkFaucet: Episode 97 (seed=96): Instruction: turn off the sink faucet
+2026-07-21 19:52:25,227 INFO Task TurnOffSinkFaucet: Episode 97 (seed=96): Success | Current Success Rate: 97.94% (95/97)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:52:25,228 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:52:34,438 INFO Task TurnOffSinkFaucet: Episode 98 (seed=97): Instruction: turn off the sink faucet
+2026-07-21 19:52:45,470 INFO Task TurnOffSinkFaucet: Episode 98 (seed=97): Success | Current Success Rate: 97.96% (96/98)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:52:45,471 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:52:57,354 INFO Task TurnOffSinkFaucet: Episode 99 (seed=98): Instruction: turn off the sink faucet
+2026-07-21 19:53:32,058 INFO Task TurnOffSinkFaucet: Episode 99 (seed=98): Failure | Current Success Rate: 96.97% (96/99)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:53:32,059 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:53:42,275 INFO Task TurnOffSinkFaucet: Episode 100 (seed=99): Instruction: turn off the sink faucet
+2026-07-21 19:53:55,176 INFO Task TurnOffSinkFaucet: Episode 100 (seed=99): Success | Current Success Rate: 97.00% (97/100)
+Client connection closed.
+2026-07-21 19:53:55,176 INFO Task TurnOffSinkFaucet Final Success Rate: 97.00% (97/100)
+2026-07-21 19:53:55,218 INFO Results saved to: ./eval_robocasa/eval_logs/eval_results_TurnOffSinkFaucet.json

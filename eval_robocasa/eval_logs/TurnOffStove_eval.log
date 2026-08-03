@@ -1,0 +1,419 @@
+[robosuite WARNING] No private macro file found! (macros.py:57)
+2026-07-21 18:34:01,920 WARNING No private macro file found!
+[robosuite WARNING] It is recommended to use a private macro file (macros.py:58)
+2026-07-21 18:34:01,920 WARNING It is recommended to use a private macro file
+[robosuite WARNING] To setup, run: python /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/scripts/setup_macros.py (macros.py:59)
+2026-07-21 18:34:01,920 WARNING To setup, run: python /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/scripts/setup_macros.py
+[robosuite WARNING] Could not import robosuite_models. Some robots may not be available. If you want to use these robots, please install robosuite_models from source (https://github.com/ARISE-Initiative/robosuite_models) or through pip install. (__init__.py:30)
+2026-07-21 18:34:15,964 WARNING Could not import robosuite_models. Some robots may not be available. If you want to use these robots, please install robosuite_models from source (https://github.com/ARISE-Initiative/robosuite_models) or through pip install.
+[robosuite WARNING] Could not load the mink-based whole-body IK. Make sure you install related import properly (e.g. pip install mink==0.0.5), otherwise you will not be able to use the default IK controller setting for GR1 robot. (__init__.py:40)
+2026-07-21 18:34:16,068 WARNING Could not load the mink-based whole-body IK. Make sure you install related import properly (e.g. pip install mink==0.0.5), otherwise you will not be able to use the default IK controller setting for GR1 robot.
+WARNING: mimicgen environments not imported since mimicgen is not installed!
+2026-07-21 18:36:26,079 INFO Task: TurnOffStove | Episodes: 100 | Start seed: 0
+2026-07-21 18:36:26,079 INFO Server: localhost:10093
+Client connected to server at localhost:10093.
+2026-07-21 18:36:27,370 INFO EvalClient ready. Robot types: ['robocasa_mg']
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:36:27,370 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:36:39,266 INFO No OpenGL_accelerate module loaded: No module named 'OpenGL_accelerate'
+2026-07-21 18:36:45,423 INFO Task TurnOffStove: Episode 1 (seed=0): Instruction: turn off the rear left burner of the stove
+2026-07-21 18:37:16,657 INFO Task TurnOffStove: Episode 1 (seed=0): Failure | Current Success Rate: 0.00% (0/1)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:37:16,657 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:37:25,505 INFO Task TurnOffStove: Episode 2 (seed=1): Instruction: turn off the rear left burner of the stove
+2026-07-21 18:37:57,406 INFO Task TurnOffStove: Episode 2 (seed=1): Failure | Current Success Rate: 0.00% (0/2)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:37:57,451 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:38:05,199 INFO Task TurnOffStove: Episode 3 (seed=2): Instruction: turn off the front right burner of the stove
+2026-07-21 18:38:37,493 INFO Task TurnOffStove: Episode 3 (seed=2): Failure | Current Success Rate: 0.00% (0/3)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:38:37,493 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:38:44,700 INFO Task TurnOffStove: Episode 4 (seed=3): Instruction: turn off the rear right burner of the stove
+2026-07-21 18:39:15,650 INFO Task TurnOffStove: Episode 4 (seed=3): Failure | Current Success Rate: 0.00% (0/4)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:39:15,651 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:39:27,798 INFO Task TurnOffStove: Episode 5 (seed=4): Instruction: turn off the front left burner of the stove
+2026-07-21 18:39:42,144 INFO Task TurnOffStove: Episode 5 (seed=4): Success | Current Success Rate: 20.00% (1/5)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:39:42,145 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:39:55,515 INFO Task TurnOffStove: Episode 6 (seed=5): Instruction: turn off the front right burner of the stove
+2026-07-21 18:40:27,682 INFO Task TurnOffStove: Episode 6 (seed=5): Failure | Current Success Rate: 16.67% (1/6)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:40:27,683 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:40:36,687 INFO Task TurnOffStove: Episode 7 (seed=6): Instruction: turn off the rear left burner of the stove
+2026-07-21 18:41:09,635 INFO Task TurnOffStove: Episode 7 (seed=6): Failure | Current Success Rate: 14.29% (1/7)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:41:09,681 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:41:16,115 INFO Task TurnOffStove: Episode 8 (seed=7): Instruction: turn off the front left burner of the stove
+2026-07-21 18:41:46,610 INFO Task TurnOffStove: Episode 8 (seed=7): Failure | Current Success Rate: 12.50% (1/8)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:41:46,611 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:41:59,946 INFO Task TurnOffStove: Episode 9 (seed=8): Instruction: turn off the rear left burner of the stove
+2026-07-21 18:42:32,388 INFO Task TurnOffStove: Episode 9 (seed=8): Failure | Current Success Rate: 11.11% (1/9)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:42:32,388 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:42:41,268 INFO Task TurnOffStove: Episode 10 (seed=9): Instruction: turn off the rear center burner of the stove
+2026-07-21 18:43:13,580 INFO Task TurnOffStove: Episode 10 (seed=9): Failure | Current Success Rate: 10.00% (1/10)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:43:13,581 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:43:28,567 INFO Task TurnOffStove: Episode 11 (seed=10): Instruction: turn off the rear left burner of the stove
+2026-07-21 18:43:57,813 INFO Task TurnOffStove: Episode 11 (seed=10): Failure | Current Success Rate: 9.09% (1/11)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:43:57,814 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:44:06,823 INFO Task TurnOffStove: Episode 12 (seed=11): Instruction: turn off the rear right burner of the stove
+2026-07-21 18:44:35,830 INFO Task TurnOffStove: Episode 12 (seed=11): Failure | Current Success Rate: 8.33% (1/12)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:44:35,831 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:44:49,681 INFO Task TurnOffStove: Episode 13 (seed=12): Instruction: turn off the front right burner of the stove
+2026-07-21 18:45:18,539 INFO Task TurnOffStove: Episode 13 (seed=12): Failure | Current Success Rate: 7.69% (1/13)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:45:18,539 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:45:26,270 INFO Task TurnOffStove: Episode 14 (seed=13): Instruction: turn off the rear right burner of the stove
+2026-07-21 18:45:58,456 INFO Task TurnOffStove: Episode 14 (seed=13): Failure | Current Success Rate: 7.14% (1/14)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:45:58,457 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:46:05,456 INFO Task TurnOffStove: Episode 15 (seed=14): Instruction: turn off the front right burner of the stove
+2026-07-21 18:46:36,865 INFO Task TurnOffStove: Episode 15 (seed=14): Failure | Current Success Rate: 6.67% (1/15)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:46:36,866 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:46:43,132 INFO Task TurnOffStove: Episode 16 (seed=15): Instruction: turn off the front left burner of the stove
+2026-07-21 18:47:13,806 INFO Task TurnOffStove: Episode 16 (seed=15): Failure | Current Success Rate: 6.25% (1/16)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:47:13,807 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:47:23,771 INFO Task TurnOffStove: Episode 17 (seed=16): Instruction: turn off the rear left burner of the stove
+2026-07-21 18:47:52,552 INFO Task TurnOffStove: Episode 17 (seed=16): Failure | Current Success Rate: 5.88% (1/17)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:47:52,553 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:48:05,125 INFO Task TurnOffStove: Episode 18 (seed=17): Instruction: turn off the rear right burner of the stove
+2026-07-21 18:48:12,885 INFO Task TurnOffStove: Episode 18 (seed=17): Success | Current Success Rate: 11.11% (2/18)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:48:12,886 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:48:20,678 INFO Task TurnOffStove: Episode 19 (seed=18): Instruction: turn off the front left burner of the stove
+2026-07-21 18:48:53,329 INFO Task TurnOffStove: Episode 19 (seed=18): Failure | Current Success Rate: 10.53% (2/19)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:48:53,329 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:49:02,236 INFO Task TurnOffStove: Episode 20 (seed=19): Instruction: turn off the front right burner of the stove
+2026-07-21 18:49:21,081 INFO Task TurnOffStove: Episode 20 (seed=19): Success | Current Success Rate: 15.00% (3/20)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:49:21,082 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:49:27,462 INFO Task TurnOffStove: Episode 21 (seed=20): Instruction: turn off the front left burner of the stove
+2026-07-21 18:49:58,215 INFO Task TurnOffStove: Episode 21 (seed=20): Failure | Current Success Rate: 14.29% (3/21)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:49:58,239 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:50:07,650 INFO Task TurnOffStove: Episode 22 (seed=21): Instruction: turn off the rear left burner of the stove
+2026-07-21 18:50:21,816 INFO Task TurnOffStove: Episode 22 (seed=21): Success | Current Success Rate: 18.18% (4/22)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:50:21,817 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:50:39,079 INFO Task TurnOffStove: Episode 23 (seed=22): Instruction: turn off the rear right burner of the stove
+2026-07-21 18:50:53,671 INFO Task TurnOffStove: Episode 23 (seed=22): Success | Current Success Rate: 21.74% (5/23)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:50:53,672 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:51:01,704 INFO Task TurnOffStove: Episode 24 (seed=23): Instruction: turn off the front right burner of the stove
+2026-07-21 18:51:34,208 INFO Task TurnOffStove: Episode 24 (seed=23): Failure | Current Success Rate: 20.83% (5/24)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:51:34,209 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:51:48,014 INFO Task TurnOffStove: Episode 25 (seed=24): Instruction: turn off the front center burner of the stove
+2026-07-21 18:51:58,832 INFO Task TurnOffStove: Episode 25 (seed=24): Success | Current Success Rate: 24.00% (6/25)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:51:58,858 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:52:07,659 INFO Task TurnOffStove: Episode 26 (seed=25): Instruction: turn off the rear right burner of the stove
+2026-07-21 18:52:39,641 INFO Task TurnOffStove: Episode 26 (seed=25): Failure | Current Success Rate: 23.08% (6/26)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:52:39,642 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:52:47,637 INFO Task TurnOffStove: Episode 27 (seed=26): Instruction: turn off the front right burner of the stove
+2026-07-21 18:53:19,498 INFO Task TurnOffStove: Episode 27 (seed=26): Failure | Current Success Rate: 22.22% (6/27)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:53:19,499 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:53:29,592 INFO Task TurnOffStove: Episode 28 (seed=27): Instruction: turn off the rear right burner of the stove
+2026-07-21 18:53:58,130 INFO Task TurnOffStove: Episode 28 (seed=27): Failure | Current Success Rate: 21.43% (6/28)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:53:58,131 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:54:11,454 INFO Task TurnOffStove: Episode 29 (seed=28): Instruction: turn off the rear center burner of the stove
+2026-07-21 18:54:43,580 INFO Task TurnOffStove: Episode 29 (seed=28): Failure | Current Success Rate: 20.69% (6/29)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:54:43,581 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:54:50,492 INFO Task TurnOffStove: Episode 30 (seed=29): Instruction: turn off the rear center burner of the stove
+2026-07-21 18:55:21,276 INFO Task TurnOffStove: Episode 30 (seed=29): Failure | Current Success Rate: 20.00% (6/30)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:55:21,277 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:55:29,682 INFO Task TurnOffStove: Episode 31 (seed=30): Instruction: turn off the rear left burner of the stove
+2026-07-21 18:56:02,253 INFO Task TurnOffStove: Episode 31 (seed=30): Failure | Current Success Rate: 19.35% (6/31)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:56:02,322 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:56:10,343 INFO Task TurnOffStove: Episode 32 (seed=31): Instruction: turn off the rear right burner of the stove
+2026-07-21 18:56:41,407 INFO Task TurnOffStove: Episode 32 (seed=31): Failure | Current Success Rate: 18.75% (6/32)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:56:41,408 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:56:48,884 INFO Task TurnOffStove: Episode 33 (seed=32): Instruction: turn off the front center burner of the stove
+2026-07-21 18:57:05,160 INFO Task TurnOffStove: Episode 33 (seed=32): Success | Current Success Rate: 21.21% (7/33)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:57:05,204 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:57:12,839 INFO Task TurnOffStove: Episode 34 (seed=33): Instruction: turn off the front left burner of the stove
+2026-07-21 18:57:45,098 INFO Task TurnOffStove: Episode 34 (seed=33): Failure | Current Success Rate: 20.59% (7/34)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:57:45,099 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:57:52,166 INFO Task TurnOffStove: Episode 35 (seed=34): Instruction: turn off the rear left burner of the stove
+2026-07-21 18:58:22,507 INFO Task TurnOffStove: Episode 35 (seed=34): Failure | Current Success Rate: 20.00% (7/35)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:58:22,508 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:58:29,591 INFO Task TurnOffStove: Episode 36 (seed=35): Instruction: turn off the rear left burner of the stove
+2026-07-21 18:59:00,781 INFO Task TurnOffStove: Episode 36 (seed=35): Failure | Current Success Rate: 19.44% (7/36)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:59:00,782 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:59:10,828 INFO Task TurnOffStove: Episode 37 (seed=36): Instruction: turn off the rear right burner of the stove
+2026-07-21 18:59:43,034 INFO Task TurnOffStove: Episode 37 (seed=36): Failure | Current Success Rate: 18.92% (7/37)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 18:59:43,035 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 18:59:52,876 INFO Task TurnOffStove: Episode 38 (seed=37): Instruction: turn off the center burner of the stove
+2026-07-21 19:00:21,479 INFO Task TurnOffStove: Episode 38 (seed=37): Failure | Current Success Rate: 18.42% (7/38)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:00:21,517 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:00:31,630 INFO Task TurnOffStove: Episode 39 (seed=38): Instruction: turn off the rear center burner of the stove
+2026-07-21 19:01:03,755 INFO Task TurnOffStove: Episode 39 (seed=38): Failure | Current Success Rate: 17.95% (7/39)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:01:03,756 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:01:10,626 INFO Task TurnOffStove: Episode 40 (seed=39): Instruction: turn off the front center burner of the stove
+2026-07-21 19:01:40,209 INFO Task TurnOffStove: Episode 40 (seed=39): Failure | Current Success Rate: 17.50% (7/40)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:01:40,210 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:01:50,377 INFO Task TurnOffStove: Episode 41 (seed=40): Instruction: turn off the front right burner of the stove
+2026-07-21 19:02:19,567 INFO Task TurnOffStove: Episode 41 (seed=40): Failure | Current Success Rate: 17.07% (7/41)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:02:19,568 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:02:33,288 INFO Task TurnOffStove: Episode 42 (seed=41): Instruction: turn off the front right burner of the stove
+2026-07-21 19:03:05,926 INFO Task TurnOffStove: Episode 42 (seed=41): Failure | Current Success Rate: 16.67% (7/42)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:03:05,927 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:03:18,282 INFO Task TurnOffStove: Episode 43 (seed=42): Instruction: turn off the rear left burner of the stove
+2026-07-21 19:03:27,188 INFO Task TurnOffStove: Episode 43 (seed=42): Success | Current Success Rate: 18.60% (8/43)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:03:27,232 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:03:36,868 INFO Task TurnOffStove: Episode 44 (seed=43): Instruction: turn off the rear center burner of the stove
+2026-07-21 19:04:08,885 INFO Task TurnOffStove: Episode 44 (seed=43): Failure | Current Success Rate: 18.18% (8/44)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:04:08,910 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:04:21,550 INFO Task TurnOffStove: Episode 45 (seed=44): Instruction: turn off the front left burner of the stove
+2026-07-21 19:04:51,878 INFO Task TurnOffStove: Episode 45 (seed=44): Failure | Current Success Rate: 17.78% (8/45)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:04:51,879 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:05:04,054 INFO Task TurnOffStove: Episode 46 (seed=45): Instruction: turn off the front center burner of the stove
+2026-07-21 19:05:43,015 INFO Task TurnOffStove: Episode 46 (seed=45): Failure | Current Success Rate: 17.39% (8/46)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:05:43,062 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:05:52,123 INFO Task TurnOffStove: Episode 47 (seed=46): Instruction: turn off the rear left burner of the stove
+2026-07-21 19:06:17,720 INFO Task TurnOffStove: Episode 47 (seed=46): Success | Current Success Rate: 19.15% (9/47)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:06:17,720 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:06:30,392 INFO Task TurnOffStove: Episode 48 (seed=47): Instruction: turn off the front left burner of the stove
+2026-07-21 19:06:41,414 INFO Task TurnOffStove: Episode 48 (seed=47): Success | Current Success Rate: 20.83% (10/48)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:06:41,415 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:06:54,091 INFO Task TurnOffStove: Episode 49 (seed=48): Instruction: turn off the rear center burner of the stove
+2026-07-21 19:07:32,744 INFO Task TurnOffStove: Episode 49 (seed=48): Failure | Current Success Rate: 20.41% (10/49)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:07:32,745 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:07:40,105 INFO Task TurnOffStove: Episode 50 (seed=49): Instruction: turn off the front left burner of the stove
+2026-07-21 19:08:10,721 INFO Task TurnOffStove: Episode 50 (seed=49): Failure | Current Success Rate: 20.00% (10/50)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:08:10,722 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:08:28,482 INFO Task TurnOffStove: Episode 51 (seed=50): Instruction: turn off the rear center burner of the stove
+2026-07-21 19:08:37,843 INFO Task TurnOffStove: Episode 51 (seed=50): Success | Current Success Rate: 21.57% (11/51)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:08:37,844 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:08:51,902 INFO Task TurnOffStove: Episode 52 (seed=51): Instruction: turn off the front left burner of the stove
+2026-07-21 19:09:01,805 INFO Task TurnOffStove: Episode 52 (seed=51): Success | Current Success Rate: 23.08% (12/52)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:09:01,806 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:09:09,014 INFO Task TurnOffStove: Episode 53 (seed=52): Instruction: turn off the rear right burner of the stove
+2026-07-21 19:09:15,792 INFO Task TurnOffStove: Episode 53 (seed=52): Success | Current Success Rate: 24.53% (13/53)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:09:15,793 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:09:34,002 INFO Task TurnOffStove: Episode 54 (seed=53): Instruction: turn off the rear right burner of the stove
+2026-07-21 19:09:58,303 INFO Task TurnOffStove: Episode 54 (seed=53): Success | Current Success Rate: 25.93% (14/54)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:09:58,304 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:10:12,448 INFO Task TurnOffStove: Episode 55 (seed=54): Instruction: turn off the rear left burner of the stove
+2026-07-21 19:10:21,674 INFO Task TurnOffStove: Episode 55 (seed=54): Success | Current Success Rate: 27.27% (15/55)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:10:21,674 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:10:34,473 INFO Task TurnOffStove: Episode 56 (seed=55): Instruction: turn off the front left burner of the stove
+2026-07-21 19:11:12,712 INFO Task TurnOffStove: Episode 56 (seed=55): Failure | Current Success Rate: 26.79% (15/56)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:11:12,713 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:11:26,756 INFO Task TurnOffStove: Episode 57 (seed=56): Instruction: turn off the rear right burner of the stove
+2026-07-21 19:11:38,000 INFO Task TurnOffStove: Episode 57 (seed=56): Success | Current Success Rate: 28.07% (16/57)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:11:38,001 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:11:50,503 INFO Task TurnOffStove: Episode 58 (seed=57): Instruction: turn off the front left burner of the stove
+2026-07-21 19:11:59,605 INFO Task TurnOffStove: Episode 58 (seed=57): Success | Current Success Rate: 29.31% (17/58)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:11:59,605 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:12:07,684 INFO Task TurnOffStove: Episode 59 (seed=58): Instruction: turn off the front left burner of the stove
+2026-07-21 19:12:38,007 INFO Task TurnOffStove: Episode 59 (seed=58): Failure | Current Success Rate: 28.81% (17/59)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:12:38,009 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:12:50,987 INFO Task TurnOffStove: Episode 60 (seed=59): Instruction: turn off the rear right burner of the stove
+2026-07-21 19:12:57,556 INFO Task TurnOffStove: Episode 60 (seed=59): Success | Current Success Rate: 30.00% (18/60)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:12:57,557 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:13:05,523 INFO Task TurnOffStove: Episode 61 (seed=60): Instruction: turn off the rear right burner of the stove
+2026-07-21 19:13:35,321 INFO Task TurnOffStove: Episode 61 (seed=60): Failure | Current Success Rate: 29.51% (18/61)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:13:35,322 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:13:45,889 INFO Task TurnOffStove: Episode 62 (seed=61): Instruction: turn off the rear left burner of the stove
+2026-07-21 19:14:14,509 INFO Task TurnOffStove: Episode 62 (seed=61): Failure | Current Success Rate: 29.03% (18/62)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:14:14,510 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:14:24,230 INFO Task TurnOffStove: Episode 63 (seed=62): Instruction: turn off the front right burner of the stove
+2026-07-21 19:14:56,645 INFO Task TurnOffStove: Episode 63 (seed=62): Failure | Current Success Rate: 28.57% (18/63)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:14:56,646 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:15:06,985 INFO Task TurnOffStove: Episode 64 (seed=63): Instruction: turn off the front left burner of the stove
+2026-07-21 19:15:35,624 INFO Task TurnOffStove: Episode 64 (seed=63): Failure | Current Success Rate: 28.12% (18/64)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:15:35,625 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:15:43,856 INFO Task TurnOffStove: Episode 65 (seed=64): Instruction: turn off the front left burner of the stove
+2026-07-21 19:15:50,459 INFO Task TurnOffStove: Episode 65 (seed=64): Success | Current Success Rate: 29.23% (19/65)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:15:50,459 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:15:58,138 INFO Task TurnOffStove: Episode 66 (seed=65): Instruction: turn off the front right burner of the stove
+2026-07-21 19:16:28,582 INFO Task TurnOffStove: Episode 66 (seed=65): Failure | Current Success Rate: 28.79% (19/66)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:16:28,629 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:16:35,473 INFO Task TurnOffStove: Episode 67 (seed=66): Instruction: turn off the rear right burner of the stove
+2026-07-21 19:17:05,563 INFO Task TurnOffStove: Episode 67 (seed=66): Failure | Current Success Rate: 28.36% (19/67)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:17:05,564 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:17:18,618 INFO Task TurnOffStove: Episode 68 (seed=67): Instruction: turn off the front right burner of the stove
+2026-07-21 19:17:27,667 INFO Task TurnOffStove: Episode 68 (seed=67): Success | Current Success Rate: 29.41% (20/68)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:17:27,667 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:17:36,880 INFO Task TurnOffStove: Episode 69 (seed=68): Instruction: turn off the rear center burner of the stove
+2026-07-21 19:18:08,599 INFO Task TurnOffStove: Episode 69 (seed=68): Failure | Current Success Rate: 28.99% (20/69)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:18:08,600 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:18:18,055 INFO Task TurnOffStove: Episode 70 (seed=69): Instruction: turn off the center burner of the stove
+2026-07-21 19:18:46,928 INFO Task TurnOffStove: Episode 70 (seed=69): Failure | Current Success Rate: 28.57% (20/70)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:18:46,929 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:19:00,695 INFO Task TurnOffStove: Episode 71 (seed=70): Instruction: turn off the rear left burner of the stove
+2026-07-21 19:19:29,168 INFO Task TurnOffStove: Episode 71 (seed=70): Failure | Current Success Rate: 28.17% (20/71)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:19:29,168 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:19:37,914 INFO Task TurnOffStove: Episode 72 (seed=71): Instruction: turn off the front left burner of the stove
+2026-07-21 19:20:06,404 INFO Task TurnOffStove: Episode 72 (seed=71): Failure | Current Success Rate: 27.78% (20/72)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:20:06,405 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:20:19,734 INFO Task TurnOffStove: Episode 73 (seed=72): Instruction: turn off the front center burner of the stove
+2026-07-21 19:20:29,806 INFO Task TurnOffStove: Episode 73 (seed=72): Success | Current Success Rate: 28.77% (21/73)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:20:29,807 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:20:36,793 INFO Task TurnOffStove: Episode 74 (seed=73): Instruction: turn off the front left burner of the stove
+2026-07-21 19:21:07,444 INFO Task TurnOffStove: Episode 74 (seed=73): Failure | Current Success Rate: 28.38% (21/74)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:21:07,445 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:21:17,306 INFO Task TurnOffStove: Episode 75 (seed=74): Instruction: turn off the rear left burner of the stove
+2026-07-21 19:21:49,513 INFO Task TurnOffStove: Episode 75 (seed=74): Failure | Current Success Rate: 28.00% (21/75)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:21:49,514 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:22:01,592 INFO Task TurnOffStove: Episode 76 (seed=75): Instruction: turn off the front right burner of the stove
+2026-07-21 19:22:32,715 INFO Task TurnOffStove: Episode 76 (seed=75): Failure | Current Success Rate: 27.63% (21/76)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:22:32,716 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:22:41,085 INFO Task TurnOffStove: Episode 77 (seed=76): Instruction: turn off the front right burner of the stove
+2026-07-21 19:22:47,752 INFO Task TurnOffStove: Episode 77 (seed=76): Success | Current Success Rate: 28.57% (22/77)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:22:47,753 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:22:55,567 INFO Task TurnOffStove: Episode 78 (seed=77): Instruction: turn off the front right burner of the stove
+2026-07-21 19:23:25,357 INFO Task TurnOffStove: Episode 78 (seed=77): Failure | Current Success Rate: 28.21% (22/78)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:23:25,358 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:23:37,573 INFO Task TurnOffStove: Episode 79 (seed=78): Instruction: turn off the rear center burner of the stove
+2026-07-21 19:24:07,666 INFO Task TurnOffStove: Episode 79 (seed=78): Failure | Current Success Rate: 27.85% (22/79)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:24:07,667 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:24:16,972 INFO Task TurnOffStove: Episode 80 (seed=79): Instruction: turn off the front left burner of the stove
+2026-07-21 19:24:45,460 INFO Task TurnOffStove: Episode 80 (seed=79): Failure | Current Success Rate: 27.50% (22/80)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:24:45,461 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:24:52,400 INFO Task TurnOffStove: Episode 81 (seed=80): Instruction: turn off the rear center burner of the stove
+2026-07-21 19:25:23,160 INFO Task TurnOffStove: Episode 81 (seed=80): Failure | Current Success Rate: 27.16% (22/81)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:25:23,161 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:25:32,549 INFO Task TurnOffStove: Episode 82 (seed=81): Instruction: turn off the rear right burner of the stove
+2026-07-21 19:25:53,219 INFO Task TurnOffStove: Episode 82 (seed=81): Success | Current Success Rate: 28.05% (23/82)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:25:53,220 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:26:11,034 INFO Task TurnOffStove: Episode 83 (seed=82): Instruction: turn off the rear right burner of the stove
+2026-07-21 19:26:21,762 INFO Task TurnOffStove: Episode 83 (seed=82): Success | Current Success Rate: 28.92% (24/83)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:26:21,807 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:26:34,919 INFO Task TurnOffStove: Episode 84 (seed=83): Instruction: turn off the rear center burner of the stove
+2026-07-21 19:26:41,242 INFO Task TurnOffStove: Episode 84 (seed=83): Success | Current Success Rate: 29.76% (25/84)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:26:41,243 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:26:58,496 INFO Task TurnOffStove: Episode 85 (seed=84): Instruction: turn off the front right burner of the stove
+2026-07-21 19:27:06,163 INFO Task TurnOffStove: Episode 85 (seed=84): Success | Current Success Rate: 30.59% (26/85)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:27:06,164 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:27:23,576 INFO Task TurnOffStove: Episode 86 (seed=85): Instruction: turn off the rear right burner of the stove
+2026-07-21 19:28:01,238 INFO Task TurnOffStove: Episode 86 (seed=85): Failure | Current Success Rate: 30.23% (26/86)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:28:01,239 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:28:09,335 INFO Task TurnOffStove: Episode 87 (seed=86): Instruction: turn off the front right burner of the stove
+2026-07-21 19:28:41,391 INFO Task TurnOffStove: Episode 87 (seed=86): Failure | Current Success Rate: 29.89% (26/87)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:28:41,392 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:28:55,108 INFO Task TurnOffStove: Episode 88 (seed=87): Instruction: turn off the front left burner of the stove
+2026-07-21 19:29:27,735 INFO Task TurnOffStove: Episode 88 (seed=87): Failure | Current Success Rate: 29.55% (26/88)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:29:27,736 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:29:36,615 INFO Task TurnOffStove: Episode 89 (seed=88): Instruction: turn off the front left burner of the stove
+2026-07-21 19:29:52,161 INFO Task TurnOffStove: Episode 89 (seed=88): Success | Current Success Rate: 30.34% (27/89)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:29:52,162 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:29:58,836 INFO Task TurnOffStove: Episode 90 (seed=89): Instruction: turn off the rear center burner of the stove
+2026-07-21 19:30:29,575 INFO Task TurnOffStove: Episode 90 (seed=89): Failure | Current Success Rate: 30.00% (27/90)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:30:29,576 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:30:45,018 INFO Task TurnOffStove: Episode 91 (seed=90): Instruction: turn off the front left burner of the stove
+2026-07-21 19:31:13,845 INFO Task TurnOffStove: Episode 91 (seed=90): Failure | Current Success Rate: 29.67% (27/91)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:31:13,846 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:31:28,354 INFO Task TurnOffStove: Episode 92 (seed=91): Instruction: turn off the rear left burner of the stove
+2026-07-21 19:31:57,070 INFO Task TurnOffStove: Episode 92 (seed=91): Failure | Current Success Rate: 29.35% (27/92)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:31:57,071 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:32:07,348 INFO Task TurnOffStove: Episode 93 (seed=92): Instruction: turn off the rear right burner of the stove
+2026-07-21 19:32:35,988 INFO Task TurnOffStove: Episode 93 (seed=92): Failure | Current Success Rate: 29.03% (27/93)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:32:36,012 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:32:44,835 INFO Task TurnOffStove: Episode 94 (seed=93): Instruction: turn off the rear right burner of the stove
+2026-07-21 19:33:13,569 INFO Task TurnOffStove: Episode 94 (seed=93): Failure | Current Success Rate: 28.72% (27/94)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:33:13,569 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:33:26,107 INFO Task TurnOffStove: Episode 95 (seed=94): Instruction: turn off the front center burner of the stove
+2026-07-21 19:33:51,198 INFO Task TurnOffStove: Episode 95 (seed=94): Success | Current Success Rate: 29.47% (28/95)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:33:51,199 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:33:59,656 INFO Task TurnOffStove: Episode 96 (seed=95): Instruction: turn off the front center burner of the stove
+2026-07-21 19:34:29,678 INFO Task TurnOffStove: Episode 96 (seed=95): Failure | Current Success Rate: 29.17% (28/96)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:34:29,679 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:34:37,660 INFO Task TurnOffStove: Episode 97 (seed=96): Instruction: turn off the front right burner of the stove
+2026-07-21 19:35:09,571 INFO Task TurnOffStove: Episode 97 (seed=96): Failure | Current Success Rate: 28.87% (28/97)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:35:09,572 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:35:19,015 INFO Task TurnOffStove: Episode 98 (seed=97): Instruction: turn off the rear right burner of the stove
+2026-07-21 19:35:33,205 INFO Task TurnOffStove: Episode 98 (seed=97): Success | Current Success Rate: 29.59% (29/98)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:35:33,206 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:35:42,227 INFO Task TurnOffStove: Episode 99 (seed=98): Instruction: turn off the rear right burner of the stove
+2026-07-21 19:36:13,109 INFO Task TurnOffStove: Episode 99 (seed=98): Failure | Current Success Rate: 29.29% (29/99)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:36:13,155 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:36:20,554 INFO Task TurnOffStove: Episode 100 (seed=99): Instruction: turn off the rear center burner of the stove
+2026-07-21 19:36:49,735 INFO Task TurnOffStove: Episode 100 (seed=99): Failure | Current Success Rate: 29.00% (29/100)
+Client connection closed.
+2026-07-21 19:36:49,736 INFO Task TurnOffStove Final Success Rate: 29.00% (29/100)
+2026-07-21 19:36:49,774 INFO Results saved to: ./eval_robocasa/eval_logs/eval_results_TurnOffStove.json

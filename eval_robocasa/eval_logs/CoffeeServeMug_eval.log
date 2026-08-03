@@ -1,0 +1,419 @@
+[robosuite WARNING] No private macro file found! (macros.py:57)
+2026-07-21 19:21:56,945 WARNING No private macro file found!
+[robosuite WARNING] It is recommended to use a private macro file (macros.py:58)
+2026-07-21 19:21:56,945 WARNING It is recommended to use a private macro file
+[robosuite WARNING] To setup, run: python /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/scripts/setup_macros.py (macros.py:59)
+2026-07-21 19:21:56,945 WARNING To setup, run: python /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/scripts/setup_macros.py
+[robosuite WARNING] Could not import robosuite_models. Some robots may not be available. If you want to use these robots, please install robosuite_models from source (https://github.com/ARISE-Initiative/robosuite_models) or through pip install. (__init__.py:30)
+2026-07-21 19:22:10,997 WARNING Could not import robosuite_models. Some robots may not be available. If you want to use these robots, please install robosuite_models from source (https://github.com/ARISE-Initiative/robosuite_models) or through pip install.
+[robosuite WARNING] Could not load the mink-based whole-body IK. Make sure you install related import properly (e.g. pip install mink==0.0.5), otherwise you will not be able to use the default IK controller setting for GR1 robot. (__init__.py:40)
+2026-07-21 19:22:11,101 WARNING Could not load the mink-based whole-body IK. Make sure you install related import properly (e.g. pip install mink==0.0.5), otherwise you will not be able to use the default IK controller setting for GR1 robot.
+WARNING: mimicgen environments not imported since mimicgen is not installed!
+2026-07-21 19:24:25,294 INFO Task: CoffeeServeMug | Episodes: 100 | Start seed: 0
+2026-07-21 19:24:25,294 INFO Server: localhost:10090
+Client connected to server at localhost:10090.
+2026-07-21 19:24:26,614 INFO EvalClient ready. Robot types: ['robocasa_mg']
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:24:26,615 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:24:38,813 INFO No OpenGL_accelerate module loaded: No module named 'OpenGL_accelerate'
+2026-07-21 19:24:50,465 INFO Task CoffeeServeMug: Episode 1 (seed=0): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:25:36,565 INFO Task CoffeeServeMug: Episode 1 (seed=0): Failure | Current Success Rate: 0.00% (0/1)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:25:36,566 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:25:45,542 INFO Task CoffeeServeMug: Episode 2 (seed=1): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:26:09,189 INFO Task CoffeeServeMug: Episode 2 (seed=1): Success | Current Success Rate: 50.00% (1/2)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:26:09,190 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:26:19,091 INFO Task CoffeeServeMug: Episode 3 (seed=2): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:26:38,092 INFO Task CoffeeServeMug: Episode 3 (seed=2): Success | Current Success Rate: 66.67% (2/3)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:26:38,093 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:26:44,833 INFO Task CoffeeServeMug: Episode 4 (seed=3): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:27:02,332 INFO Task CoffeeServeMug: Episode 4 (seed=3): Success | Current Success Rate: 75.00% (3/4)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:27:02,333 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:27:16,907 INFO Task CoffeeServeMug: Episode 5 (seed=4): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:27:51,069 INFO Task CoffeeServeMug: Episode 5 (seed=4): Failure | Current Success Rate: 60.00% (3/5)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:27:51,070 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:28:02,652 INFO Task CoffeeServeMug: Episode 6 (seed=5): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:28:18,415 INFO Task CoffeeServeMug: Episode 6 (seed=5): Success | Current Success Rate: 66.67% (4/6)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:28:18,415 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:28:28,667 INFO Task CoffeeServeMug: Episode 7 (seed=6): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:29:03,310 INFO Task CoffeeServeMug: Episode 7 (seed=6): Failure | Current Success Rate: 57.14% (4/7)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:29:03,311 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:29:10,529 INFO Task CoffeeServeMug: Episode 8 (seed=7): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:29:29,445 INFO Task CoffeeServeMug: Episode 8 (seed=7): Success | Current Success Rate: 62.50% (5/8)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:29:29,446 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:29:46,539 INFO Task CoffeeServeMug: Episode 9 (seed=8): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:30:12,769 INFO Task CoffeeServeMug: Episode 9 (seed=8): Success | Current Success Rate: 66.67% (6/9)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:30:12,770 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:30:21,001 INFO Task CoffeeServeMug: Episode 10 (seed=9): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:30:38,580 INFO Task CoffeeServeMug: Episode 10 (seed=9): Success | Current Success Rate: 70.00% (7/10)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:30:38,581 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:30:51,480 INFO Task CoffeeServeMug: Episode 11 (seed=10): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:31:13,014 INFO Task CoffeeServeMug: Episode 11 (seed=10): Success | Current Success Rate: 72.73% (8/11)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:31:13,015 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:31:21,852 INFO Task CoffeeServeMug: Episode 12 (seed=11): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:31:52,958 INFO Task CoffeeServeMug: Episode 12 (seed=11): Success | Current Success Rate: 75.00% (9/12)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:31:53,004 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:32:05,057 INFO Task CoffeeServeMug: Episode 13 (seed=12): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:32:42,026 INFO Task CoffeeServeMug: Episode 13 (seed=12): Failure | Current Success Rate: 69.23% (9/13)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:32:42,027 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:32:48,495 INFO Task CoffeeServeMug: Episode 14 (seed=13): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:33:25,802 INFO Task CoffeeServeMug: Episode 14 (seed=13): Failure | Current Success Rate: 64.29% (9/14)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:33:25,802 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:33:34,287 INFO Task CoffeeServeMug: Episode 15 (seed=14): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:33:57,598 INFO Task CoffeeServeMug: Episode 15 (seed=14): Success | Current Success Rate: 66.67% (10/15)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:33:57,599 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:34:04,254 INFO Task CoffeeServeMug: Episode 16 (seed=15): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:34:25,485 INFO Task CoffeeServeMug: Episode 16 (seed=15): Success | Current Success Rate: 68.75% (11/16)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:34:25,486 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:34:33,308 INFO Task CoffeeServeMug: Episode 17 (seed=16): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:34:52,299 INFO Task CoffeeServeMug: Episode 17 (seed=16): Success | Current Success Rate: 70.59% (12/17)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:34:52,300 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:35:04,848 INFO Task CoffeeServeMug: Episode 18 (seed=17): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:35:33,850 INFO Task CoffeeServeMug: Episode 18 (seed=17): Success | Current Success Rate: 72.22% (13/18)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:35:33,851 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:35:42,388 INFO Task CoffeeServeMug: Episode 19 (seed=18): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:36:02,237 INFO Task CoffeeServeMug: Episode 19 (seed=18): Success | Current Success Rate: 73.68% (14/19)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:36:02,238 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:36:12,209 INFO Task CoffeeServeMug: Episode 20 (seed=19): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:36:35,462 INFO Task CoffeeServeMug: Episode 20 (seed=19): Success | Current Success Rate: 75.00% (15/20)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:36:35,463 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:36:43,623 INFO Task CoffeeServeMug: Episode 21 (seed=20): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:37:00,501 INFO Task CoffeeServeMug: Episode 21 (seed=20): Success | Current Success Rate: 76.19% (16/21)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:37:00,502 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:37:09,754 INFO Task CoffeeServeMug: Episode 22 (seed=21): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:37:26,738 INFO Task CoffeeServeMug: Episode 22 (seed=21): Success | Current Success Rate: 77.27% (17/22)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:37:26,784 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:37:44,316 INFO Task CoffeeServeMug: Episode 23 (seed=22): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:38:29,502 INFO Task CoffeeServeMug: Episode 23 (seed=22): Failure | Current Success Rate: 73.91% (17/23)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:38:29,548 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:38:36,890 INFO Task CoffeeServeMug: Episode 24 (seed=23): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:39:11,329 INFO Task CoffeeServeMug: Episode 24 (seed=23): Failure | Current Success Rate: 70.83% (17/24)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:39:11,330 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:39:21,476 INFO Task CoffeeServeMug: Episode 25 (seed=24): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:39:46,390 INFO Task CoffeeServeMug: Episode 25 (seed=24): Success | Current Success Rate: 72.00% (18/25)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:39:46,391 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:39:54,008 INFO Task CoffeeServeMug: Episode 26 (seed=25): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:40:30,428 INFO Task CoffeeServeMug: Episode 26 (seed=25): Failure | Current Success Rate: 69.23% (18/26)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:40:30,429 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:40:38,077 INFO Task CoffeeServeMug: Episode 27 (seed=26): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:40:54,914 INFO Task CoffeeServeMug: Episode 27 (seed=26): Success | Current Success Rate: 70.37% (19/27)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:40:54,915 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:41:03,296 INFO Task CoffeeServeMug: Episode 28 (seed=27): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:41:22,898 INFO Task CoffeeServeMug: Episode 28 (seed=27): Success | Current Success Rate: 71.43% (20/28)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:41:22,899 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:41:36,569 INFO Task CoffeeServeMug: Episode 29 (seed=28): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:41:52,298 INFO Task CoffeeServeMug: Episode 29 (seed=28): Success | Current Success Rate: 72.41% (21/29)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:41:52,299 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:42:00,220 INFO Task CoffeeServeMug: Episode 30 (seed=29): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:42:17,765 INFO Task CoffeeServeMug: Episode 30 (seed=29): Success | Current Success Rate: 73.33% (22/30)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:42:17,765 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:42:29,680 INFO Task CoffeeServeMug: Episode 31 (seed=30): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:42:54,551 INFO Task CoffeeServeMug: Episode 31 (seed=30): Success | Current Success Rate: 74.19% (23/31)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:42:54,552 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:43:03,796 INFO Task CoffeeServeMug: Episode 32 (seed=31): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:43:23,687 INFO Task CoffeeServeMug: Episode 32 (seed=31): Success | Current Success Rate: 75.00% (24/32)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:43:23,687 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:43:32,207 INFO Task CoffeeServeMug: Episode 33 (seed=32): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:44:06,683 INFO Task CoffeeServeMug: Episode 33 (seed=32): Failure | Current Success Rate: 72.73% (24/33)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:44:06,684 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:44:15,512 INFO Task CoffeeServeMug: Episode 34 (seed=33): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:44:41,406 INFO Task CoffeeServeMug: Episode 34 (seed=33): Success | Current Success Rate: 73.53% (25/34)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:44:41,407 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:44:49,949 INFO Task CoffeeServeMug: Episode 35 (seed=34): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:45:08,972 INFO Task CoffeeServeMug: Episode 35 (seed=34): Success | Current Success Rate: 74.29% (26/35)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:45:08,973 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:45:16,167 INFO Task CoffeeServeMug: Episode 36 (seed=35): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:45:36,549 INFO Task CoffeeServeMug: Episode 36 (seed=35): Success | Current Success Rate: 75.00% (27/36)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:45:36,549 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:45:47,244 INFO Task CoffeeServeMug: Episode 37 (seed=36): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:46:21,427 INFO Task CoffeeServeMug: Episode 37 (seed=36): Failure | Current Success Rate: 72.97% (27/37)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:46:21,428 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:46:30,761 INFO Task CoffeeServeMug: Episode 38 (seed=37): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:46:48,933 INFO Task CoffeeServeMug: Episode 38 (seed=37): Success | Current Success Rate: 73.68% (28/38)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:46:48,956 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:46:58,703 INFO Task CoffeeServeMug: Episode 39 (seed=38): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:47:18,624 INFO Task CoffeeServeMug: Episode 39 (seed=38): Success | Current Success Rate: 74.36% (29/39)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:47:18,625 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:47:26,386 INFO Task CoffeeServeMug: Episode 40 (seed=39): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:47:55,852 INFO Task CoffeeServeMug: Episode 40 (seed=39): Success | Current Success Rate: 75.00% (30/40)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:47:55,852 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:48:09,832 INFO Task CoffeeServeMug: Episode 41 (seed=40): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:48:31,839 INFO Task CoffeeServeMug: Episode 41 (seed=40): Success | Current Success Rate: 75.61% (31/41)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:48:31,840 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:48:46,409 INFO Task CoffeeServeMug: Episode 42 (seed=41): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:49:20,240 INFO Task CoffeeServeMug: Episode 42 (seed=41): Failure | Current Success Rate: 73.81% (31/42)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:49:20,241 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:49:33,017 INFO Task CoffeeServeMug: Episode 43 (seed=42): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:49:59,653 INFO Task CoffeeServeMug: Episode 43 (seed=42): Success | Current Success Rate: 74.42% (32/43)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:49:59,654 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:50:09,038 INFO Task CoffeeServeMug: Episode 44 (seed=43): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:50:31,043 INFO Task CoffeeServeMug: Episode 44 (seed=43): Success | Current Success Rate: 75.00% (33/44)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:50:31,044 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:50:44,065 INFO Task CoffeeServeMug: Episode 45 (seed=44): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:51:05,913 INFO Task CoffeeServeMug: Episode 45 (seed=44): Success | Current Success Rate: 75.56% (34/45)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:51:05,914 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:51:12,641 INFO Task CoffeeServeMug: Episode 46 (seed=45): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:51:35,912 INFO Task CoffeeServeMug: Episode 46 (seed=45): Success | Current Success Rate: 76.09% (35/46)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:51:35,913 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:51:43,785 INFO Task CoffeeServeMug: Episode 47 (seed=46): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:52:08,962 INFO Task CoffeeServeMug: Episode 47 (seed=46): Success | Current Success Rate: 76.60% (36/47)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:52:08,963 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:52:16,039 INFO Task CoffeeServeMug: Episode 48 (seed=47): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:52:32,963 INFO Task CoffeeServeMug: Episode 48 (seed=47): Success | Current Success Rate: 77.08% (37/48)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:52:32,964 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:52:39,993 INFO Task CoffeeServeMug: Episode 49 (seed=48): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:52:59,640 INFO Task CoffeeServeMug: Episode 49 (seed=48): Success | Current Success Rate: 77.55% (38/49)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:52:59,641 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:53:08,723 INFO Task CoffeeServeMug: Episode 50 (seed=49): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:53:30,919 INFO Task CoffeeServeMug: Episode 50 (seed=49): Success | Current Success Rate: 78.00% (39/50)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:53:30,920 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:53:43,051 INFO Task CoffeeServeMug: Episode 51 (seed=50): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:54:17,286 INFO Task CoffeeServeMug: Episode 51 (seed=50): Failure | Current Success Rate: 76.47% (39/51)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:54:17,287 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:54:27,895 INFO Task CoffeeServeMug: Episode 52 (seed=51): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:54:51,239 INFO Task CoffeeServeMug: Episode 52 (seed=51): Success | Current Success Rate: 76.92% (40/52)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:54:51,240 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:55:00,208 INFO Task CoffeeServeMug: Episode 53 (seed=52): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:55:26,341 INFO Task CoffeeServeMug: Episode 53 (seed=52): Success | Current Success Rate: 77.36% (41/53)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:55:26,342 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:55:38,478 INFO Task CoffeeServeMug: Episode 54 (seed=53): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:56:13,325 INFO Task CoffeeServeMug: Episode 54 (seed=53): Failure | Current Success Rate: 75.93% (41/54)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:56:13,348 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:56:22,339 INFO Task CoffeeServeMug: Episode 55 (seed=54): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:56:44,640 INFO Task CoffeeServeMug: Episode 55 (seed=54): Success | Current Success Rate: 76.36% (42/55)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:56:44,640 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:56:51,340 INFO Task CoffeeServeMug: Episode 56 (seed=55): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:57:15,373 INFO Task CoffeeServeMug: Episode 56 (seed=55): Success | Current Success Rate: 76.79% (43/56)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:57:15,374 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:57:25,874 INFO Task CoffeeServeMug: Episode 57 (seed=56): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:57:46,009 INFO Task CoffeeServeMug: Episode 57 (seed=56): Success | Current Success Rate: 77.19% (44/57)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:57:46,010 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:57:52,857 INFO Task CoffeeServeMug: Episode 58 (seed=57): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:58:29,270 INFO Task CoffeeServeMug: Episode 58 (seed=57): Failure | Current Success Rate: 75.86% (44/58)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:58:29,271 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:58:38,385 INFO Task CoffeeServeMug: Episode 59 (seed=58): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:58:58,620 INFO Task CoffeeServeMug: Episode 59 (seed=58): Success | Current Success Rate: 76.27% (45/59)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:58:58,620 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:59:12,143 INFO Task CoffeeServeMug: Episode 60 (seed=59): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 19:59:38,776 INFO Task CoffeeServeMug: Episode 60 (seed=59): Success | Current Success Rate: 76.67% (46/60)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 19:59:38,777 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 19:59:46,802 INFO Task CoffeeServeMug: Episode 61 (seed=60): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 20:00:20,508 INFO Task CoffeeServeMug: Episode 61 (seed=60): Success | Current Success Rate: 77.05% (47/61)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:00:20,509 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:00:34,147 INFO Task CoffeeServeMug: Episode 62 (seed=61): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 20:01:19,001 INFO Task CoffeeServeMug: Episode 62 (seed=61): Failure | Current Success Rate: 75.81% (47/62)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:01:19,025 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:01:27,876 INFO Task CoffeeServeMug: Episode 63 (seed=62): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 20:02:02,696 INFO Task CoffeeServeMug: Episode 63 (seed=62): Failure | Current Success Rate: 74.60% (47/63)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:02:02,740 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:02:12,208 INFO Task CoffeeServeMug: Episode 64 (seed=63): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 20:02:29,516 INFO Task CoffeeServeMug: Episode 64 (seed=63): Success | Current Success Rate: 75.00% (48/64)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:02:29,517 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:02:38,457 INFO Task CoffeeServeMug: Episode 65 (seed=64): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 20:03:02,036 INFO Task CoffeeServeMug: Episode 65 (seed=64): Success | Current Success Rate: 75.38% (49/65)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:03:02,037 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:03:14,364 INFO Task CoffeeServeMug: Episode 66 (seed=65): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 20:03:36,629 INFO Task CoffeeServeMug: Episode 66 (seed=65): Success | Current Success Rate: 75.76% (50/66)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:03:36,642 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:03:43,735 INFO Task CoffeeServeMug: Episode 67 (seed=66): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 20:04:04,360 INFO Task CoffeeServeMug: Episode 67 (seed=66): Success | Current Success Rate: 76.12% (51/67)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:04:04,361 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:04:16,869 INFO Task CoffeeServeMug: Episode 68 (seed=67): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 20:04:34,026 INFO Task CoffeeServeMug: Episode 68 (seed=67): Success | Current Success Rate: 76.47% (52/68)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:04:34,027 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:04:44,155 INFO Task CoffeeServeMug: Episode 69 (seed=68): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 20:05:04,829 INFO Task CoffeeServeMug: Episode 69 (seed=68): Success | Current Success Rate: 76.81% (53/69)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:05:04,830 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:05:13,264 INFO Task CoffeeServeMug: Episode 70 (seed=69): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 20:05:37,109 INFO Task CoffeeServeMug: Episode 70 (seed=69): Success | Current Success Rate: 77.14% (54/70)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:05:37,110 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:05:49,779 INFO Task CoffeeServeMug: Episode 71 (seed=70): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 20:06:09,539 INFO Task CoffeeServeMug: Episode 71 (seed=70): Success | Current Success Rate: 77.46% (55/71)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:06:09,540 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:06:21,503 INFO Task CoffeeServeMug: Episode 72 (seed=71): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 20:06:56,658 INFO Task CoffeeServeMug: Episode 72 (seed=71): Failure | Current Success Rate: 76.39% (55/72)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:06:56,659 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:07:04,146 INFO Task CoffeeServeMug: Episode 73 (seed=72): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 20:07:22,785 INFO Task CoffeeServeMug: Episode 73 (seed=72): Success | Current Success Rate: 76.71% (56/73)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:07:22,786 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:07:30,325 INFO Task CoffeeServeMug: Episode 74 (seed=73): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 20:07:50,454 INFO Task CoffeeServeMug: Episode 74 (seed=73): Success | Current Success Rate: 77.03% (57/74)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:07:50,454 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:07:58,827 INFO Task CoffeeServeMug: Episode 75 (seed=74): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 20:08:22,255 INFO Task CoffeeServeMug: Episode 75 (seed=74): Success | Current Success Rate: 77.33% (58/75)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:08:22,255 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:08:36,585 INFO Task CoffeeServeMug: Episode 76 (seed=75): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 20:09:05,990 INFO Task CoffeeServeMug: Episode 76 (seed=75): Success | Current Success Rate: 77.63% (59/76)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:09:05,997 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:09:15,130 INFO Task CoffeeServeMug: Episode 77 (seed=76): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 20:09:33,260 INFO Task CoffeeServeMug: Episode 77 (seed=76): Success | Current Success Rate: 77.92% (60/77)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:09:33,261 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:09:40,093 INFO Task CoffeeServeMug: Episode 78 (seed=77): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 20:10:18,231 INFO Task CoffeeServeMug: Episode 78 (seed=77): Failure | Current Success Rate: 76.92% (60/78)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:10:18,277 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:10:35,670 INFO Task CoffeeServeMug: Episode 79 (seed=78): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 20:11:02,312 INFO Task CoffeeServeMug: Episode 79 (seed=78): Success | Current Success Rate: 77.22% (61/79)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:11:02,313 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:11:10,379 INFO Task CoffeeServeMug: Episode 80 (seed=79): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 20:11:27,910 INFO Task CoffeeServeMug: Episode 80 (seed=79): Success | Current Success Rate: 77.50% (62/80)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:11:27,910 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:11:36,958 INFO Task CoffeeServeMug: Episode 81 (seed=80): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 20:12:12,071 INFO Task CoffeeServeMug: Episode 81 (seed=80): Failure | Current Success Rate: 76.54% (62/81)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:12:12,071 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:12:24,850 INFO Task CoffeeServeMug: Episode 82 (seed=81): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 20:13:08,000 INFO Task CoffeeServeMug: Episode 82 (seed=81): Success | Current Success Rate: 76.83% (63/82)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:13:08,001 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:13:21,066 INFO Task CoffeeServeMug: Episode 83 (seed=82): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 20:13:39,142 INFO Task CoffeeServeMug: Episode 83 (seed=82): Success | Current Success Rate: 77.11% (64/83)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:13:39,143 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:13:52,981 INFO Task CoffeeServeMug: Episode 84 (seed=83): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 20:14:12,571 INFO Task CoffeeServeMug: Episode 84 (seed=83): Success | Current Success Rate: 77.38% (65/84)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:14:12,572 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:14:24,039 INFO Task CoffeeServeMug: Episode 85 (seed=84): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 20:14:45,174 INFO Task CoffeeServeMug: Episode 85 (seed=84): Success | Current Success Rate: 77.65% (66/85)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:14:45,175 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:14:59,281 INFO Task CoffeeServeMug: Episode 86 (seed=85): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 20:15:34,270 INFO Task CoffeeServeMug: Episode 86 (seed=85): Failure | Current Success Rate: 76.74% (66/86)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:15:34,271 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:15:41,265 INFO Task CoffeeServeMug: Episode 87 (seed=86): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 20:16:16,806 INFO Task CoffeeServeMug: Episode 87 (seed=86): Failure | Current Success Rate: 75.86% (66/87)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:16:16,806 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:16:28,591 INFO Task CoffeeServeMug: Episode 88 (seed=87): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 20:16:46,109 INFO Task CoffeeServeMug: Episode 88 (seed=87): Success | Current Success Rate: 76.14% (67/88)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:16:46,154 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:16:53,874 INFO Task CoffeeServeMug: Episode 89 (seed=88): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 20:17:13,701 INFO Task CoffeeServeMug: Episode 89 (seed=88): Success | Current Success Rate: 76.40% (68/89)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:17:13,702 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:17:20,299 INFO Task CoffeeServeMug: Episode 90 (seed=89): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 20:17:58,552 INFO Task CoffeeServeMug: Episode 90 (seed=89): Failure | Current Success Rate: 75.56% (68/90)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:17:58,598 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:18:16,057 INFO Task CoffeeServeMug: Episode 91 (seed=90): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 20:18:38,805 INFO Task CoffeeServeMug: Episode 91 (seed=90): Success | Current Success Rate: 75.82% (69/91)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:18:38,805 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:18:52,213 INFO Task CoffeeServeMug: Episode 92 (seed=91): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 20:19:13,263 INFO Task CoffeeServeMug: Episode 92 (seed=91): Success | Current Success Rate: 76.09% (70/92)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:19:13,263 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:19:22,165 INFO Task CoffeeServeMug: Episode 93 (seed=92): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 20:19:39,645 INFO Task CoffeeServeMug: Episode 93 (seed=92): Success | Current Success Rate: 76.34% (71/93)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:19:39,646 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:19:46,722 INFO Task CoffeeServeMug: Episode 94 (seed=93): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 20:20:06,487 INFO Task CoffeeServeMug: Episode 94 (seed=93): Success | Current Success Rate: 76.60% (72/94)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:20:06,488 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:20:14,054 INFO Task CoffeeServeMug: Episode 95 (seed=94): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 20:20:31,085 INFO Task CoffeeServeMug: Episode 95 (seed=94): Success | Current Success Rate: 76.84% (73/95)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:20:31,086 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:20:44,601 INFO Task CoffeeServeMug: Episode 96 (seed=95): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 20:21:08,926 INFO Task CoffeeServeMug: Episode 96 (seed=95): Success | Current Success Rate: 77.08% (74/96)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:21:08,927 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:21:17,893 INFO Task CoffeeServeMug: Episode 97 (seed=96): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 20:21:36,512 INFO Task CoffeeServeMug: Episode 97 (seed=96): Success | Current Success Rate: 77.32% (75/97)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:21:36,512 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:21:43,850 INFO Task CoffeeServeMug: Episode 98 (seed=97): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 20:22:02,722 INFO Task CoffeeServeMug: Episode 98 (seed=97): Success | Current Success Rate: 77.55% (76/98)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:22:02,768 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:22:13,408 INFO Task CoffeeServeMug: Episode 99 (seed=98): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 20:22:48,615 INFO Task CoffeeServeMug: Episode 99 (seed=98): Failure | Current Success Rate: 76.77% (76/99)
+[robosuite INFO] Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json (composite_controller_factory.py:121)
+2026-07-21 20:22:48,616 INFO Loading controller configuration from: /mnt/robot-research-cache-0/user/jun/mibot_v2/robosuite/robosuite/controllers/config/robots/default_pandaomron.json
+2026-07-21 20:22:57,393 INFO Task CoffeeServeMug: Episode 100 (seed=99): Instruction: pick the mug from under the coffee machine dispenser and place it on the counter
+2026-07-21 20:23:16,892 INFO Task CoffeeServeMug: Episode 100 (seed=99): Success | Current Success Rate: 77.00% (77/100)
+Client connection closed.
+2026-07-21 20:23:16,892 INFO Task CoffeeServeMug Final Success Rate: 77.00% (77/100)
+2026-07-21 20:23:16,931 INFO Results saved to: ./eval_robocasa/eval_logs/eval_results_CoffeeServeMug.json
