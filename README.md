@@ -33,11 +33,11 @@ XR-1 couples a pre-trained VLM (**Qwen3-VL**) with a Diffusion-Transformer (DiT)
 
 **Stage 1 — Pre-training (breadth).** Uses embodiment-free UMI data to learn generalizable representations for action generation. A VLM-powered auto-labeling pipeline automatically segments long trajectories into fixed-length clips and generates descriptions of the corresponding state transitions. Trained on these annotated clips, the model learns to generate actions that bring each scene from its current state to the described target state. By making large-scale annotation practical, this approach eliminates the need for prohibitively expensive manual labeling and breaks the robot-data scarcity bottleneck that has historically constrained policy-model scaling.
 
-**Stage 2 — Post-training (alignment).** Aligns the pre-trained model along two axes using 7,200+ hours of in-house real-robot data, filtered open-sourced robot data, and high-quality manually-annotated UMI data:
+**Stage 2 — Post-training (alignment).** Aligns the pre-trained model along two axes with cross-embodiment data, including in-house real-robot data, filtered open-sourced robot data, and high-quality manually-annotated UMI data:
 - *Embodiment alignment* — maps general action-generation ability onto actual robots via cross-embodiment data.
 - *Instruction alignment* — shifts from acting on scene-transition descriptions to understanding natural-language instructions and executing them directly.
 
-After post-training, XR-1 can perform mobile manipulation in unseen environments with unseen objects, out of the box.
+After post-training, XR-1 can perform mobile manipulation in unseen environments with unseen objects, out of the box. The model, pre-trained on over **100K hours of UMI trajectories** and subsequently post-trained on over **10K hours of cross-embodiment data**, has been [open-sourced on Hugging Face](https://huggingface.co/XiaomiRobotics/Xiaomi-Robotics-1-5B).
 
 
 ## 📅 Updates

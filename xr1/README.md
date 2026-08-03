@@ -22,7 +22,7 @@ pip install flash-attn --no-build-isolation
 
 ## Checkpoint
 
-The released Hugging Face checkpoint needs to be converted into the training format before use:
+Download the **[Xiaomi-Robotics-1-5B model](https://huggingface.co/XiaomiRobotics/Xiaomi-Robotics-1-5B)** from Hugging Face and convert it to the training format:
 
 ```bash
 python tools/weight_convert.py \
@@ -36,7 +36,7 @@ This writes `pretrained_ckpt/model_states.pt`.
 
 ## Data
 
-Each episode is one metadata JSON plus three synchronized videos (ego / wrist-left / wrist-right). See [`docs/data_format.md`](docs/data_format.md) for the full JSON schema.
+Download the **[XR-1 post-training demo dataset](https://huggingface.co/datasets/XiaomiRobotics/xr1_post_train_demo/tree/main)** from Hugging Face. Each episode is one metadata JSON plus three synchronized videos (ego / wrist-left / wrist-right). See [`docs/data_format.md`](docs/data_format.md) for the full JSON schema.
 
 The default config (`configs/data/load_washer.yaml`) expects five example episodes at `data/json1.json` … `data/json5.json`, with their videos under `data/videos/`. To train on your own data, edit that config:
 
