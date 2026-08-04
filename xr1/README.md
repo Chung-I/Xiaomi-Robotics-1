@@ -22,7 +22,7 @@ pip install flash-attn --no-build-isolation
 
 ## Checkpoint
 
-Download the **[Xiaomi-Robotics-1-5B model](https://huggingface.co/XiaomiRobotics/Xiaomi-Robotics-1-5B)** `.pt` checkpoint from Hugging Face and save it as `pretrained_ckpt/model_states.pt`.
+Download the **[Xiaomi-Robotics-1-5B model](https://huggingface.co/XiaomiRobotics/Xiaomi-Robotics-1-5B)** checkpoint from Hugging Face and save it as `pretrained_ckpt/model_states.pt`.
 
 ---
 
