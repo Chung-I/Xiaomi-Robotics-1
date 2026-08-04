@@ -7,6 +7,7 @@
   [![Paper](https://img.shields.io/badge/📄-Paper-red)](https://arxiv.org/abs/2607.15330)
   [![Project Page](https://img.shields.io/badge/🌐-Project_Page-blue)](https://robotics.xiaomi.com/xiaomi-robotics-1.html)
   [![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97-Hugging%20Face-yellow)](https://huggingface.co/collections/XiaomiRobotics/xiaomi-robotics-1)
+  [![ModelScope Collection](https://img.shields.io/badge/ModelScope-Collection-624aff.svg?logo=modelscope&logoColor=white)](https://www.modelscope.cn/collections/XiaomiRobotics/Xiaomi-Robotics-1)
   [![License](https://img.shields.io/badge/License-Apache_2.0-green.svg)](LICENSE)
   [![Papers with Code: SOTA on RoboCasa](https://paperswithcode.co/api/v1/papers/2607.15330/leaderboard-badge.svg?eval=18089&live=1)](https://paperswithcode.co/api/v1/papers/2607.15330/leaderboard-badge-link?eval=18089)
 
