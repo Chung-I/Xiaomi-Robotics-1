@@ -88,7 +88,7 @@ Each cell shows success rate, higher is better. XR-1 = Xiaomi-Robotics-1.
 
 Want to fine-tune XR-1 on your own data? The post-training and deployment code is available in [`xr1/`](xr1/). See **[`xr1/README.md`](xr1/README.md)** for details on environment setup, checkpoint conversion, data formats, training, and deployment.
 
-For post-training reproduction discussions, scan the QR code below to join our WeChat group.
+For discussions, scan the QR code below to join our WeChat group.
 
 <img src="xr1/assets/post_training_wechat_qr.jpg" alt="Post-training reproduction WeChat group QR code" width="220">
 
