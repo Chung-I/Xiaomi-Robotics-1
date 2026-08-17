@@ -148,7 +148,7 @@ coverage
 *.ogg
 
 # README assets
-!xr1/assets/post_training_wechat_qr.jpg
+!xr1/assets/wechat_group.jpg
 
 # Documents
 *.pdf
