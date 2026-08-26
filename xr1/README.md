@@ -36,6 +36,14 @@ The default config (`configs/data/load_washer.yaml`) expects five example episod
 2. Replace `mean` and `std` with the per-step mean and standard deviation of the packed relative actions. Both arrays must have shape `(action_length, action_dim)`; the defaults are `action_length = 30` and `action_dim = 60`.
 3. Replace `q01` / `q99` with quantiles of the packed robot states. Both arrays must have shape `(state_length, state_dim)`; the defaults are `state_length = 1` and `state_dim = 60`.
 
+This clarity-first demo can be used as a reference for more efficient implementations:
+
+```bash
+python tools/compute_normalize.py /path/to/training/data -o normalize.json
+```
+
+Copy `mean`, `std`, `q01`, and `q99` from `normalize.json` into the data config.
+
 Video paths are read from each JSON file. `crop_bbox` uses `(top, left, height, width)` and may be `null`.
 
 ---
