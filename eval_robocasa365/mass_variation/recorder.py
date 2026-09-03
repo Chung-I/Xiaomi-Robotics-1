@@ -315,6 +315,11 @@ class StepRecorder:
 
         commanded_delta = arrays["actions"][:, 0:6].astype(np.float32)
 
+        # Frame note for analysis-side consumers: eef_pos/eef_rot (and so
+        # achieved_eef_delta) are WORLD-frame, while commanded_delta (the
+        # OSC action's dims 0:6) is BASE-frame -- their axis-wise
+        # decompositions differ by conjugation with the base orientation;
+        # only overall magnitudes are directly comparable across the two.
         achieved_eef_delta = np.zeros((steps, 6), dtype=np.float32)
         if steps > 1:
             achieved_eef_delta[1:, 0:3] = arrays["eef_pos"][1:] - arrays["eef_pos"][:-1]

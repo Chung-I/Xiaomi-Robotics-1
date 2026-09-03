@@ -421,6 +421,13 @@ def run_condition_episode(
             density_installed = True
 
             initial_observation, _ = env.reset(seed=seed)
+            # Re-resolve bid AFTER this reset (hard_reset=True rebuilds the
+            # MuJoCo model, so pass-1's bid is not guaranteed to still be
+            # valid/correct) -- mirrors the mass branch's own pattern below.
+            # A stray reuse of the pass-1 bid here was a review finding:
+            # every other call site in this function re-resolves after its
+            # governing reset; this one didn't.
+            bid = env.sim.model.body_name2id(env.objects[obj_name].root_body)
             apply_com_offset(env, obj_name, physics["com_offset_m"], physics["com_axis"])
             settle_and_gate(env, obj_name, reference_pose=reference_pose)
 
