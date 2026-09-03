@@ -127,3 +127,36 @@ def test_seeds_matched_across_conditions():
 - Spec coverage: cells/conditions/matched-seeds (T1), physics knobs + gates (T2), ground truth + liftoff windows (T3), determinism/noise + capture-site contract for Plan 2 (T4), calibration + CoM decision (T5), Phase-1 benchmark + metrics (T6). Certificates/probing/patching are Plans 2–3 by design (spec Non-goals).
 - Known judgment calls: two-pass reset for CoM (settle loop runs inside reset — naive post-reset writes would miss settle dynamics); calibration uses XR1 itself (no scripted policy exists on this stack; 10 trials/level is a knee-finder, not a benchmark); mass sweep in absolute kg (sim defaults unphysical).
 - Type consistency: `condition_physics` dict keys used by T2 verify script, T3 npz scalars, T5/T6 drivers match; `episode_seeds` formula identical in T1 test and Global Constraints.
+
+---
+
+## Plan amendment A (2026-09-03, follows the design addendum — binding over the tasks above)
+
+- **Scope of Phase 1:** conditions = {MassLight, MassMedium, MassHeavy} at {0.15, 0.6, 1.2} kg
+  fixed (no knee calibration); ONE cell (primary; the preflight still validates the secondary
+  for the deferred arm but Phase 1 does not run it); seeds 35 (`episode_seeds(..., n=35)`).
+  CoM machinery in Task 2 is still built and verified (cheap, needed for the deferred arm)
+  but no CoM episodes run in Phase 1.
+- **Task 5 (calibration) is REPLACED by "sanity sweep":** per model, 3 levels × 5 trials
+  (15 episodes, ~8 min): assert baseline success at 0.15 kg within 0.2 of the model's
+  published per-task baseline; apply the design addendum's cell-switch decision rule if the
+  π0.5 baseline is < 0.25. Writes `output/mass_variation/sanity_sweep_<model>.json`. No
+  knee fitting, no mass_levels.json (levels are constants in `conditions.py`:
+  `MASS_LEVELS_KG = {"light": 0.15, "medium": 0.6, "heavy": 1.2}` — update Task 1 tests).
+- **New Task 7: π0.5 comparison arm.** (a) Clone `github.com/robocasa-benchmark/openpi`
+  @ ca4c6d7 to `~/Codes/openpi-robocasa` (separate venv per its README; GPU shares the box —
+  one model server at a time). (b) Download the HF checkpoint
+  `robocasa/robocasa365_checkpoints/pi05_pretrain_human300/multitask_learning/75000`
+  (HF auth note: token must be at `$HF_HOME/token` if HF_HOME is customized). (c) Investigation
+  step, recorded in the report: its serving interface + observation space (cameras, proprio,
+  history depth) with file:line — the tracking-error-channel comparison in the design depends
+  on the history depth being confirmed, not assumed. (d) Adapt `entry_mass.py` with a
+  policy-client abstraction (`infer(obs_history, instruction) -> action chunk`) so the same
+  loop, recorder, seeds, and conditions drive both models; π0.5's chunk length/replan per its
+  fork defaults, recorded. (e) Run sanity sweep + Phase 1 (105 episodes ≈ 1 h).
+- **Task 6 driver:** runs per model (`--model xr1|pi05_robocasa`), 105 episodes each;
+  metrics CSV gains a `model` column; wandb runs `phase1-xr1` / `phase1-pi05`.
+- **Recorder addition (headline channel):** `entry_mass.py` also stores per step the
+  commanded EE delta (action dims 0:6) AND achieved EEF delta (from consecutive proprio),
+  so the tracking-error certificate consumes recorder output directly — no reconstruction
+  at analysis time.

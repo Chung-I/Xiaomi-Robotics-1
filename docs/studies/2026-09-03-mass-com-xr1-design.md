@@ -96,3 +96,29 @@ Branch `study/mass-com-xr1` in `~/Codes/Xiaomi-Robotics-1`; study code under
 `eval_robocasa365/mass_variation/`; robocasa venv (`~/Codes/robocasa/.venv`) drives sim,
 `.venv-mibot` drives the model server; `MUJOCO_GL=egl`; wandb project `mass-com-xr1`
 (mandatory for all runs); local RTX 5090.
+
+## Addendum (2026-09-03, user directives — binding)
+
+1. **Headline channel: load-dependent EEF tracking error.** The named question of this study
+   is whether the model can extract mass/tactile information from the discrepancy between
+   commanded EE deltas (its own actions) and achieved EEF motion (its proprio history) under
+   load. Pre-registered accordingly: (a) a dedicated tracking-error certificate — inputs =
+   commanded-vs-achieved EEF delta history exactly as reconstructable from the policy's own
+   observation window (4 frames, stride 2 for XR1; single frame for π0.5); (b) the
+   cross-model prediction, registered before any run: XR1's 4-frame history contains this
+   channel, π0.5's single-frame observation largely does not — if tracking error is the mass
+   channel, XR1 can encode hidden mass where π0.5 architecturally cannot. Both directions of
+   outcome are informative.
+2. **Second model: π0.5 (robocasa365-trained).** Official checkpoint
+   `robocasa/robocasa365_checkpoints/pi05_pretrain_human300/multitask_learning/75000` (HF),
+   served via the `robocasa-benchmark/openpi` fork (commit ca4c6d7, Atomic-Seen 39.6%).
+   Same cell, same fixed mass levels, same matched seed list. Risk recorded: π0.5's per-task
+   baseline on the primary cell may be low (~0.3–0.5); if its baseline success is < 0.25 in
+   the sanity sweep, switch the primary cell to the highest-joint-baseline PickPlace task
+   before Phase 1 (decision rule, not post-hoc).
+3. **Budget: ≤ 1 h per model.** Cuts, in order applied: CoM arm DEFERRED from Phase 1
+   (conditions 5→3: MassLight/Medium/Heavy); secondary cell DEFERRED (cells 2→1); behavioral
+   knee calibration REPLACED by fixed physical mass levels **{0.15, 0.6, 1.2} kg**
+   (identical for both models; a 3-level × 5-trial sanity sweep per model replaces Phase 0);
+   seeds 50→35. Phase 1 = 3 × 1 × 35 = 105 episodes ≈ 1 h per model. Deferred arms remain
+   specified above and can be run later without design changes.
