@@ -122,3 +122,16 @@ Branch `study/mass-com-xr1` in `~/Codes/Xiaomi-Robotics-1`; study code under
    (identical for both models; a 3-level × 5-trial sanity sweep per model replaces Phase 0);
    seeds 50→35. Phase 1 = 3 × 1 × 35 = 105 episodes ≈ 1 h per model. Deferred arms remain
    specified above and can be run later without design changes.
+
+### Correction to Addendum item 1 (2026-09-03, verified against entry.py:58-71,166-169 + config state_length:4)
+
+XR1's observation contains the ACHIEVED EEF-pose history (4 poses, stride 2) but NOT its own
+past commanded actions — there is no (commanded, achieved) pair in its inputs. Certificates
+re-scoped accordingly: (a) **policy-observable certificate** = achieved-only proprio history
+in exactly the policy's format (4 × 14-D, stride 2; single state for π0.5 pending Task 7's
+confirmation of its observation space); (b) the commanded-vs-achieved deficit certificate is
+an ANALYSIS-side channel-content measure (recorder logs both), including the pre-registered
+physical validation: regress in-carry wrist F_z on the per-step deficit and report the
+empirical K_eff and R². The cross-model prediction stands with the corrected mechanism:
+achieved-motion signatures (droop, z-progress, velocity profile) visible in a 4-frame window
+vs a single frame.
