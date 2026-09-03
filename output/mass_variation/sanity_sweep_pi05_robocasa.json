@@ -1,5 +1,5 @@
 {
-  "finished_at": "2026-09-03T17:26:29",
+  "finished_at": "2026-09-03T17:50:02",
   "config": {
     "model": "pi05_robocasa",
     "mode": "sanity",
@@ -11,13 +11,23 @@
       "MassMedium",
       "MassHeavy"
     ],
-    "n_seeds": 5,
+    "n_seeds": 15,
     "seeds": [
       7,
       8,
       9,
       10,
-      11
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
     ],
     "base_seed": 7,
     "cell_index": 0,
@@ -29,7 +39,7 @@
     },
     "server_seed": null,
     "server_checkpoint": "/home/chungyili/Codes/openpi-robocasa/checkpoints/pi05_pretrain_human300/multitask_learning/75000",
-    "git_sha": "d0a8cce2adb06c666514ec204e8ced5c845db718",
+    "git_sha": "b49291cb6c6efbe87d17b2c466a9fda861210c9a",
     "control_hz": 20.0,
     "drop_threshold_m": 0.05,
     "drop_window_steps": 20
@@ -39,47 +49,47 @@
       "model": "pi05_robocasa",
       "cell": "PickPlaceCounterToCabinet",
       "condition": "MassLight",
-      "mass_kg": 0.15,
-      "n_episodes": 5,
-      "success_rate": 0.2,
+      "mass_kg": 0.14999999999999994,
+      "n_episodes": 15,
+      "success_rate": 0.26666666666666666,
       "grasp_rate": 1.0,
       "lift_rate": 0.6,
-      "t_success_mean_s": 21.3,
-      "drop_after_lift_rate": 0.2
+      "t_success_mean_s": 24.700000000000003,
+      "drop_after_lift_rate": 0.13333333333333333
     },
     {
       "model": "pi05_robocasa",
       "cell": "PickPlaceCounterToCabinet",
       "condition": "MassMedium",
-      "mass_kg": 0.6,
-      "n_episodes": 5,
-      "success_rate": 0.6,
+      "mass_kg": 0.5999999999999998,
+      "n_episodes": 15,
+      "success_rate": 0.5333333333333333,
       "grasp_rate": 1.0,
-      "lift_rate": 0.8,
-      "t_success_mean_s": 22.633333333333336,
-      "drop_after_lift_rate": 0.2
+      "lift_rate": 0.6666666666666666,
+      "t_success_mean_s": 24.1875,
+      "drop_after_lift_rate": 0.13333333333333333
     },
     {
       "model": "pi05_robocasa",
       "cell": "PickPlaceCounterToCabinet",
       "condition": "MassHeavy",
-      "mass_kg": 1.2,
-      "n_episodes": 5,
-      "success_rate": 0.6,
+      "mass_kg": 1.1999999999999995,
+      "n_episodes": 15,
+      "success_rate": 0.4,
       "grasp_rate": 1.0,
-      "lift_rate": 0.6,
-      "t_success_mean_s": 21.05,
-      "drop_after_lift_rate": 0.0
+      "lift_rate": 0.6666666666666666,
+      "t_success_mean_s": 23.658333333333335,
+      "drop_after_lift_rate": 0.13333333333333333
     }
   ],
   "sanity_gate": {
     "published_baseline": null,
     "tolerance": null,
     "threshold": 0.25,
-    "mass_light_success_rate": 0.2,
-    "passed": false
+    "mass_light_success_rate": 0.26666666666666666,
+    "passed": true
   },
-  "wandb_url": "https://wandb.ai/leon129506/mass-com-xr1/runs/dek9f6lw",
+  "wandb_url": "https://wandb.ai/leon129506/mass-com-xr1/runs/o7mo5aep",
   "server_restarts": [
     {
       "pid": 3138793,
@@ -194,6 +204,172 @@
         9,
         10,
         11
+      ]
+    },
+    {
+      "pid": 3142831,
+      "port": 8000,
+      "cmd": [
+        "/home/chungyili/Codes/openpi-robocasa/.venv/bin/python",
+        "-u",
+        "/home/chungyili/Codes/Xiaomi-Robotics-1/eval_robocasa365/mass_variation/serve_pi05.py",
+        "--config",
+        "pi05_pretrain_human300",
+        "--dir",
+        "/home/chungyili/Codes/openpi-robocasa/checkpoints/pi05_pretrain_human300/multitask_learning/75000",
+        "--port",
+        "8000"
+      ],
+      "started_at": "2026-09-03T17:30:11",
+      "listening_at": "2026-09-03T17:30:37",
+      "server_seed": null,
+      "server_model": "pi05_robocasa",
+      "log": "output/mass_variation/logs/server_8000.log",
+      "mode": "sanity",
+      "condition": "MassLight",
+      "model": "pi05_robocasa",
+      "pending_seeds": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ]
+    },
+    {
+      "pid": 3143770,
+      "port": 8000,
+      "cmd": [
+        "/home/chungyili/Codes/openpi-robocasa/.venv/bin/python",
+        "-u",
+        "/home/chungyili/Codes/Xiaomi-Robotics-1/eval_robocasa365/mass_variation/serve_pi05.py",
+        "--config",
+        "pi05_pretrain_human300",
+        "--dir",
+        "/home/chungyili/Codes/openpi-robocasa/checkpoints/pi05_pretrain_human300/multitask_learning/75000",
+        "--port",
+        "8000"
+      ],
+      "started_at": "2026-09-03T17:36:37",
+      "listening_at": "2026-09-03T17:36:55",
+      "server_seed": null,
+      "server_model": "pi05_robocasa",
+      "log": "output/mass_variation/logs/server_8000.log",
+      "mode": "sanity",
+      "condition": "MassMedium",
+      "model": "pi05_robocasa",
+      "pending_seeds": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ]
+    },
+    {
+      "pid": 3144735,
+      "port": 8000,
+      "cmd": [
+        "/home/chungyili/Codes/openpi-robocasa/.venv/bin/python",
+        "-u",
+        "/home/chungyili/Codes/Xiaomi-Robotics-1/eval_robocasa365/mass_variation/serve_pi05.py",
+        "--config",
+        "pi05_pretrain_human300",
+        "--dir",
+        "/home/chungyili/Codes/openpi-robocasa/checkpoints/pi05_pretrain_human300/multitask_learning/75000",
+        "--port",
+        "8000"
+      ],
+      "started_at": "2026-09-03T17:38:40",
+      "listening_at": "2026-09-03T17:38:56",
+      "server_seed": null,
+      "server_model": "pi05_robocasa",
+      "log": "output/mass_variation/logs/server_8000.log",
+      "mode": "sanity",
+      "condition": "MassMedium",
+      "model": "pi05_robocasa",
+      "pending_seeds": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ]
+    },
+    {
+      "pid": 3145667,
+      "port": 8000,
+      "cmd": [
+        "/home/chungyili/Codes/openpi-robocasa/.venv/bin/python",
+        "-u",
+        "/home/chungyili/Codes/Xiaomi-Robotics-1/eval_robocasa365/mass_variation/serve_pi05.py",
+        "--config",
+        "pi05_pretrain_human300",
+        "--dir",
+        "/home/chungyili/Codes/openpi-robocasa/checkpoints/pi05_pretrain_human300/multitask_learning/75000",
+        "--port",
+        "8000"
+      ],
+      "started_at": "2026-09-03T17:43:00",
+      "listening_at": "2026-09-03T17:43:24",
+      "server_seed": null,
+      "server_model": "pi05_robocasa",
+      "log": "output/mass_variation/logs/server_8000.log",
+      "mode": "sanity",
+      "condition": "MassHeavy",
+      "model": "pi05_robocasa",
+      "pending_seeds": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ]
+    },
+    {
+      "pid": 3146648,
+      "port": 8000,
+      "cmd": [
+        "/home/chungyili/Codes/openpi-robocasa/.venv/bin/python",
+        "-u",
+        "/home/chungyili/Codes/Xiaomi-Robotics-1/eval_robocasa365/mass_variation/serve_pi05.py",
+        "--config",
+        "pi05_pretrain_human300",
+        "--dir",
+        "/home/chungyili/Codes/openpi-robocasa/checkpoints/pi05_pretrain_human300/multitask_learning/75000",
+        "--port",
+        "8000"
+      ],
+      "started_at": "2026-09-03T17:47:16",
+      "listening_at": "2026-09-03T17:47:38",
+      "server_seed": null,
+      "server_model": "pi05_robocasa",
+      "log": "output/mass_variation/logs/server_8000.log",
+      "mode": "sanity",
+      "condition": "MassHeavy",
+      "model": "pi05_robocasa",
+      "pending_seeds": [
+        18,
+        19,
+        20,
+        21
       ]
     }
   ]
