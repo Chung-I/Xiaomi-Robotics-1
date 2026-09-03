@@ -1,0 +1,54 @@
+{
+  "verdict": "PASS",
+  "bit_identical_acts_across_fresh_servers": true,
+  "meta_json_identical": true,
+  "per_key": {
+    "actions": "bit-identical",
+    "condition": "bit-identical",
+    "dit": "bit-identical",
+    "instruction": "bit-identical",
+    "mass_kg": "bit-identical",
+    "noise_seeds": "bit-identical",
+    "partial": "bit-identical",
+    "seed": "bit-identical",
+    "seq_len": "bit-identical",
+    "state_embed": "bit-identical",
+    "steps": "bit-identical",
+    "total_steps": "bit-identical",
+    "vlm": "bit-identical"
+  },
+  "episode": "MassMedium/ep_20",
+  "captured_steps": [
+    0,
+    16,
+    32
+  ],
+  "runs": [
+    {
+      "episode_id": "MassMedium/ep_20",
+      "captured_steps": [
+        0,
+        16,
+        32
+      ],
+      "acts_path": "/home/chungyili/Codes/Xiaomi-Robotics-1/output/mass_variation/activations/gate_runs/run1/MassMedium/ep_20.npz",
+      "infer_wall_s": 1.14,
+      "partial": true,
+      "server_pid": 3167234
+    },
+    {
+      "episode_id": "MassMedium/ep_20",
+      "captured_steps": [
+        0,
+        16,
+        32
+      ],
+      "acts_path": "/home/chungyili/Codes/Xiaomi-Robotics-1/output/mass_variation/activations/gate_runs/run2/MassMedium/ep_20.npz",
+      "infer_wall_s": 0.93,
+      "partial": true,
+      "server_pid": 3167314
+    }
+  ],
+  "procedure": "one episode replayed twice (bit-exact sim replay each time), each pass against a FRESH capture-server process (fresh model load, exact-PID lifecycle); all activation arrays, returned actions, and meta.json compared for bit-identity",
+  "git_sha": "2f10970c2c93040c1b03fc0cd343fdff00440b64"
+}
