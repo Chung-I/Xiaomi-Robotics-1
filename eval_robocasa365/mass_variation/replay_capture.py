@@ -304,6 +304,8 @@ def start_capture_server(
     log_path: Path,
     checkpoint_dir: str | None = None,
     timeout_s: float = 600.0,
+    random_init: bool = False,
+    random_init_seed: int = 0,
 ) -> subprocess.Popen:
     from eval_robocasa365.mass_variation.run_phase1 import _port_listening, _wait
 
@@ -315,6 +317,8 @@ def start_capture_server(
     ]
     if checkpoint_dir:
         cmd += ["--checkpoint-dir", checkpoint_dir]
+    if random_init:
+        cmd += ["--random-init", "--random-init-seed", str(random_init_seed)]
     env = dict(os.environ)
     env.setdefault("MIBOT_SERVER_SEED", "7")  # T6/Plan-1 serving convention
     env.setdefault("TOKENIZERS_PARALLELISM", "false")
@@ -788,6 +792,12 @@ def log_wandb(manifest: dict[str, Any], acts_root: Path, config: dict[str, Any])
 def run_capture(args: argparse.Namespace) -> int:
     phase1_root = Path(args.phase1_root)
     acts_root = Path(args.acts_root)
+    if args.random_init and acts_root.resolve() == DEFAULT_ACTS_ROOT.resolve():
+        raise SystemExit(
+            "--random-init would mix random-weights captures into the trained "
+            "corpus root; pass a separate --acts-root (e.g. .../activations/"
+            "xr1_random)"
+        )
     manifest_path = acts_root / "capture_manifest.json"
     seeds = episode_seeds(args.base_seed, 0, args.n_seeds)
 
@@ -823,7 +833,8 @@ def run_capture(args: argparse.Namespace) -> int:
     ensure_port_free(args.port)
     server_log = acts_root / "capture_server.log"
     proc = start_capture_server(
-        args.port, acts_root, server_log, checkpoint_dir=args.checkpoint_dir
+        args.port, acts_root, server_log, checkpoint_dir=args.checkpoint_dir,
+        random_init=args.random_init, random_init_seed=args.random_init_seed,
     )
     t0 = time.monotonic()
     n_ok = n_div = 0
@@ -923,6 +934,12 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--limit", type=int, default=None)
     parser.add_argument("--time-budget-s", type=float, default=None)
     parser.add_argument("--no-wandb", action="store_true")
+    parser.add_argument(
+        "--random-init", action="store_true",
+        help="capture from a fresh seeded-random-weights model (Task 4 "
+             "random-init bound); point --acts-root at a SEPARATE root",
+    )
+    parser.add_argument("--random-init-seed", type=int, default=0)
     parser.add_argument(
         "--gate", action="store_true",
         help="run the two-server-restart determinism gate instead of the corpus",

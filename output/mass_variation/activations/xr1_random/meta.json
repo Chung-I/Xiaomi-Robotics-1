@@ -1,0 +1,86 @@
+{
+  "task": "plan-2 task 3: XR1 activation capture at replan steps",
+  "hook_sites": {
+    "vlm": "model.vlm.model.language_model.layers[i], i=0..35 (forward output, prefix pass fires once, KV cached)",
+    "dit": "model.dit.layers[j], j=0..35 (forward output, fires 5x per inference; the n-th firing is Euler flow step n)",
+    "state_embed": "model.state_projector (forward output, fires once)"
+  },
+  "arrays": {
+    "vlm": "(S, 36, 4, 2560) float16",
+    "dit": "(S, 36, 2, 2, 1024) float16",
+    "state_embed": "(S, 4, 1024) float16",
+    "actions": "(S, 16, 12) float32 (decoded, post decode_action)",
+    "steps": "(S,) int64 recorded-episode step index of each capture (replan grid t=0,16,32,...)",
+    "noise_seeds": "(S,) int64",
+    "seq_len": "(S,) int64 VLM prefix length per capture (instruction-dependent)"
+  },
+  "vlm_positions": [
+    "last_prefix_token",
+    "image_tokens_mean:video.robot0_agentview_left",
+    "image_tokens_mean:video.robot0_agentview_right",
+    "image_tokens_mean:video.robot0_eye_in_hand"
+  ],
+  "dit_positions": [
+    "state_tokens_mean",
+    "action_tokens_mean"
+  ],
+  "dit_flow_steps": [
+    0,
+    4
+  ],
+  "dit_token_layout": "[sink(1), state(4), noisy_action(16)] -> seq len 21",
+  "state_token_note": "The capture contract's 'state_token' position: this checkpoint's VLM prefix carries NO state token (state enters the DiT sequence via model.state_projector, modeling_mibot.py:1850), so it is served by the state_embed array plus each DiT layer's state_tokens_mean position; the VLM position set is last_prefix_token + 3 per-camera image means.",
+  "video_token_id": 151656,
+  "image_token_spans_per_camera": {
+    "video.robot0_agentview_left": [
+      [
+        13,
+        77
+      ],
+      [
+        85,
+        149
+      ]
+    ],
+    "video.robot0_agentview_right": [
+      [
+        161,
+        225
+      ],
+      [
+        233,
+        297
+      ]
+    ],
+    "video.robot0_eye_in_hand": [
+      [
+        310,
+        374
+      ],
+      [
+        382,
+        446
+      ]
+    ]
+  },
+  "token_span_note": "Half-open [start, end) index runs of video tokens in the tokenized prompt, grouped per camera in prompt order (left, right, wrist). The three videos precede the instruction text, so these spans are constant across episodes and steps; asserted on every request. last_prefix_token is index seq_len-1 (varies with instruction length, see seq_len).",
+  "noise": "np.random.default_rng(noise_seed).standard_normal((1,16,60)).astype(f32), noise_seed = episode_seed*100000 + step; injected via xr1_runner.override_initial_noise (strict single-draw scoped randn_like patch)",
+  "fire_count_asserts": "per inference: each VLM layer exactly 1, each DiT layer exactly 5, state_projector exactly 1, input_ids pre-hook exactly 1",
+  "determinism": "gate: one (episode, step-set) captured twice across two fresh server processes must be bit-identical (acts + actions + this meta); see output/mass_variation/activations/determinism_gate.json",
+  "checkpoint_dir": "/home/chungyili/Codes/Xiaomi-Robotics-1/checkpoints/Xiaomi-Robotics-1-RoboCasa365",
+  "git_sha": "e74b0dc28dc2a646f9b6e5610327a47a6eef0f42",
+  "versions": {
+    "torch": "2.8.0+cu128",
+    "transformers": "4.57.1",
+    "numpy": "2.4.4"
+  },
+  "env": {
+    "MIBOT_SERVER_SEED": "7"
+  },
+  "capture_dtype": "float16 (means computed in float32 from bf16 hidden states, then cast)",
+  "random_init": {
+    "enabled": true,
+    "seed": 0,
+    "note": "Plan-2 Task 4 random-init bound: fresh seeded weights via torch.manual_seed + AutoModel.from_config (same architecture, checkpoint weights NEVER loaded; processor/tokenizer/action stats still from the checkpoint) -- see XR1Runner.random_init"
+  }
+}

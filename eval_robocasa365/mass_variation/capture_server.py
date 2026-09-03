@@ -342,13 +342,31 @@ def build_meta(capture: ActivationCapture, checkpoint_dir: str) -> dict[str, Any
 
 
 class CaptureServer:
-    def __init__(self, port: int, acts_root: Path, checkpoint_dir: str, host: str = DEFAULT_HOST):
+    def __init__(
+        self,
+        port: int,
+        acts_root: Path,
+        checkpoint_dir: str,
+        host: str = DEFAULT_HOST,
+        random_init: bool = False,
+        random_init_seed: int = 0,
+    ):
         self.host = host
         self.port = port
         self.acts_root = Path(acts_root)
         self.checkpoint_dir = str(checkpoint_dir)
-        print(f"Loading XR1Runner from {checkpoint_dir} ...", flush=True)
-        self.capture = ActivationCapture(XR1Runner(checkpoint_dir=checkpoint_dir))
+        self.random_init = bool(random_init)
+        self.random_init_seed = int(random_init_seed)
+        print(
+            f"Loading XR1Runner from {checkpoint_dir} "
+            f"(random_init={random_init}, seed={random_init_seed}) ...",
+            flush=True,
+        )
+        self.capture = ActivationCapture(XR1Runner(
+            checkpoint_dir=checkpoint_dir,
+            random_init=random_init,
+            random_init_seed=random_init_seed,
+        ))
         print("Model loaded.", flush=True)
         self.buffers: dict[str, dict[str, list]] = {}
         self.meta_written = False
@@ -426,6 +444,19 @@ class CaptureServer:
 
     def _write_meta(self) -> None:
         meta = build_meta(self.capture, self.checkpoint_dir)
+        if self.random_init:
+            # Only added when enabled, so a trained-root server keeps writing
+            # byte-identical meta (the resume re-assert depends on that).
+            meta["random_init"] = {
+                "enabled": True,
+                "seed": self.random_init_seed,
+                "note": (
+                    "Plan-2 Task 4 random-init bound: fresh seeded weights via "
+                    "torch.manual_seed + AutoModel.from_config (same architecture, "
+                    "checkpoint weights NEVER loaded; processor/tokenizer/action "
+                    "stats still from the checkpoint) -- see XR1Runner.random_init"
+                ),
+            }
         meta_path = self.acts_root / "meta.json"
         meta_path.parent.mkdir(parents=True, exist_ok=True)
         if meta_path.exists():
@@ -479,6 +510,12 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--host", default=DEFAULT_HOST)
     parser.add_argument("--acts-root", required=True)
     parser.add_argument("--checkpoint-dir", default=str(DEFAULT_CHECKPOINT))
+    parser.add_argument(
+        "--random-init", action="store_true",
+        help="fresh seeded weights instead of the checkpoint's (Task 4 "
+             "random-init bound; see XR1Runner.random_init)",
+    )
+    parser.add_argument("--random-init-seed", type=int, default=0)
     return parser.parse_args(argv)
 
 
@@ -487,6 +524,7 @@ def main(argv: list[str] | None = None) -> int:
     server = CaptureServer(
         port=args.port, acts_root=Path(args.acts_root),
         checkpoint_dir=args.checkpoint_dir, host=args.host,
+        random_init=args.random_init, random_init_seed=args.random_init_seed,
     )
     server.serve()
     return 0

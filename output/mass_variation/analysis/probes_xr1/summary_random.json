@@ -1,0 +1,205 @@
+{
+  "config": {
+    "plan": "2026-09-03-mass-com-xr1-plan-2-probing task 4",
+    "tag": "random",
+    "acts_root": "output/mass_variation/activations/xr1_random",
+    "vlm_layers": [
+      0,
+      14,
+      28,
+      35
+    ],
+    "dit_layers": [
+      0,
+      14,
+      28,
+      35
+    ],
+    "dit_flow_steps": [
+      0,
+      4
+    ],
+    "vlm_positions": [
+      "last_prefix_token",
+      "image_tokens_mean:video.robot0_agentview_left",
+      "image_tokens_mean:video.robot0_agentview_right",
+      "image_tokens_mean:video.robot0_eye_in_hand"
+    ],
+    "dit_positions": [
+      "flow0:state_tokens_mean",
+      "flow0:action_tokens_mean",
+      "flow4:state_tokens_mean",
+      "flow4:action_tokens_mean"
+    ],
+    "targets": {
+      "mass_log_c": "reg",
+      "wrench_norm": "reg",
+      "deficit_z": "reg",
+      "grasped": "clf",
+      "step_clock": "reg"
+    },
+    "mesh_control": "object-mesh identity control SKIPPED: Phase-1 npz record no mesh/ep_meta id and the corpus is one object category by design (constant control)",
+    "masks": [
+      "precontact",
+      "carry",
+      "all"
+    ],
+    "seeds": [
+      7,
+      11
+    ],
+    "rows_probed": 301,
+    "mask_counts": {
+      "precontact": 89,
+      "carry": 101,
+      "all": 301
+    },
+    "cv_groups": "seed",
+    "shuffle_groups": "episode (hybrid, certificates.py note)",
+    "alphas": [
+      0.01,
+      0.1,
+      1.0,
+      10.0,
+      100.0,
+      1000.0,
+      10000.0
+    ],
+    "n_splits": 5,
+    "n_shuffles": 5,
+    "z_scored": false,
+    "seed": 0,
+    "n_jobs": 10,
+    "gates": {
+      "step_clock_r2": 0.9,
+      "leakage_selectivity": 0.1,
+      "enforced": false
+    },
+    "git_sha": "e74b0dc28dc2a646f9b6e5610327a47a6eef0f42",
+    "versions": {
+      "python": "3.11.15",
+      "numpy": "2.2.5",
+      "pandas": "3.0.3",
+      "sklearn": "1.9.0"
+    }
+  },
+  "gates": {
+    "step_clock_ceiling": {
+      "name": "step_clock decodes (ceiling analog)",
+      "rule": "real R^2 > 0.9 at SOME (layer, position) on mask 'all'",
+      "best_r2": 0.09143631468792357,
+      "best_cell": "state_embed/L-1/state_tokens_flat",
+      "pass": false
+    },
+    "precontact_leakage": {
+      "name": "mass precontact leakage guard",
+      "rule": "mass_log_c selectivity < 0.1 at EVERY probed cell on 'precontact'",
+      "max_selectivity": 0.6399545966120367,
+      "worst_cell": "vlm/L35/image_tokens_mean:video.robot0_agentview_left",
+      "n_cells": 33,
+      "n_violations": 26,
+      "pass": false
+    }
+  },
+  "headline_mass_log_c_carry": [
+    {
+      "block": "dit",
+      "layer": 0,
+      "position": "flow4:state_tokens_mean",
+      "r2": -0.029072018721932213,
+      "selectivity": 0.16728494525198281,
+      "shuffled_std": 0.1137341053903311,
+      "rank_acc": 0.4823425544437905,
+      "n": 101
+    },
+    {
+      "block": "dit",
+      "layer": 14,
+      "position": "flow0:action_tokens_mean",
+      "r2": -0.03944249604237582,
+      "selectivity": 0.08230511289043423,
+      "shuffled_std": 0.15478366747793276,
+      "rank_acc": 0.42348440258975867,
+      "n": 101
+    },
+    {
+      "block": "dit",
+      "layer": 28,
+      "position": "flow0:action_tokens_mean",
+      "r2": -0.04065430223249744,
+      "selectivity": 0.06429650155295333,
+      "shuffled_std": 0.18594483514581842,
+      "rank_acc": 0.39228958210712184,
+      "n": 101
+    },
+    {
+      "block": "dit",
+      "layer": 35,
+      "position": "flow0:action_tokens_mean",
+      "r2": -0.0416729313920412,
+      "selectivity": 0.04580489476373917,
+      "shuffled_std": 0.21693382961307858,
+      "rank_acc": 0.3864037669217187,
+      "n": 101
+    },
+    {
+      "block": "state_embed",
+      "layer": -1,
+      "position": "state_tokens_flat",
+      "r2": -0.04478908790273883,
+      "selectivity": 0.10817411700167462,
+      "shuffled_std": 0.16789169462869447,
+      "rank_acc": 0.37021777516185994,
+      "n": 101
+    },
+    {
+      "block": "vlm",
+      "layer": 0,
+      "position": "image_tokens_mean:video.robot0_eye_in_hand",
+      "r2": -0.05958394227214425,
+      "selectivity": 0.5101272202258046,
+      "shuffled_std": 0.5024825680679781,
+      "rank_acc": 0.5506180105944674,
+      "n": 101
+    },
+    {
+      "block": "vlm",
+      "layer": 14,
+      "position": "image_tokens_mean:video.robot0_eye_in_hand",
+      "r2": -0.04238476480313724,
+      "selectivity": 0.33944496809034447,
+      "shuffled_std": 0.21039268239012995,
+      "rank_acc": 0.5014714537963508,
+      "n": 101
+    },
+    {
+      "block": "vlm",
+      "layer": 28,
+      "position": "image_tokens_mean:video.robot0_eye_in_hand",
+      "r2": -0.07979262697798473,
+      "selectivity": 0.3421642822837343,
+      "shuffled_std": 0.20056781976585236,
+      "rank_acc": 0.46380223660977044,
+      "n": 101
+    },
+    {
+      "block": "vlm",
+      "layer": 35,
+      "position": "image_tokens_mean:video.robot0_eye_in_hand",
+      "r2": -0.11564648359454766,
+      "selectivity": 0.25736477577599143,
+      "shuffled_std": 0.21529823145199936,
+      "rank_acc": 0.47321954090641555,
+      "n": 101
+    }
+  ],
+  "results_parquet": "output/mass_variation/analysis/probes_xr1/results_random.parquet",
+  "figures": [
+    "output/mass_variation/analysis/probes_xr1/figures/r2_vs_layer_vlm_mass_log_c_random.png",
+    "output/mass_variation/analysis/probes_xr1/figures/r2_vs_layer_dit_mass_log_c_random.png",
+    "output/mass_variation/analysis/probes_xr1/figures/r2_vs_layer_vlm_wrench_norm_random.png",
+    "output/mass_variation/analysis/probes_xr1/figures/r2_vs_layer_dit_wrench_norm_random.png",
+    "output/mass_variation/analysis/probes_xr1/figures/mass_log_c_carry_vlm_positions_random.png"
+  ],
+  "wall_s": 23.3
+}

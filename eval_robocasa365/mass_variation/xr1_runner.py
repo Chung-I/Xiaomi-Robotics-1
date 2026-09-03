@@ -212,7 +212,18 @@ class XR1Runner:
         device: str = "cuda",
         crop_ratio: float = 0.95,
         robot_type: str = ROBOT_TYPE,
+        random_init: bool = False,
+        random_init_seed: int = 0,
     ) -> None:
+        """``random_init=True`` (Plan-2 Task 4's random-init bound) builds
+        the SAME architecture from the checkpoint's config but with fresh
+        seeded weights -- ``torch.manual_seed(random_init_seed)`` then
+        ``AutoModel.from_config`` -- i.e. the checkpoint's WEIGHTS are never
+        loaded (runner-side only; checkpoint files untouched). The
+        processor (tokenizer, image pipeline, action normalization stats)
+        still comes from the checkpoint, so prompts/decoding are identical
+        and only the network is random. Deterministic across processes for
+        a fixed seed (CPU init under one manual_seed, then a cast+move)."""
         from transformers import AutoModel, AutoProcessor
 
         checkpoint_dir = str(checkpoint_dir)
@@ -225,20 +236,31 @@ class XR1Runner:
             raise ValueError(
                 f"Robot type {robot_type!r} missing from checkpoint; available: {robot_types}"
             )
-        self.model = (
-            AutoModel.from_pretrained(
+        if random_init:
+            from transformers import AutoConfig
+
+            config = AutoConfig.from_pretrained(checkpoint_dir, trust_remote_code=True)
+            torch.manual_seed(int(random_init_seed))
+            model = AutoModel.from_config(
+                config,
+                trust_remote_code=True,
+                attn_implementation="flash_attention_2",
+                dtype=torch.bfloat16,
+            )
+        else:
+            model = AutoModel.from_pretrained(
                 checkpoint_dir,
                 trust_remote_code=True,
                 attn_implementation="flash_attention_2",
                 dtype=torch.bfloat16,
             )
-            .to(device)
-            .to(torch.bfloat16)
-        )
+        self.model = model.to(device).to(torch.bfloat16)
         self.model.eval()
         self.device = device
         self.crop_ratio = crop_ratio
         self.robot_type = robot_type
+        self.random_init = bool(random_init)
+        self.random_init_seed = int(random_init_seed)
 
     def infer(
         self,
