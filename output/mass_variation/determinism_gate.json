@@ -1,0 +1,35 @@
+{
+  "verdict": "PASS",
+  "same_noise_bit_identical_across_fresh_processes": true,
+  "same_noise_max_abs_diff": 0.0,
+  "in_process_repeat_bit_identical": true,
+  "different_noise_differs": true,
+  "different_noise_max_abs_diff": 1.33984375,
+  "actions_shape": [
+    16,
+    12
+  ],
+  "noise_seeds": {
+    "same": 123,
+    "different": 456
+  },
+  "noise_shape": [
+    1,
+    16,
+    60
+  ],
+  "mechanism": "scoped torch.randn_like override around the single model call (override_initial_noise); intercepts the one start-noise draw at modeling_mibot.py:1866, strict shape/count checks, restored in finally; checkpoint code unedited, server path untouched",
+  "fixture": "build_gate_fixture(seed=0): 3 cams x 4 frames x 256x256x3 uint8, proprio (4,14) float32",
+  "instruction": "pick the milk from the counter and place it in the cabinet",
+  "checkpoint_dir": "/home/chungyili/Codes/Xiaomi-Robotics-1/checkpoints/Xiaomi-Robotics-1-RoboCasa365",
+  "env": {
+    "MIBOT_SERVER_SEED": "7",
+    "torch": "2.8.0+cu128",
+    "device_name": "NVIDIA GeForce RTX 5090"
+  },
+  "git_sha": "f7d41fbd398b575a0c1a70e58907a2f622df4fc1",
+  "npz_runs": [
+    "/home/chungyili/Codes/Xiaomi-Robotics-1/output/mass_variation/determinism_gate_run1.npz",
+    "/home/chungyili/Codes/Xiaomi-Robotics-1/output/mass_variation/determinism_gate_run2.npz"
+  ]
+}
