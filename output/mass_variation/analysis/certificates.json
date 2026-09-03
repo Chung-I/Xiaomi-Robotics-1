@@ -1,0 +1,609 @@
+{
+  "config": {
+    "seed": 0,
+    "gate_r2": 0.3,
+    "gate_mask": "carry",
+    "cert_masks": [
+      "carry",
+      "all"
+    ],
+    "k_raw_ft": 16,
+    "k_deficit": 8,
+    "k_policy": 4,
+    "stride_policy": 2,
+    "alphas": [
+      0.01,
+      0.1,
+      1.0,
+      10.0,
+      100.0,
+      1000.0,
+      10000.0
+    ],
+    "n_splits": 5,
+    "n_shuffles": 5,
+    "cv_groups": "seed (35 matched-pair groups)",
+    "shuffle_groups": "episode (condition/seed) -- see module docstring",
+    "degenerate_var_tol": 1e-12,
+    "gru": {
+      "hidden": 96,
+      "layers": 2,
+      "lr": 0.001,
+      "max_epochs": 300,
+      "patience": 30,
+      "budget_s": 300.0,
+      "certs": [
+        "policy_obs_xr1",
+        "policy_obs_pi05"
+      ],
+      "skipped": false,
+      "runner": "gru_worker.py subprocess via /home/chungyili/Codes/Xiaomi-Robotics-1/.venv-mibot/bin/python"
+    },
+    "no_circularity_rule": "certs 2-3 use ONLY policy-state channels; cert 1 uses only ee_force/ee_torque",
+    "models": [
+      "xr1",
+      "pi05_robocasa"
+    ],
+    "phase1_root": "output/mass_variation/phase1",
+    "policy_state_root": "output/mass_variation/policy_state",
+    "versions": {
+      "python": "3.11.15",
+      "numpy": "2.2.5",
+      "sklearn": "1.9.0",
+      "torch": "2.7.1+cu126",
+      "gru_torch": "2.8.0+cu128"
+    }
+  },
+  "gates": {
+    "xr1/raw_ft": {
+      "gate_r2": 0.3,
+      "gate_mask": "carry",
+      "ridge_r2": 0.17809180973021366,
+      "ridge_pass": false,
+      "pass": false
+    },
+    "xr1/policy_obs_xr1": {
+      "gate_r2": 0.3,
+      "gate_mask": "carry",
+      "ridge_r2": 0.14163756962247598,
+      "ridge_pass": false,
+      "gru_r2": 0.07586889677616349,
+      "gru_pass": false,
+      "pass": false
+    },
+    "xr1/deficit": {
+      "gate_r2": 0.3,
+      "gate_mask": "carry",
+      "ridge_r2": 0.06197886977851863,
+      "ridge_pass": false,
+      "pass": false
+    },
+    "pi05_robocasa/raw_ft": {
+      "gate_r2": 0.3,
+      "gate_mask": "carry",
+      "ridge_r2": 0.16492990364614946,
+      "ridge_pass": false,
+      "pass": false
+    },
+    "pi05_robocasa/policy_obs_pi05": {
+      "gate_r2": 0.3,
+      "gate_mask": "carry",
+      "ridge_r2": -0.16353604935620814,
+      "ridge_pass": false,
+      "gru_r2": -0.5170468510969706,
+      "gru_pass": false,
+      "pass": false
+    },
+    "pi05_robocasa/deficit": {
+      "gate_r2": 0.3,
+      "gate_mask": "carry",
+      "ridge_r2": -0.034494880860573396,
+      "ridge_pass": false,
+      "pass": false
+    }
+  },
+  "k_eff": {
+    "xr1": {
+      "slope": -7.303478813657133,
+      "intercept": 1.2133862979593781,
+      "r2": 0.07450987229183448,
+      "n": 12955,
+      "per_condition": {
+        "MassHeavy": {
+          "fz_mean": 0.0584454252373986,
+          "deficit_z_mean": 0.20969607291349907,
+          "slope": -10.505424632351552,
+          "n": 4386
+        },
+        "MassLight": {
+          "fz_mean": -0.04102714253494793,
+          "deficit_z_mean": 0.17015218171274363,
+          "slope": -4.459537939606132,
+          "n": 4464
+        },
+        "MassMedium": {
+          "fz_mean": -0.3985670195766821,
+          "deficit_z_mean": 0.16736417539807968,
+          "slope": -6.721622625647462,
+          "n": 4105
+        }
+      }
+    },
+    "pi05_robocasa": {
+      "slope": -9.272318000322876,
+      "intercept": -1.452858759128777,
+      "r2": 0.08476861104630606,
+      "n": 10864,
+      "per_condition": {
+        "MassHeavy": {
+          "fz_mean": -3.1236439413230155,
+          "deficit_z_mean": 0.10461672637897589,
+          "slope": -12.066010282864072,
+          "n": 3554
+        },
+        "MassLight": {
+          "fz_mean": -2.1120673403426258,
+          "deficit_z_mean": 0.055600727052434476,
+          "slope": -3.8817020128125197,
+          "n": 3656
+        },
+        "MassMedium": {
+          "fz_mean": -1.3569721632586618,
+          "deficit_z_mean": 0.07866653498698223,
+          "slope": -10.16403563915968,
+          "n": 3654
+        }
+      }
+    }
+  },
+  "cells": [
+    {
+      "degenerate": false,
+      "r2_pooled": 0.17809180973021366,
+      "r2_folds": [
+        -0.0023689342570252236,
+        0.2547350097455269,
+        0.27589581692213994,
+        0.13428550923243554,
+        0.23022835259423025
+      ],
+      "rank_acc": 0.7507067906166581,
+      "shuffled": -0.06013922829660814,
+      "shuffled_std": 0.018025348981551247,
+      "selectivity": 0.2382310380268218,
+      "floor": -0.002697505432960323,
+      "n": 12955,
+      "n_groups": 35,
+      "model": "xr1",
+      "certificate": "raw_ft",
+      "kind": "ridge",
+      "mask": "carry",
+      "input_channels": [
+        "ee_force[3]+ee_torque[3], trailing window k=16 stride 1"
+      ],
+      "wall_s": 0.2
+    },
+    {
+      "degenerate": false,
+      "r2_pooled": 0.05933441770713921,
+      "r2_folds": [
+        0.008056841144231885,
+        0.061747210458323654,
+        0.08752061559180924,
+        0.05577538086900036,
+        0.08073217854611747
+      ],
+      "rank_acc": 0.5911367698293434,
+      "shuffled": -0.04365187554640548,
+      "shuffled_std": 0.0044877671022906206,
+      "selectivity": 0.10298629325354469,
+      "floor": -0.0005663536409044045,
+      "n": 37886,
+      "n_groups": 35,
+      "model": "xr1",
+      "certificate": "raw_ft",
+      "kind": "ridge",
+      "mask": "all",
+      "input_channels": [
+        "ee_force[3]+ee_torque[3], trailing window k=16 stride 1"
+      ],
+      "wall_s": 0.6
+    },
+    {
+      "degenerate": false,
+      "r2_pooled": 0.14163756962247598,
+      "r2_folds": [
+        0.276747018810131,
+        -0.024148220724307112,
+        -0.03386330325370035,
+        0.1753566661676389,
+        0.24743162301217425
+      ],
+      "rank_acc": 0.7080717311048006,
+      "shuffled": -0.1082276697144315,
+      "shuffled_std": 0.0680974442158218,
+      "selectivity": 0.24986523933690746,
+      "floor": -0.002697505432960323,
+      "n": 12955,
+      "n_groups": 35,
+      "model": "xr1",
+      "certificate": "policy_obs_xr1",
+      "kind": "ridge",
+      "mask": "carry",
+      "input_channels": [
+        "policy_state_14 (XR1 obs format: EEF pos rel base, EEF rot axis-angle, gripper qpos, base pos, base rot), window_stack k=4 stride 2 (ridge) / raw per-step sequence (gru)"
+      ],
+      "wall_s": 0.1
+    },
+    {
+      "degenerate": false,
+      "r2_pooled": -0.038210355202197066,
+      "r2_folds": [
+        -0.17851948301854859,
+        -0.010496120082657212,
+        -0.002686757376750837,
+        0.019655041163648246,
+        -0.02737301371601286
+      ],
+      "rank_acc": 0.533412422024448,
+      "shuffled": -0.043702946416734736,
+      "shuffled_std": 0.05989492200525806,
+      "selectivity": 0.00549259121453767,
+      "floor": -0.0005663536409044045,
+      "n": 37886,
+      "n_groups": 35,
+      "model": "xr1",
+      "certificate": "policy_obs_xr1",
+      "kind": "ridge",
+      "mask": "all",
+      "input_channels": [
+        "policy_state_14 (XR1 obs format: EEF pos rel base, EEF rot axis-angle, gripper qpos, base pos, base rot), window_stack k=4 stride 2 (ridge) / raw per-step sequence (gru)"
+      ],
+      "wall_s": 0.4
+    },
+    {
+      "degenerate": false,
+      "r2_pooled": 0.07586889677616349,
+      "r2_folds": [
+        0.34847588419641995,
+        -0.06645693041459988,
+        0.06944870484095456,
+        -0.007998842341189638,
+        -0.00713062958054822
+      ],
+      "rank_acc": 0.658181172709896,
+      "shuffled": null,
+      "shuffled_std": null,
+      "selectivity": null,
+      "floor": null,
+      "n": 12955,
+      "n_groups": 35,
+      "epochs_per_fold": [
+        67,
+        42,
+        53,
+        31,
+        32
+      ],
+      "budget_hit": false,
+      "wall_s": 1.9,
+      "model": "xr1",
+      "certificate": "policy_obs_xr1",
+      "kind": "gru",
+      "mask": "carry",
+      "input_channels": [
+        "policy_state_14 (XR1 obs format: EEF pos rel base, EEF rot axis-angle, gripper qpos, base pos, base rot), window_stack k=4 stride 2 (ridge) / raw per-step sequence (gru)"
+      ]
+    },
+    {
+      "degenerate": false,
+      "r2_pooled": -0.00836992472178455,
+      "r2_folds": [
+        -0.040712086080577636,
+        0.0020954307300991015,
+        0.004969224967665387,
+        0.007996955997394584,
+        -0.022959777042295793
+      ],
+      "rank_acc": 0.5356350305264674,
+      "shuffled": null,
+      "shuffled_std": null,
+      "selectivity": null,
+      "floor": null,
+      "n": 37886,
+      "n_groups": 35,
+      "epochs_per_fold": [
+        33,
+        66,
+        31,
+        31,
+        32
+      ],
+      "budget_hit": false,
+      "wall_s": 1.6,
+      "model": "xr1",
+      "certificate": "policy_obs_xr1",
+      "kind": "gru",
+      "mask": "all",
+      "input_channels": [
+        "policy_state_14 (XR1 obs format: EEF pos rel base, EEF rot axis-angle, gripper qpos, base pos, base rot), window_stack k=4 stride 2 (ridge) / raw per-step sequence (gru)"
+      ]
+    },
+    {
+      "degenerate": false,
+      "r2_pooled": 0.06197886977851863,
+      "r2_folds": [
+        -0.008270890748492299,
+        0.030854373765985987,
+        0.10252478374426466,
+        0.11762805204318305,
+        0.04911551034319206
+      ],
+      "rank_acc": 0.6442767926954173,
+      "shuffled": -0.048135084484710246,
+      "shuffled_std": 0.020158652985824404,
+      "selectivity": 0.11011395426322887,
+      "floor": -0.002697505432960323,
+      "n": 12955,
+      "n_groups": 35,
+      "model": "xr1",
+      "certificate": "deficit",
+      "kind": "ridge",
+      "mask": "carry",
+      "input_channels": [
+        "commanded_delta[6]+achieved_eef_delta[6], trailing window k=8 stride 1"
+      ],
+      "wall_s": 0.2
+    },
+    {
+      "degenerate": false,
+      "r2_pooled": 0.009841991629070401,
+      "r2_folds": [
+        -0.02800850820437084,
+        -0.007923338688119674,
+        0.03777864599960423,
+        0.021024156256158166,
+        0.023873075089846818
+      ],
+      "rank_acc": 0.5650531868607077,
+      "shuffled": -0.047851537240706635,
+      "shuffled_std": 0.007167614028834011,
+      "selectivity": 0.057693528869777036,
+      "floor": -0.0005663536409044045,
+      "n": 37886,
+      "n_groups": 35,
+      "model": "xr1",
+      "certificate": "deficit",
+      "kind": "ridge",
+      "mask": "all",
+      "input_channels": [
+        "commanded_delta[6]+achieved_eef_delta[6], trailing window k=8 stride 1"
+      ],
+      "wall_s": 0.7
+    },
+    {
+      "degenerate": false,
+      "r2_pooled": 0.16492990364614946,
+      "r2_folds": [
+        0.27774670511221,
+        -0.06031969588780006,
+        0.12877805779591733,
+        0.08479162566618181,
+        0.07374146375185942
+      ],
+      "rank_acc": 0.7240903400015313,
+      "shuffled": -0.10710393172927009,
+      "shuffled_std": 0.07893866276141626,
+      "selectivity": 0.27203383537541953,
+      "floor": -0.03647550376317876,
+      "n": 10864,
+      "n_groups": 29,
+      "model": "pi05_robocasa",
+      "certificate": "raw_ft",
+      "kind": "ridge",
+      "mask": "carry",
+      "input_channels": [
+        "ee_force[3]+ee_torque[3], trailing window k=16 stride 1"
+      ],
+      "wall_s": 0.2
+    },
+    {
+      "degenerate": false,
+      "r2_pooled": 0.009740593326340141,
+      "r2_folds": [
+        0.02657752441225225,
+        0.018057527119782035,
+        -0.015515290258525383,
+        -0.03852113041077154,
+        0.04254020467019626
+      ],
+      "rank_acc": 0.5341657729810566,
+      "shuffled": -0.03969678826496907,
+      "shuffled_std": 0.017823456950468962,
+      "selectivity": 0.04943738159130921,
+      "floor": -0.0017940910727447523,
+      "n": 68146,
+      "n_groups": 35,
+      "model": "pi05_robocasa",
+      "certificate": "raw_ft",
+      "kind": "ridge",
+      "mask": "all",
+      "input_channels": [
+        "ee_force[3]+ee_torque[3], trailing window k=16 stride 1"
+      ],
+      "wall_s": 1.1
+    },
+    {
+      "degenerate": false,
+      "r2_pooled": -0.16353604935620814,
+      "r2_folds": [
+        0.02082982729908378,
+        -0.3780856177397929,
+        -0.15530263988974546,
+        -0.26693207776907646,
+        -0.46032364162335315
+      ],
+      "rank_acc": 0.41267897994964964,
+      "shuffled": -0.12989769561756614,
+      "shuffled_std": 0.08266926629682012,
+      "selectivity": -0.03363835373864199,
+      "floor": -0.03647550376317876,
+      "n": 10864,
+      "n_groups": 29,
+      "model": "pi05_robocasa",
+      "certificate": "policy_obs_pi05",
+      "kind": "ridge",
+      "mask": "carry",
+      "input_channels": [
+        "policy_state_16 (pi0.5 obs format), single frame (ridge) / raw per-step sequence (gru)"
+      ],
+      "wall_s": 0.1
+    },
+    {
+      "degenerate": false,
+      "r2_pooled": -0.04326955367182639,
+      "r2_folds": [
+        -0.0883863212162792,
+        -0.04407499357523226,
+        0.013180051033876095,
+        -0.07936868146044351,
+        -0.03560388923065827
+      ],
+      "rank_acc": 0.4881378114256676,
+      "shuffled": -0.0726335046983237,
+      "shuffled_std": 0.05328199896518023,
+      "selectivity": 0.029363951026497317,
+      "floor": -0.0017940910727447523,
+      "n": 68146,
+      "n_groups": 35,
+      "model": "pi05_robocasa",
+      "certificate": "policy_obs_pi05",
+      "kind": "ridge",
+      "mask": "all",
+      "input_channels": [
+        "policy_state_16 (pi0.5 obs format), single frame (ridge) / raw per-step sequence (gru)"
+      ],
+      "wall_s": 0.5
+    },
+    {
+      "degenerate": false,
+      "r2_pooled": -0.5170468510969706,
+      "r2_folds": [
+        -1.5463191830044516,
+        -0.3240635370784162,
+        -0.20980595349234954,
+        -0.7065126533931823,
+        -0.28247100410896775
+      ],
+      "rank_acc": 0.47253998625884636,
+      "shuffled": null,
+      "shuffled_std": null,
+      "selectivity": null,
+      "floor": null,
+      "n": 10864,
+      "n_groups": 29,
+      "epochs_per_fold": [
+        75,
+        88,
+        33,
+        42,
+        31
+      ],
+      "budget_hit": false,
+      "wall_s": 1.8,
+      "model": "pi05_robocasa",
+      "certificate": "policy_obs_pi05",
+      "kind": "gru",
+      "mask": "carry",
+      "input_channels": [
+        "policy_state_16 (pi0.5 obs format), single frame (ridge) / raw per-step sequence (gru)"
+      ]
+    },
+    {
+      "degenerate": false,
+      "r2_pooled": -0.030064152933464428,
+      "r2_folds": [
+        -0.12933530429536555,
+        -0.05004463051212937,
+        0.05920232476163456,
+        -0.03487249302243067,
+        -0.0125473710331383
+      ],
+      "rank_acc": 0.5305261870966179,
+      "shuffled": null,
+      "shuffled_std": null,
+      "selectivity": null,
+      "floor": null,
+      "n": 68146,
+      "n_groups": 35,
+      "epochs_per_fold": [
+        37,
+        35,
+        58,
+        59,
+        57
+      ],
+      "budget_hit": false,
+      "wall_s": 1.9,
+      "model": "pi05_robocasa",
+      "certificate": "policy_obs_pi05",
+      "kind": "gru",
+      "mask": "all",
+      "input_channels": [
+        "policy_state_16 (pi0.5 obs format), single frame (ridge) / raw per-step sequence (gru)"
+      ]
+    },
+    {
+      "degenerate": false,
+      "r2_pooled": -0.034494880860573396,
+      "r2_folds": [
+        -0.03870139658411742,
+        -0.30794687417611777,
+        -0.04208056159401474,
+        -0.13071085256691095,
+        -0.06038900674270131
+      ],
+      "rank_acc": 0.44563075240493066,
+      "shuffled": -0.05784351770523055,
+      "shuffled_std": 0.04675750802371967,
+      "selectivity": 0.023348636844657156,
+      "floor": -0.03647550376317876,
+      "n": 10864,
+      "n_groups": 29,
+      "model": "pi05_robocasa",
+      "certificate": "deficit",
+      "kind": "ridge",
+      "mask": "carry",
+      "input_channels": [
+        "commanded_delta[6]+achieved_eef_delta[6], trailing window k=8 stride 1"
+      ],
+      "wall_s": 0.2
+    },
+    {
+      "degenerate": false,
+      "r2_pooled": -0.004415123063330473,
+      "r2_folds": [
+        -0.007223178320887591,
+        -0.01128631633841981,
+        -0.010038590527987168,
+        -0.008453825846746588,
+        -0.0009894281537776717
+      ],
+      "rank_acc": 0.4971613708324128,
+      "shuffled": -0.031831046033973506,
+      "shuffled_std": 0.016658117863396934,
+      "selectivity": 0.027415922970643034,
+      "floor": -0.0017940910727447523,
+      "n": 68146,
+      "n_groups": 35,
+      "model": "pi05_robocasa",
+      "certificate": "deficit",
+      "kind": "ridge",
+      "mask": "all",
+      "input_channels": [
+        "commanded_delta[6]+achieved_eef_delta[6], trailing window k=8 stride 1"
+      ],
+      "wall_s": 1.3
+    }
+  ]
+}
