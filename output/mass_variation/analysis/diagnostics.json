@@ -1,0 +1,197 @@
+{
+  "g_m_s2": 9.81,
+  "xr1": {
+    "per_condition_carry": {
+      "MassLight": {
+        "mask": "carry",
+        "n": 4464,
+        "mass_kg_mean": 0.14999999999999997,
+        "abs_force_mean_N": 7.62109375,
+        "abs_torque_mean_Nm": 0.7678696513175964,
+        "ee_frame_fz_mean_N": -0.04102713614702225,
+        "base_frame_force_mean_N": [
+          0.7243843078613281,
+          -3.6278302669525146,
+          0.3241521716117859
+        ],
+        "world_frame_force_mean_N": [
+          2.1172163486480713,
+          -0.5596670508384705,
+          0.3241521716117859
+        ],
+        "cfrc_obj_fz_mean_N": 1.4304065704345703,
+        "expected_mg_N": 1.4714999999999998
+      },
+      "MassMedium": {
+        "mask": "carry",
+        "n": 4105,
+        "mass_kg_mean": 0.5999999999999999,
+        "abs_force_mean_N": 10.668092727661133,
+        "abs_torque_mean_Nm": 1.0531398057937622,
+        "ee_frame_fz_mean_N": -0.3985670208930969,
+        "base_frame_force_mean_N": [
+          0.9172550439834595,
+          -5.280818462371826,
+          0.7699801325798035
+        ],
+        "world_frame_force_mean_N": [
+          3.24526047706604,
+          -1.2306313514709473,
+          0.7699801325798035
+        ],
+        "cfrc_obj_fz_mean_N": 5.747380256652832,
+        "expected_mg_N": 5.885999999999999
+      },
+      "MassHeavy": {
+        "mask": "carry",
+        "n": 4386,
+        "mass_kg_mean": 1.1999999999999997,
+        "abs_force_mean_N": 16.575973510742188,
+        "abs_torque_mean_Nm": 1.699824333190918,
+        "ee_frame_fz_mean_N": 0.05844537913799286,
+        "base_frame_force_mean_N": [
+          2.4700429439544678,
+          -9.063570022583008,
+          0.7101043462753296
+        ],
+        "world_frame_force_mean_N": [
+          6.950618743896484,
+          -0.6747020483016968,
+          0.7101043462753296
+        ],
+        "cfrc_obj_fz_mean_N": 11.758756637573242,
+        "expected_mg_N": 11.771999999999998
+      }
+    },
+    "axis_correlation": {
+      "mask": "all",
+      "abs_corr_achieved_axis_by_commanded_axis": [
+        [
+          0.7756857647145061,
+          0.048507928930520715,
+          0.32264065603160696
+        ],
+        [
+          0.018072856579317245,
+          0.4898466891321043,
+          0.03325445539227455
+        ],
+        [
+          0.3381013669306998,
+          0.013610718910282331,
+          0.9246909674186069
+        ]
+      ],
+      "base_yaw_std_rad": 1.4826219081878662,
+      "note": "diagonal dominance despite the cross-episode base-yaw spread => achieved_eef_delta (from recorder eef_pos diffs) shares the commanded action's BASE frame; world-frame deltas would mix x/y across episode yaws"
+    },
+    "units": {
+      "commanded_delta_z_std_all": 0.4683674140057615,
+      "commanded_delta_z_std_carry": 0.5124514101446124,
+      "achieved_eef_delta_z_std_m_all": 0.005178444526312925,
+      "achieved_eef_delta_z_std_m_carry": 0.005209400882853716,
+      "tracking_gain_m_per_action_unit": 0.010223727645367286,
+      "tracking_gain_intercept_m": -0.00011469379881489168,
+      "tracking_gain_r2": 0.8550533852255582,
+      "mask": "all (gain fit); stds reported for all and carry",
+      "note": "commanded_delta is the raw normalized OSC action (dimensionless, ~+-1); achieved_eef_delta is metric -- deficit_z therefore is dominated by the commanded term"
+    }
+  },
+  "pi05_robocasa": {
+    "per_condition_carry": {
+      "MassLight": {
+        "mask": "carry",
+        "n": 3656,
+        "mass_kg_mean": 0.14999999999999997,
+        "abs_force_mean_N": 7.001694679260254,
+        "abs_torque_mean_Nm": 0.7516657710075378,
+        "ee_frame_fz_mean_N": -2.112067461013794,
+        "base_frame_force_mean_N": [
+          -0.39941155910491943,
+          -4.3038811683654785,
+          1.575652837753296
+        ],
+        "world_frame_force_mean_N": [
+          2.14705491065979,
+          -0.9974974989891052,
+          1.575652837753296
+        ],
+        "cfrc_obj_fz_mean_N": 1.44425368309021,
+        "expected_mg_N": 1.4714999999999998
+      },
+      "MassMedium": {
+        "mask": "carry",
+        "n": 3654,
+        "mass_kg_mean": 0.5999999999999998,
+        "abs_force_mean_N": 11.255470275878906,
+        "abs_torque_mean_Nm": 1.1238585710525513,
+        "ee_frame_fz_mean_N": -1.356972098350525,
+        "base_frame_force_mean_N": [
+          0.8013420701026917,
+          -6.328708648681641,
+          1.4939709901809692
+        ],
+        "world_frame_force_mean_N": [
+          4.393939971923828,
+          -1.4549050331115723,
+          1.4939709901809692
+        ],
+        "cfrc_obj_fz_mean_N": 5.807076454162598,
+        "expected_mg_N": 5.885999999999998
+      },
+      "MassHeavy": {
+        "mask": "carry",
+        "n": 3554,
+        "mass_kg_mean": 1.1999999999999997,
+        "abs_force_mean_N": 15.925026893615723,
+        "abs_torque_mean_Nm": 1.60154390335083,
+        "ee_frame_fz_mean_N": -3.123643636703491,
+        "base_frame_force_mean_N": [
+          0.4214012026786804,
+          -9.836689949035645,
+          2.3820714950561523
+        ],
+        "world_frame_force_mean_N": [
+          3.5140509605407715,
+          -1.7610719203948975,
+          2.3820714950561523
+        ],
+        "cfrc_obj_fz_mean_N": 11.547910690307617,
+        "expected_mg_N": 11.771999999999998
+      }
+    },
+    "axis_correlation": {
+      "mask": "all",
+      "abs_corr_achieved_axis_by_commanded_axis": [
+        [
+          0.7662724082064439,
+          0.004826321697202872,
+          0.21247606352866155
+        ],
+        [
+          0.0044114384232185515,
+          0.5015264004955703,
+          0.047616415367245035
+        ],
+        [
+          0.27084492954824574,
+          0.044633759265529496,
+          0.8071790100820353
+        ]
+      ],
+      "base_yaw_std_rad": 1.2955251932144165,
+      "note": "diagonal dominance despite the cross-episode base-yaw spread => achieved_eef_delta (from recorder eef_pos diffs) shares the commanded action's BASE frame; world-frame deltas would mix x/y across episode yaws"
+    },
+    "units": {
+      "commanded_delta_z_std_all": 0.2677691814995735,
+      "commanded_delta_z_std_carry": 0.3553691612053698,
+      "achieved_eef_delta_z_std_m_all": 0.002827301094235463,
+      "achieved_eef_delta_z_std_m_carry": 0.0035880800442400777,
+      "tracking_gain_m_per_action_unit": 0.008522781022327888,
+      "tracking_gain_intercept_m": 0.00014059749593558858,
+      "tracking_gain_r2": 0.6515379543170148,
+      "mask": "all (gain fit); stds reported for all and carry",
+      "note": "commanded_delta is the raw normalized OSC action (dimensionless, ~+-1); achieved_eef_delta is metric -- deficit_z therefore is dominated by the commanded term"
+    }
+  }
+}

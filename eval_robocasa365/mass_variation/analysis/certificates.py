@@ -10,25 +10,38 @@ The five certificates (plan Task 2, exact):
 
 1. ``raw_ft``       -- wrist ``ee_force``+``ee_torque`` k=16 trailing windows
                        -> ``mass_log_c``. The physics channel. Both corpora.
+                       AMENDED (plan amendment B Section 1): the window input
+                       additionally carries physics-derived per-step features
+                       |F|, |tau|, world-frame force and base-frame force --
+                       see :func:`derived_force_features` for the exact,
+                       documented transform. Gate unchanged.
 2. ``policy_obs_xr1``  -- ``window_stack(policy_state_14, k=4, stride=2)``
                        flattened (exactly the XR1 policy's 4-frame proprio
                        format, achieved-only) -> ``mass_log_c``. THE headline
-                       certificate. XR1 corpus only.
+                       certificate. XR1 corpus only. Input SACRED (amendment
+                       B Section 2: readers changed, inputs not).
 3. ``policy_obs_pi05`` -- ``policy_state_16`` single frame -> ``mass_log_c``.
-                       The sensing-gap test. pi0.5 corpus only.
+                       The sensing-gap test. pi0.5 corpus only. Input SACRED.
 4. ``deficit``      -- ``commanded_delta``+``achieved_eef_delta`` k=8 trailing
                        windows -> ``mass_log_c``. Analysis-side channel
                        content. Both corpora.
-5. ``k_eff``        -- in-carry per-step OLS ``F_z ~ deficit_z`` per model:
-                       slope (K_eff), R^2, per-condition means. Physical
-                       validation, NOT gated. Also the empirical arbiter of
-                       the T1-review frame question (recorder ``eef_pos``
-                       base- vs world-frame): a strongly linear positive-R^2
-                       fit supports same-frame deficit pairing.
+5. ``k_eff``        -- AMENDED (amendment B Section 3): two in-carry per-step
+                       OLS regressions with documented units: (a) ``|F| ~
+                       mass_kg`` (channel validation; slope in N/kg, expect
+                       ~g plus load-dynamics inflation) and (b) world-frame
+                       ``F_z ~ deficit_z`` (impedance story). UNITS:
+                       ``deficit_z = commanded_delta_z - achieved_eef_delta_z``
+                       mixes NORMALIZED OSC ACTION UNITS (commanded, std
+                       ~0.36-0.51, range +-1) with meters (achieved, std
+                       ~0.004-0.005) -- the deficit is therefore dominated by
+                       the commanded term and is reported in action units,
+                       never silently converted. Not gated.
 
-No-circularity rule (pre-registered): certificates 2-3 use ONLY
+No-circularity rule (pre-registered, as amended): certificates 2-3 use ONLY
 policy-observable state channels (no forces anywhere in their features);
-certificate 1 uses ONLY force/torque (no policy states).
+certificate 1 uses force/torque channels plus, per amendment B, the recorded
+ORIENTATION chain (``policy_state_14`` dims 3:6 and 11:14) solely to
+re-express the same forces -- no position/gripper channels enter it.
 
 Method (ported discipline, via the copied ``probe_core``): ridge with the
 probe core's per-fold SVD closed form and alpha grid; CV = GroupKFold(5)
@@ -51,13 +64,26 @@ constant labels (probe_core's table branch) while the CV folds stay
 seed-grouped.
 
 Gate (pre-registered, before any result was seen): mass R^2 >= 0.3 on the
-``carry`` mask per certificate. For the two policy_obs certificates a small
-GRU (torch, GPU, seeded) is trained ADDITIONALLY: the ridge consumes the
-policy's exact observation format; the GRU consumes the raw per-step state
-sequence as a recurrent upper bound on the same channel (it tells apart "the
-channel does not carry mass" from "the policy's frame format cannot expose
-it"). A certificate PASSes if ridge or (where run) GRU clears the gate; both
-verdicts are reported separately.
+``carry`` mask per certificate. For the two policy_obs certificates two
+neural readers (torch, GPU, seeded) are trained ADDITIONALLY (amendment B
+Section 2 -- inputs sacred, readers extended and fairly budgeted):
+
+- a 2x128 ReLU MLP on the certificate's exact (sacred) input format --
+  ridge stays reported as the linear floor;
+- a 2-layer GRU width 96 over the raw per-step state sequence, a recurrent
+  upper bound on the same channel (it tells apart "the channel does not
+  carry mass" from "the policy's frame format cannot expose it").
+
+Both are trained MINIBATCHED (the pre-amendment GRU took one full-batch
+Adam step per epoch and stopped after 31-88 steps -- reviewer-verified
+undertrained), 300-epoch cap, patience 20 on held-out-train R^2. A
+certificate PASSes if ANY of its readers clears the gate; every reader's
+verdict is reported separately. Neural-reader numbers carry a reliability
+note: 29-35 seed groups is a data-starved regime for a trained reader, so
+treat them as noisy readers, not tight bounds.
+
+The pre-amendment-B table is preserved verbatim under the output JSON's
+``pre_amendment_B`` key (amendment B Section 4).
 
 Run (robocasa venv, GPU free):
     ~/Codes/robocasa/.venv/bin/python -m \\
@@ -97,32 +123,61 @@ CERT_MODELS = {
     "policy_obs_pi05": ("pi05_robocasa",),
     "deficit": MODELS,
 }
-GRU_CERTS = ("policy_obs_xr1", "policy_obs_pi05")
+NEURAL_CERTS = ("policy_obs_xr1", "policy_obs_pi05")
+NEURAL_KINDS = ("mlp", "gru")  # amendment B Section 2 reader set (ridge = linear floor)
+NEURAL_RELIABILITY_NOTE = (
+    "trained reader in a data-starved regime (29-35 seed groups, 3 mass "
+    "levels): treat as a noisy reader, not a tight bound on channel content"
+)
 
 INPUT_CHANNELS = {
-    "raw_ft": [f"ee_force[3]+ee_torque[3], trailing window k={K_RAW_FT} stride 1"],
+    "raw_ft": [
+        f"ee_force[3]+ee_torque[3]+|F|+|tau|+F_world[3]+F_base[3] "
+        f"(amendment B Section 1 derived features; orientation chain from "
+        f"policy_state_14 dims 3:6 & 11:14, rotation use only -- see "
+        f"derived_force_features), trailing window k={K_RAW_FT} stride 1"
+    ],
     "policy_obs_xr1": [
         f"policy_state_14 (XR1 obs format: EEF pos rel base, EEF rot axis-angle, "
         f"gripper qpos, base pos, base rot), window_stack k={K_POLICY} "
-        f"stride {STRIDE_POLICY} (ridge) / raw per-step sequence (gru)"
+        f"stride {STRIDE_POLICY} (ridge+mlp, sacred format) / raw per-step "
+        f"sequence (gru)"
     ],
     "policy_obs_pi05": [
-        "policy_state_16 (pi0.5 obs format), single frame (ridge) / "
-        "raw per-step sequence (gru)"
+        "policy_state_16 (pi0.5 obs format), single frame (ridge+mlp, sacred "
+        "format) / raw per-step sequence (gru)"
     ],
     "deficit": [
         f"commanded_delta[6]+achieved_eef_delta[6], trailing window k={K_DEFICIT} stride 1"
     ],
-    "k_eff": ["ee_force[z] ~ deficit_z, per-step OLS on carry"],
+    "k_eff": [
+        "amendment B Section 3: |F| ~ mass_kg and world-frame F_z ~ deficit_z, "
+        "per-step OLS on carry; deficit_z in normalized action units (see "
+        "K_EFF_UNITS_NOTE)"
+    ],
 }
 
-# GRU hyperparameters (frozen before results were seen; origin-study discipline)
+K_EFF_UNITS_NOTE = (
+    "deficit_z = commanded_delta_z - achieved_eef_delta_z mixes units: "
+    "commanded_delta is the raw normalized OSC action (dimensionless, "
+    "range ~+-1, carry std ~0.51 xr1 / ~0.36 pi05) while achieved_eef_delta "
+    "is metric (carry std ~0.005 m xr1 / ~0.004 m pi05; effective tracking "
+    "gain ~0.01 m per action unit), so deficit_z is dominated by the "
+    "commanded term and its slopes are reported per NORMALIZED ACTION UNIT, "
+    "never silently converted to meters"
+)
+
+# Neural-reader hyperparameters (amendment B Section 2 fair budget; the
+# worker mirrors these -- it cannot import this sklearn-side module)
 GRU_HIDDEN = 96
 GRU_LAYERS = 2
-GRU_LR = 1e-3
-GRU_MAX_EPOCHS = 300
-GRU_PATIENCE = 30
-GRU_BUDGET_S = 300.0  # per (certificate, mask), all folds together
+MLP_HIDDEN = 128
+NEURAL_LR = 1e-3
+NEURAL_MAX_EPOCHS = 300
+NEURAL_PATIENCE = 20
+NEURAL_EP_BATCH = 16   # gru: episodes per gradient step
+NEURAL_ROW_BATCH = 256  # mlp: masked rows per gradient step
+NEURAL_BUDGET_S = 300.0  # per (certificate, mask, reader), all folds together
 
 DEFAULT_PHASE1_ROOT = "output/mass_variation/phase1"
 DEFAULT_POLICY_STATE_ROOT = "output/mass_variation/policy_state"
@@ -130,6 +185,71 @@ DEFAULT_OUT = "output/mass_variation/analysis/certificates.json"
 
 
 # ---------------------------------------------------------- pure (unit-tested)
+
+
+def axis_angle_to_matrix(aa) -> np.ndarray:
+    """Batch Rodrigues: axis-angle vectors ``(..., 3)`` -> rotation matrices
+    ``(..., 3, 3)``; the zero vector maps to the identity."""
+    aa = np.asarray(aa, dtype=np.float64)
+    theta = np.linalg.norm(aa, axis=-1, keepdims=True)  # (..., 1)
+    small = theta[..., 0] < 1e-12
+    with np.errstate(invalid="ignore", divide="ignore"):
+        k = np.where(theta > 1e-12, aa / theta, 0.0)
+    K = np.zeros(aa.shape[:-1] + (3, 3))
+    K[..., 0, 1], K[..., 0, 2] = -k[..., 2], k[..., 1]
+    K[..., 1, 0], K[..., 1, 2] = k[..., 2], -k[..., 0]
+    K[..., 2, 0], K[..., 2, 1] = -k[..., 1], k[..., 0]
+    th = theta[..., None]
+    R = np.eye(3) + np.sin(th) * K + (1 - np.cos(th)) * (K @ K)
+    R[small] = np.eye(3)
+    return R
+
+
+def derived_force_features(ee_force, ee_torque, policy_state_14) -> np.ndarray:
+    """Amendment B Section 1 physics-derived per-step features: ``(N, 8)`` =
+    ``[|F|, |tau|, F_world (3), F_base (3)]``.
+
+    Exact transform (documented per the amendment). The recorder's
+    ``ee_force``/``ee_torque`` are the robosuite wrist F/T sensor readings
+    in the rotating EE (sensor-site) frame; gravity is world-z, so a linear
+    reader on raw components cannot see the load. The recorded orientation
+    chain (``policy_state_14``, ``entry.observation_to_state`` field order):
+
+    - ``R_be = axis_angle_to_matrix(policy_state_14[:, 3:6])`` -- EEF
+      orientation RELATIVE TO BASE
+      (``state.end_effector_rotation_relative``);
+    - ``R_wb = axis_angle_to_matrix(policy_state_14[:, 11:14])`` -- base
+      orientation in world (``state.base_rotation``; yaw-only in this
+      corpus, base upright);
+    - ``F_base = R_be @ F_ee`` (base-frame force);
+    - ``F_world = R_wb @ F_base`` (world-frame force).
+
+    BOTH rotated variants are included: they differ only by the base yaw --
+    constant within an episode but varying ~1.5 rad std ACROSS episodes --
+    which is exactly the kind of rotation a single linear reader fit across
+    episodes cannot undo. The base frame is the yaw-invariant, gravity-
+    aligned choice (base upright => base z == world z); ``F_world`` is the
+    amendment's literal item. Corpus diagnostics (``diagnostics.py``) show
+    the carried load lands on a FIXED base-frame axis (y), mass-monotone --
+    i.e. the sensor site carries a constant offset rotation relative to the
+    recorded EEF frame, which a linear reader absorbs. Only orientation
+    dims (3:6, 11:14) of ``policy_state_14`` are touched -- no position or
+    gripper channels enter the physics certificate (no-circularity as
+    amended)."""
+    F = np.asarray(ee_force, dtype=np.float64)
+    tau = np.asarray(ee_torque, dtype=np.float64)
+    ps = np.asarray(policy_state_14, dtype=np.float64)
+    if F.shape[1:] != (3,) or tau.shape[1:] != (3,) or ps.shape[1:] != (14,):
+        raise ValueError(
+            f"derived_force_features: bad shapes {F.shape} {tau.shape} {ps.shape}")
+    R_be = axis_angle_to_matrix(ps[:, 3:6])
+    R_wb = axis_angle_to_matrix(ps[:, 11:14])
+    F_base = (R_be @ F[:, :, None])[..., 0]
+    F_world = (R_wb @ F_base[:, :, None])[..., 0]
+    return np.concatenate(
+        [np.linalg.norm(F, axis=1, keepdims=True),
+         np.linalg.norm(tau, axis=1, keepdims=True),
+         F_world, F_base], axis=1).astype(np.float32)
 
 
 def per_episode_windows(x, episode_id, k: int, stride: int) -> np.ndarray:
@@ -238,26 +358,28 @@ def certificate_cell(X, y, cv_groups, shuffle_groups, seed: int = SEED) -> dict:
     }
 
 
-def fit_k_eff(fz, deficit, condition) -> dict:
-    """Per-step OLS ``F_z = slope * deficit_z + intercept`` plus per-condition
-    means -- certificate 5 (physical validation, not gated)."""
-    fz = np.asarray(fz, dtype=np.float64)
-    deficit = np.asarray(deficit, dtype=np.float64)
+def fit_k_eff(y, x, condition) -> dict:
+    """Per-step OLS ``y = slope * x + intercept`` plus per-condition means --
+    the certificate-5 regression primitive (physical validation, not gated).
+    Generic in (y, x) since amendment B Section 3 reframes k_eff as TWO
+    regressions (``|F| ~ mass_kg`` and world-frame ``F_z ~ deficit_z``)."""
+    y = np.asarray(y, dtype=np.float64)
+    x = np.asarray(x, dtype=np.float64)
     condition = np.asarray(condition)
-    A = np.stack([deficit, np.ones_like(deficit)], axis=1)
-    (slope, intercept), *_ = np.linalg.lstsq(A, fz, rcond=None)
-    pred = slope * deficit + intercept
-    ss_res = float(((fz - pred) ** 2).sum())
-    ss_tot = float(((fz - fz.mean()) ** 2).sum())
+    A = np.stack([x, np.ones_like(x)], axis=1)
+    (slope, intercept), *_ = np.linalg.lstsq(A, y, rcond=None)
+    pred = slope * x + intercept
+    ss_res = float(((y - pred) ** 2).sum())
+    ss_tot = float(((y - y.mean()) ** 2).sum())
     r2 = 1.0 - ss_res / ss_tot if ss_tot > 0 else float("nan")
     per_condition = {}
     for c in np.unique(condition):
         m = condition == c
-        sub_a = np.stack([deficit[m], np.ones(int(m.sum()))], axis=1)
-        (c_slope, _), *_ = np.linalg.lstsq(sub_a, fz[m], rcond=None)
+        sub_a = np.stack([x[m], np.ones(int(m.sum()))], axis=1)
+        (c_slope, _), *_ = np.linalg.lstsq(sub_a, y[m], rcond=None)
         per_condition[str(c)] = {
-            "fz_mean": float(fz[m].mean()),
-            "deficit_z_mean": float(deficit[m].mean()),
+            "y_mean": float(y[m].mean()),
+            "x_mean": float(x[m].mean()),
             "slope": float(c_slope),
             "n": int(m.sum()),
         }
@@ -265,7 +387,7 @@ def fit_k_eff(fz, deficit, condition) -> dict:
         "slope": float(slope),
         "intercept": float(intercept),
         "r2": float(r2),
-        "n": int(len(fz)),
+        "n": int(len(y)),
         "per_condition": per_condition,
     }
 
@@ -276,10 +398,16 @@ def fit_k_eff(fz, deficit, condition) -> dict:
 def build_features(cert: str, d: dict) -> np.ndarray:
     """The certificate's design matrix over ALL rows (masking happens per
     cell). Enforces the no-circularity rule by construction: each branch
-    touches only its pre-registered channels."""
+    touches only its pre-registered channels (raw_ft additionally reads
+    ``policy_state_14``'s ORIENTATION dims for the amendment-B rotations --
+    see ``derived_force_features``; unit-tested no-contamination)."""
     eid = d["episode_id"]
     if cert == "raw_ft":
-        ft = np.concatenate([d["ee_force"], d["ee_torque"]], axis=1)  # forces only
+        ft = np.concatenate(
+            [d["ee_force"], d["ee_torque"],  # raw components (pre-amendment set)
+             derived_force_features(d["ee_force"], d["ee_torque"],
+                                    d["policy_state_14"])],  # amendment B Section 1
+            axis=1)
         return per_episode_windows(ft, eid, k=K_RAW_FT, stride=1)
     if cert == "policy_obs_xr1":
         return per_episode_windows(d["policy_state_14"], eid, k=K_POLICY, stride=STRIDE_POLICY)
@@ -295,26 +423,32 @@ def gru_state_key(cert: str) -> str:
     return {"policy_obs_xr1": "policy_state_14", "policy_obs_pi05": "policy_state_16"}[cert]
 
 
-# -------------------------------------------------------------- GRU pipeline
+# ---------------------------------------------------- neural-reader pipeline
 
 
-def run_gru_certificate(d: dict, cert: str, mask_name: str, gru_python: str,
-                        device: str, max_epochs: int = GRU_MAX_EPOCHS,
-                        budget_s: float = GRU_BUDGET_S) -> dict:
-    """Small seeded GRU on the raw per-step policy-state sequence; loss and
-    scoring only on masked steps; same seed-grouped masked-row folds as the
-    ridge path; early-stop on one held-out train SEED's episodes (its 3
-    conditions give the per-episode-constant target nonzero validation
-    variance).
+def run_neural_certificate(d: dict, cert: str, mask_name: str, mode: str,
+                           gru_python: str, device: str, X=None,
+                           max_epochs: int = NEURAL_MAX_EPOCHS,
+                           budget_s: float = NEURAL_BUDGET_S,
+                           patience: int = NEURAL_PATIENCE) -> dict:
+    """One neural-reader cell (amendment B Section 2), ``mode`` in
+    {"gru", "mlp"}: the GRU consumes the raw per-step policy-state sequence
+    (recurrent upper bound); the MLP consumes ``X``, the certificate's exact
+    (sacred) design matrix as built by :func:`build_features`. Loss and
+    scoring only on masked rows; same seed-grouped masked-row folds as the
+    ridge path; early-stop on one held-out train SEED (its 3 conditions
+    give the per-episode-constant target nonzero validation variance);
+    minibatched with a 300-epoch cap and patience 20 (fair budget -- the
+    pre-amendment GRU was reviewer-verified undertrained).
 
     Training runs in a SUBPROCESS under ``gru_python``
     (``.venv-mibot/bin/python``: this venv's torch 2.7.1+cu126 has no
     sm_120 kernels for the RTX 5090; mibot's torch 2.8.0+cu128 does), with
     npz interchange -- see ``gru_worker.py``. The fold partition is computed
-    HERE (probe_core / sklearn side) and shipped to the worker, so the GRU
-    uses byte-identical folds to the ridge path; pooled R2 / rank_acc are
-    computed HERE from the worker's returned held-out predictions, so the
-    metric implementations stay single-sourced."""
+    HERE (probe_core / sklearn side) and shipped to the worker, so the
+    neural readers use byte-identical folds to the ridge path; pooled R2 /
+    rank_acc are computed HERE from the worker's returned held-out
+    predictions, so the metric implementations stay single-sourced."""
     import subprocess
     import tempfile
 
@@ -325,12 +459,7 @@ def run_gru_certificate(d: dict, cert: str, mask_name: str, gru_python: str,
     if float(np.var(y_all[mask_all])) < DEGENERATE_VAR_TOL:
         return degenerate_cell("constant target under mask")
 
-    states = np.asarray(d[gru_state_key(cert)], dtype=np.float32)
     eid, seeds = d["episode_id"], d["seed"]
-
-    # contiguous episode boundaries (study row order)
-    change = np.flatnonzero(eid[1:] != eid[:-1])
-    ep_start = np.concatenate([[0], change + 1, [len(eid)]]).astype(np.int64)
 
     # identical folds to the ridge path: GroupKFold over MASKED rows by seed
     seeds_masked = seeds[mask_all]
@@ -340,23 +469,39 @@ def run_gru_certificate(d: dict, cert: str, mask_name: str, gru_python: str,
         for tr, te in splits
     ]
 
-    with tempfile.TemporaryDirectory(prefix="gru_exchange_") as tmp:
+    payload = {
+        "y": y_all, "mask": mask_all,
+        "seed": np.asarray(seeds, dtype=np.int64),
+        "folds_json": np.array(json.dumps(folds)),
+    }
+    if mode == "gru":
+        change = np.flatnonzero(eid[1:] != eid[:-1])
+        payload["ep_start"] = np.concatenate(
+            [[0], change + 1, [len(eid)]]).astype(np.int64)
+        payload["states"] = np.asarray(d[gru_state_key(cert)], dtype=np.float32)
+    elif mode == "mlp":
+        if X is None:
+            raise ValueError("run_neural_certificate: mlp mode needs X")
+        payload["X"] = np.asarray(X, dtype=np.float32)
+    else:
+        raise ValueError(f"unknown neural mode {mode!r}")
+
+    with tempfile.TemporaryDirectory(prefix="neural_exchange_") as tmp:
         in_npz = str(Path(tmp) / "in.npz")
         out_npz = str(Path(tmp) / "out.npz")
-        np.savez_compressed(
-            in_npz, states=states, y=y_all, mask=mask_all,
-            seed=np.asarray(seeds, dtype=np.int64), ep_start=ep_start,
-            folds_json=np.array(json.dumps(folds)),
-        )
+        np.savez_compressed(in_npz, **payload)
         cmd = [gru_python, "-u", "-m",
                "eval_robocasa365.mass_variation.analysis.gru_worker",
-               in_npz, out_npz, "--device", device,
-               "--max-epochs", str(max_epochs), "--budget-s", str(budget_s)]
+               in_npz, out_npz, "--mode", mode, "--device", device,
+               "--max-epochs", str(max_epochs), "--budget-s", str(budget_s),
+               "--patience", str(patience),
+               "--ep-batch", str(NEURAL_EP_BATCH),
+               "--row-batch", str(NEURAL_ROW_BATCH)]
         proc = subprocess.run(cmd, capture_output=True, text=True,
                               cwd=str(Path(__file__).resolve().parents[3]))
         if proc.returncode != 0:
             raise RuntimeError(
-                f"gru_worker failed for {cert}/{mask_name} (rc={proc.returncode}):\n"
+                f"{mode} worker failed for {cert}/{mask_name} (rc={proc.returncode}):\n"
                 f"stdout:\n{proc.stdout[-2000:]}\nstderr:\n{proc.stderr[-2000:]}")
         sys.stdout.write(proc.stdout)
         with np.load(out_npz) as z:
@@ -370,8 +515,8 @@ def run_gru_certificate(d: dict, cert: str, mask_name: str, gru_python: str,
         "r2_pooled": float(r2_pooled),
         "r2_folds": [float(r) for r in res["r2_folds"]],
         "rank_acc": float(rank_acc_levels(yt, yp)),
-        "shuffled": None,  # shuffle control is the ridge path's; GRU is the
-        "shuffled_std": None,  # recurrent upper bound, seeded + early-stopped
+        "shuffled": None,  # shuffle control is the ridge path's; neural
+        "shuffled_std": None,  # readers are seeded + early-stopped bounds
         "selectivity": None,
         "floor": None,
         "n": int(mask_all.sum()),
@@ -379,6 +524,7 @@ def run_gru_certificate(d: dict, cert: str, mask_name: str, gru_python: str,
         "epochs_per_fold": [int(e) for e in res["epochs_per_fold"]],
         "budget_hit": bool(res["budget_hit"]),
         "wall_s": float(res["wall_s"]),
+        "reliability_note": NEURAL_RELIABILITY_NOTE,
     }
 
 
@@ -420,13 +566,15 @@ def main(argv=None):
     ap.add_argument("--models", nargs="+", default=list(MODELS))
     ap.add_argument("--device", default="cuda")
     ap.add_argument("--gru-python", default=".venv-mibot/bin/python",
-                    help="python with an sm_120-capable torch for the GRU "
-                         "worker subprocess (see run_gru_certificate)")
-    ap.add_argument("--skip-gru", action="store_true")
-    ap.add_argument("--max-epochs", type=int, default=GRU_MAX_EPOCHS)
-    ap.add_argument("--budget-s", type=float, default=GRU_BUDGET_S)
+                    help="python with an sm_120-capable torch for the neural "
+                         "worker subprocess (see run_neural_certificate)")
+    ap.add_argument("--skip-neural", action="store_true",
+                    help="skip the MLP and GRU readers (ridge + k_eff only)")
+    ap.add_argument("--max-epochs", type=int, default=NEURAL_MAX_EPOCHS)
+    ap.add_argument("--budget-s", type=float, default=NEURAL_BUDGET_S)
+    ap.add_argument("--patience", type=int, default=NEURAL_PATIENCE)
     ap.add_argument("--no-wandb", action="store_true")
-    ap.add_argument("--wandb-name", default="plan2-certificates")
+    ap.add_argument("--wandb-name", default="plan2-certificates-v2")
     args = ap.parse_args(argv)
     if not Path(args.gru_python).is_absolute():
         # resolve against the repo root (this file's location), not the cwd
@@ -459,39 +607,60 @@ def main(argv=None):
                       f"R2={cell['r2_pooled']} folds={cell['r2_folds']} "
                       f"sel={cell['selectivity']}+-{cell['shuffled_std']} "
                       f"rank_acc={cell['rank_acc']} ({cell['wall_s']}s)", flush=True)
-            if cert in GRU_CERTS and not args.skip_gru:
-                per_kind["gru"] = {}
-                for mask_name in CERT_MASKS:
-                    cell = run_gru_certificate(d, cert, mask_name,
-                                               args.gru_python, args.device,
-                                               max_epochs=args.max_epochs,
-                                               budget_s=args.budget_s)
-                    cell.update(model=model, certificate=cert, kind="gru",
-                                mask=mask_name, input_channels=INPUT_CHANNELS[cert])
-                    per_kind["gru"][mask_name] = cell
-                    cells.append(cell)
-                    print(f"[gru]   {model}/{cert}/{mask_name}: "
-                          f"R2={cell['r2_pooled']} folds={cell.get('r2_folds')} "
-                          f"rank_acc={cell.get('rank_acc')} "
-                          f"epochs={cell.get('epochs_per_fold')} "
-                          f"({cell.get('wall_s')}s)", flush=True)
+            if cert in NEURAL_CERTS and not args.skip_neural:
+                for kind in NEURAL_KINDS:
+                    per_kind[kind] = {}
+                    for mask_name in CERT_MASKS:
+                        cell = run_neural_certificate(
+                            d, cert, mask_name, kind, args.gru_python,
+                            args.device, X=X if kind == "mlp" else None,
+                            max_epochs=args.max_epochs,
+                            budget_s=args.budget_s, patience=args.patience)
+                        cell.update(model=model, certificate=cert, kind=kind,
+                                    mask=mask_name,
+                                    input_channels=INPUT_CHANNELS[cert])
+                        per_kind[kind][mask_name] = cell
+                        cells.append(cell)
+                        print(f"[{kind:5s}] {model}/{cert}/{mask_name}: "
+                              f"R2={cell['r2_pooled']} folds={cell.get('r2_folds')} "
+                              f"rank_acc={cell.get('rank_acc')} "
+                              f"epochs={cell.get('epochs_per_fold')} "
+                              f"({cell.get('wall_s')}s)", flush=True)
             gates[f"{model}/{cert}"] = gate_verdict(per_kind)
 
-        # certificate 5: K_eff (carry-only, not gated)
+        # certificate 5 (amendment B Section 3): two carry-mask regressions,
+        # units documented in K_EFF_UNITS_NOTE; not gated
         carry = d["masks"]["carry"]
-        k_eff[model] = fit_k_eff(d["ee_force"][carry, 2], d["deficit_z"][carry],
-                                 d["condition"][carry])
-        ke = k_eff[model]
-        print(f"[k_eff] {model}: slope={ke['slope']:.3f} intercept={ke['intercept']:.3f} "
-              f"R2={ke['r2']:.4f} n={ke['n']}", flush=True)
-        for c, v in ke["per_condition"].items():
-            print(f"        {c}: Fz_mean={v['fz_mean']:.3f} "
-                  f"deficit_z_mean={v['deficit_z_mean']:.4f} slope={v['slope']:.3f} "
-                  f"n={v['n']}", flush=True)
+        derived = derived_force_features(d["ee_force"], d["ee_torque"],
+                                         d["policy_state_14"])
+        f_norm = derived[:, 0]      # |F|
+        f_world_z = derived[:, 4]   # F_world z-component
+        k_eff[model] = {
+            "abs_force_vs_mass": fit_k_eff(  # slope in N/kg, x = mass_kg
+                f_norm[carry], d["mass_kg"][carry], d["condition"][carry]),
+            "world_fz_vs_deficit": fit_k_eff(  # slope in N per action unit
+                f_world_z[carry], d["deficit_z"][carry], d["condition"][carry]),
+            "units": K_EFF_UNITS_NOTE,
+            "deficit_z_carry_std": float(np.std(d["deficit_z"][carry])),
+            "commanded_delta_z_carry_std": float(
+                np.std(d["commanded_delta"][carry, 2])),
+            "achieved_eef_delta_z_carry_std_m": float(
+                np.std(d["achieved_eef_delta"][carry, 2])),
+        }
+        for name, reg in (("abs_force_vs_mass [N/kg]", k_eff[model]["abs_force_vs_mass"]),
+                          ("world_fz_vs_deficit [N/action-unit]",
+                           k_eff[model]["world_fz_vs_deficit"])):
+            print(f"[k_eff] {model} {name}: slope={reg['slope']:.3f} "
+                  f"intercept={reg['intercept']:.3f} R2={reg['r2']:.4f} "
+                  f"n={reg['n']}", flush=True)
+            for c, v in reg["per_condition"].items():
+                print(f"        {c}: y_mean={v['y_mean']:.3f} "
+                      f"x_mean={v['x_mean']:.4f} slope={v['slope']:.3f} "
+                      f"n={v['n']}", flush=True)
 
     # ------------------------------------------------------------ gate table
-    print("\n=============== PRE-REGISTERED GATE TABLE "
-          f"(mass R2 >= {GATE_R2} on '{GATE_MASK}') ===============", flush=True)
+    print("\n========= AMENDED (amendment B) PRE-REGISTERED GATE TABLE "
+          f"(mass R2 >= {GATE_R2} on '{GATE_MASK}') =========", flush=True)
     for key, g in gates.items():
         parts = [f"{k[:-3]}={g[k]:.4f}" if isinstance(g[k], float) else f"{k[:-3]}=None"
                  for k in g if k.endswith("_r2") and k != "gate_r2"]
@@ -509,13 +678,26 @@ def main(argv=None):
         "cv_groups": "seed (35 matched-pair groups)",
         "shuffle_groups": "episode (condition/seed) -- see module docstring",
         "degenerate_var_tol": DEGENERATE_VAR_TOL,
-        "gru": {"hidden": GRU_HIDDEN, "layers": GRU_LAYERS, "lr": GRU_LR,
-                "max_epochs": args.max_epochs, "patience": GRU_PATIENCE,
-                "budget_s": args.budget_s, "certs": list(GRU_CERTS),
-                "skipped": bool(args.skip_gru),
-                "runner": f"gru_worker.py subprocess via {args.gru_python}"},
+        "amendment": ("B (2026-09-03): raw_ft derived features |F|/|tau|/"
+                      "F_world/F_base; policy_obs readers += seeded 2x128 MLP "
+                      "(inputs sacred); GRU/MLP fairly budgeted (minibatched, "
+                      "300-epoch cap, patience 20); k_eff reframed as "
+                      "|F|~mass and world F_z~deficit_z with documented "
+                      "units; pre-amendment table under pre_amendment_B"),
+        "neural": {"gru_hidden": GRU_HIDDEN, "gru_layers": GRU_LAYERS,
+                   "mlp_hidden": MLP_HIDDEN, "lr": NEURAL_LR,
+                   "max_epochs": args.max_epochs, "patience": args.patience,
+                   "ep_batch": NEURAL_EP_BATCH, "row_batch": NEURAL_ROW_BATCH,
+                   "budget_s": args.budget_s, "certs": list(NEURAL_CERTS),
+                   "kinds": list(NEURAL_KINDS),
+                   "skipped": bool(args.skip_neural),
+                   "reliability_note": NEURAL_RELIABILITY_NOTE,
+                   "runner": f"gru_worker.py subprocess via {args.gru_python}"},
+        "k_eff_units": K_EFF_UNITS_NOTE,
         "no_circularity_rule": ("certs 2-3 use ONLY policy-state channels; "
-                                "cert 1 uses only ee_force/ee_torque"),
+                                "cert 1 uses ee_force/ee_torque plus the "
+                                "policy_state_14 ORIENTATION dims (3:6, "
+                                "11:14) for the amendment-B rotations only"),
         "models": list(args.models),
         "phase1_root": args.phase1_root,
         "policy_state_root": args.policy_state_root,
@@ -531,20 +713,39 @@ def main(argv=None):
         config["versions"]["torch"] = torch.__version__
     except ImportError:
         pass
-    if not args.skip_gru:
+    if not args.skip_neural:
         import subprocess
         proc = subprocess.run(
             [args.gru_python, "-c", "import torch; print(torch.__version__)"],
             capture_output=True, text=True)
         if proc.returncode == 0:
-            config["versions"]["gru_torch"] = proc.stdout.strip()
+            config["versions"]["neural_torch"] = proc.stdout.strip()
+
+    # amendment B Section 4: preserve the pre-amendment table for the record.
+    # If the existing output file is itself pre-amendment (no marker), stash
+    # its {config, gates, k_eff, cells}; if it already carries the stash
+    # (an amended re-run), carry that stash through unchanged.
+    pre_amendment = None
+    out_path = Path(args.out)
+    if out_path.exists():
+        try:
+            old = json.loads(out_path.read_text())
+        except json.JSONDecodeError:
+            old = None
+        if old is not None:
+            if "pre_amendment_B" in old:
+                pre_amendment = old["pre_amendment_B"]
+            elif "amendment" not in old.get("config", {}):
+                pre_amendment = {k: old.get(k)
+                                 for k in ("config", "gates", "k_eff", "cells")}
 
     out = sanitize_json({"config": config, "gates": gates, "k_eff": k_eff,
-                         "cells": cells})
-    out_path = Path(args.out)
+                         "cells": cells, "pre_amendment_B": pre_amendment})
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(json.dumps(out, indent=2, allow_nan=False) + "\n")
-    print(f"wrote {out_path}", flush=True)
+    print(f"wrote {out_path} "
+          f"(pre_amendment_B {'preserved' if pre_amendment else 'ABSENT'})",
+          flush=True)
 
     if not args.no_wandb:
         import pandas as pd
@@ -556,8 +757,11 @@ def main(argv=None):
         run.log({"certificates": wandb.Table(dataframe=pd.DataFrame(cell_rows))})
         run.summary.update({f"gate/{key}/{k}": v for key, g in gates.items()
                             for k, v in g.items() if v is not None})
-        run.summary.update({f"k_eff/{m}/{k}": v for m, ke in k_eff.items()
-                            for k, v in ke.items() if not isinstance(v, dict)})
+        run.summary.update({
+            f"k_eff/{m}/{reg_name}/{k}": v
+            for m, ke in k_eff.items()
+            for reg_name in ("abs_force_vs_mass", "world_fz_vs_deficit")
+            for k, v in ke[reg_name].items() if not isinstance(v, dict)})
         print("wandb url:", run.url, flush=True)
         run.finish()
     print("DONE", flush=True)

@@ -13,8 +13,14 @@ import pytest
 
 from eval_robocasa365.mass_variation.analysis.certificates import (
     DEGENERATE_VAR_TOL,
+    K_DEFICIT,
+    K_POLICY,
+    K_RAW_FT,
+    axis_angle_to_matrix,
+    build_features,
     certificate_cell,
     degenerate_cell,
+    derived_force_features,
     fit_k_eff,
     per_episode_windows,
     rank_acc_levels,
@@ -140,6 +146,101 @@ class TestCertificateCell:
         r = certificate_cell(X, np.zeros_like(y), cv_g, sh_g)
         assert r["degenerate"] and r["r2_pooled"] is None
         assert np.var(np.zeros_like(y)) < DEGENERATE_VAR_TOL
+
+
+class TestAxisAngleToMatrix:
+    def test_quarter_turn_about_z_maps_x_to_y(self):
+        R = axis_angle_to_matrix(np.array([[0.0, 0.0, np.pi / 2]]))[0]
+        np.testing.assert_allclose(R @ [1, 0, 0], [0, 1, 0], atol=1e-12)
+        np.testing.assert_allclose(R @ [0, 1, 0], [-1, 0, 0], atol=1e-12)
+
+    def test_zero_vector_is_identity_and_batch_shape(self):
+        aa = np.zeros((4, 3))
+        aa[1] = [np.pi, 0, 0]
+        R = axis_angle_to_matrix(aa)
+        assert R.shape == (4, 3, 3)
+        np.testing.assert_allclose(R[0], np.eye(3), atol=1e-12)
+        # rotations are orthonormal: R R^T = I
+        np.testing.assert_allclose(R[1] @ R[1].T, np.eye(3), atol=1e-12)
+
+
+class TestDerivedForceFeatures:
+    def test_norms_and_known_rotation(self):
+        F = np.array([[1.0, 2.0, 3.0]])
+        tau = np.array([[0.0, 4.0, 0.0]])
+        ps = np.zeros((1, 14), dtype=np.float32)
+        ps[0, 3:6] = [0.0, 0.0, np.pi / 2]  # EEF rel base: +90 deg about z
+        out = derived_force_features(F, tau, ps)
+        assert out.shape == (1, 8)
+        assert out[0, 0] == pytest.approx(np.sqrt(14), rel=1e-6)  # |F|
+        assert out[0, 1] == pytest.approx(4.0, rel=1e-6)  # |tau|
+        # base rot identity => F_world == F_base == Rz(90) @ F = (-2, 1, 3)
+        np.testing.assert_allclose(out[0, 2:5], [-2, 1, 3], atol=1e-6)
+        np.testing.assert_allclose(out[0, 5:8], [-2, 1, 3], atol=1e-6)
+
+    def test_base_yaw_moves_world_not_base(self):
+        F = np.array([[1.0, 0.0, 0.0]])
+        tau = np.zeros((1, 3))
+        ps = np.zeros((1, 14), dtype=np.float32)
+        ps[0, 11:14] = [0.0, 0.0, np.pi / 2]  # base yaw +90 deg
+        out = derived_force_features(F, tau, ps)
+        np.testing.assert_allclose(out[0, 5:8], [1, 0, 0], atol=1e-6)  # F_base
+        np.testing.assert_allclose(out[0, 2:5], [0, 1, 0], atol=1e-6)  # F_world
+
+
+class TestBuildFeatures:
+    """Amendment B MINOR review item: column counts + no-contamination."""
+
+    def _fake_study(self, n=10, seed=0):
+        rng = np.random.default_rng(seed)
+        return {
+            "episode_id": np.array(["ep_a"] * (n // 2) + ["ep_b"] * (n - n // 2)),
+            "ee_force": rng.normal(size=(n, 3)).astype(np.float32),
+            "ee_torque": rng.normal(size=(n, 3)).astype(np.float32),
+            "commanded_delta": rng.normal(size=(n, 6)).astype(np.float32),
+            "achieved_eef_delta": rng.normal(size=(n, 6)).astype(np.float32),
+            "policy_state_14": rng.normal(size=(n, 14)).astype(np.float32),
+            "policy_state_16": rng.normal(size=(n, 16)).astype(np.float32),
+        }
+
+    def test_column_counts(self):
+        d = self._fake_study()
+        assert build_features("raw_ft", d).shape[1] == K_RAW_FT * 14  # 6 raw + 8 derived
+        assert build_features("policy_obs_xr1", d).shape[1] == K_POLICY * 14
+        assert build_features("policy_obs_pi05", d).shape[1] == 16
+        assert build_features("deficit", d).shape[1] == K_DEFICIT * 12
+
+    def test_no_contamination(self):
+        d = self._fake_study()
+        base = {c: build_features(c, d) for c in
+                ("raw_ft", "policy_obs_xr1", "policy_obs_pi05", "deficit")}
+
+        # policy_obs certs must ignore every force channel (no circularity)
+        d2 = self._fake_study()
+        d2["ee_force"] = d2["ee_force"] + 100.0
+        d2["ee_torque"] = d2["ee_torque"] + 100.0
+        np.testing.assert_array_equal(
+            build_features("policy_obs_xr1", d2), base["policy_obs_xr1"])
+        np.testing.assert_array_equal(
+            build_features("policy_obs_pi05", d2), base["policy_obs_pi05"])
+        np.testing.assert_array_equal(build_features("deficit", d2), base["deficit"])
+        assert not np.array_equal(build_features("raw_ft", d2), base["raw_ft"])
+
+        # raw_ft may use ONLY policy_state_14's ORIENTATION dims (3:6, 11:14)
+        # -- perturbing position/gripper dims must not change it; and it must
+        # ignore policy_state_16 and the delta channels entirely
+        d3 = self._fake_study()
+        d3["policy_state_14"][:, 0:3] += 5.0
+        d3["policy_state_14"][:, 6:11] += 5.0
+        d3["policy_state_16"] += 5.0
+        d3["commanded_delta"] += 5.0
+        d3["achieved_eef_delta"] += 5.0
+        np.testing.assert_array_equal(build_features("raw_ft", d3), base["raw_ft"])
+
+        # ... while orientation dims DO enter (documented amendment-B use)
+        d4 = self._fake_study()
+        d4["policy_state_14"][:, 3:6] += 1.0
+        assert not np.array_equal(build_features("raw_ft", d4), base["raw_ft"])
 
 
 class TestFitKEff:
