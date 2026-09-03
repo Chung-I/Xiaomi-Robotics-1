@@ -1,0 +1,165 @@
+{
+  "finished_at": "2026-09-03T15:52:25",
+  "config": {
+    "model": "xr1",
+    "mode": "sanity",
+    "cell": "PickPlaceCounterToCabinet",
+    "category": "milk",
+    "conditions": [
+      "MassLight",
+      "MassMedium",
+      "MassHeavy"
+    ],
+    "n_seeds": 5,
+    "seeds": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "base_seed": 7,
+    "cell_index": 0,
+    "horizon": 750,
+    "mass_levels_kg": {
+      "light": 0.15,
+      "medium": 0.6,
+      "heavy": 1.2
+    },
+    "server_seed": 7,
+    "server_checkpoint": "/home/chungyili/Codes/Xiaomi-Robotics-1/checkpoints/Xiaomi-Robotics-1-RoboCasa365",
+    "git_sha": "c7608ed23547872ccad462a95227487aa9967cf5",
+    "control_hz": 20.0,
+    "drop_threshold_m": 0.05,
+    "drop_window_steps": 20
+  },
+  "per_condition": [
+    {
+      "model": "xr1",
+      "cell": "PickPlaceCounterToCabinet",
+      "condition": "MassLight",
+      "mass_kg": 0.15,
+      "n_episodes": 5,
+      "success_rate": 0.8,
+      "grasp_rate": 1.0,
+      "lift_rate": 0.8,
+      "t_success_mean_s": 11.1125,
+      "drop_after_lift_rate": 0.0
+    },
+    {
+      "model": "xr1",
+      "cell": "PickPlaceCounterToCabinet",
+      "condition": "MassMedium",
+      "mass_kg": 0.6,
+      "n_episodes": 5,
+      "success_rate": 1.0,
+      "grasp_rate": 1.0,
+      "lift_rate": 1.0,
+      "t_success_mean_s": 13.779999999999998,
+      "drop_after_lift_rate": 0.4
+    },
+    {
+      "model": "xr1",
+      "cell": "PickPlaceCounterToCabinet",
+      "condition": "MassHeavy",
+      "mass_kg": 1.2,
+      "n_episodes": 5,
+      "success_rate": 1.0,
+      "grasp_rate": 1.0,
+      "lift_rate": 1.0,
+      "t_success_mean_s": 16.770000000000003,
+      "drop_after_lift_rate": 0.2
+    }
+  ],
+  "sanity_gate": {
+    "published_baseline": 0.86,
+    "tolerance": 0.2,
+    "threshold": 0.6599999999999999,
+    "mass_light_success_rate": 0.8,
+    "passed": true
+  },
+  "wandb_url": "https://wandb.ai/leon129506/mass-com-xr1/runs/u7sdr1k1",
+  "server_restarts": [
+    {
+      "pid": 3130398,
+      "port": 10086,
+      "cmd": [
+        "/home/chungyili/Codes/Xiaomi-Robotics-1/.venv-mibot/bin/python",
+        "-u",
+        "deploy/server.py",
+        "--model",
+        "/home/chungyili/Codes/Xiaomi-Robotics-1/checkpoints/Xiaomi-Robotics-1-RoboCasa365",
+        "--port",
+        "10086"
+      ],
+      "started_at": "2026-09-03T15:47:19",
+      "listening_at": "2026-09-03T15:47:23",
+      "server_seed": 7,
+      "log": "output/mass_variation/logs/server_10086.log",
+      "mode": "sanity",
+      "condition": "MassLight",
+      "model": "xr1",
+      "pending_seeds": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "pid": 3130532,
+      "port": 10086,
+      "cmd": [
+        "/home/chungyili/Codes/Xiaomi-Robotics-1/.venv-mibot/bin/python",
+        "-u",
+        "deploy/server.py",
+        "--model",
+        "/home/chungyili/Codes/Xiaomi-Robotics-1/checkpoints/Xiaomi-Robotics-1-RoboCasa365",
+        "--port",
+        "10086"
+      ],
+      "started_at": "2026-09-03T15:49:21",
+      "listening_at": "2026-09-03T15:49:25",
+      "server_seed": 7,
+      "log": "output/mass_variation/logs/server_10086.log",
+      "mode": "sanity",
+      "condition": "MassMedium",
+      "model": "xr1",
+      "pending_seeds": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "pid": 3130669,
+      "port": 10086,
+      "cmd": [
+        "/home/chungyili/Codes/Xiaomi-Robotics-1/.venv-mibot/bin/python",
+        "-u",
+        "deploy/server.py",
+        "--model",
+        "/home/chungyili/Codes/Xiaomi-Robotics-1/checkpoints/Xiaomi-Robotics-1-RoboCasa365",
+        "--port",
+        "10086"
+      ],
+      "started_at": "2026-09-03T15:50:44",
+      "listening_at": "2026-09-03T15:50:48",
+      "server_seed": 7,
+      "log": "output/mass_variation/logs/server_10086.log",
+      "mode": "sanity",
+      "condition": "MassHeavy",
+      "model": "xr1",
+      "pending_seeds": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    }
+  ]
+}
