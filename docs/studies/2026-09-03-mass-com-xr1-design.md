@@ -135,3 +135,23 @@ physical validation: regress in-carry wrist F_z on the per-step deficit and repo
 empirical K_eff and R². The cross-model prediction stands with the corrected mechanism:
 achieved-motion signatures (droop, z-progress, velocity profile) visible in a 4-frame window
 vs a single frame.
+
+### Correction 2 to the Addendum (2026-09-03, post-Phase-1 — gate history + stale claims)
+
+1. **Gate-rule deviation, recorded:** the addendum's π0.5 sanity rule ("baseline < 0.25 → switch
+   the primary cell") FIRED at its pre-registered n=5 (MassLight 0.20, commit b49291c preserves
+   the artifact). The prescribed action was not taken. Controller ruling: the rule was written
+   before XR1's 105-episode arm completed on this cell — switching would have invalidated the
+   finished arm; instead the sweep was extended to n=15 (evidence purchase, model-side results
+   otherwise untouched), where MassLight read 0.267 ≥ 0.25 → gate PASS on its own threshold
+   (margin one episode; dip statistically indistinguishable from noise: Fisher p=0.26, matched
+   McNemar p=0.289). Phase 1 then ran on the same cell. Full sequence in the SDD ledger and
+   task-7 report §5/§9.
+2. π0.5-robocasa's observation space is CONFIRMED single-frame (task-7 report §2.1, file:line
+   against fork commit ca4c6d7) — the earlier "pending Task 7's confirmation" is resolved.
+3. The addendum's "deferred arms can be run later without design changes" is superseded for the
+   secondary cell: `PickPlaceToasterToCounter` hardcodes its object set (preflight finding);
+   the deferred arm's candidates that plumb `obj_groups` are listed in the Plan-1 ledger.
+4. Provenance note: the XR1 sanity/phase1 summary JSONs record `git_sha c7608ed`; the driver
+   code that produced them landed in `6de46b0` (committed minutes after the run). The π0.5
+   summaries carry code-first SHAs.
