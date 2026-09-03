@@ -1,0 +1,267 @@
+{
+  "primary": {
+    "env_name": "PickPlaceCounterToCabinet",
+    "category": "milk",
+    "probe": {
+      "env_name": "PickPlaceCounterToCabinet",
+      "category": "milk",
+      "n_seeds": 3,
+      "horizon": 750,
+      "seeds": [
+        {
+          "seed": 0,
+          "mesh_id": "milk_0",
+          "mesh_category": "milk",
+          "mjcf_path": "/home/chungyili/Codes/robocasa/robocasa/models/assets/objects/objaverse/milk/milk_0/model.xml",
+          "default_body_mass_kg": 0.05453138704055539,
+          "category_match": true
+        },
+        {
+          "seed": 1,
+          "mesh_id": "milk_1",
+          "mesh_category": "milk",
+          "mjcf_path": "/home/chungyili/Codes/robocasa/robocasa/models/assets/objects/objaverse/milk/milk_1/model.xml",
+          "default_body_mass_kg": 0.026822061726758946,
+          "category_match": true
+        },
+        {
+          "seed": 2,
+          "mesh_id": "milk_1",
+          "mesh_category": "milk",
+          "mjcf_path": "/home/chungyili/Codes/robocasa/robocasa/models/assets/objects/objaverse/milk/milk_1/model.xml",
+          "default_body_mass_kg": 0.026822061726758946,
+          "category_match": true
+        }
+      ],
+      "pool_nonempty": true,
+      "category_respected": true,
+      "distinct_mesh_ids": [
+        "milk_0",
+        "milk_1"
+      ]
+    }
+  },
+  "secondary_candidates": [
+    {
+      "category": "bottled_water",
+      "pool_check": {
+        "env_name": "PickPlaceToasterToCounter",
+        "category": "bottled_water",
+        "n_seeds": 3,
+        "horizon": 600,
+        "seeds": [
+          {
+            "seed": 0,
+            "mesh_id": "SandwichBread005",
+            "mesh_category": "sandwich_bread",
+            "mjcf_path": "/home/chungyili/Codes/robocasa/robocasa/models/assets/objects/lightwheel/sandwich_bread/SandwichBread005/model_upright.xml",
+            "default_body_mass_kg": 0.034411981280140294,
+            "category_match": false
+          },
+          {
+            "seed": 1,
+            "mesh_id": "SandwichBread005",
+            "mesh_category": "sandwich_bread",
+            "mjcf_path": "/home/chungyili/Codes/robocasa/robocasa/models/assets/objects/lightwheel/sandwich_bread/SandwichBread005/model_upright.xml",
+            "default_body_mass_kg": 0.034411981280140294,
+            "category_match": false
+          },
+          {
+            "seed": 2,
+            "mesh_id": "SandwichBread007",
+            "mesh_category": "sandwich_bread",
+            "mjcf_path": "/home/chungyili/Codes/robocasa/robocasa/models/assets/objects/lightwheel/sandwich_bread/SandwichBread007/model_upright.xml",
+            "default_body_mass_kg": 0.05946791450386959,
+            "category_match": false
+          }
+        ],
+        "pool_nonempty": true,
+        "category_respected": false,
+        "distinct_mesh_ids": [
+          "SandwichBread005",
+          "SandwichBread007"
+        ]
+      },
+      "passes": false,
+      "fail_reason": "requested obj_groups was not respected -- env sampled mesh category 'sandwich_bread' instead of 'bottled_water' (see notes: PickPlaceToasterToCounter hardcodes its 'obj' cfg's obj_groups)"
+    },
+    {
+      "category": "boxed_food",
+      "pool_check": {
+        "env_name": "PickPlaceToasterToCounter",
+        "category": "boxed_food",
+        "n_seeds": 3,
+        "horizon": 600,
+        "seeds": [
+          {
+            "seed": 0,
+            "mesh_id": "SandwichBread005",
+            "mesh_category": "sandwich_bread",
+            "mjcf_path": "/home/chungyili/Codes/robocasa/robocasa/models/assets/objects/lightwheel/sandwich_bread/SandwichBread005/model_upright.xml",
+            "default_body_mass_kg": 0.034411981280140294,
+            "category_match": false
+          },
+          {
+            "seed": 1,
+            "mesh_id": "SandwichBread005",
+            "mesh_category": "sandwich_bread",
+            "mjcf_path": "/home/chungyili/Codes/robocasa/robocasa/models/assets/objects/lightwheel/sandwich_bread/SandwichBread005/model_upright.xml",
+            "default_body_mass_kg": 0.034411981280140294,
+            "category_match": false
+          },
+          {
+            "seed": 2,
+            "mesh_id": "SandwichBread007",
+            "mesh_category": "sandwich_bread",
+            "mjcf_path": "/home/chungyili/Codes/robocasa/robocasa/models/assets/objects/lightwheel/sandwich_bread/SandwichBread007/model_upright.xml",
+            "default_body_mass_kg": 0.05946791450386959,
+            "category_match": false
+          }
+        ],
+        "pool_nonempty": true,
+        "category_respected": false,
+        "distinct_mesh_ids": [
+          "SandwichBread005",
+          "SandwichBread007"
+        ]
+      },
+      "passes": false,
+      "fail_reason": "requested obj_groups was not respected -- env sampled mesh category 'sandwich_bread' instead of 'boxed_food' (see notes: PickPlaceToasterToCounter hardcodes its 'obj' cfg's obj_groups)"
+    },
+    {
+      "category": "bottled_drink",
+      "pool_check": {
+        "env_name": "PickPlaceToasterToCounter",
+        "category": "bottled_drink",
+        "n_seeds": 3,
+        "horizon": 600,
+        "seeds": [
+          {
+            "seed": 0,
+            "mesh_id": "SandwichBread005",
+            "mesh_category": "sandwich_bread",
+            "mjcf_path": "/home/chungyili/Codes/robocasa/robocasa/models/assets/objects/lightwheel/sandwich_bread/SandwichBread005/model_upright.xml",
+            "default_body_mass_kg": 0.034411981280140294,
+            "category_match": false
+          },
+          {
+            "seed": 1,
+            "mesh_id": "SandwichBread005",
+            "mesh_category": "sandwich_bread",
+            "mjcf_path": "/home/chungyili/Codes/robocasa/robocasa/models/assets/objects/lightwheel/sandwich_bread/SandwichBread005/model_upright.xml",
+            "default_body_mass_kg": 0.034411981280140294,
+            "category_match": false
+          },
+          {
+            "seed": 2,
+            "mesh_id": "SandwichBread007",
+            "mesh_category": "sandwich_bread",
+            "mjcf_path": "/home/chungyili/Codes/robocasa/robocasa/models/assets/objects/lightwheel/sandwich_bread/SandwichBread007/model_upright.xml",
+            "default_body_mass_kg": 0.05946791450386959,
+            "category_match": false
+          }
+        ],
+        "pool_nonempty": true,
+        "category_respected": false,
+        "distinct_mesh_ids": [
+          "SandwichBread005",
+          "SandwichBread007"
+        ]
+      },
+      "passes": false,
+      "fail_reason": "requested obj_groups was not respected -- env sampled mesh category 'sandwich_bread' instead of 'bottled_drink' (see notes: PickPlaceToasterToCounter hardcodes its 'obj' cfg's obj_groups)"
+    },
+    {
+      "category": "boxed_drink",
+      "pool_check": {
+        "env_name": "PickPlaceToasterToCounter",
+        "category": "boxed_drink",
+        "n_seeds": 3,
+        "horizon": 600,
+        "seeds": [
+          {
+            "seed": 0,
+            "mesh_id": "SandwichBread005",
+            "mesh_category": "sandwich_bread",
+            "mjcf_path": "/home/chungyili/Codes/robocasa/robocasa/models/assets/objects/lightwheel/sandwich_bread/SandwichBread005/model_upright.xml",
+            "default_body_mass_kg": 0.034411981280140294,
+            "category_match": false
+          },
+          {
+            "seed": 1,
+            "mesh_id": "SandwichBread005",
+            "mesh_category": "sandwich_bread",
+            "mjcf_path": "/home/chungyili/Codes/robocasa/robocasa/models/assets/objects/lightwheel/sandwich_bread/SandwichBread005/model_upright.xml",
+            "default_body_mass_kg": 0.034411981280140294,
+            "category_match": false
+          },
+          {
+            "seed": 2,
+            "mesh_id": "SandwichBread007",
+            "mesh_category": "sandwich_bread",
+            "mjcf_path": "/home/chungyili/Codes/robocasa/robocasa/models/assets/objects/lightwheel/sandwich_bread/SandwichBread007/model_upright.xml",
+            "default_body_mass_kg": 0.05946791450386959,
+            "category_match": false
+          }
+        ],
+        "pool_nonempty": true,
+        "category_respected": false,
+        "distinct_mesh_ids": [
+          "SandwichBread005",
+          "SandwichBread007"
+        ]
+      },
+      "passes": false,
+      "fail_reason": "requested obj_groups was not respected -- env sampled mesh category 'sandwich_bread' instead of 'boxed_drink' (see notes: PickPlaceToasterToCounter hardcodes its 'obj' cfg's obj_groups)"
+    },
+    {
+      "category": "canned_food",
+      "pool_check": {
+        "env_name": "PickPlaceToasterToCounter",
+        "category": "canned_food",
+        "n_seeds": 3,
+        "horizon": 600,
+        "seeds": [
+          {
+            "seed": 0,
+            "mesh_id": "SandwichBread005",
+            "mesh_category": "sandwich_bread",
+            "mjcf_path": "/home/chungyili/Codes/robocasa/robocasa/models/assets/objects/lightwheel/sandwich_bread/SandwichBread005/model_upright.xml",
+            "default_body_mass_kg": 0.034411981280140294,
+            "category_match": false
+          },
+          {
+            "seed": 1,
+            "mesh_id": "SandwichBread005",
+            "mesh_category": "sandwich_bread",
+            "mjcf_path": "/home/chungyili/Codes/robocasa/robocasa/models/assets/objects/lightwheel/sandwich_bread/SandwichBread005/model_upright.xml",
+            "default_body_mass_kg": 0.034411981280140294,
+            "category_match": false
+          },
+          {
+            "seed": 2,
+            "mesh_id": "SandwichBread007",
+            "mesh_category": "sandwich_bread",
+            "mjcf_path": "/home/chungyili/Codes/robocasa/robocasa/models/assets/objects/lightwheel/sandwich_bread/SandwichBread007/model_upright.xml",
+            "default_body_mass_kg": 0.05946791450386959,
+            "category_match": false
+          }
+        ],
+        "pool_nonempty": true,
+        "category_respected": false,
+        "distinct_mesh_ids": [
+          "SandwichBread005",
+          "SandwichBread007"
+        ]
+      },
+      "passes": false,
+      "fail_reason": "requested obj_groups was not respected -- env sampled mesh category 'sandwich_bread' instead of 'canned_food' (see notes: PickPlaceToasterToCounter hardcodes its 'obj' cfg's obj_groups)"
+    }
+  ],
+  "secondary_choice": null,
+  "secondary_choice_reason": "no candidate passed pool + category-match + diversity checks",
+  "notes": [
+    "VERIFIED FINDING: PickPlaceToasterToCounter._get_obj_cfgs (robocasa/environments/kitchen/atomic/kitchen_pick_place.py:1034) hardcodes the 'obj' cfg's obj_groups to ('sandwich_bread',) and never reads self.obj_groups. The env-level obj_groups kwarg passed at gym.make() is accepted (no TypeError, self.obj_groups is set) but silently has no effect on which object is sampled: every candidate category below still samples a sandwich_bread mesh. The design doc (docs/studies/2026-09-03-mass-com-xr1-design.md) excludes PickPlaceDrawerToCounter for this exact reason ('hardcodes its object groups') but does not flag PickPlaceToasterToCounter -- this preflight run adds that finding. Confirmed empirically: obj_groups='canned_food' on PickPlaceToasterToCounter reset to .../lightwheel/sandwich_bread/SandwichBread005/model_upright.xml.",
+    "Category-match check: extracts the category path segment from each sampled object's mjcf_path (.../objects/<registry>/<category>/<mesh_id>/model*.xml) and compares it to the requested obj_groups value."
+  ]
+}
