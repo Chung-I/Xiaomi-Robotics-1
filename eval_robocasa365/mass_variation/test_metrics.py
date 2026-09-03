@@ -135,7 +135,9 @@ class TestConditionAggregation:
         seed 10: fail,      never grasped, never lifted
 
         success_rate 2/4 = 0.5; grasp_rate 3/4 = 0.75; lift_rate 3/4 = 0.75;
-        t_success mean over successes = 7.5 s; drop_after_lift_rate 1/4 = 0.25.
+        t_success mean over successes = 7.5 s; release_and_fall_rate 1/4 =
+        0.25 (over ALL episodes); drop_after_lift_on_failure_rate 1/2 = 0.5
+        (failures are seeds 9 and 10; only seed 9 drops).
         """
         cond_dir = root / "phase1" / cell / condition
 
@@ -187,7 +189,8 @@ class TestConditionAggregation:
         assert row["grasp_rate"] == pytest.approx(0.75)
         assert row["lift_rate"] == pytest.approx(0.75)
         assert row["t_success_mean_s"] == pytest.approx(7.5)
-        assert row["drop_after_lift_rate"] == pytest.approx(0.25)
+        assert row["release_and_fall_rate"] == pytest.approx(0.25)
+        assert row["drop_after_lift_on_failure_rate"] == pytest.approx(0.5)
         assert row["mass_kg"] == pytest.approx(0.15)
 
         row = df[df["condition"] == "MassHeavy"].iloc[0]
@@ -211,6 +214,40 @@ class TestConditionAggregation:
         row = df.iloc[0]
         assert row["success_rate"] == pytest.approx(0.0)
         assert math.isnan(row["t_success_mean_s"])
+
+    def test_drop_after_lift_on_failure_rate_nan_when_no_failures(self, tmp_path):
+        # All episodes succeed (one with a release-and-fall on success, one
+        # without) -> zero failures -> drop_after_lift_on_failure_rate is
+        # NaN (nothing to divide by), while release_and_fall_rate still
+        # counts the one release-and-fall over all episodes.
+        cell = "PickPlaceCounterToCabinet"
+        cond_dir = tmp_path / "phase1" / cell / "MassLight"
+
+        def flat_lift(steps):
+            z = np.zeros(steps)
+            z[3:] = 0.10
+            grasped = np.zeros(steps, dtype=bool)
+            grasped[2:] = True
+            return z, grasped
+
+        z, grasped = flat_lift(50)
+        _save_ep(cond_dir / "ep_7.npz", z, grasped, True, 3, seed=7, mass_kg=0.15)
+
+        # Successful placement that releases into the cabinet and falls
+        # 0.08 m onto the shelf below (>= the 0.05 m drop threshold) --
+        # exactly the "intentional cabinet release" the reviewer flagged:
+        # drop_after_lift fires, but the episode still succeeds.
+        z = np.array([0.0, 0.0, 0.03, 0.06, 0.10, 0.12, 0.10, 0.02, 0.0, 0.0])
+        grasped = np.array([0, 1, 1, 1, 1, 1, 0, 0, 0, 0], dtype=bool)
+        _save_ep(cond_dir / "ep_8.npz", z, grasped, True, 3, seed=8, mass_kg=0.15)
+
+        df = metrics.metrics_dataframe(
+            tmp_path / "phase1", cell=cell, conditions=["MassLight"], model="xr1"
+        )
+        row = df.iloc[0]
+        assert row["success_rate"] == pytest.approx(1.0)
+        assert row["release_and_fall_rate"] == pytest.approx(0.5)
+        assert math.isnan(row["drop_after_lift_on_failure_rate"])
 
     def test_missing_condition_dir_raises(self, tmp_path):
         with pytest.raises(FileNotFoundError):

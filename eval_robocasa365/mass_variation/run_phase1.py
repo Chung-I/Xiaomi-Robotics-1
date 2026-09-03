@@ -71,9 +71,12 @@ PI05_CHECKPOINT = (
 )
 PI05_TRAIN_CONFIG = "pi05_pretrain_human300"
 
-# Published per-task baseline (None = no per-task number published; the
-# sanity gate then uses ABSOLUTE_GATE_THRESHOLD -- the design addendum's
-# decision rule: pi0.5 MassLight success < 0.25 -> STOP/BLOCKED).
+# Published per-task baseline (docs/studies/2026-09-03-mass-com-xr1-design.md:40
+# -- "Cells (2): primary `PickPlaceCounterToCabinet` x `milk` (baseline
+# 43/50, sealed opaque carton)"; 43/50 = 0.86. None = no per-task number
+# published; the sanity gate then uses ABSOLUTE_GATE_THRESHOLD -- the
+# design addendum's decision rule: pi0.5 MassLight success < 0.25 ->
+# STOP/BLOCKED).
 PUBLISHED_BASELINE = {"xr1": 0.86, "pi05_robocasa": None}
 ABSOLUTE_GATE_THRESHOLD = {"pi05_robocasa": 0.25}
 BASELINE_TOLERANCE = 0.2
@@ -282,6 +285,12 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         "--no-server-restart", action="store_true",
         help="DEBUG ONLY: reuse the running server (violates the batch rule).",
     )
+    parser.add_argument(
+        "--force-gate", action="store_true",
+        help="--mode phase1 only: proceed even if this model's latest sanity "
+        "summary reports gate FAIL (default: refuse to start; see "
+        "require_sanity_gate_pass).",
+    )
     return parser.parse_args(argv)
 
 
@@ -289,6 +298,48 @@ def summary_path_for(output_root: Path, mode: str, model: str) -> Path:
     if mode == "sanity":
         return output_root / f"sanity_sweep_{model}.json"
     return output_root / "phase1" / f"phase1_summary_{model}.json"
+
+
+class SanityGateBlocked(RuntimeError):
+    """Raised by ``require_sanity_gate_pass`` when ``--mode phase1`` is
+    refused because the model's latest sanity summary reports gate FAIL."""
+
+
+def require_sanity_gate_pass(output_root: Path, model: str, force: bool) -> dict | None:
+    """Fix-wave hard-stop (ledger: "sanity gate not code-enforced BLOCKED").
+
+    Refuses to start Phase-1 for ``model`` when its latest
+    ``sanity_sweep_<model>.json`` (written by a prior ``--mode sanity`` run)
+    reports ``sanity_gate.passed`` False -- previously this was an
+    operational convention a human had to check by hand before invoking
+    ``--mode phase1``; nothing in code enforced it.
+
+    Returns the loaded sanity summary dict (for logging/config), or None if
+    no sanity summary exists yet for this model -- there is nothing to gate
+    on in that case, so this does NOT block (a missing sanity run is a
+    different problem than a FAILED one; this fix only code-enforces the
+    FAIL case the ledger flagged). ``force=True`` (``--force-gate``) always
+    lets the run proceed, but the gate is still evaluated and logged.
+    """
+    summary_path = summary_path_for(output_root, "sanity", model)
+    if not summary_path.exists():
+        return None
+    with summary_path.open("r", encoding="utf-8") as file:
+        summary = json.load(file)
+    gate = summary.get("sanity_gate")
+    if gate is not None and not gate.get("passed", False):
+        message = (
+            f"Phase-1 refused for model={model!r}: latest sanity summary "
+            f"({summary_path}) reports SANITY GATE FAIL "
+            f"(mass_light_success_rate={gate.get('mass_light_success_rate')!r} "
+            f"< threshold={gate.get('threshold')!r}). Re-run --mode sanity "
+            "until it passes, or pass --force-gate to override."
+        )
+        if force:
+            log.warning("%s (proceeding: --force-gate set)", message)
+        else:
+            raise SanityGateBlocked(message)
+    return summary
 
 
 def evaluate_sanity_gate(df, model: str) -> dict:
@@ -326,8 +377,8 @@ def log_wandb(mode: str, model: str, df, config: dict, gate: dict | None) -> str
     for _, row in df.iterrows():
         cond = row["condition"]
         for key in (
-            "success_rate", "grasp_rate", "lift_rate",
-            "t_success_mean_s", "drop_after_lift_rate",
+            "success_rate", "grasp_rate", "lift_rate", "t_success_mean_s",
+            "release_and_fall_rate", "drop_after_lift_on_failure_rate",
         ):
             payload[f"{key}/{cond}"] = row[key]
     if gate is not None:
@@ -359,6 +410,9 @@ def main(argv: list[str] | None = None) -> int:
     restarts_path = phase1_root / f"server_restarts_{args.model}.json"
     runlog_path = phase1_root / f"runlog_{args.model}.jsonl"
     server_log = output_root / "logs" / f"server_{port}.log"
+
+    if args.mode == "phase1":
+        require_sanity_gate_pass(output_root, args.model, args.force_gate)
 
     # Heavy imports only when we may actually run episodes.
     import gymnasium as gym

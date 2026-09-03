@@ -158,6 +158,15 @@ def override_initial_noise(noise: torch.Tensor) -> Iterator[list[tuple[int, ...]
       - raises if drawn more than once (a second sampling site appeared),
       - raises if never drawn (the patched call was bypassed),
       - always restores ``torch.randn_like``, including on exceptions.
+
+    Single-threaded / non-reentrant: the patch replaces the PROCESS-WIDE
+    ``torch.randn_like`` for the duration of the ``with`` block, so this
+    context must not be entered from more than one thread at a time, and
+    must not be nested/re-entered (a second concurrent call would race the
+    save/restore of ``original`` and could silently leave the wrong -- or
+    no -- patch installed). Callers (``XR1Runner.infer``) hold it around a
+    single synchronous model call; do not parallelize inference calls that
+    pass ``noise`` across threads without external serialization.
     """
     original = torch.randn_like
     calls: list[tuple[int, ...]] = []

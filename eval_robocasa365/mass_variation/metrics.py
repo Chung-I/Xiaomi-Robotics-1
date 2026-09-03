@@ -26,6 +26,20 @@ Per-episode definitions (control rate 20 Hz -> 1 step = 0.05 s):
 Aggregation (one row per condition): every ``*_rate`` uses ALL episodes of
 the condition as denominator; ``t_success_mean_s`` averages over successful
 episodes only (NaN when there are none).
+
+Column rename (fix-wave, reviewer-verified): the per-episode
+``drop_after_lift`` event fires on ANY grasped-then-fall transition after
+liftoff, including an INTENTIONAL cabinet release that then settles/falls
+slightly on a successful placement -- it does not, by itself, mean the
+episode failed by dropping the object. The aggregate column is therefore
+named ``release_and_fall_rate`` (over ALL episodes; this is what used to be
+called ``drop_after_lift_rate`` -- same definition, renamed, not
+recomputed), and a second column, ``drop_after_lift_on_failure_rate``,
+isolates the failure-conditioned reading the name ``drop_after_lift``
+originally implied: the fraction of FAILED episodes (``success`` False)
+that also drop -- i.e. drops counted only on failed episodes, divided by
+the number of failures. NaN when a condition has zero failures (nothing to
+divide by), matching ``t_success_mean_s``'s NaN-on-empty-subset convention.
 """
 
 from __future__ import annotations
@@ -106,13 +120,17 @@ def condition_episode_frame(cond_dir: str | Path) -> pd.DataFrame:
 def _aggregate(per_ep: pd.DataFrame) -> dict[str, Any]:
     n = len(per_ep)
     t_success = per_ep.loc[per_ep["success"], "t_success_s"]
+    failures = per_ep.loc[~per_ep["success"], "drop_after_lift"]
     return {
         "n_episodes": int(n),
         "success_rate": float(per_ep["success"].mean()),
         "grasp_rate": float(per_ep["grasped_any"].mean()),
         "lift_rate": float(per_ep["lifted"].mean()),
         "t_success_mean_s": float(t_success.mean()) if len(t_success) else float("nan"),
-        "drop_after_lift_rate": float(per_ep["drop_after_lift"].mean()),
+        "release_and_fall_rate": float(per_ep["drop_after_lift"].mean()),
+        "drop_after_lift_on_failure_rate": (
+            float(failures.mean()) if len(failures) else float("nan")
+        ),
         "mass_kg": float(per_ep["mass_kg"].mean()),
     }
 
@@ -146,7 +164,8 @@ def metrics_dataframe(
         "grasp_rate",
         "lift_rate",
         "t_success_mean_s",
-        "drop_after_lift_rate",
+        "release_and_fall_rate",
+        "drop_after_lift_on_failure_rate",
     ]
     return pd.DataFrame(rows, columns=columns)
 

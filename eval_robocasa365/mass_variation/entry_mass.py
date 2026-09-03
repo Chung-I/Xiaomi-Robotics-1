@@ -263,11 +263,21 @@ def run_episode(
         observation, _, done, truncated, info = env.step(convert_action(policy_action))
         steps += 1
 
-        recorder.record(env, obj_name, policy_action, grasp_fn=grasp_fn)
+        # Compute the policy-format state ONCE and feed it to both the
+        # queue (as before) and the recorder's optional policy_state
+        # channel (fix-wave item 3) -- threading the queue's own value
+        # through rather than recomputing it a second time from
+        # `observation`. Works unchanged for both clients: state_fn is
+        # already resolved above per-client (XR1's observation_to_state vs
+        # pi0.5's state_from_observation).
+        policy_state = state_fn(observation)
+        recorder.record(
+            env, obj_name, policy_action, grasp_fn=grasp_fn, policy_state=policy_state
+        )
 
         for key, image in collect_images(observation).items():
             image_queues[key].append(image)
-        state_queue.append(state_fn(observation))
+        state_queue.append(policy_state)
 
         success = bool(info.get("success", False))
         if success or done or truncated:

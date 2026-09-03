@@ -379,6 +379,104 @@ def test_recorder_liftoff_minus_one_when_never_grasped(tmp_path):
     assert not bool(data["grasped"].any())
 
 
+# ---------------------------------------------------------------------------
+# policy_state channel (fix-wave item 3)
+# ---------------------------------------------------------------------------
+
+
+def test_recorder_policy_state_included_when_given_every_step(tmp_path):
+    env = _FakeEnv()
+    recorder = StepRecorder()
+
+    steps = 4
+    for t in range(steps):
+        env.set_obj_z(0.5)
+        env.set_eef_pos([0.0, 0.0, 0.5])
+        # A 14-D XR1-shaped policy state, distinct per step so the round
+        # trip is checkable value-for-value, not just shape-for-shape.
+        policy_state = np.arange(14, dtype=np.float32) + t
+        recorder.record(
+            env,
+            "obj",
+            np.zeros(12, dtype=np.float32),
+            grasp_fn=lambda _env, _obj_name: False,
+            policy_state=policy_state,
+        )
+
+    out_path = recorder.finalize(
+        tmp_path / "ep_policy_state.npz",
+        mass_kg=0.6, com_offset_m=0.0, com_axis="y", seed=0, success=False,
+    )
+    data = np.load(out_path)
+    assert "policy_state" in data.files
+    assert data["policy_state"].shape == (steps, 14)
+    expected = np.stack([np.arange(14, dtype=np.float32) + t for t in range(steps)])
+    assert np.array_equal(data["policy_state"], expected)
+
+
+def test_recorder_policy_state_absent_when_never_given(tmp_path):
+    # No caller passes policy_state (mirrors the 210 existing Phase-1 npz,
+    # recorded before this channel existed) -> the key is simply absent,
+    # not written as an empty/zero array.
+    env = _FakeEnv()
+    recorder = StepRecorder()
+
+    for _ in range(3):
+        env.set_obj_z(0.5)
+        env.set_eef_pos([0.0, 0.0, 0.5])
+        recorder.record(
+            env, "obj", np.zeros(12, dtype=np.float32),
+            grasp_fn=lambda _env, _obj_name: False,
+        )
+
+    out_path = recorder.finalize(
+        tmp_path / "ep_no_policy_state.npz",
+        mass_kg=0.6, com_offset_m=0.0, com_axis="y", seed=0, success=False,
+    )
+    data = np.load(out_path)
+    assert "policy_state" not in data.files
+
+
+def test_recorder_policy_state_mixed_use_raises():
+    env = _FakeEnv()
+    recorder = StepRecorder()
+    env.set_obj_z(0.5)
+    env.set_eef_pos([0.0, 0.0, 0.5])
+    recorder.record(
+        env, "obj", np.zeros(12, dtype=np.float32),
+        grasp_fn=lambda _env, _obj_name: False,
+        policy_state=np.zeros(14, dtype=np.float32),
+    )
+    env.set_obj_z(0.5)
+    env.set_eef_pos([0.0, 0.0, 0.5])
+    with pytest.raises(ValueError, match="policy_state"):
+        recorder.record(
+            env, "obj", np.zeros(12, dtype=np.float32),
+            grasp_fn=lambda _env, _obj_name: False,
+        )
+
+
+def test_recorder_policy_state_mixed_use_raises_other_order():
+    # Starting WITHOUT policy_state then supplying it later must also raise
+    # (not just the reverse order tested above).
+    env = _FakeEnv()
+    recorder = StepRecorder()
+    env.set_obj_z(0.5)
+    env.set_eef_pos([0.0, 0.0, 0.5])
+    recorder.record(
+        env, "obj", np.zeros(12, dtype=np.float32),
+        grasp_fn=lambda _env, _obj_name: False,
+    )
+    env.set_obj_z(0.5)
+    env.set_eef_pos([0.0, 0.0, 0.5])
+    with pytest.raises(ValueError, match="policy_state"):
+        recorder.record(
+            env, "obj", np.zeros(12, dtype=np.float32),
+            grasp_fn=lambda _env, _obj_name: False,
+            policy_state=np.zeros(14, dtype=np.float32),
+        )
+
+
 def test_recorder_record_asserts_obj_name_present():
     env = _FakeEnv()
     recorder = StepRecorder()

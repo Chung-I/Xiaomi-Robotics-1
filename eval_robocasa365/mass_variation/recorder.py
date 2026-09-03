@@ -44,6 +44,22 @@ Hz control steps is small by construction, so it never approaches the
 theta = pi singularity regardless of where the ABSOLUTE orientations sit --
 well-conditioned by construction, not by luck.
 
+``policy_state`` channel (fix-wave, future runs only)
+--------------------------------------------------------
+``record`` takes an optional ``policy_state`` array: the EXACT policy-format
+proprio vector ``run_episode`` already computes each step for its own state
+queue (``state_fn(observation)`` -- XR1's 14-D axis-angle
+``entry.observation_to_state``, or pi0.5's 16-D raw-quaternion
+``pi05_client.state_from_observation``), threaded straight through rather
+than recomputed. When given (for every step of an episode -- see
+``StepRecorder.record``'s consistency check below), ``finalize`` writes it
+to the npz as ``policy_state`` with shape ``(T, state_dim)`` (``state_dim``
+is whatever the client's ``state_fn`` produces -- 14 for XR1, 16 for
+pi0.5). When never given, the key is simply absent from the npz -- this is
+a NEW, purely additive channel: the 210 Phase-1 npz already on disk were
+written before this field existed and stay exactly as they are; readers
+must treat ``policy_state`` as optional.
+
 Grasp detection dependency injection
 -------------------------------------
 ``record``'s default grasp source is
@@ -63,6 +79,20 @@ force_x, force_y, force_z]`` -- torque FIRST, force LAST (verified in Task
 ``cfrc_obj`` here stores that 6-vector AS-IS, unreordered: index 0:3 is
 torque, index 3:6 is force, and ``cfrc_obj[..., 5]`` is Fz (+mg sign, not
 -mg).
+
+``obj_quat`` convention note
+-----------------------------
+``obj_quat`` is read straight off ``sim.data.xquat[bid]`` (see ``record``
+below), MuJoCo's native body-orientation quaternion layout: **wxyz** (scalar
+first). This is a DIFFERENT convention from the observation-side quaternions
+this module (and ``entry.py``/``pi05_client.py``) otherwise handle --
+``state.end_effector_rotation_relative``/``state.base_rotation`` and this
+file's own ``_mat_to_quat_xyzw``/``_quat_xyzw_to_axis_angle`` helpers are all
+**xyzw** (scalar last), robosuite/robomimic's convention for policy-facing
+proprioception. Do not feed ``obj_quat`` into ``_quat_xyzw_to_axis_angle`` (or
+any other xyzw-assuming code) without first reordering it; analysis code
+consuming this npz field must convert explicitly (swap component 0 to the
+end, or vice versa) rather than assume either layout.
 """
 
 from __future__ import annotations
@@ -229,18 +259,52 @@ class StepRecorder:
         # _relative_axis_angle / the module docstring's "Rotation delta
         # fix").
         self._hand_orn: list[np.ndarray] = []
+        # Optional policy_state channel (see the module docstring): None
+        # until the first record() call establishes whether this episode is
+        # using it; every subsequent call must agree, checked in record().
+        self._policy_state: list[np.ndarray] = []
+        self._policy_state_enabled: bool | None = None
 
     @property
     def num_steps(self) -> int:
         return len(self._actions)
 
-    def record(self, env: Any, obj_name: str, action: Any, grasp_fn: Any = None) -> None:
+    def record(
+        self,
+        env: Any,
+        obj_name: str,
+        action: Any,
+        grasp_fn: Any = None,
+        policy_state: Any = None,
+    ) -> None:
         """Pull one step's ground truth off ``env`` (call this AFTER
         ``env.step`` returns, i.e. with post-step sim state) and the 12-d
         ``action`` actually applied (the RAW action, before
         ``convert_action`` -- dims 0:6 are the commanded EE delta per the
         plan amendment). ALL env/sim access for this recorder lives here.
+
+        ``policy_state``, when given, is the exact policy-format proprio
+        vector for this step (see the module docstring's "policy_state
+        channel" note) -- either provide it on EVERY call for an episode or
+        never at all; mixing raises ``ValueError`` (a partial channel would
+        silently under-report the episode length via ``np.stack``).
         """
+        state_enabled = policy_state is not None
+        if self._policy_state_enabled is None:
+            self._policy_state_enabled = state_enabled
+        elif self._policy_state_enabled != state_enabled:
+            raise ValueError(
+                "StepRecorder.record: policy_state must be given for every "
+                "step of an episode or omitted for the whole episode -- got "
+                f"policy_state={'set' if state_enabled else 'None'} after "
+                f"{'setting' if self._policy_state_enabled else 'omitting'} "
+                "it on an earlier step"
+            )
+        if state_enabled:
+            self._policy_state.append(
+                np.asarray(policy_state, dtype=np.float32).reshape(-1)
+            )
+
         if grasp_fn is None:
             from robocasa.utils.object_utils import check_obj_grasped as grasp_fn
 
@@ -280,7 +344,7 @@ class StepRecorder:
     def _stack(self) -> dict[str, np.ndarray]:
         if self.num_steps == 0:
             raise ValueError("StepRecorder has zero recorded steps")
-        return {
+        arrays = {
             "ee_force": np.stack(self._ee_force).astype(np.float32),
             "ee_torque": np.stack(self._ee_torque).astype(np.float32),
             "cfrc_obj": np.stack(self._cfrc_obj).astype(np.float32),
@@ -292,6 +356,9 @@ class StepRecorder:
             "eef_pos": np.stack(self._eef_pos).astype(np.float32),
             "eef_rot": np.stack(self._eef_rot).astype(np.float32),
         }
+        if self._policy_state_enabled:
+            arrays["policy_state"] = np.stack(self._policy_state).astype(np.float32)
+        return arrays
 
     def finalize(self, path: str | Path, **scalars: Any) -> Path:
         """Write the accumulated per-step arrays, plus the derived
@@ -309,6 +376,11 @@ class StepRecorder:
         ``eef_rot[t] - eef_rot[t-1]`` (that subtracts two ABSOLUTE
         axis-angle vectors, which is wrong near theta = pi; see the module
         docstring's "Rotation delta fix").
+
+        ``policy_state`` (T, state_dim) is included iff at least one
+        ``record()`` call in this episode provided it (see the module
+        docstring's "policy_state channel" note); otherwise the key is
+        absent from the npz entirely.
         """
         arrays = self._stack()
         steps = arrays["actions"].shape[0]

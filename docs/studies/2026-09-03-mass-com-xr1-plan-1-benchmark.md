@@ -6,7 +6,7 @@
 
 **Architecture:** All study code lives in `eval_robocasa365/mass_variation/` in this repo; robocasa/robosuite stay unedited (monkeypatch at the sampling seam, post-reset MuJoCo writes for CoM). Behavioral runs use the stock pickle server; the offline runner loads the model in-process for later plans and gates determinism now.
 
-**Tech Stack:** sim side runs in the robocasa venv (`~/Codes/robocasa/.venv/bin/python`, mujoco 3.3.1); model server in `.venv-mibot`; offline runner in `.venv-mibot`. Tests: `~/Codes/robocasa/.venv/bin/python -m pytest eval_robocasa365/mass_variation -v` (pure parts import no sim). wandb project `mass-com-xr1`.
+**Tech Stack:** sim side runs in the robocasa venv (`~/Codes/robocasa/.venv/bin/python`, mujoco 3.3.1); model server in `.venv-mibot`; offline runner in `.venv-mibot`. Tests: `~/Codes/robocasa/.venv/bin/python -m pytest eval_robocasa365/mass_variation -v` (pure parts import no sim). wandb project `mass-com-xr1`. `.venv-mibot` needed `pytest` and `imageio` installed ad hoc (Task 4: neither was present, and `entry.py` imports `imageio` at module level) to run the mandated test command against `test_xr1_runner.py`; no versioned dependency changed.
 
 **Spec:** `docs/studies/2026-09-03-mass-com-xr1-design.md` (binding; carries the ported metrics/certificate/window rules).
 
