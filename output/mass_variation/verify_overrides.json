@@ -1,0 +1,202 @@
+{
+  "primary_env": "PickPlaceCounterToCabinet",
+  "primary_category": "milk",
+  "seed": 0,
+  "density_route": {
+    "baseline": {
+      "mesh": "/home/chungyili/Codes/robocasa/robocasa/models/assets/objects/objaverse/milk/milk_0/model.xml",
+      "mass_kg": 0.05453138704055539,
+      "ipos": [
+        -0.00019265189621234707,
+        -3.316419428640925e-07,
+        -0.008101765218919522
+      ]
+    },
+    "target_density": 1100.2837678670737,
+    "overridden": {
+      "mesh": "/home/chungyili/Codes/robocasa/robocasa/models/assets/objects/objaverse/milk/milk_0/model.xml",
+      "mass_kg": 0.5999999999999999,
+      "ipos": [
+        -0.0001926518962123471,
+        -3.3164194286409254e-07,
+        -0.008101765218919525
+      ],
+      "mass_err_pct": 1.8503717077085944e-14,
+      "mesh_match": true,
+      "ipos_match": true
+    },
+    "cfrc_check": {
+      "fz": 5.8863321626910015,
+      "gravity": 9.81,
+      "mg": 5.885999999999999,
+      "expected_fz": 5.885999999999999,
+      "cfrc_err_pct": 0.005643266921546461,
+      "settle": {
+        "bid": 266,
+        "pre_pos": [
+          5.2748545727586205,
+          -4.423974081106848,
+          1.0109897777851113
+        ],
+        "pre_quat": [
+          0.4027048719299975,
+          -0.00041928604219013176,
+          0.0003495537814678929,
+          -0.9153297155316287
+        ],
+        "post_pos": [
+          5.274900633443875,
+          -4.423941077520703,
+          1.0110057144168418
+        ],
+        "post_quat": [
+          0.40270571167019786,
+          -0.000723146936117518,
+          0.0002855284883255488,
+          -0.9153291786675386
+        ],
+        "pos_delta_m": 5.886254883572651e-05,
+        "rot_delta_deg": 0.035584632354680235,
+        "pos_tol_m": 0.001,
+        "rot_tol_deg": 0.5,
+        "passed": true
+      }
+    },
+    "passed": true
+  },
+  "com_route": {
+    "mesh": "/home/chungyili/Codes/robocasa/robocasa/models/assets/objects/objaverse/milk/milk_0/model.xml",
+    "authored_ipos": [
+      -0.00019265189621234707,
+      -3.316419428640925e-07,
+      -0.008101765218919522
+    ],
+    "center_settle": {
+      "bid": 266,
+      "pre_pos": [
+        5.2748545047581885,
+        -4.4239741297141615,
+        1.0109897550965834
+      ],
+      "pre_quat": [
+        0.4027048720228184,
+        -0.0004187801149635229,
+        0.0003496689460344718,
+        -0.915329715678416
+      ],
+      "post_pos": [
+        5.274903864422024,
+        -4.423931037671192,
+        1.0110074382818672
+      ],
+      "post_quat": [
+        0.40271827970658214,
+        -0.0007582902338015684,
+        0.0002437193155244373,
+        -0.9153236328135461
+      ],
+      "pos_delta_m": 6.78674857572068e-05,
+      "rot_delta_deg": 0.04079028365623148,
+      "pos_tol_m": 0.001,
+      "rot_tol_deg": 0.5,
+      "passed": true
+    },
+    "axis_attempts": [
+      {
+        "axis": "y",
+        "offset_result": {
+          "bid": 266,
+          "mass": 0.05453138704055539,
+          "ipos": [
+            -0.00019265189621234707,
+            0.019999668358057138,
+            -0.008101765218919522
+          ]
+        },
+        "ipos_moved_exactly": true,
+        "mass_unchanged": true,
+        "xipos_delta_m": 0.01999999999999989,
+        "xipos_propagated": true,
+        "gate": {
+          "bid": 266,
+          "pre_pos": [
+            5.2748545047581885,
+            -4.4239741297141615,
+            1.0109897550965834
+          ],
+          "pre_quat": [
+            0.4027048720228184,
+            -0.0004187801149635229,
+            0.0003496689460344718,
+            -0.915329715678416
+          ],
+          "post_pos": [
+            5.274873084193512,
+            -4.42405388528559,
+            1.010970480704532
+          ],
+          "post_quat": [
+            0.4027051995251367,
+            -0.00033612964675955076,
+            0.0007917791226452692,
+            -0.915329330010844
+          ],
+          "pos_delta_m": 0.00013192733360868609,
+          "rot_delta_deg": 0.07929145366123715,
+          "pos_tol_m": 0.001,
+          "rot_tol_deg": 0.5,
+          "passed": true
+        }
+      }
+    ],
+    "chosen_axis": "y",
+    "gate_passed": true,
+    "offset_result": {
+      "bid": 266,
+      "mass": 0.05453138704055539,
+      "ipos": [
+        -0.00019265189621234707,
+        0.019999668358057138,
+        -0.008101765218919522
+      ]
+    },
+    "settle_gate": {
+      "bid": 266,
+      "pre_pos": [
+        5.2748545047581885,
+        -4.4239741297141615,
+        1.0109897550965834
+      ],
+      "pre_quat": [
+        0.4027048720228184,
+        -0.0004187801149635229,
+        0.0003496689460344718,
+        -0.915329715678416
+      ],
+      "post_pos": [
+        5.274873084193512,
+        -4.42405388528559,
+        1.010970480704532
+      ],
+      "post_quat": [
+        0.4027051995251367,
+        -0.00033612964675955076,
+        0.0007917791226452692,
+        -0.915329330010844
+      ],
+      "pos_delta_m": 0.00013192733360868609,
+      "rot_delta_deg": 0.07929145366123715,
+      "pos_tol_m": 0.001,
+      "rot_tol_deg": 0.5,
+      "passed": true
+    },
+    "passed": true
+  },
+  "matched_pair": {
+    "density_route_mesh": "/home/chungyili/Codes/robocasa/robocasa/models/assets/objects/objaverse/milk/milk_0/model.xml",
+    "com_route_mesh": "/home/chungyili/Codes/robocasa/robocasa/models/assets/objects/objaverse/milk/milk_0/model.xml",
+    "matched": true
+  },
+  "chosen_com_axis": "y",
+  "overall_passed": true
+}
