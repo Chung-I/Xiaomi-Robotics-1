@@ -122,14 +122,17 @@ def metrics_dataframe(
     cell: str,
     conditions: Iterable[str],
     model: str,
+    cell_dir: str | None = None,
 ) -> pd.DataFrame:
     """Tidy per-condition metrics: one row per condition of ``cell``,
-    with a ``model`` column, reading ``<phase1_root>/<cell>/<condition>/``.
+    with a ``model`` column, reading ``<phase1_root>/<cell_dir>/<condition>/``
+    (``cell_dir`` defaults to ``cell``; T7's pi0.5 arm reads from a
+    model-suffixed directory while labeling rows with the true cell name).
     """
     phase1_root = Path(phase1_root)
     rows = []
     for condition in conditions:
-        per_ep = condition_episode_frame(phase1_root / cell / condition)
+        per_ep = condition_episode_frame(phase1_root / (cell_dir or cell) / condition)
         row: dict[str, Any] = {"model": model, "cell": cell, "condition": condition}
         row.update(_aggregate(per_ep))
         rows.append(row)

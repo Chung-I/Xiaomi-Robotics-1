@@ -218,12 +218,17 @@ def run_episode(
         observation, _ = reset_env(env, seed)
     instruction = observation["annotation.human.task_description"]
 
+    # T7: the state-queue extractor is pluggable per model -- pi0.5 needs
+    # the fork's raw-quaternion 16-D state (pi05_client.state_from_
+    # observation), XR1 the axis-angle 14-D entry.observation_to_state.
+    state_fn = getattr(client, "state_from_observation", None) or observation_to_state
+
     queue_length = (obs_history - 1) * obs_interval + 1
     image_queues = {key: collections.deque(maxlen=queue_length) for key in CAMERA_KEYS}
     state_queue: collections.deque[np.ndarray] = collections.deque(maxlen=queue_length)
     for key, image in collect_images(observation).items():
         image_queues[key].append(image)
-    state_queue.append(observation_to_state(observation))
+    state_queue.append(state_fn(observation))
 
     recorder = StepRecorder()
     action_plan: collections.deque[np.ndarray] = collections.deque()
@@ -262,7 +267,7 @@ def run_episode(
 
         for key, image in collect_images(observation).items():
             image_queues[key].append(image)
-        state_queue.append(observation_to_state(observation))
+        state_queue.append(state_fn(observation))
 
         success = bool(info.get("success", False))
         if success or done or truncated:
@@ -368,6 +373,7 @@ def run_condition_episode(
     probe_density: float = 100.0,
     mass_tol_pct: float = 2.0,
     com_offset_tol_m: float = 1e-6,
+    cell_dir: str | None = None,
 ) -> tuple[bool, int, Path]:
     """Compose Task 1's ``condition_physics`` + Task 2's density/CoM
     injection + ``run_episode`` into ONE episode of ONE condition on
@@ -383,9 +389,14 @@ def run_condition_episode(
     asserted against the intended condition right before ``run_episode``
     starts, and THAT measured state -- not the intent -- is what gets
     written into the npz's scalars.
+
+    ``cell_dir`` (T7): output directory name under ``phase1/``, defaulting
+    to ``env_name`` (XR1's existing pathing). The pi0.5 arm passes a
+    model-suffixed name so its npz never collide with XR1's.
     """
     physics = condition_physics(condition, com_offset_m=com_offset_default)
     is_com_condition = physics["com_offset_m"] != 0.0
+    cell_dir = cell_dir or env_name
 
     env = gym.make(f"robocasa/{env_name}", split="pretrain", obj_groups=category, seed=seed)
     density_installed = False
@@ -478,7 +489,7 @@ def run_condition_episode(
             "com_axis": physics["com_axis"],
         }
 
-        npz_path = npz_path_for(output_root, env_name, condition, seed)
+        npz_path = npz_path_for(output_root, cell_dir, condition, seed)
         success, steps, saved_path = run_episode(
             env,
             client,
@@ -496,7 +507,7 @@ def run_condition_episode(
 
     update_condition_stats(
         output_root,
-        env_name,
+        cell_dir,
         condition,
         horizon,
         {"seed": seed, "success": success, "steps": steps, "npz_path": str(saved_path)},

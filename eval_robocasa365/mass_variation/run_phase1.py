@@ -62,10 +62,36 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 SERVER_PYTHON = REPO_ROOT / ".venv-mibot" / "bin" / "python"
 SERVER_CHECKPOINT = REPO_ROOT / "checkpoints" / "Xiaomi-Robotics-1-RoboCasa365"
 SERVER_SEED = 7
-PUBLISHED_BASELINE = {"xr1": 0.86}
+
+# ---- pi0.5 comparison arm (Task 7) --------------------------------------
+OPENPI_ROOT = Path.home() / "Codes" / "openpi-robocasa"
+OPENPI_PYTHON = OPENPI_ROOT / ".venv" / "bin" / "python"
+PI05_CHECKPOINT = (
+    OPENPI_ROOT / "checkpoints" / "pi05_pretrain_human300" / "multitask_learning" / "75000"
+)
+PI05_TRAIN_CONFIG = "pi05_pretrain_human300"
+
+# Published per-task baseline (None = no per-task number published; the
+# sanity gate then uses ABSOLUTE_GATE_THRESHOLD -- the design addendum's
+# decision rule: pi0.5 MassLight success < 0.25 -> STOP/BLOCKED).
+PUBLISHED_BASELINE = {"xr1": 0.86, "pi05_robocasa": None}
+ABSOLUTE_GATE_THRESHOLD = {"pi05_robocasa": 0.25}
 BASELINE_TOLERANCE = 0.2
 MASS_CONDITIONS = ("MassLight", "MassMedium", "MassHeavy")
 MODE_SEEDS = {"sanity": 5, "phase1": 35}
+# One model server on the GPU at a time: each model's default port; the
+# driver kills whatever listens on the OTHER models' ports before starting.
+MODEL_PORTS = {"xr1": 10086, "pi05_robocasa": 8000}
+# wandb run names per the plan: sanity-pi05 / phase1-pi05 (not the full
+# model id), sanity-xr1 / phase1-xr1 as in T6.
+WANDB_MODEL_NAME = {"xr1": "xr1", "pi05_robocasa": "pi05"}
+
+
+def cell_dir_for(env_name: str, model: str) -> str:
+    """npz/stats directory name under ``phase1/`` for one model's episodes.
+    XR1 keeps the unsuffixed T6 pathing (its 105 npz stay untouched);
+    every other model gets a ``__<model>`` suffix."""
+    return env_name if model == "xr1" else f"{env_name}__{model}"
 
 log = logging.getLogger("run_phase1")
 
@@ -118,29 +144,50 @@ def kill_server(port: int, timeout_s: float = 30.0) -> int | None:
     return pid
 
 
+def build_server_launch(model: str, port: int) -> tuple[list[str], dict, str]:
+    """(cmd, extra_env, cwd) to launch one model's policy server.
+
+    - xr1: stock pickle server (deploy/server.py), MIBOT_SERVER_SEED=7,
+      mirrors scripts/deploy.sh (T6 rule).
+    - pi05_robocasa: openpi websocket server via this repo's thin
+      serve_pi05.py launcher, run with the openpi-robocasa venv's python
+      (JAX); XLA_PYTHON_CLIENT_MEM_FRACTION leaves headroom for the EGL
+      sim process on the shared GPU.
+    """
+    if model == "xr1":
+        cmd = [
+            str(SERVER_PYTHON), "-u", "deploy/server.py",
+            "--model", str(SERVER_CHECKPOINT), "--port", str(port),
+        ]
+        return cmd, {
+            "MIBOT_SERVER_SEED": str(SERVER_SEED),
+            "TOKENIZERS_PARALLELISM": "false",
+        }, str(REPO_ROOT)
+    if model == "pi05_robocasa":
+        cmd = [
+            str(OPENPI_PYTHON), "-u",
+            str(REPO_ROOT / "eval_robocasa365" / "mass_variation" / "serve_pi05.py"),
+            "--config", PI05_TRAIN_CONFIG,
+            "--dir", str(PI05_CHECKPOINT),
+            "--port", str(port),
+        ]
+        return cmd, {"XLA_PYTHON_CLIENT_MEM_FRACTION": "0.7"}, str(OPENPI_ROOT)
+    raise ValueError(f"Unknown model {model!r}")
+
+
 def start_server(
     port: int,
     log_path: Path,
-    checkpoint: Path = SERVER_CHECKPOINT,
-    seed: int = SERVER_SEED,
+    model: str = "xr1",
     timeout_s: float = 600.0,
 ) -> dict:
     """Launch a fresh detached server (own session, nohup-equivalent) and
     block until the log grows AND the port listens. Returns a restart
     record for the run metadata."""
     log_path.parent.mkdir(parents=True, exist_ok=True)
+    cmd, extra_env, cwd = build_server_launch(model, port)
     env = dict(os.environ)
-    env["MIBOT_SERVER_SEED"] = str(seed)
-    env["TOKENIZERS_PARALLELISM"] = "false"
-    cmd = [
-        str(SERVER_PYTHON),
-        "-u",
-        "deploy/server.py",
-        "--model",
-        str(checkpoint),
-        "--port",
-        str(port),
-    ]
+    env.update(extra_env)
     started_at = _dt.datetime.now().isoformat(timespec="seconds")
     with open(log_path, "ab") as log_file:
         log_file.write(f"\n===== run_phase1 restart {started_at} =====\n".encode())
@@ -148,7 +195,7 @@ def start_server(
         size0 = log_file.tell()
         proc = subprocess.Popen(
             cmd,
-            cwd=str(REPO_ROOT),
+            cwd=cwd,
             env=env,
             stdout=log_file,
             stderr=subprocess.STDOUT,
@@ -177,7 +224,8 @@ def start_server(
         "cmd": cmd,
         "started_at": started_at,
         "listening_at": listening_at,
-        "server_seed": seed,
+        "server_seed": SERVER_SEED if model == "xr1" else None,
+        "server_model": model,
         "log": str(log_path),
     }
 
@@ -199,7 +247,7 @@ def record_restart(restarts_path: Path, record: dict) -> None:
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    parser.add_argument("--model", choices=["xr1"], default="xr1")
+    parser.add_argument("--model", choices=["xr1", "pi05_robocasa"], default="xr1")
     parser.add_argument("--mode", choices=["sanity", "phase1"], required=True)
     parser.add_argument("--conditions", nargs="+", default=list(MASS_CONDITIONS))
     parser.add_argument(
@@ -212,7 +260,10 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--cell-index", type=int, default=0)
     parser.add_argument("--horizon", type=int, default=None)
     parser.add_argument("--output-root", default="output/mass_variation")
-    parser.add_argument("--port", type=int, default=10086)
+    parser.add_argument(
+        "--port", type=int, default=None,
+        help="Server port (default: the model's own port, 10086 xr1 / 8000 pi05).",
+    )
     parser.add_argument(
         "--client-model-path", default=None,
         help="Processor path for the socket client (default: entry.DEFAULT_MODEL_PATH).",
@@ -241,13 +292,19 @@ def summary_path_for(output_root: Path, mode: str, model: str) -> Path:
 
 
 def evaluate_sanity_gate(df, model: str) -> dict:
+    """Amendment-A gate. With a published per-task baseline: MassLight
+    success within BASELINE_TOLERANCE of it. Without one (pi0.5), the
+    design addendum's absolute decision rule: success < 0.25 -> STOP."""
     baseline = PUBLISHED_BASELINE[model]
-    threshold = baseline - BASELINE_TOLERANCE
+    if baseline is not None:
+        threshold = baseline - BASELINE_TOLERANCE
+    else:
+        threshold = ABSOLUTE_GATE_THRESHOLD[model]
     light = df[df["condition"] == "MassLight"].iloc[0]
     light_rate = float(light["success_rate"])
     return {
         "published_baseline": baseline,
-        "tolerance": BASELINE_TOLERANCE,
+        "tolerance": BASELINE_TOLERANCE if baseline is not None else None,
         "threshold": threshold,
         "mass_light_success_rate": light_rate,
         "passed": bool(light_rate >= threshold - 1e-9),
@@ -259,7 +316,7 @@ def log_wandb(mode: str, model: str, df, config: dict, gate: dict | None) -> str
 
     run = wandb.init(
         project="mass-com-xr1",
-        name=f"{mode}-{model}",
+        name=f"{mode}-{WANDB_MODEL_NAME.get(model, model)}",
         job_type=mode,
         config=config,
         reinit=True,
@@ -295,11 +352,13 @@ def main(argv: list[str] | None = None) -> int:
 
     n_seeds = args.seeds if args.seeds is not None else MODE_SEEDS[args.mode]
     seeds = episode_seeds(args.base_seed, args.cell_index, n_seeds)
+    port = args.port if args.port is not None else MODEL_PORTS[args.model]
+    cell_dir = cell_dir_for(args.env_name, args.model)
     output_root = Path(args.output_root)
     phase1_root = output_root / "phase1"
     restarts_path = phase1_root / f"server_restarts_{args.model}.json"
     runlog_path = phase1_root / f"runlog_{args.model}.jsonl"
-    server_log = output_root / "logs" / f"server_{args.port}.log"
+    server_log = output_root / "logs" / f"server_{port}.log"
 
     # Heavy imports only when we may actually run episodes.
     import gymnasium as gym
@@ -324,16 +383,43 @@ def main(argv: list[str] | None = None) -> int:
     pending = {
         condition: [
             seed for seed in seeds
-            if not npz_path_for(output_root, args.env_name, condition, seed).exists()
+            if not npz_path_for(output_root, cell_dir, condition, seed).exists()
         ]
         for condition in args.conditions
     }
     total_pending = sum(len(v) for v in pending.values())
     log.info(
-        "mode=%s model=%s cell=%s horizon=%d seeds=%d pending=%d/%d",
-        args.mode, args.model, args.env_name, horizon, n_seeds,
+        "mode=%s model=%s cell=%s cell_dir=%s horizon=%d seeds=%d pending=%d/%d",
+        args.mode, args.model, args.env_name, cell_dir, horizon, n_seeds,
         total_pending, n_seeds * len(args.conditions),
     )
+
+    # One model server on the GPU at a time (T7 rule): before any batch,
+    # kill whatever listens on the OTHER models' ports -- by exact pid via
+    # ss -ltnp, same mechanism as the per-batch restart below.
+    if total_pending > 0 and not args.no_server_restart:
+        for other_model, other_port in MODEL_PORTS.items():
+            if other_model != args.model and other_port != port:
+                killed = kill_server(other_port)
+                if killed is not None:
+                    log.info(
+                        "Killed %s server pid=%d on port %d (one model on "
+                        "the GPU at a time)", other_model, killed, other_port,
+                    )
+                    record_restart(restarts_path, {
+                        "killed_other_model": other_model, "pid": killed,
+                        "port": other_port, "model": args.model,
+                        "at": _dt.datetime.now().isoformat(timespec="seconds"),
+                    })
+
+    def make_client():
+        if args.model == "xr1":
+            return XR1SocketClient(
+                model_path=client_model_path, host="localhost", port=port
+            )
+        from eval_robocasa365.mass_variation.pi05_client import Pi05Client
+
+        return Pi05Client(host="127.0.0.1", port=port)
 
     budget_exit = False
     for condition in args.conditions:
@@ -348,17 +434,15 @@ def main(argv: list[str] | None = None) -> int:
         if args.no_server_restart:
             log.warning("%s: --no-server-restart set; reusing running server", condition)
         else:
-            kill_server(args.port)
-            record = start_server(args.port, server_log)
+            kill_server(port)
+            record = start_server(port, server_log, model=args.model)
             record.update(
                 {"mode": args.mode, "condition": condition, "model": args.model,
                  "pending_seeds": todo}
             )
             record_restart(restarts_path, record)
 
-        client = XR1SocketClient(
-            model_path=client_model_path, host="localhost", port=args.port
-        )
+        client = make_client()
         try:
             for seed in todo:
                 if not budget_left():
@@ -367,7 +451,7 @@ def main(argv: list[str] | None = None) -> int:
                 ep_t0 = time.monotonic()
                 success, steps, npz_path = run_condition_episode(
                     gym, args.env_name, args.category, condition, seed,
-                    client, horizon, output_root,
+                    client, horizon, output_root, cell_dir=cell_dir,
                 )
                 wall_s = time.monotonic() - ep_t0
                 log.info(
@@ -390,7 +474,7 @@ def main(argv: list[str] | None = None) -> int:
     remaining = {
         condition: [
             seed for seed in seeds
-            if not npz_path_for(output_root, args.env_name, condition, seed).exists()
+            if not npz_path_for(output_root, cell_dir, condition, seed).exists()
         ]
         for condition in args.conditions
     }
@@ -406,7 +490,8 @@ def main(argv: list[str] | None = None) -> int:
 
     # ---- Mode complete: metrics, summary, wandb -------------------------
     df = metrics.metrics_dataframe(
-        phase1_root, cell=args.env_name, conditions=args.conditions, model=args.model
+        phase1_root, cell=args.env_name, conditions=args.conditions,
+        model=args.model, cell_dir=cell_dir,
     )
     if args.mode == "phase1":
         csv_path = metrics.write_csv(df, phase1_root / f"metrics_{args.model}.csv")
@@ -426,6 +511,7 @@ def main(argv: list[str] | None = None) -> int:
         "model": args.model,
         "mode": args.mode,
         "cell": args.env_name,
+        "cell_dir": cell_dir,
         "category": args.category,
         "conditions": args.conditions,
         "n_seeds": n_seeds,
@@ -434,8 +520,10 @@ def main(argv: list[str] | None = None) -> int:
         "cell_index": args.cell_index,
         "horizon": horizon,
         "mass_levels_kg": MASS_LEVELS_KG,
-        "server_seed": SERVER_SEED,
-        "server_checkpoint": str(SERVER_CHECKPOINT),
+        "server_seed": SERVER_SEED if args.model == "xr1" else None,
+        "server_checkpoint": str(
+            SERVER_CHECKPOINT if args.model == "xr1" else PI05_CHECKPOINT
+        ),
         "git_sha": git_sha,
         "control_hz": metrics.CONTROL_HZ,
         "drop_threshold_m": metrics.DROP_M,
@@ -465,11 +553,17 @@ def main(argv: list[str] | None = None) -> int:
     print(df.to_string(index=False))
     if gate is not None:
         verdict = "PASS" if gate["passed"] else "FAIL"
+        if gate["published_baseline"] is not None:
+            basis = (
+                f"(baseline {gate['published_baseline']:.2f} - "
+                f"{gate['tolerance']:.1f})"
+            )
+        else:
+            basis = "(absolute decision-rule threshold; no published per-task baseline)"
         print(
             f"SANITY GATE {verdict}: MassLight success "
             f"{gate['mass_light_success_rate']:.3f} vs threshold "
-            f"{gate['threshold']:.2f} (baseline {gate['published_baseline']:.2f} "
-            f"- {gate['tolerance']:.1f})"
+            f"{gate['threshold']:.2f} {basis}"
         )
     print(json.dumps({"status": "complete", "summary": str(summary_path)}))
     return 0
