@@ -111,3 +111,26 @@ Probing samples 6 of the 36 VLM layers, pre-registered evenly by depth: **{0, 7,
 (marginal cost ≈ 0; keeps deeper analysis possible without re-running sim). Task 4's grid, its
 random-init key layers ({0, 14, 28, 35} replacing the prior set), and Task 6's figures use the
 6-layer set. The leakage guard and ceiling gates evaluate on the 6 sampled layers.
+
+## Plan amendment B (2026-09-03, certificate readers — control-side trigger, binding)
+
+**Trigger (control-side statistics only; no activations probed yet):** all six certificate gates
+failed, but per-condition wrist |F| means during carry are 7.6/10.7/16.6 N (mass-monotone) and
+cfrc_obj fz ≈ mg exactly — the channel exists; the readers were mis-framed. Wrist force is
+recorded in the rotating EE frame; gravity is world-z; ridge cannot compute norms or rotations.
+
+1. **raw_ft certificate** gains physics-derived features computed from recorded channels:
+   per-step |F|, |τ|, and world-frame force (rotate ee_force by the recorded base/EE orientation
+   chain available in the npz + policy_state; document the exact transform). Gate unchanged
+   (R² ≥ 0.3 on carry). Rationale: the certificate asks whether the CHANNEL carries mass, not
+   whether mass is linear in an arbitrary coordinate choice.
+2. **policy_obs certificates: input format is sacred (unchanged)** — but the reader set gains a
+   seeded 2×128 MLP (the consumer of this format is a deep network; ridge stays reported as the
+   linear floor), and the GRU gets a fair budget (≥300 epochs cap with patience-20 early stop
+   on a held-out train episode). No derived features added to policy_obs inputs.
+3. **k_eff reframed** as two regressions with documented units: |F| ~ mass (channel validation)
+   and world-z force ~ deficit_z (impedance story; deficit is in normalized action units —
+   state the scale, do not convert silently).
+4. Gates, masks, CV, and the T5 sequential rule are unchanged and read from the AMENDED
+   certificate table. The pre-amendment table remains in certificates.json under
+   `pre_amendment_B` for the record.
