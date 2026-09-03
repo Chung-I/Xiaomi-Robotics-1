@@ -29,8 +29,8 @@ conditions drive both models. Parity facts (file:line refer to that fork):
   ``src/openpi/models/pi0_config.py:26``; the ``pi05_pretrain_human300``
   config at ``src/openpi/training/config.py:1274-1295`` does not override
   it); server-side ``RobocasaOutputs`` slices actions to
-  ``[:, :12]`` (``src/openpi/policies/robocasa_policy.py:129``); the
-  fork's eval replans every ``replan_steps=5`` steps (main.py:37).
+  ``[:, :12]`` (``src/openpi/policies/robocasa_policy.py:127``); the
+  fork's eval replans every ``replan_steps=5`` steps (main.py:36).
 
 The pure pieces (:func:`state_from_observation`, :func:`pack_pi05_element`,
 :func:`slice_action_chunk`) import only numpy + ``openpi_client``'s pure
@@ -45,9 +45,9 @@ import numpy as np
 from openpi_client import image_tools
 
 PI05_RESIZE_SIZE = 224  # main.py:35 (Args.resize_size default)
-PI05_REPLAN_STEPS = 5  # main.py:37 (Args.replan_steps default)
+PI05_REPLAN_STEPS = 5  # main.py:36 (Args.replan_steps default)
 PI05_CHUNK_LEN = 50  # Pi0Config.action_horizon default (pi0_config.py:26)
-PI05_ACTION_DIM = 12  # RobocasaOutputs slice (robocasa_policy.py:129)
+PI05_ACTION_DIM = 12  # RobocasaOutputs slice (robocasa_policy.py:127)
 
 # element key -> our observation/camera-queue key (entry.CAMERA_KEYS names).
 PI05_CAMERA_MAP = {
@@ -105,7 +105,7 @@ def pack_pi05_element(
 
 def slice_action_chunk(actions: np.ndarray, action_dim: int = PI05_ACTION_DIM) -> np.ndarray:
     """Defensive mirror of the server-side ``RobocasaOutputs`` slice
-    (robocasa_policy.py:129): keep the first ``action_dim`` dims."""
+    (robocasa_policy.py:127): keep the first ``action_dim`` dims."""
     actions = np.asarray(actions)
     if actions.ndim != 2 or actions.shape[1] < action_dim:
         raise ValueError(

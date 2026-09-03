@@ -163,13 +163,21 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument("--phase1-root", default="output/mass_variation/phase1")
     parser.add_argument("--cell", default="PickPlaceCounterToCabinet")
     parser.add_argument(
+        "--cell-dir", default=None,
+        help="npz directory name under phase1-root when it differs from "
+        "--cell (e.g. the model-suffixed 'PickPlaceCounterToCabinet__"
+        "pi05_robocasa'); rows are still labeled with --cell.",
+    )
+    parser.add_argument(
         "--conditions", nargs="+", default=["MassLight", "MassMedium", "MassHeavy"]
     )
     parser.add_argument("--model", default="xr1")
     parser.add_argument("--csv", default=None, help="Default: <phase1-root>/metrics_<model>.csv")
     args = parser.parse_args(argv)
 
-    df = metrics_dataframe(args.phase1_root, args.cell, args.conditions, args.model)
+    df = metrics_dataframe(
+        args.phase1_root, args.cell, args.conditions, args.model, cell_dir=args.cell_dir
+    )
     csv_path = (
         Path(args.csv)
         if args.csv

@@ -15,7 +15,7 @@ Parity target is the fork's OWN eval client,
 - element keys exactly: observation/image, observation/wrist_image,
   observation/right_image, observation/state, prompt (main.py:145-151).
 - actions come back already sliced to 12 dims by the server's
-  RobocasaOutputs (robocasa_policy.py:129); the client re-slices
+  RobocasaOutputs (robocasa_policy.py:127); the client re-slices
   defensively.
 
 No websocket/sim imports in this test module; ``openpi_client`` (pure
@@ -156,7 +156,7 @@ class TestSliceActionChunk:
 
     def test_slices_wider_chunks_to_12(self):
         """Defensive re-slice mirroring RobocasaOutputs' [:, :12]
-        (robocasa_policy.py:129) in case a server config returns padded
+        (robocasa_policy.py:127) in case a server config returns padded
         32-dim actions."""
         chunk = np.arange(50 * 32, dtype=np.float32).reshape(50, 32)
         out = slice_action_chunk(chunk)
@@ -168,7 +168,7 @@ class TestSliceActionChunk:
             slice_action_chunk(np.zeros((50, 7), dtype=np.float32))
 
     def test_replan_default_is_fork_default(self):
-        assert PI05_REPLAN_STEPS == 5  # main.py:37
+        assert PI05_REPLAN_STEPS == 5  # main.py:36
 
 
 class TestRunPhase1Pi05Wiring:
@@ -211,6 +211,38 @@ class TestRunPhase1Pi05Wiring:
             cell_dir_for("PickPlaceCounterToCabinet", "pi05_robocasa")
             == "PickPlaceCounterToCabinet__pi05_robocasa"
         )
+
+    def test_metrics_cli_cell_dir_flag(self, tmp_path):
+        """metrics.py's CLI takes --cell-dir so the pi0.5 CSV is
+        regenerable standalone from the model-suffixed npz dir."""
+        from eval_robocasa365.mass_variation import metrics
+
+        cond_dir = tmp_path / "Cell__pi05_robocasa" / "MassLight"
+        cond_dir.mkdir(parents=True)
+        np.savez(
+            cond_dir / "ep_7.npz",
+            grasped=np.array([False, True, True]),
+            obj_pos=np.zeros((3, 3)),
+            liftoff_step=1,
+            success=True,
+            seed=7,
+            mass_kg=0.15,
+        )
+        csv_path = tmp_path / "metrics_pi05_robocasa.csv"
+        metrics.main([
+            "--phase1-root", str(tmp_path),
+            "--cell", "Cell",
+            "--cell-dir", "Cell__pi05_robocasa",
+            "--conditions", "MassLight",
+            "--model", "pi05_robocasa",
+            "--csv", str(csv_path),
+        ])
+        import pandas as pd
+
+        df = pd.read_csv(csv_path)
+        assert list(df["cell"]) == ["Cell"]
+        assert list(df["model"]) == ["pi05_robocasa"]
+        assert df.iloc[0]["success_rate"] == 1.0
 
     def test_metrics_dataframe_cell_dir_split(self, tmp_path):
         """metrics_dataframe reads from cell_dir but labels rows with the
