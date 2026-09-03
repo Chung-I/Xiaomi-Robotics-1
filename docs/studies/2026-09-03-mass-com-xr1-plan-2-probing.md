@@ -133,4 +133,4 @@ recorded in the rotating EE frame; gravity is world-z; ridge cannot compute norm
    state the scale, do not convert silently).
 4. Gates, masks, CV, and the T5 sequential rule are unchanged and read from the AMENDED
    certificate table. The pre-amendment table remains in certificates.json under
-   `pre_amendment_B` for the record.
+   `pre_amendment_B` for the record. Gate reading under this amendment: a certificate PASSes if ANY fielded reader reaches the bar.

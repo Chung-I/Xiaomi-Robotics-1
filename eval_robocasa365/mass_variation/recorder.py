@@ -388,10 +388,10 @@ class StepRecorder:
         commanded_delta = arrays["actions"][:, 0:6].astype(np.float32)
 
         # Frame note for analysis-side consumers: eef_pos/eef_rot (and so
-        # achieved_eef_delta) are WORLD-frame, while commanded_delta (the
-        # OSC action's dims 0:6) is BASE-frame -- their axis-wise
-        # decompositions differ by conjugation with the base orientation;
-        # only overall magnitudes are directly comparable across the two.
+        # achieved_eef_delta) are BASE-frame (robosuite `pose_in_base_from_name`;
+        # verified in the Plan-2 T2 review via axis-correlation: X-Y off-diagonal
+        # 0.05 vs diagonal 0.78 despite base yaw std 1.48 rad), so commanded_delta
+        # (OSC base-frame) and achieved_eef_delta are SAME-frame; no conjugation needed.
         achieved_eef_delta = np.zeros((steps, 6), dtype=np.float32)
         if steps > 1:
             achieved_eef_delta[1:, 0:3] = arrays["eef_pos"][1:] - arrays["eef_pos"][:-1]

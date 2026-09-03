@@ -84,9 +84,9 @@ pre-amendment table preserved under `pre_amendment_B`), `diagnostics.json`; wand
 [unkx1dhf](https://wandb.ai/leon129506/mass-com-xr1/runs/unkx1dhf). Corpus: the Plan-2
 Task-1 dataset — 210 episodes replayed bit-exactly (0 divergences), per-step policy-format
 states extracted for both models; XR1 37 886 rows (carry 12 955), π0.5 68 146 rows (carry
-10 864). Pre-registered gate: ridge R² ≥ 0.3 for `mass_log_c` on the `carry` mask.
+10 864). Pre-registered gate: ≥ 0.3 on carry by any fielded reader (pre-amendment: ridge only) for `mass_log_c` on the `carry` mask.
 Grouped CV (GroupKFold(5) by seed, 35 matched-pair groups), selectivity vs 5
-group-coherent shuffles with per-draw alpha search.
+group-coherent shuffles with per-draw alpha search (shuffles are episode-grouped while CV folds are seed-grouped — the hybrid documented in certificates.py; seed-level shuffling would be a near-no-op, regression-guarded by test_episode_level_shuffle_not_near_noop).
 
 ### 3.1 Pre-amendment: all six gates FAIL — and why that was a reader artifact
 
@@ -242,7 +242,8 @@ scientific guard (leakage) is clean.
 weak-POSITIVE on carry, and the routing is decisive. The best VLM position at every
 sampled layer is the **wrist-camera** token mean, rising with depth (0.030→0.095); the
 raw proprio embedding (`state_embed`) is **null** and the policy_obs_xr1 certificate
-FAILED — so the late-DiT mass signal cannot be proprio-borne. It arrives through the
+FAILED — so the late-DiT mass signal shows no linear trace of a proprio route (state_embed
+0.001; the below-bar proprio certificate leaves a nonlinear route formally open). It arrives through the
 **vision stream** and concentrates where the action is formed (DiT L28/L35 at the last
 flow step, peak R² 0.189, selectivity ≈ 4.4× shuffle std, rank_acc 0.728 vs 0.5 chance).
 Magnitude caveat, stated as registered: 0.189 < the 0.3 certificate bar — this is a
@@ -258,7 +259,7 @@ decoding unchanged) over 15 episodes (seeds 7–11 × 3 conditions, 301 steps, 0
 divergences), probed at key layers {0,14,28,35} (amendment A), plus a **matched
 trained-subset** probe (same episodes, same layers, same n) for a fair comparison
 (`trained_vs_random.parquet`; wandb
-[09ztmj2c](https://wandb.ai/leon129506/mass-com-xr1/runs/09ztmj2c)):
+[09ztmj2c](https://wandb.ai/leon129506/mass-com-xr1/runs/09ztmj2c)). The random-init CAPTURE pass logged no wandb run (manifest wandb_url null) and the matched trained-subset probe ran --no-wandb; wandb run 09ztmj2c covers the random-grid probe only.
 
 | target / mask | trained R² (matched subset) | random R² |
 |---|---:|---:|
