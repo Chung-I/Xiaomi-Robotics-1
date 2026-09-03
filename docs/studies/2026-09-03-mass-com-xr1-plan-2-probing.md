@@ -103,3 +103,11 @@
 - Spec coverage: certificates incl. corrected achieved-only scoping + K_eff promise (design Correction ¶) → T2; carry-anchored masks → T1; XR1 probing of the adaptation finding → T3/T4; π0.5 single-frame question → T2 cert 3 + T5 rule; deck follow-through → T6. CoM arm remains deferred (Plan-1 scope), patching (MoT KV) is Plan 3 — out of scope here by design.
 - Judgment calls recorded: capture at replan steps only (decision-point fidelity over density; ~44 samples/episode × 105 = ~4.6k rows is enough for grouped CV at 35 groups); two-venv capture solved by a local server rather than frame dumps; probe core copied not imported (repo isolation).
 - Type consistency: `load_study` keys consumed by T2 CLI and T4 join; `window_stack(x, k=4, stride=2)` used in cert 2 and T3 window assembly reference; certificate names in T2 match T5's rule and T6's table.
+
+## Plan amendment A (2026-09-03, user directive — binding)
+
+Probing samples 6 of the 36 VLM layers, pre-registered evenly by depth: **{0, 7, 14, 21, 28, 35}**
+(DiT taps unchanged: flow steps {0,4} at the same 6 layer indices). CAPTURE remains all 36 layers
+(marginal cost ≈ 0; keeps deeper analysis possible without re-running sim). Task 4's grid, its
+random-init key layers ({0, 14, 28, 35} replacing the prior set), and Task 6's figures use the
+6-layer set. The leakage guard and ceiling gates evaluate on the 6 sampled layers.
