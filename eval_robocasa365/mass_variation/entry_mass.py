@@ -25,13 +25,57 @@ unchanged across models.
 
 Two-pass reset pattern (mirrors overrides.py's module docstring; repeated
 here because ``run_condition_episode`` is what actually drives it): mass
-conditions install the density override BEFORE the (single) reset that
-matters -- density is baked in before ``Kitchen``'s internal settle loop
-runs, so one reset is settle-consistent. CoM conditions must reset ONCE to
-discover the sampled mesh/authored ipos, THEN reset AGAIN with the SAME
-seed (verified deterministic resample) and apply the CoM offset immediately
-after that second reset returns, per the settle-loop-runs-inside-reset
-finding in Task 2.
+conditions install the density override BEFORE the reset that matters --
+density is baked in before ``Kitchen``'s internal settle loop runs, so one
+reset is settle-consistent. CoM conditions must reset ONCE to discover the
+sampled mesh/authored ipos, THEN reset AGAIN with the SAME seed (verified
+deterministic resample) and apply the CoM offset immediately after that
+second reset returns, per the settle-loop-runs-inside-reset finding in
+Task 2. CoM conditions ALSO carry the "medium" mass level (Task 1's
+``condition_physics``), so their second reset installs the density
+override too -- both physics knobs land in the SAME reset.
+
+Post-review fixes (binding)
+------------------------------
+Two bugs from the first pass, both about the CoM path silently not doing
+what its own npz scalars claimed:
+
+1. ``run_episode`` used to unconditionally call ``reset_env`` (a hard
+   reset, which REBUILDS the MuJoCo model) as its very first action --
+   which silently DISCARDED any CoM offset ``run_condition_episode`` had
+   just applied, since that offset only lives in the model instance that
+   reset just threw away. Fixed by giving ``run_episode`` an
+   ``initial_observation`` parameter: when the caller already reset the
+   env as part of physics setup (which every ``run_condition_episode``
+   call does), it passes the observation THAT reset already returned, and
+   ``run_episode`` performs NO reset of its own.
+2. The CoM branch never installed the density override, so CoM episodes
+   silently ran at whatever density the object's authored MJCF specifies
+   (NOT the "medium" mass ``condition_physics`` says they carry).
+
+Both are now covered by an assert-at-record check: right before
+``run_episode`` starts (i.e. at step 0), ``run_condition_episode`` reads
+the LIVE ``env.sim`` state (body_mass, and for CoM conditions the
+body_ipos offset from the pass-1 authored baseline) and asserts it matches
+the intended condition, then passes THOSE MEASURED values (not the
+intended ones) as the npz's ``mass_kg``/``com_offset_m`` scalars -- so the
+recorded ground truth is self-verifying: a regression of either bug above
+raises immediately instead of silently writing a wrong-but-plausible npz.
+
+Reset-count budget (IMPORTANT-3): mass conditions need only 1 reset in the
+steady state and 2 on a cold start, thanks to a per-process
+``_PROBE_MASS_CACHE`` keyed by ``(env_name, category, seed)`` -- a fixed
+seed always samples the same mesh (deterministic reseed), so the mesh's
+default-density probe mass only needs discovering ONCE per seed; every
+other condition sharing that seed (there are 3 mass conditions per seed in
+Phase 1, plus 2 deferred CoM conditions) installs its own target density
+straight from the cached probe and pays only the 1 reset with the override
+active. CoM conditions ALWAYS pay exactly 2 resets (pass 1's settle
+REFERENCE pose is condition-specific and is never skipped, even on a
+cache hit for the probe mass) but write-through into the same cache so a
+mass condition for the same seed, run afterward, benefits too. At 105+
+Phase 1 episodes this removes on the order of 70 redundant probe resets
+(and their 20-step settle loops) versus probing fresh every episode.
 """
 
 from __future__ import annotations
@@ -58,6 +102,7 @@ from eval_robocasa365.entry import (
 from eval_robocasa365.mass_variation.conditions import condition_physics, episode_seeds
 from eval_robocasa365.mass_variation.overrides import (
     apply_com_offset,
+    axis_index,
     install_density_override,
     mass_to_density,
     settle_and_gate,
@@ -68,6 +113,14 @@ from eval_robocasa365.mass_variation.recorder import StepRecorder
 PRIMARY_ENV = "PickPlaceCounterToCabinet"
 PRIMARY_CATEGORY = "milk"
 DEFAULT_OBJ_NAME = "obj"
+
+# Per-process cache: (env_name, category, seed) -> the object's mass (kg) at
+# the default probe density (100), i.e. what a reset with NO density
+# override installed would measure. Populated by whichever condition for a
+# given seed runs first (mass or CoM); read (not re-probed) by every later
+# condition sharing that seed. See the module docstring's "Reset-count
+# budget" note.
+_PROBE_MASS_CACHE: dict[tuple[str, str, int], float] = {}
 
 
 class PolicyClient(Protocol):
@@ -130,22 +183,39 @@ def run_episode(
     obs_history: int = 4,
     obs_interval: int = 2,
     grasp_fn: Any = None,
+    initial_observation: dict[str, Any] | None = None,
 ) -> tuple[bool, int, Path | None]:
     """Roll out ONE episode on an already-constructed, already-physics-
     injected ``env`` (see the module docstring's two-pass reset note --
     physics injection happens BEFORE this call, via ``run_condition_episode``
     or a caller doing the same sequence), recording ground truth every step.
 
-    ``condition_physics_dict`` (Task 1's ``condition_physics`` output) is
-    NOT applied here: it is folded into the saved npz's scalars (mass_kg,
-    com_offset_m, com_axis) so the recorder output is self-describing
-    without re-deriving the condition from the cell/seed at analysis time.
+    ``condition_physics_dict`` (Task 1's ``condition_physics`` output, or --
+    from ``run_condition_episode`` -- the MEASURED live-sim equivalent, see
+    the module docstring's "Post-review fixes" note) is NOT applied here:
+    it is folded into the saved npz's scalars (mass_kg, com_offset_m,
+    com_axis) so the recorder output is self-describing without
+    re-deriving the condition from the cell/seed at analysis time.
+
+    ``initial_observation``: when the caller has ALREADY reset ``env`` as
+    part of physics injection (the normal case, via
+    ``run_condition_episode``), pass the observation THAT reset returned
+    here -- this method then performs NO reset of its own (CRITICAL-1
+    class of bug from the review: a reset here is a HARD reset that
+    rebuilds the MuJoCo model, silently discarding any post-reset physics
+    write, e.g. a CoM offset, the caller just applied). Only omit this
+    (falling back to an internal ``reset_env(env, seed)`` call) for
+    standalone/test use where ``env`` has NOT already been reset for this
+    seed.
 
     Returns ``(success, steps, npz_path_written_or_None)``.
     """
     from robocasa.utils.env_utils import convert_action
 
-    observation, _ = reset_env(env, seed)
+    if initial_observation is not None:
+        observation = initial_observation
+    else:
+        observation, _ = reset_env(env, seed)
     instruction = observation["annotation.human.task_description"]
 
     queue_length = (obs_history - 1) * obs_interval + 1
@@ -170,6 +240,12 @@ def run_episode(
                 },
             }
             action_chunk = np.asarray(client.infer(obs_hist, instruction))
+            chunk_len = getattr(client, "chunk_len", len(action_chunk))
+            if len(action_chunk) != chunk_len:
+                raise RuntimeError(
+                    f"Policy returned {len(action_chunk)} actions but its "
+                    f"chunk_len is {chunk_len}"
+                )
             replan = getattr(client, "replan", len(action_chunk))
             if len(action_chunk) < replan:
                 raise RuntimeError(
@@ -253,6 +329,31 @@ def update_condition_stats(
     return stats
 
 
+def _probe_mass_kg(
+    env: Any, env_name: str, category: str, seed: int, obj_name: str
+) -> float:
+    """Default-density (probe) mass for whatever mesh ``seed`` samples on
+    ``env_name``/``category``, from the per-process ``_PROBE_MASS_CACHE``.
+
+    On a cache hit, this does NOT touch ``env`` at all (no reset) -- the
+    caller must already have ``env`` in a state it's happy to proceed from.
+    On a miss, performs the probe reset itself (uninstalled density) and
+    populates the cache. Deterministic reseed guarantees a fixed
+    ``(env_name, category, seed)`` always samples the identical mesh
+    (verified in Task 2), so this cache is safe across ALL conditions that
+    share a seed, not just repeated calls for the exact same condition.
+    """
+    key = (env_name, category, seed)
+    if key in _PROBE_MASS_CACHE:
+        return _PROBE_MASS_CACHE[key]
+
+    env.reset(seed=seed)
+    bid = env.sim.model.body_name2id(env.objects[obj_name].root_body)
+    probe_mass_kg = float(env.sim.model.body_mass[bid])
+    _PROBE_MASS_CACHE[key] = probe_mass_kg
+    return probe_mass_kg
+
+
 def run_condition_episode(
     gym: Any,
     env_name: str,
@@ -265,12 +366,23 @@ def run_condition_episode(
     obj_name: str = DEFAULT_OBJ_NAME,
     com_offset_default: float = 0.02,
     probe_density: float = 100.0,
+    mass_tol_pct: float = 2.0,
+    com_offset_tol_m: float = 1e-6,
 ) -> tuple[bool, int, Path]:
     """Compose Task 1's ``condition_physics`` + Task 2's density/CoM
     injection + ``run_episode`` into ONE episode of ONE condition on
     ``env_name``/``category``, writing
     ``output/mass_variation/phase1/<env_name>/<condition>/ep_<seed>.npz``
     and updating that condition's ``stats.json``.
+
+    Both mass AND CoM conditions install the density override (CoM
+    conditions carry the "medium" mass level too, per Task 1's
+    ``condition_physics`` -- see the module docstring's "Post-review
+    fixes" note); the actual live sim state (body_mass, and for CoM
+    conditions the body_ipos offset from the authored baseline) is
+    asserted against the intended condition right before ``run_episode``
+    starts, and THAT measured state -- not the intent -- is what gets
+    written into the npz's scalars.
     """
     physics = condition_physics(condition, com_offset_m=com_offset_default)
     is_com_condition = physics["com_offset_m"] != 0.0
@@ -279,41 +391,96 @@ def run_condition_episode(
     density_installed = False
     try:
         if is_com_condition:
-            # Two-pass reset pattern (REQUIRED -- overrides.py module
-            # docstring): pass 1 discovers the mesh/authored ipos and gives
-            # a center-CoM settle reference; pass 2 re-samples the SAME
-            # mesh (same seed) and applies the offset immediately after
-            # reset returns.
+            # CoM conditions ALWAYS pay exactly 2 resets (module docstring
+            # "Reset-count budget"): pass 1 discovers the mesh/authored
+            # ipos, the probe mass (cached for later conditions sharing
+            # this seed), AND gives this run's own center-CoM settle
+            # reference (never skipped, even on a cache hit for the probe
+            # mass -- the reference pose is specific to this run's gate
+            # check). Pass 2 installs the density override for the medium
+            # mass this condition carries (the bug this review found: this
+            # branch used to skip density entirely), THEN applies the CoM
+            # offset immediately after that SAME reset returns -- no
+            # further reset happens (the other bug: run_episode used to
+            # reset again on its own, discarding this).
             env.reset(seed=seed)
-            center_settle = settle_and_gate(env, obj_name)
-            reference_pose = {"pos": center_settle["post_pos"], "quat": center_settle["post_quat"]}
-
-            env.reset(seed=seed)
-            apply_com_offset(env, obj_name, physics["com_offset_m"], physics["com_axis"])
-            settle_and_gate(env, obj_name, reference_pose=reference_pose)
-        else:
-            # Mass condition: density override, applied BEFORE the reset
-            # that matters (settle-consistent -- see module docstring).
-            env.reset(seed=seed)  # pass 1: discover authored mass at default density.
             bid = env.sim.model.body_name2id(env.objects[obj_name].root_body)
             probe_mass_kg = float(env.sim.model.body_mass[bid])
-            if physics["mass_kg"] is not None:
-                target_density = mass_to_density(
-                    physics["mass_kg"], probe_mass_kg, probe_density=probe_density
-                )
-                install_density_override({obj_name: target_density})
-                density_installed = True
-                env.reset(seed=seed)  # pass 2: override active, same seed -> same mesh.
+            _PROBE_MASS_CACHE[(env_name, category, seed)] = probe_mass_kg
+            authored_ipos = np.array(env.sim.model.body_ipos[bid], dtype=float, copy=True)
+            center_settle = settle_and_gate(env, obj_name)
+            reference_pose = {
+                "pos": center_settle["post_pos"],
+                "quat": center_settle["post_quat"],
+            }
+
+            target_density = mass_to_density(
+                physics["mass_kg"], probe_mass_kg, probe_density=probe_density
+            )
+            install_density_override({obj_name: target_density})
+            density_installed = True
+
+            initial_observation, _ = env.reset(seed=seed)
+            apply_com_offset(env, obj_name, physics["com_offset_m"], physics["com_axis"])
+            settle_and_gate(env, obj_name, reference_pose=reference_pose)
+
+            axis_idx = axis_index(physics["com_axis"])
+            actual_com_offset_m = float(
+                env.sim.model.body_ipos[bid][axis_idx] - authored_ipos[axis_idx]
+            )
+        else:
+            # Mass condition: density override, applied BEFORE the reset
+            # that matters (settle-consistent -- see module docstring). 1
+            # reset in the steady state (cache hit), 2 on a cold start.
+            probe_mass_kg = _probe_mass_kg(env, env_name, category, seed, obj_name)
+            target_density = mass_to_density(
+                physics["mass_kg"], probe_mass_kg, probe_density=probe_density
+            )
+            install_density_override({obj_name: target_density})
+            density_installed = True
+
+            initial_observation, _ = env.reset(seed=seed)
+            bid = env.sim.model.body_name2id(env.objects[obj_name].root_body)
+            actual_com_offset_m = 0.0  # never written for a mass condition.
+
+        # Assert-at-record (CRITICAL-2): verify the LIVE env.sim state
+        # matches the intended condition, read fresh right here -- not
+        # trusted from `physics` or from an earlier apply_*/install_*
+        # call's return value. This is what makes "a reset silently
+        # discarded the physics injection" (or "the CoM branch never
+        # installed density") loud instead of a wrong-but-plausible npz.
+        actual_mass_kg = float(env.sim.model.body_mass[bid])
+        if physics["mass_kg"] is not None:
+            mass_err_pct = (
+                abs(actual_mass_kg - physics["mass_kg"]) / physics["mass_kg"] * 100.0
+            )
+            assert mass_err_pct < mass_tol_pct, (
+                f"{condition} seed={seed}: live body_mass {actual_mass_kg:.4f} kg is "
+                f"{mass_err_pct:.2f}% off the intended {physics['mass_kg']:.4f} kg -- "
+                "physics injection was not applied (or was discarded) before the "
+                "episode started"
+            )
+        assert abs(actual_com_offset_m - physics["com_offset_m"]) < com_offset_tol_m, (
+            f"{condition} seed={seed}: live CoM offset {actual_com_offset_m:.6f} m "
+            f"does not match the intended {physics['com_offset_m']:.6f} m"
+        )
+
+        measured_physics = {
+            "mass_kg": actual_mass_kg,
+            "com_offset_m": actual_com_offset_m,
+            "com_axis": physics["com_axis"],
+        }
 
         npz_path = npz_path_for(output_root, env_name, condition, seed)
         success, steps, saved_path = run_episode(
             env,
             client,
-            physics,
+            measured_physics,
             seed,
             horizon,
             obj_name=obj_name,
             npz_path=npz_path,
+            initial_observation=initial_observation,
         )
     finally:
         if density_installed:

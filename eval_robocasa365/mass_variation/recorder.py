@@ -14,11 +14,35 @@ package dependency (``robocasa.utils.object_utils.check_obj_grasped``) is
 lazily imported inside the method itself, matching the precedent set by
 ``overrides.py``'s ``install_density_override``/``settle_and_gate``, and
 only fires when ``grasp_fn`` is not overridden. Orientation is converted to
-axis-angle with a small in-module numpy helper (``_rotmat_to_axis_angle``),
-not ``robosuite.utils.transform_utils``, so ``record`` has no robosuite
-dependency either. The round-trip test in ``test_recorder.py`` therefore
-runs its fake-env stub with an injected ``grasp_fn`` and needs neither
-package installed -- only numpy.
+axis-angle with small in-module numpy helpers (``_mat_to_quat_xyzw`` /
+``_quat_xyzw_to_axis_angle``), not ``robosuite.utils.transform_utils``, so
+``record`` has no robosuite dependency either. The round-trip test in
+``test_recorder.py`` therefore runs its fake-env stub with an injected
+``grasp_fn`` and needs neither package installed -- only numpy.
+
+Rotation delta fix (post-review, binding)
+-------------------------------------------
+An earlier version of ``finalize`` computed ``achieved_eef_delta``'s
+rotation part by subtracting two ABSOLUTE per-step axis-angle vectors
+(``eef_rot[t] - eef_rot[t-1]``). That is wrong whenever the EEF orientation
+sits near theta = pi -- which it does for this study's whole episode
+(``eef_rot`` norms sit at 3.02-3.14 rad throughout the Task 3 smoke
+episode) -- because axis-angle has a topological discontinuity there:
+``+axis*pi`` and ``-axis*pi`` encode the SAME rotation, and a real
+trajectory that lingers near theta = pi can flip between the two encodings
+from one step to the next with no physical motion at all. Subtracting two
+such vectors cannot tell a pure encoding flip apart from an actual ~2*pi
+rotation; the smoke npz had exactly this artifact (spurious ~2*pi-norm
+spikes at steps 9, 109, 121, 187, 229).
+
+The fix: ``record`` additionally keeps the RAW per-step rotation matrix
+(``self._hand_orn``, not saved to the npz -- only ``eef_rot``, the absolute
+axis-angle proprio copy, is), and ``finalize`` computes each step's
+rotation delta from the RELATIVE rotation ``R_t @ R_{t-1}.T`` (via
+``_relative_axis_angle``). A relative rotation between two consecutive 20
+Hz control steps is small by construction, so it never approaches the
+theta = pi singularity regardless of where the ABSOLUTE orientations sit --
+well-conditioned by construction, not by luck.
 
 Grasp detection dependency injection
 -------------------------------------
@@ -43,6 +67,7 @@ torque, index 3:6 is force, and ``cfrc_obj[..., 5]`` is Fz (+mg sign, not
 
 from __future__ import annotations
 
+import math
 from pathlib import Path
 from typing import Any
 
@@ -84,34 +109,88 @@ def liftoff_step(z: Any, grasped: Any, rise_m: float = 0.05) -> int:
     return int(np.argmax(hit))
 
 
-def _rotmat_to_axis_angle(rot: Any) -> np.ndarray:
-    """Rotation matrix (3, 3) -> axis-angle exponential coordinates (3,):
-    unit axis scaled by the rotation angle in radians.
+def _mat_to_quat_xyzw(rot: Any) -> np.ndarray:
+    """Rotation matrix (3, 3) -> (x, y, z, w) quaternion, trace-based
+    (Shepperd w-branch, falling back to the largest-diagonal-term branch
+    when w is near zero -- a near-180-degree rotation).
 
-    Pure numpy (deliberately NOT ``robosuite.utils.transform_utils`` --
-    this keeps ``record`` free of a robosuite import, so the fake-env round
-    trip in ``test_recorder.py`` needs neither robocasa nor robosuite). Uses
-    the standard skew-symmetric-part-of-(R - R^T) formula; degrades to the
-    zero vector as theta -> 0 (near-identity rotation), which this study's
-    EEF orientations never approach the opposite edge case of (theta -> pi)
-    for.
+    Callers here pass either (a) an ABSOLUTE EEF orientation (only for
+    ``eef_rot``'s per-step storage, via ``_rotmat_to_axis_angle`` below,
+    matching what the policy's own proprio construction does -- see
+    ``entry.observation_to_state``) or (b) a RELATIVE rotation between two
+    consecutive 20 Hz control steps (``R_t @ R_{t-1}.T``, see
+    ``_relative_axis_angle``), which is near-identity by construction. The
+    degenerate branch below only matters for case (a); it is never
+    exercised for (b).
     """
     rot = np.asarray(rot, dtype=np.float64)
-    cos_theta = np.clip((np.trace(rot) - 1.0) / 2.0, -1.0, 1.0)
-    theta = float(np.arccos(cos_theta))
-    if theta < 1e-8:
+    trace = float(np.trace(rot))
+    w = math.sqrt(max(trace + 1.0, 0.0)) / 2.0
+    if w > 1e-6:
+        x = (rot[2, 1] - rot[1, 2]) / (4.0 * w)
+        y = (rot[0, 2] - rot[2, 0]) / (4.0 * w)
+        z = (rot[1, 0] - rot[0, 1]) / (4.0 * w)
+    else:
+        x = math.sqrt(max((rot[0, 0] + 1.0) / 2.0, 0.0))
+        y = math.sqrt(max((rot[1, 1] + 1.0) / 2.0, 0.0))
+        z = math.sqrt(max((rot[2, 2] + 1.0) / 2.0, 0.0))
+        x = math.copysign(x, rot[2, 1] - rot[1, 2])
+        y = math.copysign(y, rot[0, 2] - rot[2, 0])
+        z = math.copysign(z, rot[1, 0] - rot[0, 1])
+    return np.array([x, y, z, w], dtype=np.float64)
+
+
+def _quat_xyzw_to_axis_angle(quat: Any) -> np.ndarray:
+    """(x, y, z, w) quaternion -> axis-angle exponential coordinates, via
+    ``atan2(sin_half, cos_half)`` (mirrors ``entry.py``'s
+    ``quat_xyzw_to_axis_angle`` -- reimplemented, not imported, so this
+    module's only sim-package dependency stays the lazy
+    ``check_obj_grasped`` import in ``record``; importing ``entry.py`` at
+    module level would pull in its torch/transformers/imageio chain).
+
+    ``atan2`` is well-conditioned for the ANGLE at every theta, including
+    theta -> pi -- the discontinuity axis-angle has there is topological
+    (``+axis*pi`` and ``-axis*pi`` are the same rotation), not a numerical
+    artifact of this function, and no atan2-based fix removes it. That is
+    exactly why ``finalize`` never subtracts two outputs of this function
+    to get a delta -- see ``_relative_axis_angle``.
+    """
+    quat = np.asarray(quat, dtype=np.float64).reshape(-1)
+    norm = np.linalg.norm(quat)
+    if norm < 1e-12:
         return np.zeros(3)
-    axis = (
-        np.array(
-            [
-                rot[2, 1] - rot[1, 2],
-                rot[0, 2] - rot[2, 0],
-                rot[1, 0] - rot[0, 1],
-            ]
-        )
-        / (2.0 * np.sin(theta))
-    )
-    return axis * theta
+    quat = quat / norm
+    if quat[3] < 0:
+        quat = -quat
+    xyz = quat[:3]
+    sin_half = np.linalg.norm(xyz)
+    if sin_half < 1e-12:
+        return np.zeros(3)
+    angle = 2.0 * math.atan2(sin_half, float(np.clip(quat[3], -1.0, 1.0)))
+    return (xyz / sin_half) * angle
+
+
+def _rotmat_to_axis_angle(rot: Any) -> np.ndarray:
+    """Absolute rotation matrix -> axis-angle, for ``eef_rot`` storage."""
+    return _quat_xyzw_to_axis_angle(_mat_to_quat_xyzw(rot))
+
+
+def _relative_axis_angle(rot_prev: Any, rot_curr: Any) -> np.ndarray:
+    """Axis-angle of the RELATIVE rotation ``rot_curr @ rot_prev.T``.
+
+    THE fix for CRITICAL-1: a rotation DELTA must never be computed by
+    subtracting two absolute axis-angle vectors where the underlying
+    orientation sits near theta = pi (this study's EEF does, for the whole
+    episode) -- see the module docstring's "Rotation delta fix" note.
+    Composing the relative rotation directly and converting THAT to
+    axis-angle sidesteps the problem entirely: the relative rotation
+    between two consecutive 20 Hz steps is small by construction, so its
+    own axis-angle representation is always near the origin, far from any
+    singularity, independent of where ``rot_prev``/``rot_curr``
+    individually sit.
+    """
+    rel = np.asarray(rot_curr, dtype=np.float64) @ np.asarray(rot_prev, dtype=np.float64).T
+    return _quat_xyzw_to_axis_angle(_mat_to_quat_xyzw(rel))
 
 
 def _gripper_qpos(env: Any) -> np.ndarray:
@@ -144,6 +223,12 @@ class StepRecorder:
         self._actions: list[np.ndarray] = []
         self._eef_pos: list[np.ndarray] = []
         self._eef_rot: list[np.ndarray] = []
+        # Raw per-step rotation matrices -- NOT saved to the npz, only used
+        # internally by finalize() to compute achieved_eef_delta's rotation
+        # part from consecutive RELATIVE rotations (see
+        # _relative_axis_angle / the module docstring's "Rotation delta
+        # fix").
+        self._hand_orn: list[np.ndarray] = []
 
     @property
     def num_steps(self) -> int:
@@ -190,6 +275,7 @@ class StepRecorder:
 
         self._eef_pos.append(hand_pos.astype(np.float32))
         self._eef_rot.append(np.asarray(axis_angle, dtype=np.float32).reshape(3))
+        self._hand_orn.append(hand_orn.copy())
 
     def _stack(self) -> dict[str, np.ndarray]:
         if self.num_steps == 0:
@@ -216,18 +302,26 @@ class StepRecorder:
         Tracking-error channel: ``commanded_delta`` is ``actions[:, 0:6]``
         (the commanded EE pos+rot delta, action dims 0:6 per
         ``robocasa.utils.env_utils.convert_action``); ``achieved_eef_delta``
-        is the per-step diff of ``[eef_pos, eef_rot]`` against the PREVIOUS
-        step (step 0 is zeros -- there is no step -1 to diff against).
+        is the per-step delta against the PREVIOUS step (step 0 is zeros --
+        there is no step -1 to diff against): position (dims 0:3) is a
+        plain diff of ``eef_pos`` (no wraparound issue); rotation (dims 3:6)
+        is ``_relative_axis_angle(R_{t-1}, R_t)`` -- NOT
+        ``eef_rot[t] - eef_rot[t-1]`` (that subtracts two ABSOLUTE
+        axis-angle vectors, which is wrong near theta = pi; see the module
+        docstring's "Rotation delta fix").
         """
         arrays = self._stack()
         steps = arrays["actions"].shape[0]
 
         commanded_delta = arrays["actions"][:, 0:6].astype(np.float32)
 
-        eef_pose = np.concatenate([arrays["eef_pos"], arrays["eef_rot"]], axis=1)
-        achieved_eef_delta = np.zeros_like(eef_pose, dtype=np.float32)
+        achieved_eef_delta = np.zeros((steps, 6), dtype=np.float32)
         if steps > 1:
-            achieved_eef_delta[1:] = eef_pose[1:] - eef_pose[:-1]
+            achieved_eef_delta[1:, 0:3] = arrays["eef_pos"][1:] - arrays["eef_pos"][:-1]
+            for t in range(1, steps):
+                achieved_eef_delta[t, 3:6] = _relative_axis_angle(
+                    self._hand_orn[t - 1], self._hand_orn[t]
+                )
 
         liftoff = liftoff_step(arrays["obj_pos"][:, 2], arrays["grasped"])
 

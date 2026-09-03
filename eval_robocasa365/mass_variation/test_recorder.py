@@ -9,10 +9,32 @@ robosuite installed to run ``record``/``finalize`` -- only numpy.
 
 from __future__ import annotations
 
+import math
+
 import numpy as np
 import pytest
 
-from eval_robocasa365.mass_variation.recorder import StepRecorder, liftoff_step
+from eval_robocasa365.mass_variation.recorder import (
+    StepRecorder,
+    _relative_axis_angle,
+    _rotmat_to_axis_angle,
+    liftoff_step,
+)
+
+
+def _rodrigues(axis, angle: float) -> np.ndarray:
+    """Rotation matrix for ``angle`` radians about ``axis`` (test helper
+    only -- not part of the recorder's public surface)."""
+    axis = np.asarray(axis, dtype=float)
+    axis = axis / np.linalg.norm(axis)
+    k = np.array(
+        [
+            [0.0, -axis[2], axis[1]],
+            [axis[2], 0.0, -axis[0]],
+            [-axis[1], axis[0], 0.0],
+        ]
+    )
+    return np.eye(3) + math.sin(angle) * k + (1.0 - math.cos(angle)) * (k @ k)
 
 
 # ---------------------------------------------------------------------------
@@ -71,6 +93,60 @@ def test_liftoff_step_rejects_mismatched_lengths():
 
 
 # ---------------------------------------------------------------------------
+# CRITICAL-1 (review fix): rotation delta must come from the RELATIVE
+# rotation, never from subtracting two ABSOLUTE axis-angle vectors, because
+# absolute axis-angle is discontinuous near theta = pi -- exactly where this
+# study's EEF orientation sits for the whole episode (verified empirically:
+# the smoke npz's eef_rot norms sit at 3.02-3.14 rad throughout, and the OLD
+# subtraction-based code produced spurious ~2*pi-norm spikes at steps 9,
+# 109, 121, 187, 229).
+# ---------------------------------------------------------------------------
+
+
+def test_relative_axis_angle_small_near_pi_boundary():
+    # Empirically located (see the Task 3 fix report): a rotation by 3.141
+    # rad about a tilted axis, followed one control step later by 3.142 rad
+    # about the SAME axis -- a true 0.001 rad relative rotation -- is
+    # exactly where the OLD absolute-subtraction code flipped sign and
+    # reported a ~2*pi delta. The fix must report ~0.001 rad instead.
+    axis = (0.1, 0.2, 0.97)
+    rot_prev = _rodrigues(axis, 3.141)
+    rot_curr = _rodrigues(axis, 3.142)
+
+    naive_delta_norm = np.linalg.norm(
+        _rotmat_to_axis_angle(rot_curr) - _rotmat_to_axis_angle(rot_prev)
+    )
+    # demonstrates the property this test would have caught: the naive
+    # (old) approach spikes to ~2*pi here.
+    assert naive_delta_norm > 6.0
+
+    fixed_delta = _relative_axis_angle(rot_prev, rot_curr)
+    assert np.linalg.norm(fixed_delta) == pytest.approx(0.001, abs=1e-6)
+
+
+def test_relative_axis_angle_small_for_small_rotation_regardless_of_absolute_angle():
+    # Sweep several near-pi absolute orientations connected by a small
+    # (0.02 rad) relative rotation about a fixed axis; the relative delta
+    # must stay small (< 0.1 rad) at every one of them, not just the one
+    # boundary point above.
+    axis = (0.3, -0.4, 0.85)
+    for base_angle in (3.00, 3.05, 3.10, 3.12, 3.13, 3.14):
+        rot_prev = _rodrigues(axis, base_angle)
+        rot_curr = _rodrigues(axis, base_angle + 0.02)
+        delta = _relative_axis_angle(rot_prev, rot_curr)
+        assert np.linalg.norm(delta) < 0.1, (
+            f"relative delta too large at base_angle={base_angle}: {delta}"
+        )
+        assert np.linalg.norm(delta) == pytest.approx(0.02, abs=1e-6)
+
+
+def test_relative_axis_angle_zero_for_identical_rotation():
+    rot = _rodrigues((0.0, 0.0, 1.0), 3.14)
+    delta = _relative_axis_angle(rot, rot)
+    assert np.linalg.norm(delta) == pytest.approx(0.0, abs=1e-9)
+
+
+# ---------------------------------------------------------------------------
 # StepRecorder round trip against a fake env stub
 # ---------------------------------------------------------------------------
 
@@ -114,6 +190,7 @@ class _FakeSim:
 class _FakeRobot:
     def __init__(self) -> None:
         self._eef_pos = np.zeros(3)
+        self._eef_orn = np.eye(3)
 
     @property
     def ee_force(self) -> dict:
@@ -129,7 +206,7 @@ class _FakeRobot:
 
     @property
     def _hand_orn(self) -> dict:
-        return {"right": np.eye(3)}
+        return {"right": self._eef_orn}
 
 
 class _FakeEnv:
@@ -145,6 +222,9 @@ class _FakeEnv:
 
     def set_eef_pos(self, pos) -> None:
         self.robots[0]._eef_pos = np.asarray(pos, dtype=float)
+
+    def set_eef_orn(self, rot) -> None:
+        self.robots[0]._eef_orn = np.asarray(rot, dtype=float)
 
 
 def test_recorder_shape_and_finalize_roundtrip(tmp_path):
@@ -196,10 +276,14 @@ def test_recorder_shape_and_finalize_roundtrip(tmp_path):
     assert np.array_equal(data["commanded_delta"], data["actions"][:, 0:6])
     # first step has no predecessor to diff against -> zeros.
     assert np.allclose(data["achieved_eef_delta"][0], 0.0)
-    # a later step's achieved delta is the diff of [eef_pos, eef_rot]
-    # against the immediately preceding step.
+    # a later step's achieved position delta (dims 0:3) is the diff of
+    # eef_pos against the immediately preceding step (orientation stays
+    # identity throughout this fixture, so the rotation part (dims 3:6) is
+    # zero everywhere -- see test_recorder_achieved_eef_delta_well_conditioned_near_pi
+    # for the rotation-delta-specific regression coverage).
     expected_pos_delta = np.array([0.1, 0.0, z_values[2] - z_values[1]])
     assert np.allclose(data["achieved_eef_delta"][2][:3], expected_pos_delta)
+    assert np.allclose(data["achieved_eef_delta"][:, 3:6], 0.0)
 
     # scalars round-trip.
     assert float(data["mass_kg"]) == pytest.approx(0.6)
@@ -215,6 +299,57 @@ def test_recorder_shape_and_finalize_roundtrip(tmp_path):
     assert int(data["liftoff_step"]) == liftoff_step(
         data["obj_pos"][:, 2], data["grasped"]
     )
+
+
+def test_recorder_achieved_eef_delta_well_conditioned_near_pi(tmp_path):
+    # Integration-level regression for CRITICAL-1: drive the EEF orientation
+    # through the exact near-pi boundary that produced spurious ~2*pi-norm
+    # spikes in the Task 3 smoke episode (steps 9, 109, 121, 187, 229 --
+    # see the fix report), through the FULL record()/finalize() pipeline
+    # (not just the pure _relative_axis_angle helper), and assert every
+    # recorded rotation delta stays small.
+    env = _FakeEnv()
+    recorder = StepRecorder()
+
+    axis = (0.1, 0.2, 0.97)
+    # angles chosen to straddle the theta ~= pi antipodal-encoding boundary
+    # (see test_relative_axis_angle_small_near_pi_boundary): each step is a
+    # true 0.02 rad rotation from the previous one, but several individual
+    # steps sit within 0.02 rad of pi.
+    angles = [3.00, 3.05, 3.10, 3.12, 3.14, 3.145, 3.13, 3.08]
+
+    for t, angle in enumerate(angles):
+        env.set_obj_z(0.5)
+        env.set_eef_pos([0.0, 0.0, 0.5])
+        env.set_eef_orn(_rodrigues(axis, angle))
+        recorder.record(
+            env,
+            "obj",
+            np.zeros(12, dtype=np.float32),
+            grasp_fn=lambda _env, _obj_name: False,
+        )
+
+    out_path = recorder.finalize(
+        tmp_path / "ep_near_pi.npz",
+        mass_kg=0.6,
+        com_offset_m=0.0,
+        com_axis="y",
+        seed=0,
+        success=False,
+    )
+    data = np.load(out_path)
+
+    rot_deltas = data["achieved_eef_delta"][:, 3:6]
+    rot_delta_norms = np.linalg.norm(rot_deltas, axis=1)
+    # step 0 has no predecessor.
+    assert rot_delta_norms[0] == pytest.approx(0.0, abs=1e-9)
+    # every OTHER step's rotation delta must match the TRUE step-to-step
+    # angle change exactly (same fixed axis throughout) -- and, critically,
+    # nowhere near 2*pi ~= 6.28, which is what the old subtraction-based
+    # code would have produced at several of these steps.
+    expected_deltas = np.abs(np.diff(angles))
+    assert np.allclose(rot_delta_norms[1:], expected_deltas, atol=1e-6)
+    assert rot_delta_norms[1:].max() < 0.1
 
 
 def test_recorder_liftoff_minus_one_when_never_grasped(tmp_path):
