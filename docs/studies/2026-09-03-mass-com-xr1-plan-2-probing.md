@@ -162,3 +162,33 @@ vision-borne" reading is an inference (probe positive + proprio null), not a mea
    inferred. π0.5 camera FAIL ⇒ its branch closure stands on complete input evidence.
    π0.5 camera PASS ⇒ the closure was premature and its activation capture becomes REQUIRED
    (a scope decision for the controller, recorded either way).
+
+## Plan amendment D (2026-09-04, reopening the π0.5-RoboCasa branch)
+
+**Trigger — a counterexample inside our own data, not a new preference.** Task 5's rule closed
+the π0.5-RoboCasa branch on the premise that *an input certificate failing means the inputs do
+not carry the property, so the internals cannot be asked about it*. XR1 refutes that premise:
+BOTH of its input certificates fail — proprioception 0.142, camera −0.31/−0.29 with a reader
+demonstrably competent on a control target (0.31 on obj_z) — and yet its activations decode
+hidden mass at R² 0.189 with a clean pre-contact guard and a null random-init bound. Certificate
+failure therefore measures the limits of *our readers* (PCA-512 on 96×96 grayscale, a small CNN),
+not the emptiness of the channel a 4B-parameter pretrained encoder reads. The premise was wrong;
+the conclusion drawn from it does not stand.
+
+1. **The branch is reopened.** π0.5-RoboCasa's hidden states will be captured and probed under the
+   same protocol as XR1: same corpus (its own 105 episodes), same targets, same phase masks, same
+   episode-grouped CV and group-coherent shuffles, same gates, same leakage guard, same
+   random-init bound, capture at ITS OWN decision moments (it re-plans every 5 steps).
+2. **Registered expectations, symmetric and stated before the run.** If its activations decode
+   mass above the random-init bound with a clean pre-contact guard, the reading "a single-frame
+   policy cannot encode hidden mass" is REFUTED and the study says so. If they are null while the
+   ceiling control passes, the cross-model contrast becomes measured on both arms instead of one
+   measured and one assumed. Either outcome is reportable and neither is preferred.
+3. **Binding on the write-up:** the study's cross-model claim (history-equipped model encodes,
+   single-frame model does not) may not be stated until both arms are measured. Until this
+   completes, the published wording stays as corrected on 2026-09-04: π0.5-RoboCasa's
+   proprioception and camera carry no certified mass signal *by our readers*, and its internals
+   are an open question.
+4. **What survives from the original decision:** following the registered rule at the time was
+   correct procedure, and the pre-amendment certificate results stand as recorded. What changes
+   is the inference, not the data.
