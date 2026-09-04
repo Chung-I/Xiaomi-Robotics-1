@@ -24,7 +24,7 @@ shuffled-std band. Selectivity (not raw R²) is the y axis because the
 shuffled floor itself moves with bin size and with which seed groups land
 in which fold.
 
-Lines (4)
+Lines (5)
 ---------
 1. ``physics ceiling`` -- ridge on the raw wrist F/T window: exactly the
    ``raw_ft`` certificate's design matrix (``certificates.build_features``:
@@ -36,13 +36,29 @@ Lines (4)
 2. ``XR1 action module (DiT L28, flow4 state-block)`` -- the probe peak site.
 3. ``XR1 wrist-camera tokens (VLM L21)`` -- the vision site (the VLM peak).
 4. ``XR1 proprioception (state_embed)`` -- the null site.
+5. ``commanded-vs-achieved deficit`` -- ridge on exactly the ``deficit``
+   certificate's design matrix (``certificates.build_features("deficit", d)``:
+   ``commanded_delta[6]`` + ``achieved_eef_delta[6]``, trailing window k=8,
+   stride 1, never crossing an episode boundary; the identical feature
+   builder imported from ``certificates.py``, not re-implemented). This
+   channel is the one the ``deficit`` certificate scores on the ``carry``
+   mask: aggregate-informative (episode-mean commanded-up effort rises +23%
+   for XR1 / +87% for pi0.5 from lightest to heaviest carton) but weak
+   per-step (certificate R^2 0.062, FAIL). Its time profile was unknown
+   before this curve: does it spike at contact like the physics ceiling, or
+   stay flat -- i.e. is the load signature instantaneous or only visible
+   under averaging? Added as a fifth, directly comparable line (same bins,
+   rows, folds, shuffle protocol as the other four) to answer that
+   descriptively; both outcomes are reportable and neither would change the
+   study headline.
 
-All four are scored on the SAME rows (the captured replan steps inside a
+All five are scored on the SAME rows (the captured replan steps inside a
 bin) with the SAME GroupKFold(5) fold partition (computed once per bin from
 the seed groups), so the lines are strictly comparable. The one deliberate
 preprocessing difference is the one each corpus already carries in the
-study: the physics features are globally z-scored inside the cell (mixed
-physical units -- Newtons, N·m, radians), exactly as
+study: the physics and deficit features are globally z-scored inside the
+cell (mixed physical units -- Newtons, N·m, radians for physics; normalized
+action units vs metres for deficit), exactly as
 ``certificates.certificate_cell`` does, while activations are not
 (homogeneous units, matching ``run_probes_xr1``).
 
@@ -56,7 +72,7 @@ A bin is RETAINED only if it holds >= ``MIN_ROWS`` (120) rows AND
 >= ``MIN_EPISODE_GROUPS`` (15) distinct episodes; otherwise it is dropped
 and recorded as dropped (``retained=False`` with a ``drop_reason``) rather
 than scored on a handful of episodes. The rule was fixed before any curve
-was computed and is applied identically to all four lines.
+was computed and is applied identically to all five lines.
 
 Outputs: ``<out-dir>/timecurve.parquet`` (one row per site x bin, including
 dropped bins), ``<out-dir>/fig_mass_vs_time.png``,
@@ -116,18 +132,25 @@ HEADLINE_NOT_UPGRADED = (
     "noisier estimate on ~5x fewer rows, not a better result."
 )
 
-# (label, block, layer, position) -- block "raw_ft" is the physics reference.
+# (label, block, layer, position) -- block "raw_ft" is the physics reference,
+# block "deficit" is the commanded-vs-achieved deficit reference (also a
+# sensor/action-side channel, not a model site).
 SITES = (
     ("physics ceiling (wrist F/T, k=16 window)", "raw_ft", -1, "ee_force+ee_torque+derived"),
     ("XR1 action module (DiT L28, flow4 state-block)", "dit", 28, "flow4:state_tokens_mean"),
     ("XR1 wrist-camera tokens (VLM L21)", "vlm", 21,
      "image_tokens_mean:video.robot0_eye_in_hand"),
     ("XR1 proprioception (state_embed)", "state_embed", -1, "state_tokens_flat"),
+    ("commanded-vs-achieved deficit (k=8 window)", "deficit", -1,
+     "commanded_delta+achieved_eef_delta"),
 )
 
 # CVD-checked on a light surface; per-series markers are the redundant
 # encoding. The physics reference is neutral grey + dashed so it never reads
-# as one of the three model sites.
+# as one of the three model sites. The four original entries are UNCHANGED
+# from the published version; the deficit line below is the one addition
+# (distinct purple + filled-plus marker + dash-dot, so it never reads as
+# any of the four existing lines).
 SITE_STYLE = {
     "physics ceiling (wrist F/T, k=16 window)":
         {"color": "#4a4a4a", "marker": "D", "ls": "--"},
@@ -137,6 +160,8 @@ SITE_STYLE = {
         {"color": "#3a6ea5", "marker": "s", "ls": "-"},
     "XR1 proprioception (state_embed)":
         {"color": "#2f9e63", "marker": "^", "ls": "-"},
+    "commanded-vs-achieved deficit (k=8 window)":
+        {"color": "#8e44ad", "marker": "P", "ls": "-."},
 }
 
 DEFAULT_ACTS_ROOT = "output/mass_variation/activations/xr1"
@@ -236,16 +261,20 @@ def bin_drop_reason(n: int, n_episodes: int,
 def site_matrices(ds: dict, acts: dict, idx: np.ndarray) -> dict[str, np.ndarray]:
     """``{site label: X (M, D)}`` at the captured (joined) rows.
 
-    The physics matrix is built on the FULL per-step corpus first (its k=16
-    trailing window must see the un-subsampled history, exactly as the
-    ``raw_ft`` certificate does) and only then restricted to the captured
-    rows -- the plan's "same rows" requirement, without corrupting the
-    window."""
+    The physics and deficit matrices are built on the FULL per-step corpus
+    first (their trailing windows -- k=16 and k=8 respectively -- must see
+    the un-subsampled history, exactly as ``certificates.build_features``
+    does) and only then restricted to the captured rows -- the plan's "same
+    rows" requirement, without corrupting the window. Both are the identical
+    ``certificates.build_features`` builder, imported not re-implemented."""
     raw_ft_full = certificates.build_features("raw_ft", ds)
+    deficit_full = certificates.build_features("deficit", ds)
     out: dict[str, np.ndarray] = {}
     for label, block, layer, position in SITES:
         if block == "raw_ft":
             out[label] = raw_ft_full[idx].astype(np.float32)
+        elif block == "deficit":
+            out[label] = deficit_full[idx].astype(np.float32)
         elif block == "dit":
             li = list(acts["dit_layer_ids"]).index(layer)
             fi, bi = divmod(_dit_position_index(position), 2)
@@ -276,7 +305,7 @@ def _dit_position_index(position: str) -> int:
 
 def _zscore(X: np.ndarray) -> np.ndarray:
     """``certificates.certificate_cell``'s label-free feature standardisation
-    (mixed physical units); applied to the physics line only."""
+    (mixed physical units); applied to the physics and deficit lines only."""
     X = np.asarray(X, dtype=np.float32)
     sd = X.std(axis=0)
     return (X - X.mean(axis=0)) / np.where(sd == 0, 1.0, sd)
@@ -292,7 +321,7 @@ def run_time_curve(ds: dict, acts: dict, idx: np.ndarray, bins, seed: int = SEED
     """One probe cell per (site, bin) on the captured rows.
 
     Fold partition, shuffle groups and row set are computed ONCE per bin and
-    shared by all four sites, so the four curves differ only in features."""
+    shared by all five sites, so the five curves differ only in features."""
     episode_id = np.asarray(acts["episode_id"])
     y = np.asarray(ds["mass_log_c"], dtype=np.float64)[idx]
     cv_groups = np.asarray(ds["seed"])[idx]
@@ -344,7 +373,7 @@ def run_time_curve(ds: dict, acts: dict, idx: np.ndarray, bins, seed: int = SEED
                 }
             else:
                 X = X_by_site[label][sel]
-                if block == "raw_ft":
+                if block in ("raw_ft", "deficit"):
                     X = _zscore(X)
                 factors = probe_core._fold_factors(X, cv_groups[sel], splits=splits)
                 cell = _cell_from_factors(
@@ -549,7 +578,7 @@ def precontact_reading(df: pd.DataFrame) -> str:
         f"{float(worst['selectivity']):+.3f} "
         f"({worst['site']}, [{float(worst['bin_lo_s']):+.1f},"
         f"{float(worst['bin_hi_s']):+.1f}) s), but the largest REAL pooled "
-        f"held-out R² over all four lines and all pre-contact bins is only "
+        f"held-out R² over all five lines and all pre-contact bins is only "
         f"{max_real:+.4f} — i.e. no line predicts mass better than the "
         f"training-fold mean before contact. Those small positive "
         f"selectivities come from the shuffled control scoring NEGATIVE "
@@ -572,7 +601,7 @@ def figure_caption(df: pd.DataFrame, liftoff_s: float | None) -> str:
         f"EXPLORATORY post-hoc time resolution of the pre-registered carry-phase probe result — no new claim, "
         f"same rows/targets/discipline at finer time grain. Selectivity = real pooled held-out R² minus mean shuffled R² "
         f"(5 group-coherent shuffles, each with its own alpha search); band = ±1 shuffled std. GroupKFold(5) by SEED, "
-        f"shuffles group-coherent by EPISODE; identical rows and folds for all four lines. Bins 1.6 s (32 steps @20 Hz), "
+        f"shuffles group-coherent by EPISODE; identical rows and folds for all five lines. Bins 1.6 s (32 steps @20 Hz), "
         f"span −6.4..+9.6 s, retained only if ≥{MIN_ROWS} rows and ≥{MIN_EPISODE_GROUPS} episodes ({kept} retained; dropped: {drop_txt}). "
         f"Median lift-off {('+%.2f s' % liftoff_s) if liftoff_s is not None else 'n/a'}. "
         f"Headline unchanged: peak carry-phase selectivity 0.227 (R² 0.189) at DiT L28, below the 0.3 bar."
@@ -729,6 +758,15 @@ def main(argv=None) -> int:
             f"window k={certificates.K_RAW_FT} stride 1, z-scored per cell "
             "exactly as certificates.certificate_cell does (mixed physical "
             "units); activations are NOT z-scored (run_probes_xr1 convention)"),
+        "deficit_line": (
+            "certificates.build_features('deficit'): commanded_delta[6]+"
+            "achieved_eef_delta[6], per-episode trailing window "
+            f"k={certificates.K_DEFICIT} stride 1, z-scored per cell exactly "
+            "as certificates.certificate_cell does (mixed units: normalized "
+            "OSC action vs metres) -- the identical builder the 'deficit' "
+            "certificate uses (carry-mask R^2 0.062, FAIL); this line asks "
+            "whether that channel's time profile spikes at contact or stays "
+            "flat, not whether it passes the certificate gate"),
         "bin_rule": {
             "width_steps": args.bin_width_steps,
             "width_s": args.bin_width_steps / CONTROL_HZ,
@@ -742,7 +780,7 @@ def main(argv=None) -> int:
         },
         "protocol": {
             "cv": "GroupKFold(5) by SEED (identical fold partition for all "
-                  "four sites within a bin)",
+                  "five sites within a bin)",
             "shuffle": "group-coherent by EPISODE, per-draw alpha search",
             "alphas": probe_core.ALPHAS.tolist(),
             "n_splits": probe_core.N_SPLITS,
