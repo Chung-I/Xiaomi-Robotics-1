@@ -134,3 +134,31 @@ recorded in the rotating EE frame; gravity is world-z; ridge cannot compute norm
 4. Gates, masks, CV, and the T5 sequential rule are unchanged and read from the AMENDED
    certificate table. The pre-amendment table remains in certificates.json under
    `pre_amendment_B` for the record. Gate reading under this amendment: a certificate PASSes if ANY fielded reader reaches the bar.
+
+## Plan amendment C (2026-09-04, vision certificate — registered before the run)
+
+**Trigger (scope gap, not a result):** the certificates so far cover each policy's
+PROPRIOCEPTIVE format only. Both models also see cameras, so (a) XR1's "the trace is
+vision-borne" reading is an inference (probe positive + proprio null), not a measurement, and
+(b) π0.5-RoboCasa's branch was closed on partial input evidence. This amendment closes both.
+
+1. **New certificate `policy_obs_vision`**, run per model in that model's own visual format:
+   π0.5-RoboCasa = ONE frame, 3 cameras, its own resize-with-pad; XR1 = 4 frames at stride 2,
+   3 cameras, its own 0.95 crop. Frames are re-rendered from the existing bit-exact replays
+   (no new policy rollouts) and stored downsampled to 96×96 grayscale per camera; any further
+   reduction is part of the READER and must be disclosed.
+2. **Readers:** ridge on within-fold PCA (512 components, PCA fit on TRAIN folds only — fitting
+   it on all rows would leak), and a small seeded CNN (fair budget, early stop on a held-out
+   train episode). Mask `carry`; gate unchanged (R² ≥ 0.3); episode-grouped CV and
+   group-coherent shuffles as everywhere else.
+3. **Control:** the same certificate on `precontact` must be null — the three weights share
+   scene, object and placement by the matched-seed design, so a pre-contact camera reader has
+   nothing legitimate to read. A non-null pre-contact result indicates a rendering or join
+   artifact and voids the cell.
+4. **Registered expectations (before the run):** XR1's 4-frame camera format plausibly PASSES
+   (its probes already show camera-borne mass signal); π0.5's single frame plausibly FAILS (one
+   instant carries no motion). Both directions are informative for both models.
+5. **Pre-committed consequences:** XR1 camera PASS ⇒ "vision-borne" becomes measured, not
+   inferred. π0.5 camera FAIL ⇒ its branch closure stands on complete input evidence.
+   π0.5 camera PASS ⇒ the closure was premature and its activation capture becomes REQUIRED
+   (a scope decision for the controller, recorded either way).
