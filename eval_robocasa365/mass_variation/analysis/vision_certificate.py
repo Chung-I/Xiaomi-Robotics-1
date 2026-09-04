@@ -64,6 +64,7 @@ Run (robocasa venv; the CNN needs a free GPU):
 from __future__ import annotations
 
 import argparse
+import contextlib
 import json
 import subprocess
 import sys
@@ -94,6 +95,29 @@ DEGENERATE_VAR_TOL = certificates.DEGENERATE_VAR_TOL
 N_PCA_COMPONENTS = 512
 PCA_OVERSAMPLE = 10       # randomized range-finder oversampling
 PCA_N_ITER = 4            # power iterations (sklearn's randomized_svd default)
+
+# Ridge alpha grid for THIS reader only (review fix 1). ``probe_core.ALPHAS``
+# (1e-2..1e4) is the study's registered grid, calibrated for the
+# proprioceptive path whose features are globally z-SCORED. This reader's
+# features are UNSCALED principal-component scores whose leading singular
+# value is ~2700-2970 (s^2 ~ 8e6), so every alpha in the registered grid is
+# negligible against s^2: the grid collapsed to essentially OLS on 512 PCs
+# and the selected alpha sat at the grid's UPPER EDGE in every cell -- a
+# TRUNCATED search, not a converged one.
+#
+# Fix chosen: WIDEN THE GRID rather than z-score the PC scores. Rescaling the
+# scores would change the estimator itself (whitened-PCA ridge weights the
+# trailing, noise-dominated directions like the leading ones); widening
+# changes only the search range, which is what was actually broken. The real
+# fit and all five shuffle draws search the identical widened grid, so the
+# control stays fair.
+VISION_ALPHAS = 10.0 ** np.arange(-2, 13)   # 1e-2 .. 1e12
+# Ridge's alpha -> infinity limit IS the predict-the-training-fold-mean floor,
+# so a top-edge selection is only TRUNCATED if its score still differs from
+# that floor. Within this tolerance the grid has reached the mean predictor
+# and a top-edge selection is the converged answer "no signal above the
+# floor", not a cut-off search.
+ALPHA_SATURATION_TOL = 1e-3
 
 XR1_CROP_RATIO = 0.95     # entry.py --crop-ratio default
 STORE_SIDE_PX = 96        # render_frames.STORE_SIDE_PX (reader-side)
@@ -304,13 +328,91 @@ def pca_fold_factors(X, cv_groups, n_components: int = N_PCA_COMPONENTS,
     return factors
 
 
+class AlphaGridTruncated(RuntimeError):
+    """The ridge alpha search selected a value at an END of its grid and that
+    end is NOT the mean-predictor limit -- i.e. the reported score is a
+    property of where the grid stopped, not of the data. Never widen the
+    tolerance to silence this; widen the grid."""
+
+
+@contextlib.contextmanager
+def alpha_grid(alphas):
+    """Run ``probe_core``'s ridge path against ``alphas`` instead of its
+    module-level registered grid.
+
+    ``probe_core.py`` is COPIED VERBATIM from the sibling study (its header
+    note forbids editing it), and it reads ``ALPHAS`` at module scope, so a
+    scoped, restoring rebind is how this reader supplies its own grid without
+    touching that file or duplicating the statistic. Everything inside the
+    block -- the real fit AND every shuffle draw -- sees the same grid.
+    """
+    previous = probe_core.ALPHAS
+    probe_core.ALPHAS = np.asarray(alphas, dtype=float)
+    try:
+        yield
+    finally:
+        probe_core.ALPHAS = previous
+
+
+def alpha_curve(factors, y, alphas) -> list[tuple[float, float]]:
+    """``[(alpha, pooled held-out R2)]`` -- the search's own scoring code
+    driven one alpha at a time (single-element grids), so the curve cannot
+    drift from what the selection actually optimises."""
+    y = np.asarray(y, dtype=np.float64)
+    curve = []
+    for a in alphas:
+        with alpha_grid([a]):
+            curve.append((float(a),
+                          float(probe_core._cv_pooled_best_factored(factors, y, "reg"))))
+    return curve
+
+
+def check_alpha_boundary(curve, floor: float,
+                         tol: float = ALPHA_SATURATION_TOL) -> dict:
+    """Review fix 1's boundary-saturation guard.
+
+    Raises :class:`AlphaGridTruncated` if the best alpha is the grid's LOWEST
+    (always a truncation -- a weaker penalty was never tried) or its HIGHEST
+    while still scoring materially above the mean-predictor ``floor`` (the
+    alpha -> infinity limit, so the grid stopped before the penalty could
+    finish taking effect). A top-edge selection whose score has already
+    reached the floor is accepted and flagged ``saturated_at_floor``: the
+    search converged, and its answer is "nothing beats predicting the mean".
+    """
+    alphas = [a for a, _ in curve]
+    scores = [s for _, s in curve]
+    best = int(np.argmax(scores))
+    at_floor = bool(abs(scores[best] - floor) <= tol)
+    info = {
+        "alpha_selected": alphas[best],
+        "alpha_grid_min": alphas[0], "alpha_grid_max": alphas[-1],
+        "alpha_at_lower_bound": best == 0,
+        "alpha_at_upper_bound": best == len(alphas) - 1,
+        "alpha_saturated_at_floor": at_floor,
+        "alpha_curve": [[a, s] for a, s in curve],
+    }
+    if best == 0:
+        raise AlphaGridTruncated(
+            f"best alpha {alphas[best]:g} is the grid's LOWEST -- the search "
+            f"never tried a weaker penalty; widen the grid downward")
+    if best == len(alphas) - 1 and not at_floor:
+        raise AlphaGridTruncated(
+            f"best alpha {alphas[best]:g} is the grid's HIGHEST and its score "
+            f"{scores[best]:.6f} is still {scores[best] - floor:+.6f} from the "
+            f"mean-predictor floor {floor:.6f} -- the search was truncated; "
+            f"widen the grid upward")
+    return info
+
+
 def vision_certificate_cell(X, y, cv_groups, shuffle_groups,
                             n_components: int = N_PCA_COMPONENTS,
-                            seed: int = SEED) -> dict:
+                            seed: int = SEED, alphas=VISION_ALPHAS) -> dict:
     """One ``ridge_pca`` cell: in-fold PCA, then the EXACT certificate
     statistic every other certificate uses
-    (``certificates.cell_from_factors``). Degenerate guards mirror
-    ``certificates.certificate_cell``."""
+    (``certificates.cell_from_factors``), searched over ``alphas`` (see
+    :data:`VISION_ALPHAS` for why this reader needs its own grid).
+    Degenerate guards mirror ``certificates.certificate_cell``; the alpha
+    boundary guard raises rather than reporting a truncated number."""
     y = np.asarray(y, dtype=np.float64)
     if len(y) == 0:
         return certificates.degenerate_cell("empty mask")
@@ -321,8 +423,11 @@ def vision_certificate_cell(X, y, cv_groups, shuffle_groups,
     splits = probe_core._group_splits(np.zeros((len(y), 1)), cv_groups)
     factors = pca_fold_factors(X, cv_groups, n_components=n_components,
                                seed=seed, splits=splits)
-    cell = certificates.cell_from_factors(
-        factors, splits, y, cv_groups, np.asarray(shuffle_groups), seed=seed)
+    with alpha_grid(alphas):
+        cell = certificates.cell_from_factors(
+            factors, splits, y, cv_groups, np.asarray(shuffle_groups), seed=seed)
+    floor = probe_core._floor(y, cv_groups, "reg", splits=splits)
+    cell.update(check_alpha_boundary(alpha_curve(factors, y, alphas), floor))
     cell["pca_components_used"] = int(factors[0]["pca_components"].shape[0])
     return cell
 
@@ -502,6 +607,9 @@ def main(argv=None):
     ap.add_argument("--masks", nargs="+", default=list(CERT_MASKS))
     ap.add_argument("--kinds", nargs="+", default=list(DEFAULT_KINDS))
     ap.add_argument("--n-components", type=int, default=N_PCA_COMPONENTS)
+    ap.add_argument("--recompute-kinds", nargs="*", default=[],
+                    help="Discard any cached cells of these kinds and "
+                         "recompute them (e.g. after a reader change).")
     ap.add_argument("--row-stride", type=int, default=1,
                     help="Sub-sample rows WITHIN episodes (never drop an "
                          "episode) if a reader's budget demands it.")
@@ -529,8 +637,12 @@ def main(argv=None):
         except json.JSONDecodeError:
             previous = None
         if previous:
-            done = {(c["model"], c["kind"], c["mask"]): c for c in previous.get("cells", [])}
-            print(f"[resume] {len(done)} cell(s) already in {out_path}", flush=True)
+            done = {(c["model"], c["kind"], c["mask"]): c
+                    for c in previous.get("cells", [])
+                    if c["kind"] not in set(args.recompute_kinds)}
+            print(f"[resume] {len(done)} cell(s) already in {out_path}"
+                  + (f"; recomputing kind(s) {args.recompute_kinds}"
+                     if args.recompute_kinds else ""), flush=True)
 
     cells, gates = [], {}
     for model in args.models:
@@ -703,7 +815,21 @@ def main(argv=None):
                                   "episode (episodes are never dropped)",
                           "row_stride": args.row_stride,
                           "rate": 1.0 / args.row_stride},
-        "alphas": probe_core.ALPHAS.tolist(), "n_splits": probe_core.N_SPLITS,
+        "alphas": VISION_ALPHAS.tolist(),
+        "alphas_registered_proprio_path": probe_core.ALPHAS.tolist(),
+        "alpha_grid_note": (
+            "review fix 1: the registered 1e-2..1e4 grid is calibrated for the "
+            "z-scored proprioceptive features; on UNSCALED PCA scores "
+            "(s[0]~2700-2970) every one of its alphas is negligible against "
+            "s^2, so the search saturated at the grid's upper edge in every "
+            "cell (effectively OLS on 512 PCs). Fixed by WIDENING the grid to "
+            "1e12 -- chosen over z-scoring the PC scores because widening "
+            "changes only the search range, while rescaling would change the "
+            "estimator (whitened-PCA ridge). Real fit and all 5 shuffle draws "
+            "share the widened grid. check_alpha_boundary raises if a "
+            "selection sits at either end without having reached the "
+            "mean-predictor floor."),
+        "n_splits": probe_core.N_SPLITS,
         "n_shuffles": probe_core.N_SHUFFLES,
         "cv_groups": "seed (35 matched-pair groups)",
         "shuffle_groups": "episode (condition/seed) -- certificates.py's hybrid rule",

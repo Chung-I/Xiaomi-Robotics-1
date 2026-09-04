@@ -331,6 +331,84 @@ class TestPCAInFold:
         assert const["degenerate"]
 
 
+class TestAlphaGrid:
+    """Review fix 1: the ridge search must not report a number that is a
+    property of where its alpha grid stopped."""
+
+    def test_grid_is_scoped_and_restored(self):
+        from eval_robocasa365.mass_variation.analysis import probe_core
+        original = probe_core.ALPHAS
+        with vc.alpha_grid([1.0, 2.0]):
+            assert list(probe_core.ALPHAS) == [1.0, 2.0]
+        assert probe_core.ALPHAS is original
+
+    def test_grid_is_restored_after_an_exception(self):
+        from eval_robocasa365.mass_variation.analysis import probe_core
+        original = probe_core.ALPHAS
+        with pytest.raises(RuntimeError):
+            with vc.alpha_grid([1.0]):
+                raise RuntimeError("boom")
+        assert probe_core.ALPHAS is original
+
+    def test_registered_proprio_grid_is_untouched(self):
+        # probe_core.py is copied verbatim from the sibling study; this
+        # reader supplies its own grid without editing that file
+        from eval_robocasa365.mass_variation.analysis import probe_core
+        np.testing.assert_allclose(probe_core.ALPHAS, 10.0 ** np.arange(-2, 5))
+
+    def test_vision_grid_reaches_far_past_the_registered_one(self):
+        assert vc.VISION_ALPHAS.max() >= 1e12
+        assert vc.VISION_ALPHAS.min() == pytest.approx(1e-2)
+
+    def test_lower_bound_selection_raises(self):
+        curve = [(1e-2, 0.9), (1e-1, 0.5), (1.0, 0.1)]
+        with pytest.raises(vc.AlphaGridTruncated, match="LOWEST"):
+            vc.check_alpha_boundary(curve, floor=0.0)
+
+    def test_upper_bound_selection_above_the_floor_raises(self):
+        # still improving at the top edge -> the grid stopped too early
+        curve = [(1.0, 0.1), (10.0, 0.3), (100.0, 0.5)]
+        with pytest.raises(vc.AlphaGridTruncated, match="HIGHEST"):
+            vc.check_alpha_boundary(curve, floor=0.0)
+
+    def test_upper_bound_selection_at_the_floor_is_accepted(self):
+        # the alpha -> infinity limit IS the mean predictor: converged null
+        curve = [(1.0, -0.9), (10.0, -0.4), (100.0, -0.002)]
+        info = vc.check_alpha_boundary(curve, floor=-0.002)
+        assert info["alpha_at_upper_bound"] and info["alpha_saturated_at_floor"]
+        assert info["alpha_selected"] == 100.0
+
+    def test_interior_optimum_is_accepted_and_reported(self):
+        curve = [(1.0, 0.1), (10.0, 0.7), (100.0, 0.2)]
+        info = vc.check_alpha_boundary(curve, floor=0.0)
+        assert info["alpha_selected"] == 10.0
+        assert not info["alpha_at_lower_bound"] and not info["alpha_at_upper_bound"]
+
+    def test_curve_uses_the_same_scoring_path_as_the_search(self):
+        rng = np.random.default_rng(0)
+        groups = np.repeat(np.arange(10), 6)
+        X = rng.standard_normal((60, 8)).astype(np.float32)
+        y = rng.standard_normal(10)[groups]
+        splits = vc.probe_core._group_splits(np.zeros((60, 1)), groups)
+        factors = vc.probe_core._fold_factors(X, groups, splits=splits)
+        alphas = [1e-1, 1.0, 1e2, 1e4]
+        curve = vc.alpha_curve(factors, y, alphas)
+        with vc.alpha_grid(alphas):
+            best = vc.probe_core._cv_pooled_best_factored(factors, y, "reg")
+        assert max(s for _, s in curve) == pytest.approx(best)
+
+    def test_cell_reports_the_selected_alpha(self):
+        rng = np.random.default_rng(7)
+        groups = np.repeat(np.arange(15), 8)
+        y = rng.standard_normal(15)[groups]
+        direction = rng.standard_normal(30)
+        X = (y[:, None] * direction[None, :] * 5.0
+             + 0.1 * rng.standard_normal((120, 30))).astype(np.float32)
+        cell = vc.vision_certificate_cell(X, y, groups, groups, n_components=4, seed=0)
+        assert "alpha_selected" in cell and "alpha_curve" in cell
+        assert cell["alpha_grid_max"] >= 1e12
+
+
 class TestCellSchema:
     def test_matches_the_certificates_module_schema(self):
         from eval_robocasa365.mass_variation.analysis import certificates
