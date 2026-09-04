@@ -19,6 +19,12 @@ Two reader modes (Plan amendment B Section 2 -- fair training budgets):
   ``X`` (the certificate's SACRED input format -- the flattened 4x14
   stride-2 XR1 window, or the 16-D pi0.5 single frame), minibatches of
   ``--row-batch`` masked rows per gradient step.
+- ``--mode cnn`` (Plan amendment C, the vision certificate): seeded small
+  conv net -- 3x (3x3 conv stride 2 + BatchNorm + ReLU, widths 32/64/128)
+  -> global average pool -> linear -- on a caller-built uint8 image stack
+  ``X (N, C, H, W)``, where ``C`` is that model's own (frames x cameras)
+  channel count. Images are kept uint8 on the device and normalised per
+  batch with per-channel statistics computed from the FIT rows only.
 
 Both: Adam 1e-3, z-stats from fit rows, ``--max-epochs`` cap (default
 300), early stop patience ``--patience`` (default 20) on held-out-train
@@ -31,7 +37,8 @@ Exchange npz (written by certificates.py):
   gru mode: states (N, D) float32 per-step sequences; ep_start (E+1,)
   int64 episode boundaries (contiguous, study row order).
   mlp mode: X (N, D) float32 design matrix.
-  both: y (N,) float64 (mass_log_c); mask (N,) bool; seed (N,) int64;
+  cnn mode: X (N, C, H, W) uint8 image stack.
+  all: y (N,) float64 (mass_log_c); mask (N,) bool; seed (N,) int64;
   folds_json () str -- JSON [[train_seeds, test_seeds], ...] from the SAME
   masked-row GroupKFold the ridge path used.
 
@@ -284,6 +291,124 @@ def run_mlp(data: dict, device: str, max_epochs: int, budget_s: float,
     return _pack(pooled_true, pooled_pred, fold_r2s, fold_epochs, budget_hit, t0)
 
 
+def _make_cnn(in_channels: int):
+    """The Plan amendment C vision reader: 3 stride-2 conv blocks -> GAP ->
+    linear. Small on purpose -- 35 seed groups is a data-starved regime, and
+    the certificate wants a fair reader, not a maximally-tuned one."""
+    import torch.nn as nn
+
+    widths = (32, 64, 128)
+    layers, prev = [], in_channels
+    for width in widths:
+        layers += [nn.Conv2d(prev, width, 3, stride=2, padding=1),
+                   nn.BatchNorm2d(width), nn.ReLU()]
+        prev = width
+    layers += [nn.AdaptiveAvgPool2d(1), nn.Flatten(), nn.Linear(prev, 1)]
+    return nn.Sequential(*layers)
+
+
+def run_cnn(data: dict, device: str, max_epochs: int, budget_s: float,
+            patience: int, row_batch: int) -> dict:
+    """Plan amendment C vision reader. Same fold/early-stop/budget discipline
+    as :func:`run_mlp` (folds shipped by the caller, hold-out = one train
+    SEED, Adam 1e-3, ``--max-epochs`` cap with ``--patience``, wall budget),
+    on uint8 images kept on the device and normalised per batch."""
+    import torch
+
+    X_all = np.asarray(data["X"], dtype=np.uint8)
+    y_all = np.asarray(data["y"], dtype=np.float64)
+    mask_all = np.asarray(data["mask"], dtype=bool)
+    seeds = np.asarray(data["seed"], dtype=np.int64)
+    folds = json.loads(str(data["folds_json"]))
+    C = X_all.shape[1]
+
+    t0 = time.time()
+    torch.manual_seed(SEED)
+    np_rng = np.random.default_rng(SEED)
+    X_dev = torch.from_numpy(X_all).to(device)  # uint8, normalised per batch
+    pooled_true, pooled_pred = [], []
+    fold_r2s, fold_epochs = [], []
+    budget_hit = False
+
+    for fold, (tr_seeds, te_seeds) in enumerate(folds):
+        tr_set, te_set = set(tr_seeds), set(te_seeds)
+        val_seed = _pick_val_seed(tr_seeds, np_rng)
+        rows_fit = np.flatnonzero(mask_all & np.isin(seeds, sorted(tr_set - {val_seed})))
+        rows_val = np.flatnonzero(mask_all & (seeds == val_seed))
+        rows_te = np.flatnonzero(mask_all & np.isin(seeds, sorted(te_set)))
+
+        i_fit = torch.from_numpy(rows_fit).to(device)
+        i_val = torch.from_numpy(rows_val).to(device)
+        i_te = torch.from_numpy(rows_te).to(device)
+        Yf = torch.from_numpy(y_all[rows_fit].astype(np.float32)).to(device)
+        vt, tt = y_all[rows_val], y_all[rows_te]
+
+        # per-channel image stats from the FIT rows only (no leakage)
+        with torch.no_grad():
+            sample = X_dev[i_fit[: min(4096, len(i_fit))]].float().div_(255.0)
+            x_mu = sample.mean(dim=(0, 2, 3)).view(1, C, 1, 1)
+            x_sd = sample.std(dim=(0, 2, 3)).clamp_min(1e-6).view(1, C, 1, 1)
+            del sample
+        y_mu, y_sd = Yf.mean(), Yf.std().clamp_min(1e-6)
+
+        torch.manual_seed(SEED + fold)
+        net = _make_cnn(C).to(device)
+        opt = torch.optim.Adam(net.parameters(), lr=LR)
+
+        def forward(idx):
+            return net((X_dev[idx].float().div_(255.0) - x_mu) / x_sd).squeeze(-1)
+
+        def predict(idx):
+            out = []
+            with torch.no_grad():
+                for lo in range(0, len(idx), row_batch):
+                    out.append((forward(idx[lo:lo + row_batch]) * y_sd + y_mu).cpu().numpy())
+            return np.concatenate(out) if out else np.zeros(0)
+
+        best_val, best_state, since_best = -np.inf, None, 0
+        epoch = 0
+        n_fit = len(rows_fit)
+        for epoch in range(max_epochs):
+            if time.time() - t0 > budget_s:
+                budget_hit = True
+                break
+            net.train()
+            order = torch.from_numpy(np_rng.permutation(n_fit)).to(device)
+            for lo in range(0, n_fit, row_batch):
+                sel = order[lo:lo + row_batch]
+                if len(sel) < 2:  # BatchNorm needs >1 row
+                    continue
+                loss = ((forward(i_fit[sel]) - (Yf[sel] - y_mu) / y_sd) ** 2).mean()
+                opt.zero_grad()
+                loss.backward()
+                opt.step()
+            net.eval()
+            val_r2 = _r2(vt, predict(i_val))
+            crit = val_r2 if np.isfinite(val_r2) else -np.inf
+            if crit > best_val or best_state is None:
+                best_val, since_best = crit, 0
+                best_state = [p.detach().clone() for p in net.state_dict().values()]
+            else:
+                since_best += 1
+                if since_best >= patience:
+                    break
+        fold_epochs.append(epoch + 1)
+        if best_state is not None:
+            with torch.no_grad():
+                for p, b in zip(net.state_dict().values(), best_state):
+                    p.copy_(b)
+        net.eval()
+        tp = predict(i_te)
+        fold_r2s.append(_r2(tt, tp))
+        pooled_true.append(tt)
+        pooled_pred.append(tp)
+        print(f"[cnn-worker] fold {fold}: r2={fold_r2s[-1]:.4f} epochs={epoch + 1} "
+              f"val_seed={val_seed} n_fit={n_fit} n_te={len(tt)} "
+              f"elapsed={time.time() - t0:.0f}s", flush=True)
+
+    return _pack(pooled_true, pooled_pred, fold_r2s, fold_epochs, budget_hit, t0)
+
+
 def _pack(pooled_true, pooled_pred, fold_r2s, fold_epochs, budget_hit, t0):
     return {
         "y_true": np.concatenate(pooled_true),
@@ -301,7 +426,7 @@ def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("in_npz")
     ap.add_argument("out_npz")
-    ap.add_argument("--mode", choices=("gru", "mlp"), default="gru")
+    ap.add_argument("--mode", choices=("gru", "mlp", "cnn"), default="gru")
     ap.add_argument("--device", default="cuda")
     ap.add_argument("--max-epochs", type=int, default=300)
     ap.add_argument("--budget-s", type=float, default=300.0)
@@ -318,6 +443,9 @@ def main(argv=None):
     if args.mode == "gru":
         out = run_gru(data, args.device, args.max_epochs, args.budget_s,
                       args.patience, args.ep_batch)
+    elif args.mode == "cnn":
+        out = run_cnn(data, args.device, args.max_epochs, args.budget_s,
+                      args.patience, args.row_batch)
     else:
         out = run_mlp(data, args.device, args.max_epochs, args.budget_s,
                       args.patience, args.row_batch)

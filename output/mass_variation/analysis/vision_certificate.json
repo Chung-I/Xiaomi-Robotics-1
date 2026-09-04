@@ -1,0 +1,693 @@
+{
+  "config": {
+    "amendment": "C (2026-09-04): vision certificate -- each model's own visual format, frames re-rendered from the bit-exact replays; readers = in-fold-PCA ridge + small seeded CNN; gate unchanged (carry R2 >= 0.3); precontact is the control and a non-null control voids the carry cell",
+    "seed": 0,
+    "gate_r2": 0.3,
+    "gate_mask": "carry",
+    "control_mask": "precontact",
+    "cert_masks": [
+      "carry",
+      "precontact"
+    ],
+    "certificate": "policy_obs_vision",
+    "visual_formats": {
+      "xr1": {
+        "window": {
+          "k": 4,
+          "stride": 2
+        },
+        "transform": "center_crop_0.95"
+      },
+      "pi05_robocasa": {
+        "window": {
+          "k": 1,
+          "stride": 1
+        },
+        "transform": "resize_with_pad"
+      }
+    },
+    "camera_keys": [
+      "video.robot0_agentview_left",
+      "video.robot0_agentview_right",
+      "video.robot0_eye_in_hand"
+    ],
+    "storage": {
+      "side_px": 96,
+      "channels": "grayscale",
+      "source_px": 256,
+      "source_channels": "RGB",
+      "disclosure": "the 96x96 grayscale storage and every further reduction (PCA / strided conv) are part of the READER, not any model's input format"
+    },
+    "pca": {
+      "n_components": 512,
+      "n_iter": 4,
+      "oversample": 10,
+      "fit_scope": "TRAIN ROWS OF EACH FOLD ONLY (leakage rule)",
+      "scores_rescaled": false
+    },
+    "cnn": {
+      "max_epochs": 200,
+      "patience": 15,
+      "batch": 128,
+      "budget_s": 300.0,
+      "arch": "3x(conv3x3 stride2 + BN + ReLU) -> GAP -> linear",
+      "runner": "gru_worker.py --mode cnn via /home/chungyili/Codes/Xiaomi-Robotics-1/.venv-mibot/bin/python",
+      "shuffle_control": null,
+      "reliability_note": "trained reader in a data-starved regime (35 seed groups, 3 mass levels): treat as a noisy reader, not a tight bound on channel content; no shuffle control (see the module docstring) -- its control is the precontact cell"
+    },
+    "row_subsample": {
+      "rule": "every row_stride-th masked row WITHIN each episode (episodes are never dropped)",
+      "row_stride": 1,
+      "rate": 1.0
+    },
+    "alphas": [
+      0.01,
+      0.1,
+      1.0,
+      10.0,
+      100.0,
+      1000.0,
+      10000.0
+    ],
+    "n_splits": 5,
+    "n_shuffles": 5,
+    "cv_groups": "seed (35 matched-pair groups)",
+    "shuffle_groups": "episode (condition/seed) -- certificates.py's hybrid rule",
+    "models": [
+      "xr1",
+      "pi05_robocasa"
+    ],
+    "phase1_root": "output/mass_variation/phase1",
+    "policy_state_root": "output/mass_variation/policy_state",
+    "frames_root": "output/mass_variation/frames",
+    "versions": {
+      "python": "3.11.15",
+      "numpy": "2.2.5",
+      "sklearn": "1.9.0",
+      "cnn_torch": "2.8.0+cu128"
+    },
+    "complete": true,
+    "reader_competence_cells": [
+      "pi05_robocasa/cnn_sanity/carry",
+      "pi05_robocasa/cnn_sanity/precontact",
+      "pi05_robocasa/sanity/carry",
+      "pi05_robocasa/sanity/precontact",
+      "xr1/cnn_sanity/carry",
+      "xr1/cnn_sanity/precontact",
+      "xr1/sanity/carry",
+      "xr1/sanity/precontact"
+    ]
+  },
+  "gates": {
+    "pi05_robocasa/policy_obs_vision": {
+      "gate_r2": 0.3,
+      "gate_mask": "carry",
+      "control_mask": "precontact",
+      "control_null_r2_max": 0.0,
+      "cnn_r2": -0.4956247612514819,
+      "cnn_control_r2": -0.3008304137773292,
+      "cnn_control_null": true,
+      "cnn_pass": false,
+      "cnn_voided": false,
+      "ridge_pca_r2": -0.4801517289849053,
+      "ridge_pca_control_r2": -0.07929314602848492,
+      "ridge_pca_control_null": true,
+      "ridge_pca_pass": false,
+      "ridge_pca_voided": false,
+      "pass": false,
+      "any_voided": false
+    },
+    "xr1/policy_obs_vision": {
+      "gate_r2": 0.3,
+      "gate_mask": "carry",
+      "control_mask": "precontact",
+      "control_null_r2_max": 0.0,
+      "cnn_r2": -0.3066462644269403,
+      "cnn_control_r2": -0.12693745755544716,
+      "cnn_control_null": true,
+      "cnn_pass": false,
+      "cnn_voided": false,
+      "ridge_pca_r2": -0.2879492218504123,
+      "ridge_pca_control_r2": -0.2323594334582395,
+      "ridge_pca_control_null": true,
+      "ridge_pca_pass": false,
+      "ridge_pca_voided": false,
+      "pass": false,
+      "any_voided": false
+    }
+  },
+  "cells": [
+    {
+      "degenerate": false,
+      "r2_pooled": -0.4956247612514819,
+      "r2_folds": [
+        -0.5388465084193128,
+        -0.6860834997632363,
+        -0.11265016679703121,
+        -0.7271467397572093,
+        -0.9378411785911436
+      ],
+      "rank_acc": 0.3981544514209953,
+      "shuffled": null,
+      "shuffled_std": null,
+      "selectivity": null,
+      "floor": null,
+      "n": 10864,
+      "n_groups": 29,
+      "epochs_per_fold": [
+        21,
+        16,
+        41,
+        16,
+        16
+      ],
+      "budget_hit": false,
+      "wall_s": 13.6,
+      "reliability_note": "trained reader in a data-starved regime (35 seed groups, 3 mass levels): treat as a noisy reader, not a tight bound on channel content; no shuffle control (see the module docstring) -- its control is the precontact cell",
+      "model": "pi05_robocasa",
+      "certificate": "policy_obs_vision",
+      "kind": "cnn",
+      "mask": "carry",
+      "input_channels": [
+        "MODEL FORMAT (pi05_robocasa): 1 frame(s) at stride 1 x 3 cameras ['video.robot0_agentview_left', 'video.robot0_agentview_right', 'video.robot0_eye_in_hand'], per-frame resize_with_pad",
+        "READER: 96x96 grayscale per camera (storage) as 3 input channels; 3 stride-2 conv blocks -> GAP -> linear, seeded, early-stopped on a held-out train episode",
+        "NOTE: both models actually see 256x256 RGB; the 96x96 grayscale storage and every reduction above are READER-side, not the model's input format (amendment C Section 1)"
+      ],
+      "row_stride": 1
+    },
+    {
+      "degenerate": false,
+      "r2_pooled": -0.3008304137773292,
+      "r2_folds": [
+        -0.5526574414468197,
+        -0.1974757199934425,
+        -0.2251857186098427,
+        -0.048070531690033835,
+        -0.5297525814897783
+      ],
+      "rank_acc": 0.5003686180581308,
+      "shuffled": null,
+      "shuffled_std": null,
+      "selectivity": null,
+      "floor": null,
+      "n": 19499,
+      "n_groups": 35,
+      "epochs_per_fold": [
+        27,
+        42,
+        16,
+        17,
+        23
+      ],
+      "budget_hit": false,
+      "wall_s": 27.3,
+      "reliability_note": "trained reader in a data-starved regime (35 seed groups, 3 mass levels): treat as a noisy reader, not a tight bound on channel content; no shuffle control (see the module docstring) -- its control is the precontact cell",
+      "model": "pi05_robocasa",
+      "certificate": "policy_obs_vision",
+      "kind": "cnn",
+      "mask": "precontact",
+      "input_channels": [
+        "MODEL FORMAT (pi05_robocasa): 1 frame(s) at stride 1 x 3 cameras ['video.robot0_agentview_left', 'video.robot0_agentview_right', 'video.robot0_eye_in_hand'], per-frame resize_with_pad",
+        "READER: 96x96 grayscale per camera (storage) as 3 input channels; 3 stride-2 conv blocks -> GAP -> linear, seeded, early-stopped on a held-out train episode",
+        "NOTE: both models actually see 256x256 RGB; the 96x96 grayscale storage and every reduction above are READER-side, not the model's input format (amendment C Section 1)"
+      ],
+      "row_stride": 1
+    },
+    {
+      "degenerate": false,
+      "r2_pooled": 0.5523731717477667,
+      "r2_folds": [
+        0.6987508036074375,
+        0.6851038334865641,
+        0.3626888410750062,
+        0.20507823038144746,
+        0.5633998962840837
+      ],
+      "rank_acc": 0.7347036355685752,
+      "shuffled": null,
+      "shuffled_std": null,
+      "selectivity": null,
+      "floor": null,
+      "n": 10864,
+      "n_groups": 29,
+      "epochs_per_fold": [
+        35,
+        43,
+        29,
+        23,
+        42
+      ],
+      "budget_hit": false,
+      "wall_s": 21.5,
+      "reliability_note": "trained reader in a data-starved regime (35 seed groups, 3 mass levels): treat as a noisy reader, not a tight bound on channel content; no shuffle control (see the module docstring) -- its control is the precontact cell",
+      "model": "pi05_robocasa",
+      "certificate": "reader_competence_obj_z",
+      "kind": "cnn_sanity",
+      "mask": "carry",
+      "input_channels": [
+        "MODEL FORMAT (pi05_robocasa): 1 frame(s) at stride 1 x 3 cameras ['video.robot0_agentview_left', 'video.robot0_agentview_right', 'video.robot0_eye_in_hand'], per-frame resize_with_pad",
+        "READER: 96x96 grayscale per camera (storage) as 3 input channels; 3 stride-2 conv blocks -> GAP -> linear, seeded, early-stopped on a held-out train episode",
+        "NOTE: both models actually see 256x256 RGB; the 96x96 grayscale storage and every reduction above are READER-side, not the model's input format (amendment C Section 1)"
+      ],
+      "row_stride": 1,
+      "target": "obj_pos_z (object world height, metres)"
+    },
+    {
+      "degenerate": false,
+      "r2_pooled": -0.24666800687043122,
+      "r2_folds": [
+        -6.435236519488363,
+        -1.3260640762476514,
+        -0.4724758039743213,
+        0.1293886902585193,
+        -0.5637760014205144
+      ],
+      "rank_acc": 0.5078655428504052,
+      "shuffled": null,
+      "shuffled_std": null,
+      "selectivity": null,
+      "floor": null,
+      "n": 19499,
+      "n_groups": 35,
+      "epochs_per_fold": [
+        118,
+        21,
+        43,
+        22,
+        23
+      ],
+      "budget_hit": false,
+      "wall_s": 49.0,
+      "reliability_note": "trained reader in a data-starved regime (35 seed groups, 3 mass levels): treat as a noisy reader, not a tight bound on channel content; no shuffle control (see the module docstring) -- its control is the precontact cell",
+      "model": "pi05_robocasa",
+      "certificate": "reader_competence_obj_z",
+      "kind": "cnn_sanity",
+      "mask": "precontact",
+      "input_channels": [
+        "MODEL FORMAT (pi05_robocasa): 1 frame(s) at stride 1 x 3 cameras ['video.robot0_agentview_left', 'video.robot0_agentview_right', 'video.robot0_eye_in_hand'], per-frame resize_with_pad",
+        "READER: 96x96 grayscale per camera (storage) as 3 input channels; 3 stride-2 conv blocks -> GAP -> linear, seeded, early-stopped on a held-out train episode",
+        "NOTE: both models actually see 256x256 RGB; the 96x96 grayscale storage and every reduction above are READER-side, not the model's input format (amendment C Section 1)"
+      ],
+      "row_stride": 1,
+      "target": "obj_pos_z (object world height, metres)"
+    },
+    {
+      "degenerate": false,
+      "r2_pooled": -0.4801517289849053,
+      "r2_folds": [
+        -0.07163096298438498,
+        -0.6673538245770845,
+        -0.38597190841852913,
+        -0.8066781790816246,
+        -0.8988114378165033
+      ],
+      "rank_acc": 0.4435428881293779,
+      "shuffled": -0.3959196948253273,
+      "shuffled_std": 0.3711830067875922,
+      "selectivity": -0.08423203415957803,
+      "floor": -0.03647550376317876,
+      "n": 10864,
+      "n_groups": 29,
+      "pca_components_used": 512,
+      "model": "pi05_robocasa",
+      "certificate": "policy_obs_vision",
+      "kind": "ridge_pca",
+      "mask": "carry",
+      "input_channels": [
+        "MODEL FORMAT (pi05_robocasa): 1 frame(s) at stride 1 x 3 cameras ['video.robot0_agentview_left', 'video.robot0_agentview_right', 'video.robot0_eye_in_hand'], per-frame resize_with_pad",
+        "READER: 96x96 grayscale per camera (storage), flattened 1x3x96x96 = 27648 dims, then PCA(512) FITTED WITHIN EACH TRAIN FOLD, then ridge (same alpha grid / shuffles / folds as every other certificate)",
+        "NOTE: both models actually see 256x256 RGB; the 96x96 grayscale storage and every reduction above are READER-side, not the model's input format (amendment C Section 1)"
+      ],
+      "row_stride": 1,
+      "wall_s": 36.6
+    },
+    {
+      "degenerate": false,
+      "r2_pooled": -0.07929314602848492,
+      "r2_folds": [
+        -0.1287371806334221,
+        -0.02520770343829626,
+        -0.02491759286672801,
+        -0.0921967153002814,
+        -0.14446697782240991
+      ],
+      "rank_acc": 0.5281531361155899,
+      "shuffled": -0.2457445451994634,
+      "shuffled_std": 0.20062662656852612,
+      "selectivity": 0.16645139917097848,
+      "floor": -0.002079563779222804,
+      "n": 19499,
+      "n_groups": 35,
+      "pca_components_used": 512,
+      "model": "pi05_robocasa",
+      "certificate": "policy_obs_vision",
+      "kind": "ridge_pca",
+      "mask": "precontact",
+      "input_channels": [
+        "MODEL FORMAT (pi05_robocasa): 1 frame(s) at stride 1 x 3 cameras ['video.robot0_agentview_left', 'video.robot0_agentview_right', 'video.robot0_eye_in_hand'], per-frame resize_with_pad",
+        "READER: 96x96 grayscale per camera (storage), flattened 1x3x96x96 = 27648 dims, then PCA(512) FITTED WITHIN EACH TRAIN FOLD, then ridge (same alpha grid / shuffles / folds as every other certificate)",
+        "NOTE: both models actually see 256x256 RGB; the 96x96 grayscale storage and every reduction above are READER-side, not the model's input format (amendment C Section 1)"
+      ],
+      "row_stride": 1,
+      "wall_s": 47.8
+    },
+    {
+      "degenerate": false,
+      "r2_pooled": 0.6896485288956975,
+      "r2_folds": [
+        0.747320943958957,
+        0.7449008481519582,
+        0.5734292244001831,
+        0.6470097666246342,
+        0.5813432799590956
+      ],
+      "rank_acc": 0.761144966241477,
+      "shuffled": -0.16028597200682743,
+      "shuffled_std": 0.05756563389085539,
+      "selectivity": 0.849934500902525,
+      "floor": -0.019558454597740527,
+      "n": 10864,
+      "n_groups": 29,
+      "pca_components_used": 512,
+      "model": "pi05_robocasa",
+      "certificate": "reader_competence_obj_z",
+      "kind": "sanity",
+      "mask": "carry",
+      "input_channels": [
+        "MODEL FORMAT (pi05_robocasa): 1 frame(s) at stride 1 x 3 cameras ['video.robot0_agentview_left', 'video.robot0_agentview_right', 'video.robot0_eye_in_hand'], per-frame resize_with_pad",
+        "READER: 96x96 grayscale per camera (storage), flattened 1x3x96x96 = 27648 dims, then PCA(512) FITTED WITHIN EACH TRAIN FOLD, then ridge (same alpha grid / shuffles / folds as every other certificate)",
+        "NOTE: both models actually see 256x256 RGB; the 96x96 grayscale storage and every reduction above are READER-side, not the model's input format (amendment C Section 1)"
+      ],
+      "row_stride": 1,
+      "target": "obj_pos_z (object world height, metres)",
+      "wall_s": 84.6
+    },
+    {
+      "degenerate": false,
+      "r2_pooled": -0.2853116862323486,
+      "r2_folds": [
+        -9.402086428328605,
+        0.2570256510899618,
+        -1.3282070589139154,
+        0.29669153011345195,
+        -0.7034120464557552
+      ],
+      "rank_acc": 0.5521555862394292,
+      "shuffled": -0.1966737477517912,
+      "shuffled_std": 0.07995539805187576,
+      "selectivity": -0.0886379384805574,
+      "floor": -0.06465779185853071,
+      "n": 19499,
+      "n_groups": 35,
+      "pca_components_used": 512,
+      "model": "pi05_robocasa",
+      "certificate": "reader_competence_obj_z",
+      "kind": "sanity",
+      "mask": "precontact",
+      "input_channels": [
+        "MODEL FORMAT (pi05_robocasa): 1 frame(s) at stride 1 x 3 cameras ['video.robot0_agentview_left', 'video.robot0_agentview_right', 'video.robot0_eye_in_hand'], per-frame resize_with_pad",
+        "READER: 96x96 grayscale per camera (storage), flattened 1x3x96x96 = 27648 dims, then PCA(512) FITTED WITHIN EACH TRAIN FOLD, then ridge (same alpha grid / shuffles / folds as every other certificate)",
+        "NOTE: both models actually see 256x256 RGB; the 96x96 grayscale storage and every reduction above are READER-side, not the model's input format (amendment C Section 1)"
+      ],
+      "row_stride": 1,
+      "target": "obj_pos_z (object world height, metres)",
+      "wall_s": 70.3
+    },
+    {
+      "degenerate": false,
+      "r2_pooled": -0.3066462644269403,
+      "r2_folds": [
+        -0.40449178908413264,
+        -0.17382152625642244,
+        -0.3847942120742174,
+        -0.2465892064054369,
+        -0.3425496418845795
+      ],
+      "rank_acc": 0.49250804271576304,
+      "shuffled": null,
+      "shuffled_std": null,
+      "selectivity": null,
+      "floor": null,
+      "n": 12955,
+      "n_groups": 35,
+      "epochs_per_fold": [
+        42,
+        17,
+        26,
+        17,
+        17
+      ],
+      "budget_hit": false,
+      "wall_s": 18.8,
+      "reliability_note": "trained reader in a data-starved regime (35 seed groups, 3 mass levels): treat as a noisy reader, not a tight bound on channel content; no shuffle control (see the module docstring) -- its control is the precontact cell",
+      "model": "xr1",
+      "certificate": "policy_obs_vision",
+      "kind": "cnn",
+      "mask": "carry",
+      "input_channels": [
+        "MODEL FORMAT (xr1): 4 frame(s) at stride 2 x 3 cameras ['video.robot0_agentview_left', 'video.robot0_agentview_right', 'video.robot0_eye_in_hand'], per-frame center_crop_0.95",
+        "READER: 96x96 grayscale per camera (storage) as 12 input channels; 3 stride-2 conv blocks -> GAP -> linear, seeded, early-stopped on a held-out train episode",
+        "NOTE: both models actually see 256x256 RGB; the 96x96 grayscale storage and every reduction above are READER-side, not the model's input format (amendment C Section 1)"
+      ],
+      "row_stride": 1
+    },
+    {
+      "degenerate": false,
+      "r2_pooled": -0.12693745755544716,
+      "r2_folds": [
+        -0.11773856549842066,
+        -0.18750368450859312,
+        -0.17831089448966364,
+        -0.09445482007814232,
+        -0.09550417417940316
+      ],
+      "rank_acc": 0.4798564707491568,
+      "shuffled": null,
+      "shuffled_std": null,
+      "selectivity": null,
+      "floor": null,
+      "n": 12664,
+      "n_groups": 35,
+      "epochs_per_fold": [
+        18,
+        16,
+        20,
+        20,
+        16
+      ],
+      "budget_hit": false,
+      "wall_s": 14.9,
+      "reliability_note": "trained reader in a data-starved regime (35 seed groups, 3 mass levels): treat as a noisy reader, not a tight bound on channel content; no shuffle control (see the module docstring) -- its control is the precontact cell",
+      "model": "xr1",
+      "certificate": "policy_obs_vision",
+      "kind": "cnn",
+      "mask": "precontact",
+      "input_channels": [
+        "MODEL FORMAT (xr1): 4 frame(s) at stride 2 x 3 cameras ['video.robot0_agentview_left', 'video.robot0_agentview_right', 'video.robot0_eye_in_hand'], per-frame center_crop_0.95",
+        "READER: 96x96 grayscale per camera (storage) as 12 input channels; 3 stride-2 conv blocks -> GAP -> linear, seeded, early-stopped on a held-out train episode",
+        "NOTE: both models actually see 256x256 RGB; the 96x96 grayscale storage and every reduction above are READER-side, not the model's input format (amendment C Section 1)"
+      ],
+      "row_stride": 1
+    },
+    {
+      "degenerate": false,
+      "r2_pooled": 0.31061295720603865,
+      "r2_folds": [
+        -0.7375979178683072,
+        0.1803716974594286,
+        0.32932132241240053,
+        0.35381910103525227,
+        0.7685860835533386
+      ],
+      "rank_acc": 0.6601279872728751,
+      "shuffled": null,
+      "shuffled_std": null,
+      "selectivity": null,
+      "floor": null,
+      "n": 12955,
+      "n_groups": 35,
+      "epochs_per_fold": [
+        49,
+        16,
+        18,
+        17,
+        21
+      ],
+      "budget_hit": false,
+      "wall_s": 18.8,
+      "reliability_note": "trained reader in a data-starved regime (35 seed groups, 3 mass levels): treat as a noisy reader, not a tight bound on channel content; no shuffle control (see the module docstring) -- its control is the precontact cell",
+      "model": "xr1",
+      "certificate": "reader_competence_obj_z",
+      "kind": "cnn_sanity",
+      "mask": "carry",
+      "input_channels": [
+        "MODEL FORMAT (xr1): 4 frame(s) at stride 2 x 3 cameras ['video.robot0_agentview_left', 'video.robot0_agentview_right', 'video.robot0_eye_in_hand'], per-frame center_crop_0.95",
+        "READER: 96x96 grayscale per camera (storage) as 12 input channels; 3 stride-2 conv blocks -> GAP -> linear, seeded, early-stopped on a held-out train episode",
+        "NOTE: both models actually see 256x256 RGB; the 96x96 grayscale storage and every reduction above are READER-side, not the model's input format (amendment C Section 1)"
+      ],
+      "row_stride": 1,
+      "target": "obj_pos_z (object world height, metres)"
+    },
+    {
+      "degenerate": false,
+      "r2_pooled": -0.11423353438103367,
+      "r2_folds": [
+        -0.8515654532075099,
+        0.07223157801408353,
+        -0.06832288873520964,
+        0.3642385219052918,
+        0.03291551262109382
+      ],
+      "rank_acc": 0.5995581537504079,
+      "shuffled": null,
+      "shuffled_std": null,
+      "selectivity": null,
+      "floor": null,
+      "n": 12664,
+      "n_groups": 35,
+      "epochs_per_fold": [
+        25,
+        20,
+        17,
+        24,
+        28
+      ],
+      "budget_hit": false,
+      "wall_s": 17.5,
+      "reliability_note": "trained reader in a data-starved regime (35 seed groups, 3 mass levels): treat as a noisy reader, not a tight bound on channel content; no shuffle control (see the module docstring) -- its control is the precontact cell",
+      "model": "xr1",
+      "certificate": "reader_competence_obj_z",
+      "kind": "cnn_sanity",
+      "mask": "precontact",
+      "input_channels": [
+        "MODEL FORMAT (xr1): 4 frame(s) at stride 2 x 3 cameras ['video.robot0_agentview_left', 'video.robot0_agentview_right', 'video.robot0_eye_in_hand'], per-frame center_crop_0.95",
+        "READER: 96x96 grayscale per camera (storage) as 12 input channels; 3 stride-2 conv blocks -> GAP -> linear, seeded, early-stopped on a held-out train episode",
+        "NOTE: both models actually see 256x256 RGB; the 96x96 grayscale storage and every reduction above are READER-side, not the model's input format (amendment C Section 1)"
+      ],
+      "row_stride": 1,
+      "target": "obj_pos_z (object world height, metres)"
+    },
+    {
+      "degenerate": false,
+      "r2_pooled": -0.2879492218504123,
+      "r2_folds": [
+        -0.07207531882676599,
+        -0.368613046080585,
+        -0.3931893117618017,
+        -0.1426387852235973,
+        -0.5083448781901931
+      ],
+      "rank_acc": 0.49473885423276814,
+      "shuffled": -0.2689859113985095,
+      "shuffled_std": 0.15233425138083437,
+      "selectivity": -0.01896331045190275,
+      "floor": -0.002697505432960323,
+      "n": 12955,
+      "n_groups": 35,
+      "pca_components_used": 512,
+      "model": "xr1",
+      "certificate": "policy_obs_vision",
+      "kind": "ridge_pca",
+      "mask": "carry",
+      "input_channels": [
+        "MODEL FORMAT (xr1): 4 frame(s) at stride 2 x 3 cameras ['video.robot0_agentview_left', 'video.robot0_agentview_right', 'video.robot0_eye_in_hand'], per-frame center_crop_0.95",
+        "READER: 96x96 grayscale per camera (storage), flattened 4x3x96x96 = 110592 dims, then PCA(512) FITTED WITHIN EACH TRAIN FOLD, then ridge (same alpha grid / shuffles / folds as every other certificate)",
+        "NOTE: both models actually see 256x256 RGB; the 96x96 grayscale storage and every reduction above are READER-side, not the model's input format (amendment C Section 1)"
+      ],
+      "row_stride": 1,
+      "wall_s": 221.2
+    },
+    {
+      "degenerate": false,
+      "r2_pooled": -0.2323594334582395,
+      "r2_folds": [
+        -0.28638258844092124,
+        -0.3292608980061511,
+        -0.2831928250615101,
+        -0.152383393847785,
+        -0.16477127706660832
+      ],
+      "rank_acc": 0.47683998988298176,
+      "shuffled": -0.2193801695172795,
+      "shuffled_std": 0.1583674076258963,
+      "selectivity": -0.012979263940959995,
+      "floor": -0.0029718420467448325,
+      "n": 12664,
+      "n_groups": 35,
+      "pca_components_used": 512,
+      "model": "xr1",
+      "certificate": "policy_obs_vision",
+      "kind": "ridge_pca",
+      "mask": "precontact",
+      "input_channels": [
+        "MODEL FORMAT (xr1): 4 frame(s) at stride 2 x 3 cameras ['video.robot0_agentview_left', 'video.robot0_agentview_right', 'video.robot0_eye_in_hand'], per-frame center_crop_0.95",
+        "READER: 96x96 grayscale per camera (storage), flattened 4x3x96x96 = 110592 dims, then PCA(512) FITTED WITHIN EACH TRAIN FOLD, then ridge (same alpha grid / shuffles / folds as every other certificate)",
+        "NOTE: both models actually see 256x256 RGB; the 96x96 grayscale storage and every reduction above are READER-side, not the model's input format (amendment C Section 1)"
+      ],
+      "row_stride": 1,
+      "wall_s": 239.9
+    },
+    {
+      "degenerate": false,
+      "r2_pooled": -0.24100551350279953,
+      "r2_folds": [
+        -4.847280482238893,
+        0.3511425417740043,
+        0.3843859159033488,
+        0.14167851099095852,
+        0.34540138988656544
+      ],
+      "rank_acc": 0.6304030816330864,
+      "shuffled": -0.11961865556918623,
+      "shuffled_std": 0.052993479065062236,
+      "selectivity": -0.1213868579336133,
+      "floor": -0.0161180780945529,
+      "n": 12955,
+      "n_groups": 35,
+      "pca_components_used": 512,
+      "model": "xr1",
+      "certificate": "reader_competence_obj_z",
+      "kind": "sanity",
+      "mask": "carry",
+      "input_channels": [
+        "MODEL FORMAT (xr1): 4 frame(s) at stride 2 x 3 cameras ['video.robot0_agentview_left', 'video.robot0_agentview_right', 'video.robot0_eye_in_hand'], per-frame center_crop_0.95",
+        "READER: 96x96 grayscale per camera (storage), flattened 4x3x96x96 = 110592 dims, then PCA(512) FITTED WITHIN EACH TRAIN FOLD, then ridge (same alpha grid / shuffles / folds as every other certificate)",
+        "NOTE: both models actually see 256x256 RGB; the 96x96 grayscale storage and every reduction above are READER-side, not the model's input format (amendment C Section 1)"
+      ],
+      "row_stride": 1,
+      "target": "obj_pos_z (object world height, metres)",
+      "wall_s": 318.2
+    },
+    {
+      "degenerate": false,
+      "r2_pooled": -0.28328677036826866,
+      "r2_folds": [
+        -0.7691395501218892,
+        -0.02448660794273083,
+        -0.2325921534307922,
+        -0.3370632471820436,
+        -1.129515101889071
+      ],
+      "rank_acc": 0.5567872134060178,
+      "shuffled": -0.2780214047523007,
+      "shuffled_std": 0.0914466005132424,
+      "selectivity": -0.005265365615967965,
+      "floor": -0.09388080738671034,
+      "n": 12664,
+      "n_groups": 35,
+      "pca_components_used": 512,
+      "model": "xr1",
+      "certificate": "reader_competence_obj_z",
+      "kind": "sanity",
+      "mask": "precontact",
+      "input_channels": [
+        "MODEL FORMAT (xr1): 4 frame(s) at stride 2 x 3 cameras ['video.robot0_agentview_left', 'video.robot0_agentview_right', 'video.robot0_eye_in_hand'], per-frame center_crop_0.95",
+        "READER: 96x96 grayscale per camera (storage), flattened 4x3x96x96 = 110592 dims, then PCA(512) FITTED WITHIN EACH TRAIN FOLD, then ridge (same alpha grid / shuffles / folds as every other certificate)",
+        "NOTE: both models actually see 256x256 RGB; the 96x96 grayscale storage and every reduction above are READER-side, not the model's input format (amendment C Section 1)"
+      ],
+      "row_stride": 1,
+      "target": "obj_pos_z (object world height, metres)",
+      "wall_s": 313.8
+    }
+  ]
+}

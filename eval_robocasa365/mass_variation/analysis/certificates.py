@@ -314,6 +314,48 @@ def degenerate_cell(reason: str) -> dict:
     }
 
 
+def cell_from_factors(factors, splits, y, cv_groups, shuffle_groups,
+                      seed: int = SEED) -> dict:
+    """THE certificate statistic, given precomputed per-fold ridge factors.
+
+    Split out of :func:`certificate_cell` (behaviour unchanged) so readers
+    whose per-fold feature map is not a plain global one -- Plan amendment
+    C's vision certificate fits a PCA inside each fold before the ridge --
+    can reuse the identical protocol instead of restating it: best-alpha
+    pooled held-out R2, per-fold R2s, rank_acc from those same held-out
+    predictions, ``probe_core.N_SHUFFLES`` group-coherent label shuffles
+    each with its OWN alpha search, and the predict-the-train-mean floor.
+
+    ``factors`` are ``probe_core._fold_factors``-shaped dicts (``tr``,
+    ``te``, ``U``, ``s``, ``G``); ``splits`` the matching (train, test)
+    index pairs. ``cv_groups`` (seed) drive the folds and the floor;
+    ``shuffle_groups`` (episode) drive the shuffle -- see the module
+    docstring's "hybrid shuffle groups" note.
+    """
+    y = np.asarray(y, dtype=np.float64)
+    real, pred = probe_core._cv_pooled_best_factored(factors, y, "reg", return_pred=True)
+    rng = np.random.default_rng(seed)
+    shuf_scores = [
+        probe_core._cv_pooled_best_factored(
+            factors, probe_core._shuffle_group_coherent(y, shuffle_groups, rng), "reg"
+        )
+        for _ in range(probe_core.N_SHUFFLES)
+    ]
+    floor = probe_core._floor(y, np.asarray(cv_groups), "reg", splits=splits)
+    return {
+        "degenerate": False,
+        "r2_pooled": float(real),
+        "r2_folds": [float(probe_core._score(y[te], pred[te], "reg")) for _, te in splits],
+        "rank_acc": float(rank_acc_levels(y, pred)),
+        "shuffled": float(np.mean(shuf_scores)),
+        "shuffled_std": float(np.std(shuf_scores)),
+        "selectivity": float(real - np.mean(shuf_scores)),
+        "floor": float(floor),
+        "n": int(len(y)),
+        "n_groups": int(len(np.unique(cv_groups))),
+    }
+
+
 def certificate_cell(X, y, cv_groups, shuffle_groups, seed: int = SEED) -> dict:
     """One ridge certificate cell on already-masked rows.
 
@@ -335,27 +377,7 @@ def certificate_cell(X, y, cv_groups, shuffle_groups, seed: int = SEED) -> dict:
 
     splits = probe_core._group_splits(X, cv_groups)
     factors = probe_core._fold_factors(X, cv_groups, splits=splits)
-    real, pred = probe_core._cv_pooled_best_factored(factors, y, "reg", return_pred=True)
-    rng = np.random.default_rng(seed)
-    shuf_scores = [
-        probe_core._cv_pooled_best_factored(
-            factors, probe_core._shuffle_group_coherent(y, shuffle_groups, rng), "reg"
-        )
-        for _ in range(probe_core.N_SHUFFLES)
-    ]
-    floor = probe_core._floor(y, cv_groups, "reg", splits=splits)
-    return {
-        "degenerate": False,
-        "r2_pooled": float(real),
-        "r2_folds": [float(probe_core._score(y[te], pred[te], "reg")) for _, te in splits],
-        "rank_acc": float(rank_acc_levels(y, pred)),
-        "shuffled": float(np.mean(shuf_scores)),
-        "shuffled_std": float(np.std(shuf_scores)),
-        "selectivity": float(real - np.mean(shuf_scores)),
-        "floor": float(floor),
-        "n": int(len(y)),
-        "n_groups": int(len(np.unique(cv_groups))),
-    }
+    return cell_from_factors(factors, splits, y, cv_groups, shuffle_groups, seed=seed)
 
 
 def fit_k_eff(y, x, condition) -> dict:
